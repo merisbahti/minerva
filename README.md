@@ -7,7 +7,8 @@ Project in computer science.
 
 [Stagger.tar.bz2](http://mumin.ling.su.se/projects/stagger/snapshot.tar.bz2)  
 [wikixmlj-r43.jar](https://wikixmlj.googlecode.com/files/wikixmlj-r43.jar)  
-[Apache Solr](http://lucene.apache.org/solr/mirrors-solr-latest-redir.html?)
+[Apache Solr](http://lucene.apache.org/solr/mirrors-solr-latest-redir.html?)  
+[Apache Lucene](http://apache.mirrors.spacedump.net/lucene/java/4.10.2)
 
 ## Guides
 

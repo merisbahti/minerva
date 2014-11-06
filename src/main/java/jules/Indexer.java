@@ -27,7 +27,7 @@ public class Indexer {
 	}
 	
 	public void index(){
-		WikiXMLDOMParser wxp = new WikiXMLDOMParser(wikiFile);
+		WikiXMLParser wxp = WikiXMLParserFactory.getDOMParser(wikiFile);
 		WikiPage page;
 		Analyzer analyzer = new StandardAnalyzer();
 		IndexWriterConfig iwc = new IndexWriterConfig(Version.LATEST, analyzer);
@@ -38,6 +38,7 @@ public class Indexer {
 			while(it.hasMorePages()){
 				page = it.nextPage();
 				Document doc = new Document();
+				System.out.println(page.getID() + ": Adding File: " + page.getTitle());
 				doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.NO));
 				doc.add(new TextField("title", page.getTitle(), Field.Store.NO));
 				doc.add(new TextField("text", page.getText(), Field.Store.NO));

@@ -1,6 +1,7 @@
 package jules;
 
 import java.io.File;
+import java.io.IOException;
 
 import org.apache.lucene.analysis.*;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -27,33 +28,54 @@ public class Indexer {
 	}
 	
 	public void index(){
-		WikiXMLParser wxp = WikiXMLParserFactory.getDOMParser(wikiFile);
+		//WikiXMLParser wxp = WikiXMLParserFactory.getDOMParser(wikiFile);
 		WikiPage page;
 		Analyzer analyzer = new StandardAnalyzer();
 		IndexWriterConfig iwc = new IndexWriterConfig(Version.LATEST, analyzer);
 		try{
-			IndexWriter writer = new IndexWriter(FSDirectory.open(new File(indexDir)), iwc);
-			wxp.parse();
-			WikiPageIterator it = wxp.getIterator();
-			while(it.hasMorePages()){
-				page = it.nextPage();
-				Document doc = new Document();
-				System.out.println(page.getID() + ": Adding File: " + page.getTitle());
-				doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.NO));
-				doc.add(new TextField("title", page.getTitle(), Field.Store.NO));
-				doc.add(new TextField("text", page.getText(), Field.Store.NO));
+			final IndexWriter writer = new IndexWriter(FSDirectory.open(new File(indexDir)), iwc);
+			
+			WikiXMLParser wxsp = WikiXMLParserFactory.getSAXParser(wikiFile);
+			
+			wxsp.setPageCallback(new PageCallbackHandler() {
 				
-				/*
-				 * Check also
-				 * 
-				 * Infobox
-				 * Categories
-				 * Links
-				 * Redirect pages
-				 */
-				
-				writer.addDocument(doc);
-			}
+				@Override
+				public void process(WikiPage page) {
+					Document doc = new Document();
+					System.out.println(page.getID() + ", title: " + page.getTitle());
+					doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.NO));
+					doc.add(new TextField("title", page.getTitle(), Field.Store.NO));
+					doc.add(new TextField("text", page.getText(), Field.Store.NO));
+					try {
+						writer.addDocument(doc);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					
+				}
+			});
+			
+//			wxp.parse();
+//			WikiPageIterator it = wxp.getIterator();
+//			while(it.hasMorePages()){
+//				page = it.nextPage();
+//				Document doc = new Document();
+//				System.out.println(page.getID() + ": Adding File: " + page.getTitle());
+//				doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.NO));
+//				doc.add(new TextField("title", page.getTitle(), Field.Store.NO));
+//				doc.add(new TextField("text", page.getText(), Field.Store.NO));
+//				
+//				/*
+//				 * Check also
+//				 * 
+//				 * Infobox
+//				 * Categories
+//				 * Links
+//				 * Redirect pages
+//				 */
+//				
+//				writer.addDocument(doc);
+//			}
 			writer.commit();
 			writer.close();
 		}catch(Exception e){ e.printStackTrace(); }

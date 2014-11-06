@@ -55,6 +55,8 @@ public class Indexer {
 				}
 			});
 			
+			wxsp.parse();
+			
 //			wxp.parse();
 //			WikiPageIterator it = wxp.getIterator();
 //			while(it.hasMorePages()){

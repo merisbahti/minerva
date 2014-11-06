@@ -4,15 +4,15 @@ TODO
 This is the todo list and working plan
 
 Week 1:
-- Create an indexer using Sweble and Lucene
+- Create an indexer using Solr
 ````
 XML
  |   
- |  Perl Wikipedia toolkit??
+ |   Solr
  V
-Wiki markup
+Indexed database
+ ^
  |
- |  Sweble
- V
-Data
+ |
+Query abstraction (http request)
 ````

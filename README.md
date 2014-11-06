@@ -11,4 +11,5 @@ Project in computer science.
 
 ## Guides
 
-[Apache Solr tutorial](http://lucene.apache.org/solr/4_10_2/tutorial.html)
+[Apache Solr tutorial](http://lucene.apache.org/solr/4_10_2/tutorial.html)  
+[Apache Solr complete guide 4.10](http://archive.apache.org/dist/lucene/solr/ref-guide/apache-solr-ref-guide-4.10.pdf)

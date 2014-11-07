@@ -1,11 +1,9 @@
-package jules;
-import edu.jhu.nlp.wikipedia._;
+import jules.Indexer
 
 object Main {
 
   def main(args: Array[String]): Unit = {
-    val ind: Indexer = new Indexer
-    ind.query("kung");
+    Index.query("kung").foreach( x => println(s"Title: ${x._2}\nText:\n${x._3}"))
   }
 
 }

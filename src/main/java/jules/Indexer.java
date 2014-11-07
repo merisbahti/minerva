@@ -29,7 +29,6 @@ public class Indexer {
 	
 	public void index(){
 		//WikiXMLParser wxp = WikiXMLParserFactory.getDOMParser(wikiFile);
-		WikiPage page;
 		Analyzer analyzer = new StandardAnalyzer();
 		IndexWriterConfig iwc = new IndexWriterConfig(Version.LATEST, analyzer);
 		try{
@@ -43,9 +42,9 @@ public class Indexer {
 				public void process(WikiPage page) {
 					Document doc = new Document();
 					System.out.println(page.getID() + ", title: " + page.getTitle());
-					doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.NO));
-					doc.add(new TextField("title", page.getTitle(), Field.Store.NO));
-					doc.add(new TextField("text", page.getText(), Field.Store.NO));
+					doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.YES));
+					doc.add(new TextField("title", page.getTitle(), Field.Store.YES));
+					doc.add(new TextField("text", page.getText(), Field.Store.YES));
 					try {
 						writer.addDocument(doc);
 					} catch (IOException e) {

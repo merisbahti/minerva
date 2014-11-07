@@ -76,6 +76,9 @@ public class Indexer {
                 e.printStackTrace();
             }
             //d.getField("title");
+            for (IndexableField field : d.getFields()) {
+                System.out.println(field.name());
+            }
             System.out.println((i + 1) + ". " + d.getField("title"));
         }
 

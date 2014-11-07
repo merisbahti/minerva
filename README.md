@@ -11,6 +11,6 @@ Project in computer science.
 [Apache Lucene](http://apache.mirrors.spacedump.net/lucene/java/4.10.2)
 
 ## Guides
-[Lucene in 5 minutes](http://www.lucenetutorial.com/lucene-in-5-minutes.html)
+[Lucene in 5 minutes](http://www.lucenetutorial.com/lucene-in-5-minutes.html)  
 [Apache Solr tutorial](http://lucene.apache.org/solr/4_10_2/tutorial.html)  
 [Apache Solr complete guide 4.10](http://archive.apache.org/dist/lucene/solr/ref-guide/apache-solr-ref-guide-4.10.pdf)

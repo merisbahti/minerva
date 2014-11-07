@@ -14,7 +14,6 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.store.Directory;
 import org.apache.lucene.util.Version;
 
 import edu.jhu.nlp.wikipedia.*;
@@ -98,6 +97,7 @@ public class Indexer {
                     // We don't want to store unnecessary pages.
                     if (page.isDisambiguationPage() || page.isRedirect() || page.isSpecialPage() || page.isStub())
                         return;
+
                     Document doc = new Document();
                     System.out.println(page.getID() + ", title: " + page.getTitle());
                     doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.YES));

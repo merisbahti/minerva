@@ -33,11 +33,8 @@ public class Indexer {
 		IndexWriterConfig iwc = new IndexWriterConfig(Version.LATEST, analyzer);
 		try{
 			final IndexWriter writer = new IndexWriter(FSDirectory.open(new File(indexDir)), iwc);
-			
 			WikiXMLParser wxsp = WikiXMLParserFactory.getSAXParser(wikiFile);
-			
 			wxsp.setPageCallback(new PageCallbackHandler() {
-				
 				@Override
 				public void process(WikiPage page) {
 					Document doc = new Document();
@@ -53,30 +50,7 @@ public class Indexer {
 					
 				}
 			});
-			
 			wxsp.parse();
-			
-//			wxp.parse();
-//			WikiPageIterator it = wxp.getIterator();
-//			while(it.hasMorePages()){
-//				page = it.nextPage();
-//				Document doc = new Document();
-//				System.out.println(page.getID() + ": Adding File: " + page.getTitle());
-//				doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.NO));
-//				doc.add(new TextField("title", page.getTitle(), Field.Store.NO));
-//				doc.add(new TextField("text", page.getText(), Field.Store.NO));
-//				
-//				/*
-//				 * Check also
-//				 * 
-//				 * Infobox
-//				 * Categories
-//				 * Links
-//				 * Redirect pages
-//				 */
-//				
-//				writer.addDocument(doc);
-//			}
 			writer.commit();
 			writer.close();
 		}catch(Exception e){ e.printStackTrace(); }

@@ -29,6 +29,9 @@ public class Indexer {
 
 
     public Indexer(){
+
+        //wikiFile = "./sewiki.xml";
+        //indexDir = "./indexDir_test/";
         wikiFile = "./svwiki-20141031-pages-meta-current.xml";
         indexDir = "./indexDir/";
     }
@@ -74,11 +77,11 @@ public class Indexer {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //d.getField("title");
+            System.out.println("=========================================================================================");
             for (IndexableField field : d.getFields()) {
-                System.out.println(field.name());
+                System.out.println(field.name() + ": " + d.getField(field.name()).stringValue());
             }
-            System.out.println((i + 1) + ". " + d.getField("title"));
+            System.out.println("=========================================================================================");
         }
 
         return "hej";
@@ -88,6 +91,7 @@ public class Indexer {
         //WikiXMLParser wxp = WikiXMLParserFactory.getDOMParser(wikiFile);
         Analyzer analyzer = new StandardAnalyzer();
         IndexWriterConfig iwc = new IndexWriterConfig(Version.LATEST, analyzer);
+        iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
         try{
             final IndexWriter writer = new IndexWriter(FSDirectory.open(new File(indexDir)), iwc);
             WikiXMLParser wxsp = WikiXMLParserFactory.getSAXParser(wikiFile);
@@ -95,11 +99,15 @@ public class Indexer {
                 @Override
                 public void process(WikiPage page) {
                     // We don't want to store unnecessary pages.
-                    if (page.isDisambiguationPage() || page.isRedirect() || page.isSpecialPage() || page.isStub())
+                    // text starts with #OMDIRIGERING
+                    if (page.isDisambiguationPage() || page.isRedirect() || page.isSpecialPage()
+                        || page.isStub() || page.getTitle().startsWith("Användare:") || page.getTitle().startsWith("Användardiskussion:")
+                        || page.getText().trim().toLowerCase().startsWith("#redirect") || page.getText().trim().startsWith("#omdirig")
+                        || page.getID() == null || page.getID().length() == 0
+                    ) {
                         return;
-
+                    }
                     Document doc = new Document();
-                    System.out.println(page.getID() + ", title: " + page.getTitle());
                     doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.YES));
                     doc.add(new TextField("title", page.getTitle(), Field.Store.YES));
                     doc.add(new TextField("text", page.getText(), Field.Store.YES));
@@ -114,6 +122,8 @@ public class Indexer {
             wxsp.parse();
             writer.commit();
             writer.close();
-        }catch(Exception e){ e.printStackTrace(); }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }

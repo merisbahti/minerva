@@ -113,12 +113,15 @@ public class Indexer {
                     doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.YES));
                     doc.add(new TextField("title", page.getTitle(), Field.Store.YES));
                     doc.add(new TextField("text", page.getText(), Field.Store.YES));
+
+                    if (doc.getField("text").stringValue().toLowerCase().startsWith("#omdirigering"))
+                        return;
+
                     try {
                         writer.addDocument(doc);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
                 }
             });
             wxsp.parse();

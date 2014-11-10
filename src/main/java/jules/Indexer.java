@@ -19,6 +19,12 @@ import org.apache.lucene.util.Version;
 import edu.jhu.nlp.wikipedia.*;
 
 public class Indexer {
+	public static void main (String[] args){
+		while(true){
+			System.out.println("Enter query:");
+			query(System.console().readLine());
+		}
+	}
     private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
     private static String indexDir = "./merisnuc/";
 

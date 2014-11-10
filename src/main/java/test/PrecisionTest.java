@@ -31,7 +31,7 @@ public class PrecisionTest {
 	
 	private static double testQuery(String query, String answer){
 		List<Map<String, String>> result = Indexer.query(query, true);
-		// find all occurances of the answer
+		// find all occurrences of the answer
 		// divide by all words in the result
 		int ansOcc = 0;
 		int wordCount = 0;
@@ -68,6 +68,8 @@ public class PrecisionTest {
 		map.put("Sverige", "Stockholm");
 		map.put("Vilket år är Göran Persson född?", "1949");
 		map.put("Vad heter Sveriges huvudstad?", "Stockholm");
+		map.put("Hur gammal blev Kurt Cobain?", "27");
+		map.put("Vilken är Kinas tredje-största stad?", "Guangzhou");
 		
 	}
 

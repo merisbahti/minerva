@@ -21,8 +21,8 @@ import edu.jhu.nlp.wikipedia.*;
 public class Indexer {
     public static void Main(String[] args){
         Indexer indexer = new Indexer();
-        //indexer.index();
-        indexer.query("kung");
+        indexer.index();
+        //indexer.query("kung");
     }
     private String wikiFile;
     private String indexDir;
@@ -32,8 +32,8 @@ public class Indexer {
 
         //wikiFile = "./sewiki.xml";
         //indexDir = "./indexDir_test/";
-        wikiFile = "./svwiki-20141031-pages-meta-current.xml";
-        indexDir = "./indexDir/";
+        wikiFile = "./sewiki-20141104-pages-meta-current.xml";
+        indexDir = "./merisnuc/";
     }
 
 
@@ -41,7 +41,7 @@ public class Indexer {
         System.out.println("Querying: " + querystr);
         Analyzer analyzer = new StandardAnalyzer();
 
-        QueryParser qp = new QueryParser(Version.LUCENE_4_10_2, "title", analyzer);
+        QueryParser qp = new QueryParser("title", analyzer);
         Query query = null;
         try {
             query = qp.parse(querystr);
@@ -78,6 +78,7 @@ public class Indexer {
                 e.printStackTrace();
             }
             System.out.println("=========================================================================================");
+            System.out.println("Score: " + hits[i].score);
             for (IndexableField field : d.getFields()) {
                 System.out.println(field.name() + ": " + d.getField(field.name()).stringValue());
             }
@@ -105,6 +106,7 @@ public class Indexer {
                         || page.getText().trim().toLowerCase().startsWith("#redirect") || page.getText().trim().startsWith("#omdirig")
                         || page.getID() == null || page.getID().length() == 0
                     ) {
+                    	System.out.println(page.getTitle());
                         return;
                     }
                     Document doc = new Document();

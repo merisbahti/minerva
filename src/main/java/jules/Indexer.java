@@ -27,14 +27,14 @@ public class Indexer {
 		while(true){
 			System.out.println("Enter query:");
 			System.out.print("> ");
-			query(System.console().readLine());
+			query(System.console().readLine(), false);
 		}
 	}
     private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
     private static String indexDir = "./indexDir/";
 
-    public static List<Map<String, String>> query(String querystr) {
-        System.out.println("Querying: " + querystr);
+    public static List<Map<String, String>> query(String querystr, boolean silent) {
+        print("Querying: " + querystr, silent);
         Analyzer analyzer = new StandardAnalyzer();
 
         QueryParser qp = new QueryParser("title", analyzer);
@@ -65,7 +65,7 @@ public class Indexer {
 
         // 4. display results
         List<Map<String, String>> results = new ArrayList<Map<String, String>>();
-        System.out.println("Found " + hits.length + " hits.");
+        print("Found " + hits.length + " hits.", silent);
         for(int i=0;i<hits.length;++i) {
             int docId = hits[i].doc;
             Document d = null;
@@ -75,18 +75,23 @@ public class Indexer {
                 e.printStackTrace();
             }
             Map<String, String> tmpResult = new HashMap<String, String>();
-            System.out.println("=========================================================================================");
-            System.out.println("Score: " + hits[i].score);
+            print("=========================================================================================", silent);
+            print("Score: " + hits[i].score, silent);
             tmpResult.put("Score", Float.toString(hits[i].score));
             for (IndexableField field : d.getFields()) {
-                System.out.println(field.name() + ": " + d.getField(field.name()).stringValue());
+                print(field.name() + ": " + d.getField(field.name()).stringValue(), silent);
                 tmpResult.put(field.name(), d.getField(field.name()).stringValue());
             }
-            System.out.println("=========================================================================================");
+            print("=========================================================================================", silent);
             results.add(tmpResult);
         }
 
         return results;
+    }
+    
+    private static void print(String s, boolean silent){
+    	if(!silent)
+    		System.out.println(s);
     }
 
     public static void index(){

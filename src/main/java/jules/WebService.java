@@ -27,7 +27,7 @@ public class WebService {
             Map<String, String> queryParams = queryToMap(t.getRequestURI().getQuery());
             if (queryParams.containsKey("q") && !queryParams.get("q").trim().equals("")) {
                 sb.append(queryParams.get("q"));
-                List<Map<String, String>> results = jules.Indexer.query(queryParams.get("q"));
+                List<Map<String, String>> results = jules.Indexer.query(queryParams.get("q"), false);
                 for (Map<String, String> result : results) {
                     sb.append("====================================================\n");
                     for (Map.Entry<String, String> entry : result.entrySet()) {

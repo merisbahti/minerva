@@ -22,6 +22,7 @@ public class Indexer {
 	public static void main (String[] args){
 		while(true){
 			System.out.println("Enter query:");
+			System.out.print("> ");
 			query(System.console().readLine());
 		}
 	}

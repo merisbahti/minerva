@@ -2,6 +2,10 @@ package jules;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.lucene.analysis.*;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -20,9 +24,9 @@ import edu.jhu.nlp.wikipedia.*;
 
 public class Indexer {
     private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
-    private static String indexDir = "./merisnuc/";
+    private static String indexDir = "./indexDir/";
 
-    public static String query(String querystr) {
+    public static List<Map<String, String>> query(String querystr) {
         System.out.println("Querying: " + querystr);
         Analyzer analyzer = new StandardAnalyzer();
 
@@ -34,7 +38,7 @@ public class Indexer {
             e.printStackTrace();
         }
         // 3. search
-        int hitsPerPage = 10;
+        int hitsPerPage = 3;
         IndexReader reader = null;
 
         try {
@@ -53,6 +57,7 @@ public class Indexer {
         ScoreDoc[] hits = collector.topDocs().scoreDocs;
 
         // 4. display results
+        List<Map<String, String>> results = new ArrayList<Map<String, String>>();
         System.out.println("Found " + hits.length + " hits.");
         for(int i=0;i<hits.length;++i) {
             int docId = hits[i].doc;
@@ -62,15 +67,19 @@ public class Indexer {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            Map<String, String> tmpResult = new HashMap<String, String>();
             System.out.println("=========================================================================================");
             System.out.println("Score: " + hits[i].score);
+            tmpResult.put("Score", Float.toString(hits[i].score));
             for (IndexableField field : d.getFields()) {
                 System.out.println(field.name() + ": " + d.getField(field.name()).stringValue());
+                tmpResult.put(field.name(), d.getField(field.name()).stringValue());
             }
             System.out.println("=========================================================================================");
+            results.add(tmpResult);
         }
 
-        return "hej";
+        return results;
     }
 
     public static void index(){

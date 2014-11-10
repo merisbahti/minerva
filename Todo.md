@@ -15,8 +15,8 @@ WikiPage
  |   Lucene
  V
 Indexed database
- ^
- |
- |
+ /\
+ ||
+ ||
 Query abstraction (http request)
 ````

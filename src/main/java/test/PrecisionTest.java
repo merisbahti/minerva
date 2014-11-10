@@ -6,6 +6,14 @@ import java.util.Map;
 
 import jules.*;
 
+/**
+ * Simple naive precision test for query results.
+ * Only checks how much of the total answer is the desired one.
+ * The goal of our program is to answer questions with as high precision as possible
+ * 
+ * @author Tim Dolck
+ *
+ */
 public class PrecisionTest {
 	private static Map<String,String> testStrings = new HashMap<String,String>();
 	
@@ -32,7 +40,7 @@ public class PrecisionTest {
 		
 		for(Map<String,String> map : result){
 			for(String quest : map.keySet()){
-				String q = quest.replaceAll("[!?,]", "");
+				String q = map.get(quest).replaceAll("[!?,]", "");
 				String[] words = q.split("\\s+");
 				
 				for(int i = 0; i <= words.length - n; i++){
@@ -50,13 +58,16 @@ public class PrecisionTest {
 				wordCount += words.length - n + 1;
 			}
 		}
+		System.out.println("Matches: " + ansOcc);
+		System.out.println("Wordcount: " + wordCount);
 		
 		return (double)ansOcc/wordCount;
 	}
 	
 	private static void initMap(Map<String,String> map){
+		map.put("Sverige", "Stockholm");
 		map.put("Vilket år är Göran Persson född?", "1949");
-		map.put("Vad heter Sveriges huvudstad", "Stockholm");
+		map.put("Vad heter Sveriges huvudstad?", "Stockholm");
 		
 	}
 

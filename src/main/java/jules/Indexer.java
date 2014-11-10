@@ -19,25 +19,10 @@ import org.apache.lucene.util.Version;
 import edu.jhu.nlp.wikipedia.*;
 
 public class Indexer {
-    public static void Main(String[] args){
-        Indexer indexer = new Indexer();
-        indexer.index();
-        //indexer.query("kung");
-    }
-    private String wikiFile;
-    private String indexDir;
+    private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
+    private static String indexDir = "./merisnuc/";
 
-
-    public Indexer(){
-
-        //wikiFile = "./sewiki.xml";
-        //indexDir = "./indexDir_test/";
-        wikiFile = "./sewiki-20141104-pages-meta-current.xml";
-        indexDir = "./merisnuc/";
-    }
-
-
-    public String query(String querystr) {
+    public static String query(String querystr) {
         System.out.println("Querying: " + querystr);
         Analyzer analyzer = new StandardAnalyzer();
 
@@ -88,7 +73,7 @@ public class Indexer {
         return "hej";
     }
 
-    public void index(){
+    public static void index(){
         //WikiXMLParser wxp = WikiXMLParserFactory.getDOMParser(wikiFile);
         Analyzer analyzer = new StandardAnalyzer();
         IndexWriterConfig iwc = new IndexWriterConfig(Version.LATEST, analyzer);

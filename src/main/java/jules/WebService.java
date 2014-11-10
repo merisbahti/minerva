@@ -23,11 +23,6 @@ public class WebService {
     static class MyHandler implements HttpHandler {
         public void handle(HttpExchange t) throws IOException {
             String response = "nothing done yet";
-            System.out.println("Parsing qmap" + t.getRequestURI().getRawQuery());
-            System.out.println("Parsing qmap" + t.getRequestURI().toString());
-            System.out.println("added this line " + t.getRequestURI().toString().split("/")[1]);
-            //System.out.println("Parsing qmap" + t.getRequestURI().getQuery().toString());
-            //Map<String, String> qMap = queryToMap(t.getRequestURI().toString().split("/")[1]);
             Map<String, String> qMap = new HashMap<String, String>();
             qMap.put("q", "kung");
 

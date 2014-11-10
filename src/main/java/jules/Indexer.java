@@ -41,7 +41,7 @@ public class Indexer {
         System.out.println("Querying: " + querystr);
         Analyzer analyzer = new StandardAnalyzer();
 
-        QueryParser qp = new QueryParser(Version.LUCENE_4_10_2, "title", analyzer);
+        QueryParser qp = new QueryParser("title", analyzer);
         Query query = null;
         try {
             query = qp.parse(querystr);
@@ -111,12 +111,15 @@ public class Indexer {
                     doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.YES));
                     doc.add(new TextField("title", page.getTitle(), Field.Store.YES));
                     doc.add(new TextField("text", page.getText(), Field.Store.YES));
+
+                    if (doc.getField("text").stringValue().toLowerCase().startsWith("#omdirigering"))
+                        return;
+
                     try {
                         writer.addDocument(doc);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
                 }
             });
             wxsp.parse();

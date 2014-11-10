@@ -34,7 +34,7 @@ public class WebService {
                 System.out.println("key found");
                 StringBuilder sb = new StringBuilder();
                 String q = qMap.get("q");
-                List<Map<String, String>> results =  jules.Indexer.query(q);
+                List<Map<String, String>> results =  jules.Indexer.query(q, true);
                 for (Map<String, String> result : results) {
                     sb.append("===========================================\n");
                     for (Map.Entry<String, String> entry : result.entrySet()) {

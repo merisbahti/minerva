@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.lucene.analysis.*;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.sv.SwedishAnalyzer;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.*;
 import org.apache.lucene.queryparser.classic.ParseException;
@@ -35,7 +35,7 @@ public class Indexer {
 
     public static List<Map<String, String>> query(String querystr, boolean silent) {
         print("Querying: " + querystr, silent);
-        Analyzer analyzer = new StandardAnalyzer();
+        Analyzer analyzer = new SwedishAnalyzer();
 
         QueryParser qp = new QueryParser("title", analyzer);
         Query query = null;
@@ -79,8 +79,8 @@ public class Indexer {
             print("Score: " + hits[i].score, silent);
             tmpResult.put("Score", Float.toString(hits[i].score));
             for (IndexableField field : d.getFields()) {
-                print(field.name() + ": " + d.getField(field.name()).stringValue(), silent);
-                tmpResult.put(field.name(), d.getField(field.name()).stringValue());
+                print(field.name() + ": " + field.stringValue(), silent);
+                tmpResult.put(field.name(), field.stringValue());
             }
             print("=========================================================================================", silent);
             results.add(tmpResult);
@@ -95,8 +95,7 @@ public class Indexer {
     }
 
     public static void index(){
-        //WikiXMLParser wxp = WikiXMLParserFactory.getDOMParser(wikiFile);
-        Analyzer analyzer = new StandardAnalyzer();
+        Analyzer analyzer = new SwedishAnalyzer();
         IndexWriterConfig iwc = new IndexWriterConfig(Version.LATEST, analyzer);
         iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
         try{
@@ -105,8 +104,10 @@ public class Indexer {
             wxsp.setPageCallback(new PageCallbackHandler() {
                 @Override
                 public void process(WikiPage page) {
-                    // We don't want to store unnecessary pages.
-                    // text starts with #OMDIRIGERING
+                	/*
+                	 * We don't want to store unnecessary pages.
+                	 * Text starts with #OMDIRIGERING
+                	 */
                     if (page.isDisambiguationPage() || page.isRedirect() || page.isSpecialPage()
                         || page.isStub() || page.getTitle().startsWith("Användare:") || page.getTitle().startsWith("Användardiskussion:")
                         || page.getText().trim().toLowerCase().startsWith("#redirect") || page.getText().trim().startsWith("#omdirig")
@@ -119,6 +120,13 @@ public class Indexer {
                     doc.add(new IntField("id", Integer.parseInt(page.getID()), Field.Store.YES));
                     doc.add(new TextField("title", page.getTitle(), Field.Store.YES));
                     doc.add(new TextField("text", page.getText(), Field.Store.YES));
+                    
+                    /**
+                     * Should we add:
+                     * Infobox, 
+                     * Links, 
+                     * Categories?
+                     */
 
                     if (doc.getField("text").stringValue().toLowerCase().startsWith("#omdirigering"))
                         return;

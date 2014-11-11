@@ -6,6 +6,10 @@
 	<classpathentry kind="src" output="target/scala-2.10/test-classes" path="src/test/java"/>
 	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/tim/dev/edan70/EDAN70/lib/stagger.jar"/>
+	<classpathentry kind="lib" path="/home/julian/Downloads/stagger/stagger.jar"/>
+	<classpathentry kind="lib" path="lib/wikixmlj-r43.jar"/>
+	<classpathentry kind="lib" path="/home/julian/School/edan70/EDAN70/lib/lucene-core-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/home/julian/School/edan70/EDAN70/lib/lucene-queryparser-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/home/julian/School/edan70/EDAN70/lib/lucene-analyzers-common-4.10.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

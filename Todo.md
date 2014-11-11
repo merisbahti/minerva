@@ -4,15 +4,19 @@ TODO
 This is the todo list and working plan
 
 Week 1:
-- Create an indexer using Solr
+- Create an indexer using Lucene and wikixmlj
 ````
 XML
  |   
- |   Solr
+ |   wikixmlj
+ V
+WikiPage
+ |
+ |   Lucene
  V
 Indexed database
- ^
- |
- |
+ /\
+ ||
+ ||
 Query abstraction (http request)
 ````

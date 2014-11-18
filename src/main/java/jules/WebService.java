@@ -8,14 +8,22 @@ import java.util.List;
 import java.util.Map;
 
 
-import com.carrotsearch.ant.tasks.junit4.dependencies.com.google.gson.JsonArray;
-import com.carrotsearch.ant.tasks.junit4.dependencies.com.google.gson.JsonObject;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
+import org.json.*;
+
+
 
 public class WebService {
     public static void main(String[] args) throws Exception {
+        HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
+        server.createContext("/", new MyHandler());
+        server.setExecutor(null); // creates a default executor
+        server.start();
+    }
+
+    public static void runner() throws Exception {
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
@@ -30,9 +38,9 @@ public class WebService {
                 StringBuilder sb = new StringBuilder();
                 String q = qMap.get("q");
                 List<Map<String, String>> results =  jules.Indexer.query(q, true);
-                JsonArray jsonResults = new JsonArray();
+                JSONArray jsonResults = new JSONArray();
                 for (Map<String, String> result : results) {
-                    JsonObject res = new JsonObject();
+                    JSONObject res = new JSONObject();
                     for (Map.Entry<String, String> entry : result.entrySet()) {
                         // If it's text... we'll just take the context in this baseline
                         sb.append(entry.getKey() + ": \n");
@@ -41,13 +49,13 @@ public class WebService {
                             //String context = entry.getValue().toLowerCase().subSequence(indexOfHit-20, indexOfHit+20).toString()+"\n";
                             String context = entry.getValue();
                             sb.append(context);
-                            res.addProperty(entry.getKey(), entry.getValue());
+                            res.put(entry.getKey(), entry.getValue());
                         } else {
                             sb.append(entry.getValue() + "\n");
-                            res.addProperty(entry.getKey(), entry.getValue());
+                            res.put(entry.getKey(), entry.getValue());
                         }
                     }
-                    jsonResults.add(res);
+                    jsonResults.put(res);
                 }
                 response = jsonResults.toString();
             }

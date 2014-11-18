@@ -36,7 +36,7 @@ public class Indexer {
 		}
 	}
     private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
-    private static String indexDir = "./merisnuc/";
+    private static String indexDir = "./indexDir/";
 
     public static List<Map<String, String>> query(String querystr, boolean silent) {
         print("Querying: " + querystr, silent);

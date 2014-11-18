@@ -1,18 +1,31 @@
 package jules;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.transform.Transformer;
-
-import org.apache.lucene.analysis.*;
+import org.apache.commons.compress.compressors.CompressorException;
+import org.apache.commons.compress.compressors.CompressorInputStream;
+import org.apache.commons.compress.compressors.CompressorStreamFactory;
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.sv.SwedishAnalyzer;
-import org.apache.lucene.document.*;
-import org.apache.lucene.index.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.document.IntField;
+import org.apache.lucene.document.TextField;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.index.IndexableField;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
@@ -22,27 +35,107 @@ import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
-import edu.jhu.nlp.wikipedia.*;
+import edu.jhu.nlp.wikipedia.PageCallbackHandler;
+import edu.jhu.nlp.wikipedia.WikiPage;
+import edu.jhu.nlp.wikipedia.WikiXMLParser;
+import edu.jhu.nlp.wikipedia.WikiXMLParserFactory;
 
-//import org.sweble.*;
-//import org.sweble.wom3.*;
-//import org.sweble.
 public class Indexer {
 	public static void main (String[] args){
-		while(true){
+		bzIndexer();
+		/*while(true){
 			System.out.println("Enter query:");
 			System.out.print("> ");
 			query(System.console().readLine(), false);
-		}
+		}*/
 	}
     private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
     private static String indexDir = "./indexDir/";
+    private static String outputDir = "./output/";
+    private static int counter = 0;
+    private static Analyzer analyzer;
+    private static IndexWriterConfig iwc;
+    private static IndexWriter writer;
+    
+    public static void bzIndexer(){
+    	analyzer = new SwedishAnalyzer();
+        iwc = new IndexWriterConfig(Version.LATEST, analyzer);
+        iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
+        try {
+			writer = new IndexWriter(FSDirectory.open(new File(indexDir)), iwc);
+		} catch (IOException e) {e.printStackTrace();}
+        
+    	File output = new File(outputDir);
+    	ArrayList<File> files = new ArrayList<File>();
+    	for (File f : output.listFiles()){
+    		for(File g : f.listFiles()){
+    			files.add(g.getAbsoluteFile());
+    		}
+    	}
+    	for(File f : files){
+    		doIndex(f.getAbsolutePath());
+    	}
+    	try {
+        	writer.commit();
+			writer.close();
+		} catch (IOException e) {e.printStackTrace();}
+    	
+    }
+    
+    public static void doIndex(String file){
+    	try {
+			BufferedReader br = getBufferedReaderForBZ2File(file);
+			StringBuilder sb = null;
+			String line;
+			Document doc = null;
+			String title;
+			String subtitle;
+			String text;
+			while((line = br.readLine()) != null){
+				if(line.startsWith("<doc")){
+					sb = new StringBuilder();
+				} else if(line.startsWith("</doc>")){
+					title = sb.toString().substring(0, sb.toString().indexOf("\n"));
+					for(String s : sb.toString().split("subtitle123:")){
+						counter++;
+						subtitle = s.substring(0, s.indexOf("\n"));
+						text = s.substring(s.indexOf("\n")+1);
+						doc = new Document();
+						doc.add(new IntField("id", counter, Field.Store.YES));
+						doc.add(new TextField("title", title, Field.Store.YES));
+						doc.add(new TextField("subtitle", subtitle, Field.Store.YES));
+						doc.add(new TextField("text", text, Field.Store.YES));
+						writer.addDocument(doc);
+						if(counter % 1000 == 0) System.out.println(counter);
+					}
+				} else if(line.startsWith("<h\\d")){
+					sb.append("subtitle123:" + line.substring(4, line.lastIndexOf("<")) + "\n");
+				} else {
+					sb.append(line.replaceAll("</?li>", "")+"\n");
+				}
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(file);
+		}
+    	
+    }
+    
+    public static BufferedReader getBufferedReaderForBZ2File(String fileIn) throws FileNotFoundException, CompressorException {
+        FileInputStream fin = new FileInputStream(fileIn);
+        BufferedInputStream bis = new BufferedInputStream(fin);
+        CompressorInputStream input = new CompressorStreamFactory().createCompressorInputStream(bis);
+        BufferedReader br2 = new BufferedReader(new InputStreamReader(input));
+
+        return br2;
+    }
 
     public static List<Map<String, String>> query(String querystr, boolean silent) {
         print("Querying: " + querystr, silent);
         Analyzer analyzer = new SwedishAnalyzer();
 
-        QueryParser qp = new QueryParser("title", analyzer);
+        QueryParser qp = new QueryParser("text", analyzer);
         Query query = null;
         try {
             query = qp.parse(querystr);
@@ -50,7 +143,7 @@ public class Indexer {
             e.printStackTrace();
         }
         // 3. search
-        int hitsPerPage = 3;
+        int hitsPerPage = 10;
         IndexReader reader = null;
 
         try {

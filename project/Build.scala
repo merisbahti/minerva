@@ -9,10 +9,7 @@ object ProjectBuild extends Build {
       organization := "se.lth.cs",
       scalaVersion := "2.11.2",
       libraryDependencies += "org.apache.lucene" % "lucene-core" % "4.10.2",
-      libraryDependencies += "org.openrdf.sesame" % "sesame-runtime" % "2.7.0",
-      libraryDependencies += "com.sparkjava" % "spark-core" % "2.0.0",
       libraryDependencies += "org.json" % "json" % "20131018"
-
   )
 
   val myProject = Project("edan70-unknown", file("."), settings = projectSettings)

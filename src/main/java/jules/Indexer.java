@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.xml.transform.Transformer;
+
 import org.apache.lucene.analysis.*;
 import org.apache.lucene.analysis.sv.SwedishAnalyzer;
 import org.apache.lucene.document.*;
@@ -22,6 +24,9 @@ import org.apache.lucene.util.Version;
 
 import edu.jhu.nlp.wikipedia.*;
 
+//import org.sweble.*;
+//import org.sweble.wom3.*;
+//import org.sweble.
 public class Indexer {
 	public static void main (String[] args){
 		while(true){
@@ -31,7 +36,7 @@ public class Indexer {
 		}
 	}
     private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
-    private static String indexDir = "./indexDir/";
+    private static String indexDir = "./merisnuc/";
 
     public static List<Map<String, String>> query(String querystr, boolean silent) {
         print("Querying: " + querystr, silent);
@@ -104,6 +109,8 @@ public class Indexer {
             wxsp.setPageCallback(new PageCallbackHandler() {
                 @Override
                 public void process(WikiPage page) {
+                	
+                	page.getText().split("=+ [A-ZÅÄÖa-zåäö]+ =+");
                 	/*
                 	 * We don't want to store unnecessary pages.
                 	 * Text starts with #OMDIRIGERING

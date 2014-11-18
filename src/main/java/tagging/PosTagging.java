@@ -29,6 +29,7 @@ public class PosTagging {
 		modelReader.close();
 
 		for (String inputFile : documents) {
+			System.out.println(inputFile);
 			BufferedReader reader = new BufferedReader(new StringReader(inputFile));
 			
 			Tokenizer tokenizer = new SwedishTokenizer(reader);

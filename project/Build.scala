@@ -8,9 +8,7 @@ object ProjectBuild extends Build {
       version := "1.0",
       organization := "se.lth.cs",
       scalaVersion := "2.11.2",
-      libraryDependencies += "org.apache.lucene" % "lucene-core" % "4.10.2",
-      libraryDependencies += "org.openrdf.sesame" % "sesame-runtime" % "2.7.0",
-      libraryDependencies += "com.sparkjava" % "spark-core" % "2.0.0"
+      libraryDependencies += "org.apache.lucene" % "lucene-core" % "4.10.2"
 
   )
 

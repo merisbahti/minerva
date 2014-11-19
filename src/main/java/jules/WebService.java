@@ -36,7 +36,7 @@ public class WebService {
             if (qMap.containsKey("q")) {
                 StringBuilder sb = new StringBuilder();
                 String q = qMap.get("q");
-                List<Map<String, String>> results =  jules.Indexer.query(q, true);
+                List<Map<String, String>> results =  jules.Indexer.query(q, 100);
                 JSONArray jsonResults = new JSONArray();
                 for (Map<String, String> result : results) {
                     JSONObject res = new JSONObject();

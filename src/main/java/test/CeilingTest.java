@@ -11,7 +11,7 @@ import java.util.Map;
 public class CeilingTest {
     @Test
     public void naiveQueryTest() {
-        List<Map<String, String>> results = Indexer.query("Vad heter islands Huvudstad?", true);
+        List<Map<String, String>> results = Indexer.query("Vad heter islands Huvudstad?", 100);
         assert(true);
     }
 

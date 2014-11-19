@@ -1,6 +1,7 @@
 package test;
 import jules.Indexer;
 import org.junit.*;
+import util.Pair;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,30 +12,32 @@ import java.util.Map;
     Test för att kolla frekvensen av svaret givet en query.
  */
 public class CeilingTest {
-    // Out of ideas, don't know which dependencies we can use.
-    // Let's just use a List<String> where even elements are questions
-    // and uneven elements are the answers to the previous elements question.
-    // Fuck java.
-    private ArrayList<String> al = new ArrayList(Arrays.asList(
-            new String[]{
-                    "Vad heter Sveriges huvudstad?", "Stockholm",
-                    "Vad heter Islands Huvudstad?", "Reykjavik",
-                    "Vilka gjorde låten Mamma Mia?", "ABBA",
-                    "Vad är en björk?", "Träd",
-                    "Vad kallas hundens ungar?", "valp"
-            }));
+    private ArrayList<Pair<String, String>> al = new ArrayList<Pair<String, String>>();
+
+    @Before
+    public void setUp() {
+        al.add(new Pair<>("Vad heter Sveriges huvudstad", "stockholm"));
+        al.add(new Pair<>("Vad heter Islands Huvudstad?", "Reykjavik".toLowerCase()));
+        al.add(new Pair<>("Vilka gjorde låten Mamma Mia?", "ABBA".toLowerCase()));
+        al.add(new Pair<>("Vad är en björk?", "Träd".toLowerCase()));
+        al.add(new Pair<>("Vad kallas hundens ungar?", "valp".toLowerCase()));
+        al.add(new Pair<>("Sverige", "Stockholm"));
+        al.add(new Pair<>("Vilket år är Göran Persson född?", "1949"));
+        al.add(new Pair<>("Vad heter Sveriges huvudstad?", "Stockholm"));
+        al.add(new Pair<>("Hur gammal blev Kurt Cobain?", "27"));
+        al.add(new Pair<>("Vilken är Kinas tredje-största stad?", "Guangzhou"));
+    }
 
     @Test
     public void firstQuestionTest() {
-        for (int i = 0; i < al.size(); i=i+2) {
-            System.out.println(al.get(i));
-            List<Map<String, String>> results = Indexer.query(al.get(i), 1000);
-            occursIn(al.get(i+1), results);
+        for (Pair<String, String> qa : al) {
+            List<Map<String, String>> results = Indexer.query(qa.fst, 100);
+            ResultDetails occs = occursIn(qa.snd, results);
+            System.out.println("FO: " + occs.firstOccurence+"\tTOTO: " + occs.totalOccurences + "\t" + qa.fst );
         }
-        assert(true);
     }
 
-    private static void occursIn(String answer, List<Map<String, String>> results) {
+    private static ResultDetails occursIn(String answer, List<Map<String, String>> results) {
         int firstOccurence  = -1;
         int totalOccurences = 0;
         int curResultNumber = -1;
@@ -44,20 +47,27 @@ public class CeilingTest {
             for (Map.Entry<String, String> entry : result.entrySet()) {
                 // Put stagger magic here, extract nouns
                 // And create relative frequency?
-                String[] words = entry.getValue().split("\\s+");
+                String[] words = entry.getValue().toLowerCase().replaceAll("[^a-zåäö0-9\\s]","").split("\\s+");
                 for (String word : words) {
                     totalWords++;
-                    if (word.toLowerCase().replaceAll("[^a-zåäö]", "").equals(answer.toLowerCase()))  {
-                        if (firstOccurence == -1) {
-                            firstOccurence = curResultNumber;
-                        }
+                    if (word.equals(answer))  {
+                        if (firstOccurence == -1) firstOccurence = curResultNumber;
                         totalOccurences++;
                     }
                 }
             }
         }
-        System.out.println("First occurence: " + firstOccurence);
-        System.out.println("total occurences: " + totalOccurences);
-        System.out.println("total occurences / total words: " +  (float) totalOccurences / totalWords);
+        return new ResultDetails(firstOccurence, totalOccurences, totalWords);
+    }
+
+    private static class ResultDetails {
+       public final int firstOccurence;
+       public final int totalOccurences;
+       public final int totalWords;
+       ResultDetails(int firstOccurence, int totalOccurences, int totalWords)  {
+           this.firstOccurence = firstOccurence;
+           this.totalOccurences = totalOccurences;
+           this.totalWords = totalWords;
+       }
     }
 }

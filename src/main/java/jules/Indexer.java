@@ -29,6 +29,7 @@ import org.apache.lucene.index.IndexableField;
 import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.queryparser.classic.QueryParser.Operator;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
@@ -149,6 +150,7 @@ public class Indexer {
 		Analyzer analyzer = new SwedishAnalyzer();
 		String[] fieldNames = {"title","subtitle","text"};
 		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer);
+		mfqp.setDefaultOperator(Operator.AND);
 		Query query = null;
 		try {
 			query = mfqp.parse(querystr);

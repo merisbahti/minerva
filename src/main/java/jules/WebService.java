@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
+
 import org.json.*;
 
 public class WebService {
@@ -48,10 +48,20 @@ public class WebService {
                             //String context = entry.getValue().toLowerCase().subSequence(indexOfHit-20, indexOfHit+20).toString()+"\n";
                             String context = entry.getValue();
                             sb.append(context);
-                            res.put(entry.getKey(), entry.getValue());
+                            try {
+								res.put(entry.getKey(), entry.getValue());
+							} catch (JSONException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
                         } else {
                             sb.append(entry.getValue() + "\n");
-                            res.put(entry.getKey(), entry.getValue());
+                            try {
+								res.put(entry.getKey(), entry.getValue());
+							} catch (JSONException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
                         }
                     }
                     jsonResults.put(res);

@@ -148,8 +148,11 @@ public class Indexer {
 
 	public static List<Map<String, String>> query(String querystr,int nbrHits) {
 		Analyzer analyzer = new SwedishAnalyzer();
-		String[] fieldNames = {"title","subtitle","text"};
-		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer);
+		String[] fieldNames = {"title","text"};
+		Map<String, Float> boosts = new HashMap<String,Float>();
+		boosts.put("title", 2f);
+		boosts.put("text", 1f);
+		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer, boosts);
 		mfqp.setDefaultOperator(Operator.AND);
 		Query query = null;
 		try {

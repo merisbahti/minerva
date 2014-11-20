@@ -6,6 +6,8 @@
 lib/*
 model/*
 
+questions/*
+
 # sbt specific
 .cache/
 .history/

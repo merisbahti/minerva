@@ -53,6 +53,7 @@ public class QueryPassenger {
 
 		IndexSearcher searcher = new IndexSearcher(reader);
 		searcher.setSimilarity(new BM25Similarity());
+
 		TopScoreDocCollector collector = TopScoreDocCollector.create(nbrHits,
 				true);
 		try {

@@ -15,7 +15,7 @@ import org.junit.Test;
 
 public class AnswerPresentTest {
 	Map<String, String> questions;
-	String qDir = "/home/julian/School/edan70/questions/";
+	String qDir = "./questions/";
 	int[] querySizes = {1, 5, 10, 25, 50, 75, 100, 150, 200, 250, 300};
 	PrintWriter writer;
 

@@ -6,18 +6,20 @@ This is the todo list and working plan
 Week 1:
 - Create an indexer using Lucene and wikixmlj
 ````
-XML
- |   
- |   wikixmlj
- V
-WikiPage
- |
- |   Lucene
- V
-Indexed database
- /\
- ||
- ||
+
+                OR
+XML             ||  XML
+ |              ||   |
+ |   wikixmlj   ||   |  WikiExtractor.py
+ V              ||   v   
+WikiPage        || bz2 Files
+ |              ||   |
+ |   Lucene     ||   |  Lucene
+ V              ||   v
+    Indexed database
+       /\
+       ||
+       ||
 Query abstraction (http request)
 ````
 

@@ -14,18 +14,18 @@ import com.sun.net.httpserver.HttpServer;
 
 import org.json.*;
 
+import tagging.PosTagger;
+
 public class WebService {
     public static void main(String[] args) throws Exception {
-        HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
-        server.createContext("/", new MyHandler());
-        server.setExecutor(null); // creates a default executor
-        server.start();
+        runner();
     }
 
     public static void runner() throws Exception {
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
+        PosTagger.getInstance();
         server.start();
     }
 

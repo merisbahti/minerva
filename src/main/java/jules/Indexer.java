@@ -135,6 +135,43 @@ public class Indexer {
 		}
 
 	}
+	
+	public static void doIndexDocuments(String file){
+		try {
+			BufferedReader br = getBufferedReaderForBZ2File(file);
+			StringBuilder sb = null;
+			String line;
+			Document doc = null;
+			String title;
+			String text;
+			while ((line = br.readLine()) != null) {
+				if (line.startsWith("<doc")) {
+					sb = new StringBuilder();
+				} else if (line.startsWith("</doc>")) {
+					title = sb.toString().substring(0,sb.toString().indexOf("\n"));
+					text = sb.toString().substring(sb.toString().indexOf("\n")+1);
+					doc = new Document();
+					counter++;
+					doc.add(new IntField("id", counter, Field.Store.YES));
+					doc.add(new TextField("title", title, Field.Store.YES));
+					doc.add(new TextField("text", text, Field.Store.YES));
+					writer.addDocument(doc);
+					if (counter % 1000 == 0)
+						System.out.println(counter);
+
+				} else if (line.startsWith("<h")) {
+					sb.append(line.replaceAll("</?h\\d>", "") + "\n");
+				} else {
+					sb.append(line.replaceAll("</?li>", "") + "\n");
+				}
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(file);
+		}
+
+	}
 
 	public static BufferedReader getBufferedReaderForBZ2File(String fileIn)
 			throws FileNotFoundException, CompressorException {
@@ -167,7 +204,7 @@ public class Indexer {
 		}
 
 		IndexSearcher searcher = new IndexSearcher(reader);
-		searcher.setSimilarity(new BM25Similarity());
+		//searcher.setSimilarity(new BM25Similarity());
 		TopScoreDocCollector collector = TopScoreDocCollector.create(
 				nbrHits, true);
 		try {

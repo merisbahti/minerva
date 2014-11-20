@@ -24,7 +24,7 @@ public class AnswerPresentTest {
 	public void setUp() throws Exception {
 		questions = new HashMap<String, String>();
 		File dir = new File(qDir);
-		writer = new PrintWriter("answerPresentResults.txt", "UTF-8");
+		writer = new PrintWriter("answerPresentResultsDefault.txt", "UTF-8");
 		for(File f : dir.listFiles()){
 			System.out.println("Reading file: " + f.getName());
 			BufferedReader br = new BufferedReader(new FileReader(f));

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 
+import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
@@ -58,6 +59,9 @@ public class WebService {
                 response = jsonResults.toString();
             }
             System.out.println("serving response");
+            t.setAttribute("content-type", "application/json");
+            Headers h = t.getResponseHeaders();
+            h.add("content-type", "application/json; charset=utf-8");
             t.sendResponseHeaders(200, response.getBytes().length);
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());

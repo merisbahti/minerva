@@ -8,7 +8,7 @@ import se.su.ling.stagger.*;
 public class PosTagger {
 	public static void test() throws ClassNotFoundException, IOException,
 			TagNameException {
-		String s = "Det var en gång en katt som hette Nils.";
+		String s = "Det var en gång en katt som hette Nils och bodde i Rio de Janeiro.";
 		try {
 			PosTagger t = new PosTagger();
 			List<Word[]> res = t.tagString(s);
@@ -66,17 +66,33 @@ public class PosTagger {
 			}
 			TaggedToken[] taggedSent = tagger.tagSentence(sent, true, false);
 			TagSet tagset = tagger.getTaggedData().getPosTagSet();
+			TagSet netagset = tagger.getTaggedData().getNETagSet();
+			TagSet netypetagset = tagger.getTaggedData().getNETypeTagSet();
 			Word[] words = new Word[taggedSent.length];
 			for (int i = 0; i < taggedSent.length; i++) {
 				TaggedToken token = taggedSent[i];
 				String posTag;
+				String neTag;
+				String neTypetag;
 				try {
 					posTag = tagset.getTagName(token.posTag).split("\\|")[0];
+					
 				} catch (TagNameException e) {
-					posTag = null; // Todo: determine which type the
+					posTag = "-"; // Todo: determine which type the
 									// empty(unknown) postag should have
 				}
-				words[i] = new Word(token.token.value, token.lf, posTag);
+				try {
+					neTag = netagset.getTagName(token.neTag);
+				}catch (TagNameException e){
+					neTag = "O";
+				}
+				try {
+					neTypetag = netypetagset.getTagName(token.neTypeTag);
+				} catch (TagNameException e) {
+					neTypetag = "-";
+				}
+				
+				words[i] = new Word(token.token.value, token.lf, posTag, neTag, neTypetag);
 			}
 			taggedSents.add(words);
 

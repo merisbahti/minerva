@@ -1,9 +1,20 @@
 package tagging;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.List;
 
-import se.su.ling.stagger.*;
+import se.su.ling.stagger.SwedishTokenizer;
+import se.su.ling.stagger.TagNameException;
+import se.su.ling.stagger.TagSet;
+import se.su.ling.stagger.TaggedToken;
+import se.su.ling.stagger.Tagger;
+import se.su.ling.stagger.Token;
+import se.su.ling.stagger.Tokenizer;
 
 public class PosTagger {
 	public static void test() throws ClassNotFoundException, IOException,

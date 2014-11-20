@@ -135,6 +135,43 @@ public class Indexer {
 		}
 
 	}
+	
+	public static void doIndexDocuments(String file){
+		try {
+			BufferedReader br = getBufferedReaderForBZ2File(file);
+			StringBuilder sb = null;
+			String line;
+			Document doc = null;
+			String title;
+			String text;
+			while ((line = br.readLine()) != null) {
+				if (line.startsWith("<doc")) {
+					sb = new StringBuilder();
+				} else if (line.startsWith("</doc>")) {
+					title = sb.toString().substring(0,sb.toString().indexOf("\n"));
+					text = sb.toString().substring(sb.toString().indexOf("\n")+1);
+					doc = new Document();
+					counter++;
+					doc.add(new IntField("id", counter, Field.Store.YES));
+					doc.add(new TextField("title", title, Field.Store.YES));
+					doc.add(new TextField("text", text, Field.Store.YES));
+					writer.addDocument(doc);
+					if (counter % 1000 == 0)
+						System.out.println(counter);
+
+				} else if (line.startsWith("<h")) {
+					sb.append(line.replaceAll("</?h\\d>", "") + "\n");
+				} else {
+					sb.append(line.replaceAll("</?li>", "") + "\n");
+				}
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(file);
+		}
+
+	}
 
 	public static BufferedReader getBufferedReaderForBZ2File(String fileIn)
 			throws FileNotFoundException, CompressorException {
@@ -148,15 +185,12 @@ public class Indexer {
 	}
 
 	public static List<Map<String, String>> query(String querystr,int nbrHits) {
-        querystr = querystr.toLowerCase().replace("[^a-zåäö\\s]","");
-        System.out.println(querystr);
 		Analyzer analyzer = new SwedishAnalyzer();
-		String[] fieldNames = {"title","subtitle","text"};
+		String[] fieldNames = {"title","text"};
 		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer);
-		//mfqp.setDefaultOperator(Operator.AND);
 		Query query = null;
 		try {
-			query = mfqp.parse(querystr);
+			query = mfqp.parse(querystr.replaceAll("[^a-zåäö\\s]", ""));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -170,7 +204,7 @@ public class Indexer {
 		}
 
 		IndexSearcher searcher = new IndexSearcher(reader);
-		searcher.setSimilarity(new BM25Similarity(2f, 0.75f));
+		//searcher.setSimilarity(new BM25Similarity());
 		TopScoreDocCollector collector = TopScoreDocCollector.create(
 				nbrHits, true);
 		try {

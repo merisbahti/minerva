@@ -5,12 +5,13 @@ import java.util.*;
 
 import se.su.ling.stagger.*;
 
-public class PosTagging {
+public class PosTagger {
 	public static void test() throws ClassNotFoundException, IOException,
 			TagNameException {
 		String s = "Det var en gång en katt som hette Nils.";
 		try {
-			List<Word[]> res = posTagging(s, false);
+			PosTagger t = new PosTagger();
+			List<Word[]> res = t.tagString(s);
 			for (Word[] sent : res) {
 				for (Word token : sent) {
 					System.out.println(token);
@@ -21,9 +22,12 @@ public class PosTagging {
 		}
 
 	}
-
-	public static List<Word[]> posTagging(String document, boolean silent)
-			throws IOException {
+	
+	private Tagger tagger;
+	private boolean silent;
+	
+	public PosTagger() throws IOException{
+		this.silent = true;
 		String modelFile = "./model/swedish.bin";
 
 		ObjectInputStream modelReader;
@@ -32,19 +36,20 @@ public class PosTagging {
 		} catch (Exception e) {
 			throw new IOException("Couldn't load modelfile");
 		}
-		print("Loading Stagger model ...", silent);
+		print("Loading Stagger model ...");
 		
-		Tagger tagger;
 		try {
 			tagger = (Tagger) modelReader.readObject();
 		} catch (Exception e) {
 			modelReader.close();
 			throw new IOException("Model file found but unable to be loaded.");
 		}
-		print("Model loaded!", silent);
+		print("Model loaded!");
 		modelReader.close();
+	}
 
-		System.out.println(document);
+	public List<Word[]> tagString(String document) throws IOException {
+		print(document);
 		BufferedReader reader = new BufferedReader(new StringReader(document));
 
 		Tokenizer tokenizer = new SwedishTokenizer(reader);
@@ -66,7 +71,7 @@ public class PosTagging {
 				TaggedToken token = taggedSent[i];
 				String posTag;
 				try {
-					posTag = tagset.getTagName(token.posTag);
+					posTag = tagset.getTagName(token.posTag).split("\\|")[0];
 				} catch (TagNameException e) {
 					posTag = null; // Todo: determine which type the
 									// empty(unknown) postag should have
@@ -82,7 +87,7 @@ public class PosTagging {
 		return taggedSents;
 	}
 
-	private static void print(String s, boolean silent) {
+	private void print(String s) {
 		if (!silent)
 			System.out.println(s);
 	}

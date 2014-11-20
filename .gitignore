@@ -3,6 +3,8 @@
 *.swp
 .cache
 .classpath
+lib/*
+model/*
 
 # sbt specific
 .cache/

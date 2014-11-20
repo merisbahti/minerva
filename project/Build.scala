@@ -8,6 +8,7 @@ object ProjectBuild extends Build {
       version := "1.0",
       organization := "se.lth.cs",
       scalaVersion := "2.11.2",
+      
       libraryDependencies += "org.apache.lucene" % "lucene-core" % "4.10.2",
       libraryDependencies += "org.json" % "json" % "20131018"
   )

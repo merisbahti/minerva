@@ -148,8 +148,6 @@ public class Indexer {
 	}
 
 	public static List<Map<String, String>> query(String querystr,int nbrHits) {
-        querystr = querystr.toLowerCase().replace("[^a-zåäö\\s]","");
-        System.out.println(querystr);
 		Analyzer analyzer = new SwedishAnalyzer();
 		String[] fieldNames = {"title","text"};
 		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer);

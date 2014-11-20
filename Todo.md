@@ -3,7 +3,6 @@ TODO
 
 This is the todo list and working plan
 
-Week 1:
 - Create an indexer using Lucene and wikixmlj
 ````
 

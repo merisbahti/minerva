@@ -1,56 +1,89 @@
 package tagging;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.StringReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 import se.su.ling.stagger.*;
 
 public class PosTagging {
-	public static void main(String[] args) throws ClassNotFoundException, IOException, TagNameException{
-		List<String> strings = new ArrayList<String>();
-		strings.add("Det var en gång en katt som hette Nils.");
-		posTagging(strings);
-		
-	}
-	public static void posTagging(List<String> documents) throws IOException, TagNameException, ClassNotFoundException {
-		String modelFile = "./model/swedish.bin";
-		TaggedToken[][] inputSents = null;
+	public static void test() throws ClassNotFoundException, IOException,
+			TagNameException {
+		String s = "Det var en gång en katt som hette Nils.";
+		try {
+			List<Word[]> res = posTagging(s, false);
+			for (Word[] sent : res) {
+				for (Word token : sent) {
+					System.out.println(token);
+				}
+			}
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
 
-		ObjectInputStream modelReader = new ObjectInputStream(
-				new FileInputStream(modelFile));
-		System.err.println("Loading Stagger model ...");
-		Tagger tagger = (Tagger) modelReader.readObject();
-		String lang = "sv";
+	}
+
+	public static List<Word[]> posTagging(String document, boolean silent)
+			throws IOException {
+		String modelFile = "./model/swedish.bin";
+
+		ObjectInputStream modelReader;
+		try {
+			modelReader = new ObjectInputStream(new FileInputStream(modelFile));
+		} catch (Exception e) {
+			throw new IOException("Couldn't load modelfile");
+		}
+		print("Loading Stagger model ...", silent);
+		
+		Tagger tagger;
+		try {
+			tagger = (Tagger) modelReader.readObject();
+		} catch (Exception e) {
+			modelReader.close();
+			throw new IOException("Model file found but unable to be loaded.");
+		}
+		print("Model loaded!", silent);
 		modelReader.close();
 
-		for (String inputFile : documents) {
-			System.out.println(inputFile);
-			BufferedReader reader = new BufferedReader(new StringReader(inputFile));
-			
-			Tokenizer tokenizer = new SwedishTokenizer(reader);
-			
-			ArrayList<Token> sentence;
-			int sentIdx = 0;
-			while ((sentence = tokenizer.readSentence()) != null) {
-				TaggedToken[] sent = new TaggedToken[sentence.size()];
-				for (int j = 0; j < sentence.size(); j++) {
-					Token tok = sentence.get(j);
-					String id;
-					id = sentIdx + ":" + tok.offset;
-					sent[j] = new TaggedToken(tok, id);
-				}
-				TaggedToken[] taggedSent = tagger
-						.tagSentence(sent, true, false);
-				tagger.getTaggedData().writeConllSentence(System.out, taggedSent,true);
-				sentIdx++;
-			}
-			tokenizer.yyclose();
+		System.out.println(document);
+		BufferedReader reader = new BufferedReader(new StringReader(document));
 
+		Tokenizer tokenizer = new SwedishTokenizer(reader);
+		ArrayList<Word[]> taggedSents = new ArrayList<Word[]>();
+		ArrayList<Token> sentence;
+		int sentIdx = 0;
+		while ((sentence = tokenizer.readSentence()) != null) {
+			TaggedToken[] sent = new TaggedToken[sentence.size()];
+			for (int j = 0; j < sentence.size(); j++) {
+				Token tok = sentence.get(j);
+				String id;
+				id = sentIdx + ":" + tok.offset;
+				sent[j] = new TaggedToken(tok, id);
+			}
+			TaggedToken[] taggedSent = tagger.tagSentence(sent, true, false);
+			TagSet tagset = tagger.getTaggedData().getPosTagSet();
+			Word[] words = new Word[taggedSent.length];
+			for (int i = 0; i < taggedSent.length; i++) {
+				TaggedToken token = taggedSent[i];
+				String posTag;
+				try {
+					posTag = tagset.getTagName(token.posTag);
+				} catch (TagNameException e) {
+					posTag = null; // Todo: determine which type the
+									// empty(unknown) postag should have
+				}
+				words[i] = new Word(token.token.value, token.lf, posTag);
+			}
+			taggedSents.add(words);
+
+			sentIdx++;
 		}
+
+		tokenizer.yyclose();
+		return taggedSents;
+	}
+
+	private static void print(String s, boolean silent) {
+		if (!silent)
+			System.out.println(s);
 	}
 }

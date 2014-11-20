@@ -37,6 +37,7 @@ import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.search.similarities.BM25Similarity;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
+import org.apache.lucene.search.similarities.*;
 
 import edu.jhu.nlp.wikipedia.PageCallbackHandler;
 import edu.jhu.nlp.wikipedia.WikiPage;
@@ -147,6 +148,8 @@ public class Indexer {
 	}
 
 	public static List<Map<String, String>> query(String querystr,int nbrHits) {
+        querystr = querystr.toLowerCase().replace("[^a-zåäö\\s]","");
+        System.out.println(querystr);
 		Analyzer analyzer = new SwedishAnalyzer();
 		String[] fieldNames = {"title","text"};
 		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer);

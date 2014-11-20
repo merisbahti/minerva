@@ -17,15 +17,15 @@ public class CeilingTest {
     @Before
     public void setUp() {
         al.add(new Pair<>("Vad heter Sveriges huvudstad", "stockholm"));
-        al.add(new Pair<>("Vad heter Islands Huvudstad?", "Reykjavik".toLowerCase()));
-        al.add(new Pair<>("Vilka gjorde låten Mamma Mia?", "ABBA".toLowerCase()));
-        al.add(new Pair<>("Vad är en björk?", "Träd".toLowerCase()));
-        al.add(new Pair<>("Vad kallas hundens ungar?", "valp".toLowerCase()));
+        al.add(new Pair<>("Vad heter Islands Huvudstad", "Reykjavik".toLowerCase()));
+        al.add(new Pair<>("Vilka gjorde låten Mamma Mia", "ABBA".toLowerCase()));
+        al.add(new Pair<>("Vad är en björk", "Träd".toLowerCase()));
+        al.add(new Pair<>("Vad kallas hundens ungar", "valp".toLowerCase()));
         al.add(new Pair<>("Sverige", "Stockholm"));
-        al.add(new Pair<>("Vilket år är Göran Persson född?", "1949"));
-        al.add(new Pair<>("Vad heter Sveriges huvudstad?", "Stockholm"));
-        al.add(new Pair<>("Hur gammal blev Kurt Cobain?", "27"));
-        al.add(new Pair<>("Vilken är Kinas tredje-största stad?", "Guangzhou"));
+        al.add(new Pair<>("Vilket år är Göran Persson född", "1949"));
+        al.add(new Pair<>("Vad heter Sveriges huvudstad", "Stockholm"));
+        al.add(new Pair<>("Hur gammal blev Kurt Cobain", "27"));
+        al.add(new Pair<>("Vilken är Kinas tredje-största stad", "Guangzhou"));
     }
 
     @Test

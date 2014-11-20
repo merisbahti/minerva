@@ -19,6 +19,7 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopScoreDocCollector;
+import org.apache.lucene.search.similarities.BM25Similarity;
 import org.apache.lucene.store.FSDirectory;
 
 public class QueryPassenger {
@@ -42,7 +43,7 @@ public class QueryPassenger {
 		}
 
 		IndexSearcher searcher = new IndexSearcher(reader);
-		//searcher.setSimilarity(new BM25Similarity());
+		searcher.setSimilarity(new BM25Similarity());
 		TopScoreDocCollector collector = TopScoreDocCollector.create(
 				nbrHits, true);
 		try {

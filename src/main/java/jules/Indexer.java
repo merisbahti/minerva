@@ -149,14 +149,10 @@ public class Indexer {
 	public static List<Map<String, String>> query(String querystr,int nbrHits) {
 		Analyzer analyzer = new SwedishAnalyzer();
 		String[] fieldNames = {"title","text"};
-		Map<String, Float> boosts = new HashMap<String,Float>();
-		boosts.put("title", 2f);
-		boosts.put("text", 1f);
-		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer, boosts);
-		mfqp.setDefaultOperator(Operator.AND);
+		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer);
 		Query query = null;
 		try {
-			query = mfqp.parse(querystr);
+			query = mfqp.parse(querystr.replaceAll("[^a-zåäö\\s]", ""));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -170,7 +166,7 @@ public class Indexer {
 		}
 
 		IndexSearcher searcher = new IndexSearcher(reader);
-		searcher.setSimilarity(new BM25Similarity(2f, 0.75f));
+		searcher.setSimilarity(new BM25Similarity());
 		TopScoreDocCollector collector = TopScoreDocCollector.create(
 				nbrHits, true);
 		try {

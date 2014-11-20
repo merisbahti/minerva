@@ -61,7 +61,7 @@ public class Indexer {
 			}
 		}
 		for (File f : files) {
-			doIndex(f.getAbsolutePath());
+			doIndexDocuments(f.getAbsolutePath());
 		}
 		try {
 			writer.commit();

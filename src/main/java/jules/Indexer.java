@@ -8,10 +8,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.commons.compress.compressors.CompressorException;
 import org.apache.commons.compress.compressors.CompressorInputStream;
 import org.apache.commons.compress.compressors.CompressorStreamFactory;
@@ -21,24 +17,10 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.IntField;
 import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
-import org.apache.lucene.index.IndexableField;
-import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
-import org.apache.lucene.queryparser.classic.ParseException;
-import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.queryparser.classic.QueryParser.Operator;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.TopScoreDocCollector;
-import org.apache.lucene.search.similarities.BM25Similarity;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
-import org.apache.lucene.search.similarities.*;
-
 import edu.jhu.nlp.wikipedia.PageCallbackHandler;
 import edu.jhu.nlp.wikipedia.WikiPage;
 import edu.jhu.nlp.wikipedia.WikiXMLParser;
@@ -54,7 +36,7 @@ public class Indexer {
 	}
 
 	private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
-	private static String indexDir = "./indexDir/";
+	public static String indexDir = "./indexDir/";
 	private static String outputDir = "./output/";
 	private static int counter = 0;
 	private static Analyzer analyzer;
@@ -184,56 +166,7 @@ public class Indexer {
 		return br2;
 	}
 
-	public static List<Map<String, String>> query(String querystr,int nbrHits) {
-		Analyzer analyzer = new SwedishAnalyzer();
-		String[] fieldNames = {"title","text"};
-		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer);
-		Query query = null;
-		try {
-			query = mfqp.parse(querystr.replaceAll("[^a-zåäö\\s]", ""));
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-		// 3. search
-		IndexReader reader = null;
-		try {
-			reader = DirectoryReader
-					.open((FSDirectory.open(new File(indexDir))));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		IndexSearcher searcher = new IndexSearcher(reader);
-		//searcher.setSimilarity(new BM25Similarity());
-		TopScoreDocCollector collector = TopScoreDocCollector.create(
-				nbrHits, true);
-		try {
-			searcher.search(query, collector);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		ScoreDoc[] hits = collector.topDocs().scoreDocs;
-
-		// 4. display results
-		List<Map<String, String>> results = new ArrayList<Map<String, String>>();
-		for (int i = 0; i < hits.length; ++i) {
-			int docId = hits[i].doc;
-			Document d = null;
-			try {
-				d = searcher.doc(docId);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			Map<String, String> tmpResult = new HashMap<String, String>();
-			tmpResult.put("Score", Float.toString(hits[i].score));
-			for (IndexableField field : d.getFields()) {
-				tmpResult.put(field.name(), field.stringValue());
-			}
-			results.add(tmpResult);
-		}
-
-		return results;
-	}
+	
 
 	public static void index() {
 		Analyzer analyzer = new SwedishAnalyzer();

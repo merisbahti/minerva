@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jules.Indexer;
+import jules.QueryPassenger;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +45,7 @@ public class AnswerPresentTest {
 		for(int size : querySizes){
 			presentAnswers = 0;
 			for(Map.Entry<String, String> entry : questions.entrySet()){
-				List<Map<String, String>> results = Indexer.query(entry.getKey(), size);
+				List<Map<String, String>> results = QueryPassenger.query(entry.getKey(), size);
 				if(checkAnswer(results, entry.getValue()))
 					presentAnswers++;
 			}

@@ -30,7 +30,7 @@ public class PrecisionTest {
 	}
 	
 	private static double testQuery(String query, String answer){
-		List<Map<String, String>> result = Indexer.query(query, 100);
+		List<Map<String, String>> result = QueryPassenger.query(query, 100);
 		// find all occurrences of the answer
 		// divide by all words in the result
 		int ansOcc = 0;

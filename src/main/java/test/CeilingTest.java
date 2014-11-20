@@ -1,10 +1,11 @@
 package test;
-import jules.Indexer;
+import jules.QueryPassenger;
+
 import org.junit.*;
+
 import util.Pair;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -31,7 +32,7 @@ public class CeilingTest {
     @Test
     public void firstQuestionTest() {
         for (Pair<String, String> qa : al) {
-            List<Map<String, String>> results = Indexer.query(qa.fst, 100);
+            List<Map<String, String>> results = QueryPassenger.query(qa.fst, 100);
             ResultDetails occs = occursIn(qa.snd, results);
             System.out.println("FO: " + occs.firstOccurence+"\tTOTO: " + occs.totalOccurences + "\t" + qa.fst );
         }

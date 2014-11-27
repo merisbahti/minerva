@@ -5,11 +5,12 @@ Project in computer science.
 
 ## Dependencies
 
-[Stagger.tar.bz2](http://mumin.ling.su.se/projects/stagger/snapshot.tar.bz2)  
-[wikixmlj-r43.jar](https://wikixmlj.googlecode.com/files/wikixmlj-r43.jar)  
-[Apache Solr](http://lucene.apache.org/solr/mirrors-solr-latest-redir.html?)  
-[Apache Lucene](http://apache.mirrors.spacedump.net/lucene/java/4.10.2)  
-[Wikipedia Extractor](http://medialab.di.unipi.it/Project/SemaWiki/Tools/WikiExtractor.py)
+- [Stagger.tar.bz2](http://mumin.ling.su.se/projects/stagger/snapshot.tar.bz2)  
+- [wikixmlj-r43.jar](https://wikixmlj.googlecode.com/files/wikixmlj-r43.jar)  
+- [Apache Solr](http://lucene.apache.org/solr/mirrors-solr-latest-redir.html?)  
+- [Apache Lucene](http://apache.mirrors.spacedump.net/lucene/java/4.10.2)  
+- [Wikipedia Extractor](http://medialab.di.unipi.it/Project/SemaWiki/Tools/WikiExtractor.py)
+- [Stagger swedish model](http://mumin.ling.su.se/projects/stagger/swedish.bin.bz2)
 
 ## Guides
 [Lucene in 5 minutes](http://www.lucenetutorial.com/lucene-in-5-minutes.html)  

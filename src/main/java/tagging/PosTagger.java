@@ -84,8 +84,13 @@ public class PosTagger {
 					id = sentIdx + ":" + tok.offset;
 					sent[j] = new TaggedToken(tok, id);
 				}
-				TaggedToken[] taggedSent = tagger
-						.tagSentence(sent, true, false);
+				TaggedToken[] taggedSent; 
+				try{
+					taggedSent = tagger.tagSentence(sent, true, false);
+				}catch (Exception e){
+					System.err.println(sentence);
+					continue;
+				}
 				TagSet tagset = tagger.getTaggedData().getPosTagSet();
 				TagSet netagset = tagger.getTaggedData().getNETagSet();
 				TagSet netypetagset = tagger.getTaggedData().getNETypeTagSet();

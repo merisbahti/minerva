@@ -25,10 +25,12 @@ Query abstraction (http request)
 ====================================================
                         MÖTE
 ====================================================
-* Fixa fin kurva med matlab som jämför TFDF och BM25.
-  Paragraf och dokument. 
-
-
 Att läsa:
 * IBM - Finding the needle in the haystack.
 * Pinchak - A Probabilistic Answer Type Model 
+
+att fixa:
+baseline!
+använd libshorttext för att predict category
+liblinear - logistikregression
+reranking

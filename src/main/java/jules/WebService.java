@@ -35,7 +35,7 @@ public class WebService {
             Map <String,String> qMap = queryToMap(t.getRequestURI().getQuery() == null ? "" : t.getRequestURI().getQuery());
             if (qMap.containsKey("q")) {
                 StringBuilder sb = new StringBuilder();
-                String q = qMap.get("q");
+                String q = qMap.get("q").toLowerCase();
                 List<Map<String, String>> results =  jules.QueryPassenger.query(q, 100);
                 JSONArray jsonResults = new JSONArray();
                 for (Map<String, String> result : results) {

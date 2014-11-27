@@ -38,7 +38,7 @@ public class QueryPassenger {
 				analyzer);
 		Query query = null;
 		try {
-			query = mfqp.parse(querystr.replaceAll("[^a-zåäö\\s]", ""));
+			query = mfqp.parse(querystr.toLowerCase().replaceAll("[^a-zåäö\\s]", ""));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}

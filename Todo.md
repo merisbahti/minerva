@@ -29,8 +29,8 @@ Att läsa:
 * IBM - Finding the needle in the haystack.
 * Pinchak - A Probabilistic Answer Type Model 
 
-att fixa:
-baseline!
-använd libshorttext för att predict category
-liblinear - logistikregression
-reranking
+Att fixa:
+* Baseline!
+* Använd libshorttext för att predict category
+* liblinear - logistikregression
+* Reranking

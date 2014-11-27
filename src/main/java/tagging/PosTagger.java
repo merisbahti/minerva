@@ -33,11 +33,12 @@ public class PosTagger {
 		}
 
 	}
-	
+
 	private Tagger tagger;
 	private boolean silent;
-	
-	public PosTagger() throws IOException{
+	private static PosTagger instance = null;
+
+	protected PosTagger() throws IOException {
 		this.silent = true;
 		String modelFile = "./model/swedish.bin";
 
@@ -48,7 +49,7 @@ public class PosTagger {
 			throw new IOException("Couldn't load modelfile");
 		}
 		print("Loading Stagger model ...");
-		
+
 		try {
 			tagger = (Tagger) modelReader.readObject();
 		} catch (Exception e) {
@@ -59,7 +60,14 @@ public class PosTagger {
 		modelReader.close();
 	}
 
-	public List<Word[]> tagString(String document) throws IOException {
+	public static PosTagger getInstance() throws IOException {
+		if (instance == null) {
+			instance = new PosTagger();
+		}
+		return instance;
+	}
+
+	public List<Word[]> tagString(String document) {
 		print(document);
 		BufferedReader reader = new BufferedReader(new StringReader(document));
 
@@ -67,50 +75,61 @@ public class PosTagger {
 		ArrayList<Word[]> taggedSents = new ArrayList<Word[]>();
 		ArrayList<Token> sentence;
 		int sentIdx = 0;
-		while ((sentence = tokenizer.readSentence()) != null) {
-			TaggedToken[] sent = new TaggedToken[sentence.size()];
-			for (int j = 0; j < sentence.size(); j++) {
-				Token tok = sentence.get(j);
-				String id;
-				id = sentIdx + ":" + tok.offset;
-				sent[j] = new TaggedToken(tok, id);
-			}
-			TaggedToken[] taggedSent = tagger.tagSentence(sent, true, false);
-			TagSet tagset = tagger.getTaggedData().getPosTagSet();
-			TagSet netagset = tagger.getTaggedData().getNETagSet();
-			TagSet netypetagset = tagger.getTaggedData().getNETypeTagSet();
-			Word[] words = new Word[taggedSent.length];
-			for (int i = 0; i < taggedSent.length; i++) {
-				TaggedToken token = taggedSent[i];
-				String posTag;
-				String neTag;
-				String neTypetag;
-				try {
-					posTag = tagset.getTagName(token.posTag).split("\\|")[0];
-					
-				} catch (TagNameException e) {
-					posTag = "-"; // Todo: determine which type the
-									// empty(unknown) postag should have
+		try {
+			while ((sentence = tokenizer.readSentence()) != null) {
+				TaggedToken[] sent = new TaggedToken[sentence.size()];
+				for (int j = 0; j < sentence.size(); j++) {
+					Token tok = sentence.get(j);
+					String id;
+					id = sentIdx + ":" + tok.offset;
+					sent[j] = new TaggedToken(tok, id);
 				}
-				try {
-					neTag = netagset.getTagName(token.neTag);
-				}catch (TagNameException e){
-					neTag = "O";
-				}
-				try {
-					neTypetag = netypetagset.getTagName(token.neTypeTag);
-				} catch (TagNameException e) {
-					neTypetag = "-";
-				}
-				
-				words[i] = new Word(token.token.value, token.lf, posTag, neTag, neTypetag);
-			}
-			taggedSents.add(words);
+				TaggedToken[] taggedSent = tagger
+						.tagSentence(sent, true, false);
+				TagSet tagset = tagger.getTaggedData().getPosTagSet();
+				TagSet netagset = tagger.getTaggedData().getNETagSet();
+				TagSet netypetagset = tagger.getTaggedData().getNETypeTagSet();
+				Word[] words = new Word[taggedSent.length];
+				for (int i = 0; i < taggedSent.length; i++) {
+					TaggedToken token = taggedSent[i];
+					String posTag;
+					String neTag;
+					String neTypetag;
+					try {
+						posTag = tagset.getTagName(token.posTag).split("\\|")[0];
 
-			sentIdx++;
+					} catch (TagNameException e) {
+						posTag = "-"; // Todo: determine which type the
+										// empty(unknown) postag should have
+					}
+					try {
+						neTag = netagset.getTagName(token.neTag);
+					} catch (TagNameException e) {
+						neTag = "O";
+					}
+					try {
+						neTypetag = netypetagset.getTagName(token.neTypeTag);
+					} catch (TagNameException e) {
+						neTypetag = "-";
+					}
+
+					words[i] = new Word(token.token.value, token.lf, posTag,
+							neTag, neTypetag);
+				}
+
+				taggedSents.add(words);
+
+				sentIdx++;
+			}
+		} catch (IOException e) {
+			//Do nothing more if we cant read more sentences
 		}
 
-		tokenizer.yyclose();
+		try {
+			tokenizer.yyclose();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return taggedSents;
 	}
 

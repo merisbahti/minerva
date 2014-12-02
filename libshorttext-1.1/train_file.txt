@@ -1,0 +1,2310 @@
+concept	vad kalla hästhonan ?
+description	vad göra man när man mocka ?
+definition	vad kalla det när man göra häst ren och fin med en speciell borste och skrapa ?
+concept	vad vara mule på en häst ?
+definition	vad kalla den hästfärg där häst vara vit med stor brun eller svart fläck ?
+concept	vilken kroppsdel på häst bruka man mäta häst höjd vid ?
+concept	vad heta fågel med gul bröst med svart mittband och svart huvud , som gärna äta talg i vintertid ?
+concept	vad heta fågel som vara mycket lik en talgoxe , men ljusblå på huvud ?
+concept	vilken mycket vanlig grå liten fågel förväxla pilfink ofta med ?
+concept	vad heta den fink med rödbrun rygg och undersida som sjunga vacker och vara en av Sverige vanlig fågel ?
+concept	vad kalla den gråsvart vårfågel som trippa över gräs med sin lång stjärt vippa ?
+concept	vad heta Sverige liten fågel , bara 5 gram tung ?
+concept	vilken vara värld stor apa ?
+concept	vilken apa vråla så högt att den få namn därefter ?
+concept	vad heta apa på Borneo som få namn efter näsa som växa med år ?
+concept	vilken sort apa vara kung Louie i Djungelboken ?
+concept	vilken hundlik apa , som man bruka se på Zoo , ha en stor röd bakdel ?
+concept	två av den apa som vara nära släkt med vi leva i Afrika .
+concept	vad äta säl framförallt ?
+multiplechoice	vilken säl hitta man i östersjö - sjöleopard , gråsäl eller krabbätare ?
+concept	vilken stor sälart leva i ishav och ha lång bete ?
+concept	vad kalla den sälart som ha snabelliknande nos , som kunna bli upp till 80 cm ?
+concept	vad kalla den fettlager säl ha under hud ?
+concept	vad vara en kut ?
+concept	vilken kattdjur kalla för djur konung ?
+concept	vad heta det stor kattdjur som vara randig och leva i asien ?
+concept	vilken fläckig kattdjur få en att tänka på en engelsk bilmärke ?
+concept	vad heta den amerikansk kattdjur som också kalla bergslejon och finnas som en sportklädesmärke ?
+concept	vilken fläckig kattdjur vara värld snabb däggdjur ?
+concept	vad heta en svart leopard ?
+concept	vilken rovdjur vara hos vi ofta rödpälsat , ha yvig svans och jaga om natt ?
+concept	Sverige stor rovdjur förekomma i en känna barnvisa .
+definition	vad kalla det när björn lägga sig att sova i sin bo för vinter ?
+concept	vilken katt-rovdjur heta Lynx Lynx på latin och ha tofs på öra ?
+concept	vilken rovdjur kunna också kalla ulv ?
+concept	vad kalla den rovdjur som likna en liten björn men som vara en mårddjur ?
+concept	vilken gnagare äta gärna nöt och kotte och synas ofta i träd i vår skog ?
+concept	vilken liten gnagare finnas ofta i hus på land , ta sig in genom Pyttehål , och kunna fånga i fälla ?
+concept	vilken liten gnagare finnas i svart och brun och leva ofta 1 kloak ?
+concept	vilken liten gnagare med stor kindpåse ha vi som husdjur , ofta i bur och med en hjul att springa i ?
+concept	vilken gnagare ha vi som husdjur och finnas bland annat som virvel , angora eller släthårig ?
+concept	vilken gnagare i fjäll gå ibland på lång vandring ?
+concept	vilken surra insekt suga blod som ge klia bett ?
+concept	vilken insekt bo i stack och kunna bitas så det göra ordentlig ont ?
+concept	vad kalla den insekt som sticka med en gadd och som finnas bland annat som bål och jordvariant ?
+concept	vad kalla den taggig ökenlevande växt som hos vi bli krukväxt ?
+concept	vad heta den ogräs som brännas när man röra vid det , men som kunna bli en god soppa ?
+concept	vad heta den insekt som bita sig fast i hud , suga blod och kunna ge farlig sjukdom som borrelia ?
+concept	vad kalla det hästdjur som vara svart- och vitrandigt och finnas i afrika ?
+concept	vilken stor svartvit kråkfågel bruka anklaga för att vara tjuvaktig ?
+concept	vad heta den svartvit sydpolsfågel som inte kunna flyga ?
+concept	vilken svartvit hundras finnas i titel till två av Disney teckna film ?
+concept	vad heta det björnliknande djur som finnas framför allt i kina och leva på bambu ?
+concept	vad kalla den vanlig akvariefisk som till namn låta som den finnas på Afrika savann ?
+concept	vilken fiskliknande däggdjur ha en helt egen avdelning , med uppvisning inför publik , på Kolmården djurpark ?
+concept	vad heta vattendjur som finnas både på Sverige öst och västkust och vars ansikte påminna lite om en hund ?
+concept	vad heta värld stor däggdjur ?
+concept	vad kalla den svartvit jaktval som vara en mycket snabb simmare ?
+concept	vad heta vår stor gnagare som bygga damm och bo i vatten ?
+concept	vad heta det vattendjur med tjock päls som gärna leka och heta lutra lutra på latin ?
+location	varifrån komma Sverige enda egen ponnyras ?
+concept	vad heta den norsk hästras som vara ljusgul till färg och ha ståndman ?
+concept	vilken hästras vara den enda med den extra gångart tölt och passgång ?
+concept	vad heta den liten hästras som komma från en ögrupp norr om Skottland och förr använda i gruva ?
+description	vad vara speciell med shirehästen ?
+location	från vilken land komma connemaraponnyn ?
+concept	vilken hund påminna till utseende om en varg och vara vanlig som polis och vakthund ?
+concept	en långsmal hund med kort ben på tre bokstav ?
+concept	av vilken ras vara den berömma filmhunden lassie ?
+concept	vilken hundras vara båtsman 1 vi på Saltkråkan ?
+description	vilken färg ha alltid en golden retriever ?
+concept	vad heta den teckna hund av ras beagle som gilla att sova på tak till sin hundkoja ?
+verb	vad säga man att hund göra ?
+verb	vad säga man att katt göra ?
+verb	vad säga man att höna göra ?
+verb	vad säga man att häst göra ?
+verb	vad säga man att gris göra ?
+verb	vad säga man att ko göra ?
+concept	vad kalla hund fot ?
+concept	vad kalla häst fot ?
+concept	vilken insekt låta som om den ha fler fot än den egentligen ha ?
+amount	hur mången ben ha en spindel ?
+concept	vad kalla ko fot ?
+concept	tupp ha på sin ben något som människa kunna sätta på stövel när hon rida .
+description	hur ta sig en känguru fram ?
+concept	vilken ullig tamdjur föda upp i stor skala i australien ?
+multiplechoice	leva den märklig näbbdjur på land eller i vatten ?
+concept	vilken liten björnliknande djur äta eucalyptusblad ?
+concept	Filmfisken Nemo leva i vatten utanför Australien .
+concept	vad heta den australisk vildhundarna ?
+concept	jord hög landdjur leva i Afrika .
+concept	vad heta Afrika stor landlevande djur ?
+concept	hos vilken kattdjur ha hanne en stor praktfull man ?
+concept	vilken djur kalla också öken skepp ?
+concept	vilken stor däggdjur vara vanlig i Afrika flod ?
+concept	vilken fläckig hundsläkting leva i flock , äta as och ha en läte som vara skrattlikt ?
+concept	vad heta den liten silvrig fisk som simma i stim och som på östkust kalla strömming ?
+concept	vad heta den fisk som se ut som en simma orm ?
+concept	vad heta den plattfisk som ha röd prick ?
+concept	vad heta matfisken på fem bokstav , där den tre första bokstav vara namn på åskguden i asatro ?
+concept	vilken långsmal gäddfisk ha grön ben ?
+concept	vilken stimlevande fisk vara tydlig grön- och svartrandig över rygg och äta gärna röka ?
+concept	vad heta östkust liten silvrig fisk som simma i stim och som på västkust kalla sill ?
+concept	vad heta fisk med sträv fjäll och taggig ryggfena som du kunna få när du meta eller fisk med kastspö ?
+concept	vilken stor rovfisk bruka säga stå och lura i vass ?
+concept	vilken fisk bygga man trappa till , och servera ofta röka eller grava ?
+concept	vilken fisk bruka man klubba genom is på vinter ?
+concept	vilken fisk med en färg i namn finna man i norrländsk vattendrag , men även i Vättern ?
+concept	vad kalla den orm som rassla när den bli arg ?
+concept	vad kalla det svartvit stinkdjur som spruta en mycket illaluktande vätska om det känna sig hota ?
+concept	vilken halvbjörn se ut som om den ha en bovmask för öga , och låta som den vara renlig ?
+concept	vad heta den enda vildlevande oxdjur på Nordamerika prärie , som också kalla buffel ?
+concept	vilken sort ekorre heta i Usa chipmunk och se ut som piff och puff ?
+concept	vad kalla den nordamerikansk vargsläkting som också kalla präriehund ?
+concept	vad heta Sverige enda giftig orm ?
+description	hur döda boa och pytonorm sin byte ?
+concept	vad ha kungskobran för teckning på huvud , som se ut som en synhjälpmedel ?
+concept	vilken orm tro många av misstag vara en huggorm ?
+description	mamba finnas i två färg .
+concept	vad heta värld stor orm som leva i Sydamerika ?
+concept	vad kalla den genomskinlig geléartad djur som kunna brännas ?
+concept	vilken fisk ha hästhuvud och en lång kröka bakdel ?
+concept	vad kalla det åtta eller tioarmade djur som leva i hav ?
+concept	vilken femarmad varelse leva i hav men se ut att höra hemma på himmel ?
+concept	vad heta den liten djur som tillsammans bygga rev som kunna bli stor ö ?
+concept	vilken havsväxt som finnas i till exempel blåsvariant anse nyttig att bada i ?
+concept	vilken skaldjur ha speciell fest till sin ära , särskilt i augusti ?
+concept	vilket vara den liten skaldjur 6 fisk i svensk vatten ?
+concept	vilket vara den stor havslevande skaldjur man kunna fånga i svensk vatten ?
+concept	vilken havsdjur med skal och klo förflytta sig ofta sidledes ?
+concept	vad heta den djur som vara blå på utsida av skal , och pärlemorskimrande på insida ?
+concept	vad heta den skaldjur som växa på bank , äta rå och anse vara en delikatess ?
+concept	vad heta den fisk som finnas bland annat som vita och tigervariant , och kunna attackera människa ?
+concept	vad kalla den fisk som leva i stim i Amazonas och tillsammans kunna anfalla en människa ?
+concept	vad kalla den reptil som finnas som bland annat alligator och kajman ?
+concept	vad vara det egentligen på en brännmanet som vi kunna bränna vi på ?
+concept	vad heta den liten tulpanliknande vit kräftdjur som växa på klippa och som man kunna skära sig på ?
+description	vad vara speciell med fisk fjärsing , som finnas i svensk vatten ?
+concept	vilken bär se ut som en liten jordgubbe och bruka trä på strå ?
+concept	vilken bär kalla också skog röd guld , och bli sylt till till exempel köttbulle ?
+concept	vad bjuda mor liten olle på för bära ?
+concept	vad heta den bär som mogna på höst och se ut som blåsvart hallon ?
+concept	vad heta de rödoranga bär som växa på rosenbuske och kunna bli en god efterrättssoppa ?
+concept	vad heta den gul bär som växa på myr och som man göra sylt av ?
+concept	vad heta det träd vars svartvit bark kalla näver ?
+concept	vad heta den träd som vara symbol för sparbank och vars frukt kalla ollon ?
+concept	vad heta den träd som ha flikig löv och sur röd bär i klase ?
+concept	vad heta den träd vars namn låta som en liten låda ?
+concept	vad heta den träd vara löv finnas på Kanada flagga ?
+concept	vad heta den träd vara blad darra lätt ?
+concept	vilken barrträd bruka vi traditionellt ta in till jul ?
+concept	vad kalla frukt på barrträd ?
+description	vilken form ha grankotte
+concept	vilket vara vår hög barrträd , som kalla furu när det bli planka ?
+concept	vilken barrträd som se ut som en smal buske , ha liten blå bär som kunna använda i matlagning ?
+concept	vilket vara den enda barrträd i Sverige som fälla sin barr på vinter ?
+concept	vilken insekt tillverka honung ?
+concept	vad heta den röd skalbagge med svart prick som vi ibland kalla maria ?
+concept	vilken irritera insekt trivas gärna inomhus på sommar och bruka sätta sig på mat ?
+concept	vad heta den lite klumpig och luden insekt som vara svart och gul och komma tidigt på vår ?
+concept	vad kalla den liten blodsugare som komma i jättesvärm och förknippa med Norrland ?
+concept	vad heta den flygare med fyra vinge vars namn låta som hämta ur en saga ?
+concept	vilken ogräs få efter blomning vit boll som vara rolig att blåsa iväg ?
+concept	vad heta den knallgula vårfjärilen ?
+concept	vad heta den orangefärgad fjäril med svart prick som få sin namn efter en bränna växt ?
+concept	vad heta den fjäril vars namn få en att tänka på en sjörövarflagga ?
+concept	vilken insekt som se ut som en jättemygga kalla också pappa långben ?
+concept	vad heta den vit fjäril med svart fläck på vingspets vars namn låta som en grönsak ?
+concept	vad heta sippa som bilda stor vit täcke i skog om vår ?
+concept	vad heta den vit blomma som tidigt sticka upp genom snö i rabatt , vilket höra på namn ?
+concept	vad heta lökväxt som likna en påsklilja och ha namn efter vårhelgen pingst ?
+concept	vad heta den vit blomma med gul mitt som man räkna den klassisk älska , älska inte på ?
+concept	vilken vårblomma med grön långsmal blad och liten vit klocka få sedan röd bär som vara mycket giftig ?
+concept	vad heta den växt som kunna bli flera meter hög och ha en växtsaft som kunna ge brännskada på hud ?
+concept	vilken gul blomma , se som ogräs , tycka mången gräsmatteägare illa om ?
+concept	vad heta den tidig liten vårblomma som växa i dike och också kalla hästhov ?
+concept	vad heta den gul blomma som inte ens ko gilla , men som låta som man bre den på macka ?
+concept	vad heta blomma som kunna bli 3 m hög och som få frön som vi bland annat göra olja av ?
+concept	vad heta den liljeväxt som se ut som en gul pingstlilja men blomma tidigare än den ?
+concept	vilken blomma av ärtsläktet ha en namn som låta som det höra hemma i en tantmun ?
+concept	vilken blå blomma likna en klocka ?
+concept	vilken blomma vara släkt med vitsippa och i visa " uti backe stå " ?
+concept	vilken liten blomma ha få ge namn och smak äta en tablettask ?
+concept	vilken blå midsommarblomma vara folkparti symbol ?
+concept	vad heta växt som när den blomma få liten stickig boll , som fästa lätt på kläder ?
+concept	vilken ligga , blålila växt bilda riktig matta på hed och sätta ofta 1 blomlåda vintertid ?
+concept	vilken avlång frukt vara egentligen en ört , ha gul skal som tas av innan man äta den ?
+concept	vilken exotisk frukt med gul söt kött , som ofta konservera , se ut som en stor kotte ?
+concept	vilken frukt med ofta grön fruktkött och stor som en hönsägg , ha samma namn som en nyzeeländsk fågel ?
+concept	vad heta den frukt som se ut som en persika med blank skal ?
+concept	vad heta den päronformad frukt med mörkgrön skrovlig skal och ljusgrön fruktkött runt en stor brun kärna ?
+concept	vad heta den liten frukt med mörk skrynklig skal , vars innehåll bestå mycket av kärna som man äta ?
+concept	vilken sur gul frukt pressa över till exempel fisk eller på sallad ?
+concept	vilken vanlig citrusfrukt äta vi mycket av , särskilt på vinter , och som finnas i blodvariant också ?
+concept	vad heta den frukt vi ofta äta till jul och som likna apelsin , men vara liten ?
+concept	vad heta den stor lite besk citrusfrukt som man gärna del i halva och äta med sked ?
+concept	vilken liten och grön citronliknande frukt använda ofta i matlagning ?
+concept	vad heta den japansk frukt som utvecklas ur mandarin , ha gulgrön skal och ingen kärna ?
+multiplechoice	innehålla torka frukt mycket eller lite fet ?
+concept	vad kalla vindruva när de torka ?
+concept	på jul gottebord finnas ofta dadel samt denna torka frukt på F .
+concept	vilken vanlig röd , rund grönsak använda numera ofta soltorka i matlagning ?
+concept	vilken vanlig svensk frukt , med kärnhus bortta , sälja ibland som torka ring ?
+concept	vilken liten gul frukt med stor kärna bruka man torka och sälja som naturgodis ?
+concept	vad heta den röd bär som man ofta äta till midsommar ?
+concept	vilken frukt vara stor som en äpple , men mycket glödlampsformad och växa på träd ?
+concept	vilken bär vara vanlig i trädgård och finnas i röd , svart eller vit ?
+concept	vad kalla den frukt som växa på träd , vara saftig med stor kärna och blå , röd eller gul ?
+concept	vad heta den liten röd eller gulröd bär med kärna , som växa på träd och sitta ihop två och två ?
+concept	vad heta växt med stor blad där man använda syrlig stjälk till Smulpaj , saft eller kräm ?
+concept	vilken djur spinna gärna nät för att fånga sin byte i ?
+concept	vilken kryp bruka man ha när man meta ?
+concept	vad heta den stor grön gräshoppa som man förr låta bita i vårta för att de skola försvinna ?
+concept	om man välta en sten se man ofta mängd med liten grå djur som kila iväg .
+concept	vad heta den liten skinnbagge som kunna lukta som om den fisa och därav få sin lustig namn ?
+concept	vad heta vår stor skalbagge , vars namn börja med bokstav e , k ?
+concept	vilken stor kattdjur vara horoskopdjur i juli och augusti ?
+concept	vilken fjällförsedda vattendjur vara horoskopdjur i februari och mars ?
+concept	vad heta den skaldjur som vara horoskopdjur för juni och juli men ofta äta i augusti ?
+concept	vilken skalförsett spindeldjur med klo och giftgadd vara horoskopdjur för oktober och november ?
+concept	en kastrera tjur kalla så här , och vara horoskopdjur i april och maj ?
+concept	vilken däggdjur vara bra på att klättra i berg och vara horoskopdjur för december och januari ?
+verb	vad kalla det att katt göra när den vara belåten ?
+description	hur tvätta en katt sig ?
+concept	vad ha katt ytterst på tass som göra att den kunna klättra i träd
+concept	vara ta kattmamman tag i sin unge med mun när hon skola bära de ?
+amount	en katt ha fyra tå på baktass .
+description	vad vara det för likhet mellan pelle svanslös och en manxkatt ?
+concept	vad kalla hund unge ?
+verb	en arg hund morra , men vad göra en hund som varna för fara ?
+concept	med vilken kroppsdel visa hund vanligen att den vara glad ?
+concept	med vilken rovdjur tro man hund vara släkt ?
+description	hur skola nos kännas på en frisk hund ?
+concept	vad kalla en hundgård för hunduppfödning med en annan ord ?
+concept	vad heta den långbent stor fågel som ibland bygga bo på hustak och säga komma med barn ?
+concept	vad heta den stor vacker vit fågel med lång böja hals som man se simma i damm och sjö ?
+concept	på vilken sort fågel flyga Nils Holgersson över Sverige ?
+concept	vad heta den gråvit sjöfågel som bruka cirkla runt fiskebåt för att hitta mat ?
+concept	vad kalla den sjöfågel som ha jättestor näbb med en påse under , där den förvara fisk ?
+concept	vad heta den andfågel , vanlig i parkdamm , där hanne ha klargrönt huvud ?
+multiplechoice	ha rovfågel bra eller dålig syn ?
+concept	vad heta den rovfågelsfamilj som jaga nattetid , ho och kunna snurra sin huvud en hel varv ?
+concept	vad heta den rovfågelsfamilj med kal huvud , som man på film ofta se äta död djur ?
+concept	våra stor rovfågel finnas i bland annat hav och kungsvariant .
+concept	vad heta den fågel som kunna dressera att använda till jakt ?
+concept	vad heta rovfågel som bara äta fisk och stava med gj ?
+concept	vilken fågel lägga ägg i andras bo och säga ko-ko ?
+concept	vad heta den fågel som finnas i såväl skog som städja , och som förr använda att sända brev med ?
+concept	vad heta den fågelfamilj som med näbb stöta hål i trädstam , och där den stor sort ha röd huvud ?
+concept	om vilken vanlig gråsvart fågel säga man att den kraxa ?
+concept	om två sort fågel bruka säga att de spela när de uppvakta hona .
+concept	vad heta den stor hönsfågel där hane vara färggrann med lång stjärt , och som ofta kunna se på åker och fält ?
+concept	från vilken fågel få vi vanligen den ägg vi äta ?
+concept	vad heta den fågelfamilj med stor färggrann fågel som kunna prata ?
+concept	vad heta den färggrann fågel som kunna resa sin stjärtfjäder som en solfjäder ?
+concept	vad heta den gul liten fågel som sjunga vacker och vara vanlig som burfågel ?
+concept	vad kalla den jättestor fågel som inte kunna flyga , och som numera föda upp även i Sverige för kött skull ?
+concept	vad heta den vanlig liten burfågel som vara en papegojart med nedåtböjd näbb ?
+concept	vad heta gnagare med stor framtand som gräva håla och gilla morot ?
+concept	vad heta den rödbrun hundsläkting med yvig svans som gräva sin egen lya ?
+concept	vilken liten gräva gnagare vara känna under namn krösus i Bamse värld ?
+concept	vad heta det lite klumpig grå rovdjur med svartvit-randigt huvud som gräva sin egen gryt ?
+concept	vad heta den svart liten djur med pytteliten öga , som gräva lång gång i gräsmatta så det bli liten jordhög ?
+concept	vad heta det däggdjur i Sydamerika som ha lång nos , lång klibbig tunga , och gärna äta termit ?
+concept	vilken djur få vi vanligen vår mjölk ifrån ?
+concept	vad heta tjur som sitta under korkek och lukta på blomma ?
+concept	vad heta Sverige stor vild djur med horn ?
+concept	vad heta det stor närsynt afrikansk djur med horn på nos ?
+concept	vilken djur med horn finnas bara i norra Sverige och sköta av same ?
+concept	vad heta den tamdjur som vara känna för att äta den mycken , hållas i hage och ge en god ost ?
+concept	vad heta det urgammal djur med tusentals tagg på kropp som gärna leva i vår villaträdgård ?
+concept	vad föra slag djur vara en domherre ?
+concept	vilken stor djur bruka kalla skog konung ?
+concept	vad heta den långörad snabbskuttare med klyva överläpp som det finnas gott om i Sverige ?
+concept	vilket vara Sverige enda vild kattdjur ?
+concept	vad heta Sverige enda vild grisart ?
+location	vad kalla man en område sötvatten , till exempel Vänern eller Vättern ?
+location	vad kalla jord stor salt vattenområde ?
+concept	vad kalla en vattensamling som bli efter att det regna , till exempel på gata ?
+concept	vad kalla en konstgjord stillastående vatten i en trädgård med växt och sten i ?
+concept	vad kalla en liten skogssjö med en annan ord ?
+concept	vad kalla den grund vatten som befinna sig innanför skydda rev , vanlig vid söderhavsö ?
+concept	vad heta det när vatten ström från hög höjd , till exempel utföra en berg ?
+concept	vad bilda när vind eller till exempel en båt sätta vatten i rörelse ?
+concept	vad kunna man kalla en liten flod med en enda bokstav ?
+concept	vad bruka man kalla en rinna vatten som vara liten än en å ?
+concept	vad kalla den stor svensk flod i Norrland ?
+concept	vad kalla en mycket snabb rinna vatten , ofta med sten , där man till exempel kunna åka gummibåt ?
+description	vad göra snö som töa ?
+concept	vad bruka vi kalla den snö som vara perfekt att göra snögubbe och snöboll med ?
+concept	vad kalla den vit på träd efter en kall natt , när det inte snöa ?
+amount	vid vilken temperatur frysa sötvatten till is ?
+concept	vad vara en annan namn för en snöskred ?
+concept	vad vara en annan namn för det man i nord ofta kalla jökel , dvs is och snö som aldrig smälta ?
+concept	vad heta den värdefull gul metall som man ofta göra smycke , till exempel ring av ?
+concept	av vilken metall bruka den medalj vara man få om man komma tvåa ?
+concept	vilken vara jord vanlig metall , som använda att göra stål av ?
+concept	om du komma trea få du en medalj som bestå av kopp och tenn .
+concept	vad heta den enda metall som flyta i rumstemperatur och som finnas i till exempel termometer ?
+concept	vad heta den tung mjuk metall som man ofta ha som sänke på metrev ?
+concept	nämna tre av vår fyra årstid ?
+concept	vad kalla det när mark skaka och hus falla ?
+concept	vad heta det när det blåsa stark än storm ?
+concept	när hav sänka kalla det ebb .
+concept	vad kalla vi det när mark bli frysa vintertid ?
+concept	vad vara cyklon och tromb exempel på ?
+concept	vad kalla berg som spruta eld ?
+concept	vad heta värld hård ädelsten ?
+concept	vilken stenart göra stenåldersfolket verktyg av ?
+concept	vad kalla förstena kåda som man kunna göra smycke av ?
+location	utanför vilken svensk ö finnas de berömma stenformation som kalla rauk ?
+location	var finnas den varm , smälta magma som bestå av smälta sten ?
+definition	vad kalla det väderfenomen som ge upphov till blixt och dunder ?
+description	hur regna det när det vara duggregn ?
+concept	vad kalla den frusen regn som falla som hård iskorn , ibland även sommartid ?
+concept	vad kalla den fuktighet som göra luft grå och omöjlig att se igenom ?
+concept	vad kalla den fuktighet som ligga på växt och annan på morgon sommartid ?
+concept	vad kalla med en gemensam namn regn , snö och hagel som falla från himmel ?
+location	vad heta den jättetorra plats på jord där det nästan bara finnas sten eller sand ?
+multiplechoice	vad finnas det mycket av i Sverige , barrskog eller lövskog ?
+location	vad kalla vi ofta en regnskog , där det finnas till exempel lian ?
+location	i vilken världsdel hitta man prärie där boskap ströva omkring ?
+multiplechoice	vara en myr en fuktig eller torr område i natur ?
+location	vad heta den stor gräsmarkerna i Afrika ?
+concept	vilken musliknande däggdjursfamilj vara den enda där djur kunna flyga ?
+description	varför skola man akta sig för en elektrisk ål ?
+concept	vad heta den svart insekt med en klo på bakdel , som förr tro krypa in i folk öra ?
+concept	vad finnas i kamel puckel ?
+concept	vad kalla den långsmal insekt som hållas som husdjur och på namn låta som en del av en träd ?
+description	hur hänga sengångare ofta i träd ?
+location	vilken land ha landsgräns mot sverige ?
+location	vilket vara den enda nordisk land man inte kunna köra bil från Sverige ?
+location	vad bruka vi i daglig tal kalla Nederländerna ?
+location	i vilken land heta huvudstad berlin ?
+location	vilken land i öster vara europas till yta stor land ?
+location	i vilken land heta huvudstad Tallinn ?
+concept	vilken djur vara en symbol för australien ?
+verb	vilken vattensport med en bräda utöva mycket i Oceanien ?
+description	utanför Australien kust finnas det god om haj .
+location	i vilken land , känna från inspelning av härskarringen , vara wellington huvudstad ?
+concept	på ny zeeland heta en grön frukt och en vanlig fågel likadant .
+location	mellan vilka två stor hav ligga australien ?
+location	vilket vara Sverige sydlig landskap ?
+location	det finnas två svensk landskap som bestå av varsin ö .
+location	vilket vara Sverige stor landskap ?
+location	popgrupp gyllene tid komma från Halmstad .
+location	i vilken landskap ligga mora och Siljan ?
+location	i vilka två landskap ligga Göteborg ?
+concept	vilken flagga vara blå med en gul kors ?
+location	i vilken land vara flagga röd med en vit kors och kalla Dannebrogen ?
+description	hur se japan flagga ut ?
+concept	vilken speciell flagga vara vit med fem olikfärgad ring ?
+description	hur se Eu flagga ut ?
+concept	vilken växtdel finnas på Kanada flagga ?
+location	i vilken världsdel ligga Sverige ?
+location	vilken två världsdel heta likadant fast med nord och syd framföra ?
+location	om man åka rakt söderut från Stockholm 600 mil , vilken världsdel hamna man då ?
+location	vilken världsdel vara stor ?
+location	i vilken världsdel ligga Grekland ?
+location	i vilken världsdel ligga den sydlig udde godahoppsudden ?
+location	i vilken stor svensk stad rinna Göta älv ut ?
+location	vad heta den stor flod som rinna genom bland annat Egypten ?
+location	vad heta värld stor flod som rinna i Sydamerika ?
+location	genom vilken europeisk storstad rinna flod Themsen ?
+location	vad heta Indien helig flod ?
+location	i vilken stor land finnas flod Volga , Ob och len ?
+concept	vilken vit ingrediens finnas nästan alltid med i kinesisk maträtt ?
+description	vilken hårfärg bruka infödd kines ha ?
+location	vilket av värld sju underverk vara jättelång och finnas i kina ?
+location	i vilken världsdel ligga kina ?
+location	vad heta kina huvudstad ?
+location	vad heta den brittisk koloni som återgå till kina år 1997 och som förkorta hk ?
+location	i vilken stad finnas nöjesfält grön lund ?
+organization	vad heta den populär djurpark utanför Norrköping med bland annat Bamse värld och delfinariet ?
+location	i vilken stad kunna man besöka madame tussaud's vaxkabinett och towern ?
+location	i vilken sydeuropeisk stad finnas den gammal romersk amfiteater Colosseum där man bland annat ha gladiatorspel ?
+location	till vilken ögrupp höra ö som teneriffa och lanzarote ?
+location	i vilken avlägsen land kunna du besöka ko samu1 , bangkok och phuket ?
+organization	vad heta den jättestor rund Inomhusarenan i Stockholm ?
+organization	om du gå ner där det finnas en skylt med en stor t , vad skola du troligen åka då ?
+organization	vad heta det stor friluftsmuseum på djurgård där det finnas mången djur att titta på ?
+location	vad heta den gammal del av Stockholm ?
+amount	vilken riktnummer måste du slå om du skola ringa till någon i Stockholm från en annan det av land ?
+description	vilken färgnamn ha en sal i stadshus där nobelmiddagen hållas ?
+location	vad heta den stor flygplats norr om Stockholm ?
+location	vid vilken huvudstad ligga flygplats Kastrup ?
+location	utanför vilken västsvensk storstad ligga flygplats Landvetter ?
+description	en flygplats i new york heta john f kennedy .
+location	i vilken nordisk land finnas flygplats keflavik ?
+location	vid vilken europeisk storstad ligga flygplats som stansted , gatwick och Heathrow ?
+location	på vilken ö ligga Visby ?
+location	vad heta Sverige näst stor ö med fyr lång jan ?
+location	Hallands Väderö ligga trots namn inte i Halland .
+location	i vilken stad ligga Sverige tredje stor ö , Hisingen ?
+location	vad heta den ö norr om Gotland där mången kändis ha sommarställe ?
+location	vad heta den gammal kunglig ö mitt i Vättern ?
+location	vad heta bro mellan sverige och danmark ?
+location	den berömma bro golden gate ligga i san francisco .
+location	från vilken småländsk stad gå bro över till Öland ?
+location	mellan vilka två land gå svinesundsbron ?
+description	vad vara speciell med klaff och vridbro ?
+location	i vilken svensk kustlandskap ligga hög kustenbron ?
+other	vad heta valuta , dvs peng man använda , i Norge ?
+other	vilken vara valuta i Usa ?
+other	i Sverige betala vi med krona och öre .
+location	i vilken europeisk land betala man med pund ?
+location	i vilken land med huvudstad moskva betala man med rubel ?
+location	i vilken land i asien betala man med yen ?
+location	vad heta Sverige stor stad ?
+location	vad heta Sverige tredje stor stad som ligga i Skåne ?
+location	vilken stad i Västergötland vara känna bland annat för sin populär sommarland ?
+location	vad heta stad vid Vättern som vara känna för sin polkagris ?
+location	vilken stad ha en röd färg uppkalla efter sig ?
+location	vilken vara den till yta stor stad i Sverige ?
+location	i vilken stad kunna man gå på Liseberg ?
+location	i vilken landskap finnas stad som Varberg och Falkenberg ?
+description	vad vara Orust , Tjörn och Åstol exempel på ?
+location	vad heta den nordvästskånska ort där det varje sommar spela en stor tennistävling ?
+location	vad kalla hav norr om Kattegatt ?
+amount	speciellt viktig väg i Europa bruka kalla europa väg .
+organization	vad kalla den hus där amerikansk president bo ?
+person	vad heta den stor staty som stå i New York hamn ?
+location	vad heta USA nordlig grannland ?
+location	i vilken amerikansk delstat finnas stad som san francisco och los angeles ?
+location	vilken land ha Usa landgräns till i söder ?
+abbreviation	vad stå förkortning Usa för ?
+location	i vilken stad hitta man kunglig slott och vaxholmsbåtarna ?
+location	i vilken landskap växa Emil i Lönneberga upp ?
+location	vad kalla den gränspunkt där sverige , norge och finland möta ?
+location	i vilken landskap , som också vara en ö , kunna man vandra i den speciell natur på alvar ?
+location	vilken landskap ha en måla trähäst som souvenir ?
+location	i vilken liten halländsk ort ligga köpparadiset gekås ?
+location	i vilken land kunna man se Eiffeltornet ?
+location	i vilken nordisk stad finnas nöjespark tivoli och sjöjungfrustatyn den liten havefrue ?
+location	Il vilken huvudstad finnas hyde park och buckingham palace ?
+concept	vad vara den liten italiensk stad pisa känna för ?
+location	i vilken stad i italien kunna man åka gondol på kanal ?
+location	i vilken tysk stad , tidigare dela av en mur , finnas brandenburger tor ?
+location	vad heta den stadsdel i kalifornisk los angeles som bli känna för sin filmindustri ?
+location	i vilken amerikansk storstad , också kalla " the big apple " , finnas teatergatan broadway ?
+location	i vilken land finnas såväl huvudstad himmelsk frid torg som stad kanton och shanghai ?
+location	i vilken land kunna man dyka vid stor barriärrev ?
+location	många vallfärda till stad där Jesus dö .
+location	vilken stad i Brasilien vara känna för sin karneval och föra den stor jesusstatyn på berg sockertopp ?
+organization	vilken frivillig hjälporganisation hjälpa framför allt barn , vilket höra på namn ?
+organization	vad kalla den samarbetsorganisation som 25 europeisk land , bland annat sverige , vara med i ?
+organization	vad heta den miljöorganisation vars namn på svenska betyda " grön fred "
+organization	vad betyda FN , som den fler av jord land vara med i ?
+organization	en stor hjälporganisation kalla i muslimsk land röd halvmåne .
+abbreviation	vilken engelsk förkortning med tre bokstav bruka använda för världsnaturfond ?
+other	vilken språk vara den stor språk i Usa ?
+other	vad tala man för språk i paris ?
+other	vad tala man för språk i Österrike ?
+other	vilken språk mycket än finsk vara huvudspråk 1 finland ?
+other	vilken europeisk språk tala i bland annat mexico , argentina och chile ?
+location	i vilken stor land i asien tala man bland annat språk mandarin ?
+location	vilken europeisk land se ut som en stövel på karta ?
+location	i vilken grannland kunna man åka båtlinjen hurtigrutten ?
+location	till vilken land höra ö Bornholm ?
+location	till vilken land i södra Europa ha man tjurfäktning ?
+location	i vilken land finnas Rivieran med stad som nice och cannes ?
+location	nämna ett av den tre land i Baltikum ?
+location	i vilken land , delvis i Europa , delvis i Asien , ligga Istanbul .
+location	från vilken land komma till exempel dvd-spelare och videokamera av märke sony och panasonic ?
+location	vilken land ha jord näst stor befolkning och en huvudstad som heta new delhi ?
+location	i vilken land kunna man semestra i pattaya och besöka bangkok ?
+location	i vilken stor land skola olympisk spel 2008 gå ?
+location	i Saudiarabien ligga muslim helig stad som många vända sig mot när de be .
+location	vad heta värd folkrik land ?
+location	i vilken land i Nordamerika vara både engelsk och fransk officiell språk , dvs huvudspråk ?
+location	i vilken land 1 före detta Jugoslavien kunna besöka bland annat dubrovnik ?
+location	i vilken afrikansk land kunna man åka på Safari eller besöka Nairobi ?
+location	vilken asiatisk land vara dela i en sydlig och en nordlig del , där huvudstad heta Söul och pyongyang ?
+location	två afrikansk land heta likadant , ett med tillnamn kinshasa .
+location	vilket vara den enda nordisk land som bestå av en ö ?
+location	i vilken land gå Usa in med trupp för att bland annat fånga Saddam Hussein ?
+location	i vilken land vara det fler jude , och språk man tala hebreisk ?
+location	i vilken land i asien tro många på hinduism och tala språk Hindi ?
+location	till vilken europeisk land höra ö Sicilien och Sardinien ?
+location	vara vara du om du besöka " den grön ö " , med stad som limerick och cork ?
+location	vilken land ligga mellan norge och finland ?
+location	vilket vara Afrika sydlig land ?
+location	i vilken land med gräns till portugal säga man si för ja ?
+location	vad kalla England , Skottland , wales och Nordirland med en gemensam namn ?
+location	vilken ö i Västindien ha samma namn som vår svensk lussebrud ?
+location	vilken alpland med stad basel och zürich ha få en sort ost uppkalla efter sig ?
+location	vad heta hav som ligga öster om Sverige ?
+location	vilken hav flyga man över om man åka från Europa till Amerika ?
+location	vad heta värld stor hav ?
+location	vad heta hav mellan södra Europa och Nordafrika ?
+location	vad ha hav rund pol för gemensam namn ?
+location	vad heta hav öster om Afrika ?
+location	vad heta Sverige hög berg ?
+location	i vilken nordisk land vara himmelbjerget land hög berg ?
+location	i vilken land vara galdhöppiggen och glittertind den hög berg ?
+location	vilket vara värld hög berg ?
+location	i vilken land vara fuji en helig berg ?
+location	i vilken världsdel ligga berg Kilimandjaro ?
+location	vad heta bergskedja som gå genom bland annat Österrike , schweiz och italien ?
+location	vad heta värld hög bergskedja , belägen i Asien , där bland annat nepal och Tibet ligga ?
+location	vad kalla vi den amerikansk bergskedja rocky mountains på svenska ?
+location	vilken bergskedja vara europas östgräns mot asien ?
+location	vad heta den stor bergskedja i Sydamerika där inkaindian bo ?
+location	vad heta bergskedja i norra Afrika som låta som en kartbok ?
+location	vilken nordisk land kalla också " den tusen sjö land " ?
+location	vad heta den mycket saltrika sjö som vara utan liv , och ligga på gräns mellan Jordanien och israel
+location	i vilken varm världsdel ligga Victoriasjön ?
+location	i vilken varm världsdel hitta man den stor sjö , fem sjö där bland annat michigansjön och övre sjö ingå ?
+location	Ladoga vara europas stor sjö och ligga vid st petersburg .
+description	bajkalsjön i Ryssland vara värld … , ja vad då ?
+location	i vilken land ligga Dalsland kanal ?
+concept	vad kalla den sort kanal som bruka finnas runt gammal borg ?
+concept	vad kalla den anordning i en kanal som göra att båt kunna byta nivå ?
+location	vad kalla vattenväg med mången sluss som gå tvärs igenom Sverige och förbinda östersjö med Kattegatt ?
+location	panamakanalen i Centralamerika ta över 30 år att bygga .
+location	vad heta den stor kanal som gå från medelhav genom Egypten till röd hav ?
+location	i vilken stad finnas den stor klocka big ben och piccadilly circus ?
+location	i vilken skånsk stad kalla det svartvit-randiga fotbollslag bois ?
+location	vilken stad i södra Kalifornien förknippa man med beverly hills och disneyland ?
+location	vad heta den gammal stad i Skåne , norr om Malmö , med berömma domkyrka och universitet ?
+location	vilken vara Portugal huvudstad ?
+location	vad heta den stor engelsk hamnstad i västra England som beatles komma ifrån ?
+description	vad heta folkslag som bo på Grönland ?
+multiplechoice	vara pygmé lång eller kort ?
+description	vad heta Skandinavien ursprungsbefolkning som leva framförallt i norr och förknippa med renskötsel ?
+other	vilken påhittad folkslag tillhöra Frodo och simma i saga om ring ?
+description	vad vara sioux , Inka och Maya exempel på ?
+location	vara heta ursprungsbefolkning aboriginer ?
+location	var vara oslo huvudstad ?
+location	vad heta Finland huvudstad ?
+location	vad heta Frankrike huvudstad ?
+location	i vilken land vara Reykjavik huvudstad ?
+location	i vilken land vara ROM huvudstad ?
+location	i vilken land vara madrid huvudstad ?
+location	vad heta Sverige stor sjö ?
+location	vid vilken stor avlång sjö södra ände ligga Jönköping ?
+location	vid vilken sjö ligga Stockholm ?
+location	i vilken jämtländsk sjö säga det bo en odjur ?
+location	vad heta dal stor sjö ?
+location	vad heta Sverige fjärde stor sjö , där bland annat Örebro ligga ?
+other	vad heta Sverige nationalsång ?
+location	i vilken nordisk land vara der er et yndigt land nationalsång ?
+location	i vilken europeisk land vara god save the queen nationalsång ?
+location	i vilken land vara deutschland , deutschland über alles nationalsång ?
+location	i vilken europeisk land kalla nationalsång för marseljäs ?
+location	i vilken stor land i Oceanien vara Waltzing Matilda en av två nationalsång ?
+location	i vilken land börja man tillverka volvobil ?
+location	från vilken land komma honda , mazda och toyota ?
+location	från vilken land i Europa komma renault och citroën ?
+location	varifrån komma bmw , mercedes och audi ?
+location	vad komma ford och chrysler ifrån ?
+location	varifrån komma fiat och ferrari ?
+location	vilken land förknippa med Ikea och orreforsglas ?
+location	vilken land förknippa med disneyland och skyskrapa ?
+location	vilken land förknippa med manga-serie och pokémon ?
+location	vilken land förknippa med nokiatelefon och bastu ?
+location	vilken land förknippa med kastanjett och matador ?
+location	vilken land förknippa med gondol och armanikläder ?
+location	från vilken land komma lag manchester united och arsenal ?
+location	från vilken land komma lag juventus och mila ?
+location	från vilken land komma lag valencia och barcelona ?
+location	från vilken land komma lag ajax och feyenoord ?
+location	från vilken land komma lag assyrisk och Sylvia ?
+location	från vilken land komma lag porto och benfica ?
+location	vara bära man kilt ?
+person	vilken seriefigur ha gammaldags s k golfbyxa med strumpa som gå upp till knä ?
+location	vad komma kimonon ifrån ?
+location	vilken nordisk land förknippa man med " lusekofta " ?
+location	vilken grannland till Österrike förknippa också med lederhosen ?
+location	i vilken land i Asien bära kvinna ofta Sari , en lång tygstycke som vara vira rund kropp ?
+location	vilken land förknippa vi med såväl basebollkeps som cowboyhatt ?
+location	i vilken land vara stenmarksluvan hög mode på 70-tal ?
+location	i vilken land i Nordamerika vara den bred och hög hatt Sombrero vanlig ?
+location	i vilken land använda korrekt klä affärsman en hatt som kalla plommonstop ?
+location	i vilken Medelhavsland , som vara dela mellan europa och asien , bära mången man fez ?
+location	i vilken land i Asien finnas sikh , som enligt sin religion måste bära turban över sin lång hår ?
+location	vilken land tänka man på när man höra hamburgare och Coca-Cola ?
+location	från vilken land komma pizza och spagetti ?
+location	vilken land förknippa med köttbulle , sill och smörgåsbord ?
+location	i vilken land kunna man få en " smörrebröd " ?
+location	i vilken land hitta man sushi och Sukiyaki ?
+location	i vilken land serve man te och fish and chips ?
+location	os-stad 2004 och Grekland huvudstad ?
+location	till vilken stad och klubb flytta Henrik Larsson när han lämna celtic ?
+location	vilken belgisk stad vara centrum för EU , europeisk union ?
+location	vad heta Nederländerna huvudstad ?
+location	vad heta Ungern huvudstad , som bestå av två del , varav den ena heta pest ?
+location	vad heta huvudstad på Nordirland ?
+location	vara ligga hamburg ?
+location	vara ligga chicago ?
+location	vara ligga Odense ?
+location	vara ligga yokohama ?
+location	vara ligga st petersburg ?
+location	vara ligga bombay ?
+location	vilken land i Atlanten vara känna för sin vulkan , het källa och en egen hästras ?
+location	vilken land med huvudstad tokyo kalla för Nippon på den egen språk ?
+location	vilken land i medelhav med huvudstad Nicosia vara uppdela i en grekisk och en turkisk del ?
+location	vilken land med huvudstad Dublin ligga väster om Storbritannien ?
+location	vilken land med nordön och sydön ligga sydöst om australien ?
+location	vilken land med huvudstad Havanna ha länge styra av fidel castro ?
+other	vilken religion ha man i danmark ?
+other	vilken religion ha man i irak ?
+other	vilken religion ha man i Grekland ?
+other	vilken religion ha man i israel ?
+other	vilken religion ha man i indien ?
+other	vilken religion ha man i thailand ?
+location	i vilken stad stå skyskrapa empire state building ?
+description	vilken sort naturfenomen vara niagara ?
+other	vilken titel ha den hög ledare i Usa ?
+location	vad heta den plats som vara en del av los angeles och centrum för filmindustri i Usa ?
+organization	vad heta den berömma disneyparken som ligga i florida ?
+location	i vilken hav bada man om man vara på nordamerikansk västkust ?
+location	en av Sverige mycket känna badort vara Tylösand utanför Halmstad .
+location	i vilken nordisk land ligga Skagen med sin fin strand ?
+location	på vilken populär spansk semesterögrupp i Atlanten finnas strand mas Paloma ?
+location	i vilken skånsk storstad kunna man bada mitt i stad på Ribersborg eller ribba som strand också kalla ?
+location	i vilken brasiliansk storstad ligga den berömma strand copacabana ?
+location	i vilken amerikansk delstat , som också vara en ögrupp i stilla hav , ligga waikiki beach ?
+other	på vilken språk tacka man med ord " thank you " ?
+other	på vilken språk tacka man med ord " danke schön " ?
+other	skola man säga tack i moskva säga man " spasiba " .
+other	på vilken språk tacka man med ord " merci " ?
+other	på vilken nordisk språk tacka man med ord " kiitos " ?
+other	i tokyo tacka man med ord " arigato " .
+concept	vad heta den argentinsk dans som petra Nielsen dansa i Melodifestival 2004 ?
+location	vilken nordisk land komma jenka ifrån ?
+location	i vilken land öster om finland dansa man kosackdans ?
+location	Riverdance komma från den land som bruka kalla " den grön ö " .
+concept	vilken dans dansa man på karneval i brasilien ?
+location	vilken europeisk Medelhavsland vara hemland för flamencon ?
+location	vilken land förknippa man statsminister som Göran Persson och Carl Bildt med ?
+location	vilken land förknippa man president som george bush och bill clinton med ?
+location	vilken land förknippa man premiärminister som tony blair och margaret Thatcher med ?
+location	vilken nordisk land förknippa man president som Tarja Halonen och Mauno Koivisto med ?
+location	vilken nordisk land förknippa man statsminister som Kjell Magne Bondevik och Gro Harlem Brundtland med ?
+location	vilken land i asien förknippa man premiärminister som Indira Gandhi och Rajiv Gandhi med ?
+location	i vilken land vara Madeleine prinsessa ?
+location	i vilken nordisk land vara mette Marit prinsessa ?
+location	i vilken nordisk land vara mary prinsessa ?
+location	vilken land förknippa man med Amsterdam och prinsessa maxima ?
+location	i vilken sydeuropeiskt semesterland , med huvudstad madrid , vara Letizia prinsessa ?
+location	i vilken pytteliten land vid medelhav vara caroline prinsessa ?
+organization	vad heta den dansk lekparadis som vara uppbygga av berömma liten kloss ?
+location	i vilken svensk landskap ligga Astrid Lindgren värld ?
+location	på vilken stor svensk ö finnas en stor djurpark med tillhöra tivoli ?
+other	vilken vit bullig sagofigur ha en egen värld i finsk nådendal ?
+organization	vad kalla det westerninspirerade semesterland som ligga vid småländsk Gnosjö ?
+organization	vad heta det ställe i Södertälje där man få experimentera och prova all möjlig teknisk ?
+location	vad heta Sverige grannland i öster ?
+location	i vilken stad ligga den berömma röd torg med leninmausoleet och vasilijkatedralen ?
+location	i vilken land finnas ormtjusare och helig ko ?
+concept	vad använda man som ätredskap i mången sydostasiatisk land i ställe för kniv och gaffel ?
+multiplechoice	ligga vietnam före eller efter Sverige i tid på klocka ?
+location	vad heta den järnväg som gå tvärs igenom Ryssland från moskva till vladivostok ?
+location	vad heta Danmark stor stad ?
+location	vad heta Sverige nordlig stad , känna för sin gruva ?
+location	vad heta Värmlands stor stad som ligga vid Vänern ?
+location	nämna en av den två stad på K som ligga i Blekinge ?
+location	vad heta Egypten stor stad , där man kunna se pyramid strax intill ?
+location	vad heta Ukraina huvudstad ?
+person	vad heta Sverige drottning ?
+amount	hur mången barn ha kung och drottning ?
+person	vem skola ta över tron efter vår kung ?
+concept	en svensk kung ha få en världsberömd Skidlopp uppkalla efter sig .
+concept	gustav vi adolf , vår kung farfar , syssla bland annat med historisk utgrävning .
+concept	erik xiv tro ha bli förgifta på order av sin bror Johan .
+person	vilken astrid lindgrenfigur slåss mot sjörövare i Söderhavet ?
+concept	vad kunna man hitta under x : det på sjörövarkarta ?
+concept	vilken ord som börja på P vara också en ord för sjörövare ?
+description	hur se en klassisk sjörövarflagga ut ?
+description	hur få sjörövare fånge hoppa i hav som straff ?
+concept	sjörövare vara ofta ute efter gulddubloner .
+amount	hur mången ljus vara det ofta i en adventsljusstake med stearinljus ?
+amount	vilken betrakta som oturstalet ?
+amount	hur mången sida ha en kvadrat ?
+amount	hur mången år vara en decennium ?
+amount	hur mången år vara en millennium ?
+amount	hur mången dag vara det på ett år då det vara skottår ?
+person	vad kalla du din mamma pappa ?
+person	vad kalla två syskon som föda nästan samtidigt ?
+person	vad vara din mamma syster till du ?
+person	vad vara din pappa bror eller syster barn till du ?
+person	vad burka man kalla en barn som vara föda mången år efter sin syskon ?
+concept	vad kalla det med en speciell ord när man försöka ta reda på sak om sin förfader långt tillbaka i tid ?
+concept	vad heta den spetsig byggnad som använda som gravplats och som stå kvar än i dag ?
+description	vad kalla men den balsamera linda död människa man hitta i pyramid ?
+concept	i vilken tjock bok kunna man läsa om när Moses leda israel barn ur Egypten ?
+person	vilken titel ha den egyptisk kung ?
+concept	vad vara hieroglyf i den gammal Egypten ?
+concept	en sfinx vara en speciell egyptisk staty som ha lejonkropp , men vad ha den för huvud ?
+concept	vad ha riddare på kropp för att skydda den mot skada ?
+concept	vad sitta riddare på när de strida ?
+concept	riddare hålla en lans i högerhand .
+concept	vad ha riddare för vapen i en skida på sin vänster sida ?
+concept	riddare ha ofta visir på hjälm .
+concept	vad heta tävling där riddare strida mycket på skoj ?
+definition	vad kalla man den prins eller prinsessa som skola ärva tron och bli king eller drottning ?
+person	vad heta Sverige nuvarande kung ?
+location	utanför vilken storstad ligga Drottningholm där kung och drottning bo ?
+person	vad heta kungapar enda son ?
+location	drottning silvia vara delvis uppvuxen i Brasilien , men från vilken land komma hennes familj ?
+person	vad vara vår kungafamilj efternamn ( som sällan använda av de ) ?
+person	Linus och Niclas Wahlgren ha en känna syster som spela teater och sjunga .
+person	nämna ett av förnamn på den två tjej i bubbles som vara tvilling ?
+person	vad heta lisa och Maggie Simpson storebror i den teckna serie ?
+person	vem vara prinsessa Margaretha , Birgitta , Désirée , och Christina känna lillebror ?
+person	vad heta de amerikansk megakända tvilling Mary-Kate och Ashley i efternamn ?
+concept	vilken sport syssla tvilling Henrik och Daniel Sedin med ?
+concept	vad kalla sits på en cykel med en annan ord ?
+concept	vad kalla motsvarighet till fåtölj men med flera sittplats ?
+concept	vad kalla en stol utan ryggstöd ?
+concept	vad bruka man kalla en sittplats för flera person utan ryggstöd ?
+concept	vad kalla en soffa som kunna göra om till en eller flera säng ?
+concept	vad kalla en stol med runda mede ?
+concept	vad kalla en hus i miniatyr som mången flicka leka med och möblera ?
+concept	vad kalla den sort tidsfördriv där man skola foga ihop mången bit till en bild ?
+person	vad heta docka vars pojkvän heta Ken ?
+concept	leksakstillverkaren brio ha framför allt bli känna för att tillverka leksak , till exempel tåg , av en viss material .
+organization	vilken företag vara det som göra så kalla bionicle ?
+concept	en rund trissa på en snöre anse av många vara värld gammal leksak .
+concept	vad kalla den sort mössa som en tomte bruka bära ?
+concept	vad kalla den hatt man ofta använda i " vild väster " ?
+concept	vad böra man ha på huvud om man jobba i en gruva ?
+concept	vad kalla en sportig mössa med skärm med en annan ord ?
+amount	hur mången kant ha hatt enligt en känna visa ?
+concept	vad kalla den mjuk , rund mössa som Sickan 1 jönssonligan bruka bära ?
+concept	vad heta det man sova 1 som bestå av en tröja eller jacka och en par byxa ?
+concept	vad vara en annan namn för kortbyxa ?
+concept	vad kalla en kortärmad bomullströja med en engelsk uttryck ?
+concept	vad kalla en kavaj och byxa i samma tyg , med en speciell ord ?
+concept	vad kalla en ärmlös klädesplagg med knapp eller dragkedja framtill ?
+concept	vad kalla en par byxa med hängsle och bröstlapp med en annan ord ?
+concept	vad vara bra att ha på fot om det regna ?
+concept	vad kalla sko göra av rem som korsa över fot ?
+concept	vad vara underst på en sko ?
+concept	vad ha man på fot om man åka skida ?
+concept	vilken typ av sko ha en 100-meterslöpare på tävling
+multiplechoice	vara det dam eller herre som bära pump på fot ?
+other	borta bra men hemma ...?
+concept	man skola sluta när det vara som ...?
+concept	Tala vara silver , tiga vara ...?
+concept	man skola inte gå över å efter ...?
+other	när katt vara borta ...?
+other	god fly än illa ...?
+concept	modig som en ...?
+concept	stark som en ...?
+concept	hal som en ...?
+concept	listig som en ...?
+concept	envis som en ..?
+concept	pigg som en ...?
+other	vilken färg ha bil från hemglass ?
+concept	cornettoglass finnas inte på pinne , utan som vad ?
+concept	vad heta den liten ljusgrön isglass från gb ?
+person	vilken figur ha GB som symbol ?
+concept	vad heta gb:s lyxpinnglass i flera smak vars namn betyda stor på latin ?
+concept	vilken siffernamn ha den klassisk vanilj och ischokladglassen på pinne ?
+organization	vad heta den brun läsk , på en speciell flaska , som vara konkurrent med Pepsi ?
+concept	vilken typisk svensk brun läsk sälja extra mycket till jul och påsk ?
+concept	vilken vara den vanlig smak på cider ?
+concept	vilken läsk finnas bland annat i smak citron , vild bär , exotisk frukt och fläder citrus ?
+concept	vilken läsk med en engelsk sjua i namn smaka fruktsoda ?
+amount	hur mången centiliter innehålla en liten läskburk ?
+concept	vilken vit krydda kunna utvinna ur havsvatten ?
+concept	vilken krydda finnas i bit eller strö och använda i kaffe och te ?
+concept	vilken brun krydda bruka man ha på julgröten ?
+concept	vilken vanlig krydda finnas i svart , vit och grön variant ?
+concept	vad heta den gul , jättedyr kryddpulvret som man ha i lussekatt ?
+concept	vilken örtkrydda bruka ligga på köpepizzan ?
+concept	vilken klassisk svensk snabbmat sälja i bröd med senap och ketchup ?
+concept	vilken snabbmat förknippa man med kedja som max och McDonalds ?
+concept	vilken ursprunglig italiensk rätt kunna heta vesuvio eller Calzone ?
+concept	vilken rätt bestå av tunn köttskiva från spett , grönsak och så i bröd ?
+concept	vad kalla pizza som sälja i liten pappersförpackning och som man värma i microugnen tillsammans med förpackning ?
+concept	vad heta de fritera bulle av kikärt som servera i bröd med sås ?
+organization	vad heta den stor svenska möbelvaruhus som sälja bokhylla billy i hel värld ?
+definition	hur förkorta den svensk klädkedjan hennes & Mauritz
+organization	vad heta Sverige stor livsmedelskedja , med tre bokstav i namn ?
+organization	vilken butikskedja för sportkläder ha en löparbana som symbol ?
+organization	vad heta den dansk säng och sängklädesbutik som kalla sig för bäddlager ?
+organization	vad heta den foto och elektronikkedja som säga att de vara vad de heta ?
+other	vilken färg ha Bamse på sin luva ?
+other	vilken två färg vara dominera på spidermans dräkt ?
+other	vilken färg ha knatte i kall anka på sin mössa ?
+other	vilken färg ha gubbe 1 på skylt som markera övergångsställe ?
+other	vilken färg ha ädelsten rubin ?
+other	vad kalla blågrön färg med en annan ord ?
+concept	vilken vitmålad sak med guldknopp i trädgård vara 8-12 meter hög ?
+concept	vad kalla den dela av staket som gå att stänga och öppna ?
+concept	vad kalla det när man plantera blomma tillsammans , till exempel framför hus ?
+concept	vad kalla den rad av buske , ofta klippa , som kunna ersätta en staket ?
+concept	vad kalla den behållare där växtdel förmultna ?
+concept	vad heta den gammaldags typ av klocka där skugga visa tid ?
+concept	vad vara chips göra av för rotfrukt ?
+concept	vad vara en tändsticksask göra av ?
+concept	vad vara en big pack glasslåda göra av ?
+concept	vad vara en knivblad göra av ?
+concept	vad vara en cykeldäck göra av ?
+concept	från vilken djur komma innehåll i en tagelmadrass ?
+location	vara betala man sina vara ?
+location	vara hitta man bil , däck och dumle ?
+concept	vad vara brago , ballerina och marie exempel på ?
+concept	vilken livsmedel sälja under namn som herrgård och grevé ?
+concept	vilken sort mat sälja under namn som whiskas och pussi ?
+concept	vad handla man i charkuteridisk ?
+concept	vilken snacks vara upphetta majskorn ?
+concept	vilken snacks kunna man också kalla ostkrok ?
+concept	vilken snacks kunna ha smak av Sour cream and onion ( gräddfil och lök ) ?
+organization	nämna en av den två stor snackstillverkarna i Sverige ?
+concept	vilken salta nöt vara egentligen av ärtsläktet ?
+concept	vad kalla den gräddfilsbaserade kryddsås man doppa snacks i ?
+concept	vilken vara den allra billig och naturlig dryck du kunna dricka ?
+concept	vilken varm brunsvart dryck dricka ofta av vuxen ?
+concept	vilken dryck få man genom att doppa en påse med liten växtblad i het vatten ?
+concept	vilken dryck kunna man köpa i variant som mini , mellan , lätt- , och gammaldags ?
+concept	vilken dryck kunna du få vispgrädde till om det skola vara lyxig ?
+concept	vilken ren dryck av till exempel apelsin , äpple eller ananas få du kanske till frukost ibland ?
+concept	vad förknippa man marabou med för sort godis ?
+concept	vilken tre färg vara det på Ahlgren godisbil ?
+location	hur förpacka godis som viol , svart katt och Pimpim ?
+concept	vad kalla en godisbit fastsätta på en pinne av trä eller papp ?
+concept	1 aladdinasken finnas både ljus och mörk choklad .
+concept	vad smaka djungelvrål ?
+concept	vad kalla en väska som man bära på rygg , med rem över båda axel ?
+concept	vad kalla den väska som den fler mamma och en del flicka ha sin peng och annan småsak i ?
+concept	vad kalla den sort stor väska som man packa i om man till exempel flyga på semester , och som kunna ha hjul ?
+concept	vad kalla man ofta en lite avlång tygväska som man till exempel ha sin träningskläder i ?
+concept	vad kalla den liten väska man bruka ha sin toalettsak som tandborste och tvål 1 när man vara på resa ?
+concept	vad kalla en platt väska som man förvara jobbpapper i , och som kunna ha dokument före namn ?
+concept	vad vara pommes frites göra av ?
+concept	vilken engelsk ord använda vi föra det man få om man mixa glass och mjölk och eventuell sylt eller kakao ?
+concept	om man vispa ägg och vatten och steka i stekpanna , vad få man då ?
+concept	vilken sort gryn bruka ingå i recept på chokladboll ?
+concept	nämna en av den tre huvudingredienserna i pannkakssmet ?
+concept	vad kalla den pastarätt där man varva pastaplatta , köttfärs och vit sås ?
+concept	vad kalla en korv som ofta köpa i ring , och ha namn efter en stad i dal ?
+concept	vad kalla den liten ' kunglig ' korv som ofta finnas på smörgåsbord och julbord ?
+concept	vad heta scans grillkorv vars namn betyda het hund på engelska ?
+location	från vilken nordisk land komma röd korv ?
+location	från vilken land komma korv bratwurst ?
+concept	vilken vara den dominera krydda i Salamikorv ?
+concept	vilken smörgåspålägg göra av mjölk , hyvla ?
+concept	vad kalla den söt pålägg av till exempel apelsin eller aprikos som många ha på rosta bröd ?
+concept	vilken färg ha keso ?
+concept	vilken smörgåspålägg bestå delvis av fiskägg och sälja i tub ?
+concept	vilken pålägg bestå av mala lever uppblanda med bland annat fet och kunna bre eller skiva ?
+concept	vad kalla den bredbar pålägg som koka ihop av vassla och sälja bland annat under märke fjällbrynt ?
+person	vad heta åskguden i den gammal asatro ?
+concept	i vilken religion tillbe man buddha ?
+concept	muslim kalla han allah , jude säga Jahve .
+person	vem vara den stor gud i den gammal asatro ?
+person	vad heta den romersk kärleksgud som skjuta pil ?
+concept	han kunna kalla Neptun eller Poseidon och bruka bära en treudd .
+concept	vilken månad fira vi jul ?
+concept	vilken tre månad sjunga gyllene tid om som också vara " sommarlovsmånaderna " ?
+concept	vilken vara år tionde månad men med en namn som betyda åtta ?
+concept	i vilken månad fira vi midsommar ?
+concept	vilken månad vara uppkalla efter gud Janus med två ansikte ?
+concept	i vilken månad infalla vårdagjämning ?
+organization	vilket vara den stor parti i riksdag 2004 ?
+organization	vad heta den politisk parti som förkorta m ?
+multiplechoice	hur gammal måste man vara för att få rösta i riksdagsval - 15 , 18 eller 21 år ?
+organization	vilken parti förkorta mp och ha en maskros som symbol ?
+amount	hur ofta ha vi riksdagsval i Sverige ?
+multiplechoice	hur mången procent röst måste en parti få som lite för att komma in i riksdag - 4 , 5 eller 6 ?
+location	i vilken stad sitta Sverige regering ?
+person	vad kalla den hög chef för regering ?
+organization	vilken parti ha regera mycket i Sverige den sen hundra år ?
+person	vilken minister ha hand om ekonomi och peng ?
+person	vilken minister vara den som ha hand om kontakt med annan land ?
+person	vilken minister bestämma över militär ?
+concept	vad kalla hård bröd med en annan ord ?
+description	vad ha en baguette för form ?
+concept	vilket av vår fyra sädesslag ge den ljus bröd ?
+concept	vilken sort frön bruka ligga ovanpå hamburgerbröd ?
+concept	i vilken bön höra ord vår daglig bröd , ge vi idag ?
+location	från vilken Medelhavsland komma bröd ciabatta och focaccia ?
+concept	vilken mejeriprodukt kunna vispa och lägga på tårta ?
+concept	vad bruka man ofta steka i för matfett om man inte använda olja ?
+concept	vad bruka man ha till cornflakes och kalaspuff om det inte vara mjölk ?
+concept	vad få man om man kärna , alltså vispa grädde tillräckligt länge ?
+concept	vilken mejeriprodukt finnas som naturell eller smaksätta med till exempel vanilj och som ofta äta till frukost ?
+concept	vilken sort mejeriprodukt äta man med sill och gräslök till midsommar ?
+location	hur förkorta den europeisk union ?
+concept	hur förkorta bysthållare ?
+organization	vilken morgontidning förkorta dn ?
+organization	vilken flygbolag heta egentligen Scandinavian airlines system ?
+concept	vad stå förkortning www för ?
+organization	under vilken förkortning känna vi möbelföretag Ingvar Kamprad Elmtaryd Agunnaryd ?
+concept	vad bruka man ha för speciell bulle till lucia ?
+concept	vilken bulle fylla med mandelmassa och grädde äta främst i början av år ?
+concept	vilken sort sås servera klassiskt till äppelkaka eller rabarberpaj ?
+concept	vilken färg ha marsipanöverdraget på en klassisk prinsesstårta ?
+concept	vilken blomma , göra av marsipan , vara den klassisk tårtdekorationen ?
+concept	vilken platt bakverk med vaniljkräm eller sylt ovanpå , ha namn efter Österrike huvudstad ?
+concept	vilken sort kaka baka man inför jul och stansa ut till exempel gubbe eller gris ?
+concept	vilken djurnamn ha en mjuk kaka med både mörk chokladsmet och ljus sockerkakssmet i ?
+concept	vad kalla mjuk kaka i pappersform , ofta av sockerkakssmet och med smak av till exempel blåbär eller choklad ?
+amount	hur mången sort kaka skola det vara på den klassisk kaffebjudningen förr ?
+concept	vad vara egentligen den liten hacka bit i knäck ?
+concept	vilken sort småkaka låta som en nattlig upplevelse ?
+concept	vad heta den stor landlevande köttätande dinosaurie ?
+concept	vad heta den utdöd djur som se ut som en stor hårig elefant ?
+person	den allra stor dinosaurie vara växtätare .
+person	vilken nu leva varelse vara mycket lik neanderthalarna ?
+concept	vilken djur finnas förr som sabeltandad , och kunna se i till exempel film ice age ?
+concept	vad vara den utdöd dront för sort djur ?
+concept	i vilken ämne kunna du sy kläder eller virka en grytlapp ?
+concept	i vilken ämne kunna du få hoppa bok eller spela boll ?
+concept	i vilken ämne vara det bra att kunna läsa not ?
+other	vilket vara den första främmande språk den fler svensk elev läsa ?
+concept	vilken ämne gälla om du lösa ekvation och dividera ?
+other	vilken ämne undervisa lärare ni som tala om ordklass och satsdel ?
+concept	vad heta skola två termin ?
+concept	i vilken klass börja man i mellanstadium ?
+concept	vad kalla den ledig tid som man ha mellan lektion ?
+concept	vad kalla det arbete man få med sig från skola att göra hemma ?
+person	vem vara chef över lärare på en skola ?
+concept	vad kalla med en gemensam namn den tabell som visa vad olik tal gång annan tal bli ?
+concept	vilken rotfrukt vara orange och servera ofta riva ?
+concept	vilken vara Sverige mycket äta rotfrukt ?
+concept	vid vilken helg bruka man av tradition äta nypotatis ?
+concept	vilken röd rotfrukt servera ofta inlägga och skiva till pyttipanna ?
+concept	vilken stark liten rödvit rotfrukt servera ofta till midsommar ?
+concept	vilken stor rotfrukt vara huvudingrediensen i rotmos ?
+concept	vilken liten grön rund grönsak växa i skida och köpa ofta djupfrysa ?
+concept	vad kalla den bladgrönsak som finnas som till exempel isberg eller ruccola ?
+concept	vilken grönsak bestå pizzasallad huvudsakligen av ?
+concept	vad kalla den lång smal lökväxt som vara vit nedtill och ofta skiva i gryta och soppa ?
+concept	vad heta den bladväxt som stuva och servera till bland annat steka fisk ?
+concept	den gurkliknande squash kunna också kalla en namn som låta italiensk .
+concept	vilken färg ha den ärta man vanligen koka ärtsoppa på ?
+concept	vilken vitgul grönsak ha ord " blom " i namn ?
+concept	vilken grönsak bestå av liten gul korn som växa på kolv ?
+concept	vilken färg ha den böna som tillaga med sirap och ättika och äta med steka fläsk ?
+concept	vilken grönsak med stark doft använda till att smaksätta maträtt med och lukta " lång väg " när man äta den ?
+concept	vad kalla en extra stor tomat ?
+concept	vad heta den kryddväxt som använda vid kräftkok eller till färskpotatis ?
+concept	vad heta den grön kryddväxt , ofta med lite krusig blad , som börja med per ...?
+concept	på vilken lökväxt med lila blomma använda vi den grön strå klippa över mat ?
+concept	vad kalla den kryddväxt som låta som en peng och smaka minna ?
+concept	nämna en av den två örtkrydda man bruka ha i klassisk svensk ärtsoppa ?
+concept	vilken kryddväxt dofta och smaka citron och använda ibland som dekoration på efterrätt ?
+concept	på finger samt uppmaning att höra av sig ?
+concept	handtag på köksskåp och blomma innan den slå ut ?
+concept	något man läsa i och en träd ?
+concept	övre våning och bris eller storm ?
+concept	stor sten eller kortsnagga ?
+concept	fattig och det som hand sitta länge ut på ?
+concept	att lägga sak 1 och lövträd ?
+concept	ovanför ögonbryn och att steka i ?
+concept	del med kniv och rosa färg ?
+concept	lövträd och kasta på darttavla ?
+concept	måste man betala på sin lön och piratrikedom ?
+concept	dela bröd och cd
+concept	han kanske brumma och gå i ide ?
+person	han vara motsats till natt ?
+person	han ha samma namn som arm övre del ?
+person	han ha samma namn som en skogsväg ?
+person	han kunna vara av flinta eller granit ?
+person	han finnas länge ut på trasmatta kant ?
+person	hon vara en berättelse för liten barn ?
+person	hon ha en namn som vara en vårmånad ?
+person	hon heta som att låta djupfrysa ligga framme ?
+person	hon ha en namn som få en att tänka på en sommarmånad ?
+person	hon heta som första ord vid start i en löptävling ?
+person	hon börja på L och vara Småland landskapsblomma ?
+concept	för vilken värktablett göra den liten blå man reklam ?
+organization	för vilken matbutikskedja göra stig och hans medarbetare reklam ?
+organization	vilken snabbmatskedja utbrista i ' M Lovin it i sin reklam ?
+organization	vilken kaffe skola man bjuda på om man få oväntad besök ?
+other	vad heta den teckna häst som göra att du kunna vinna på häst , enligt reklam ?
+concept	vad kalla en kort filmsnutt som göra reklam för komma program med en engelsk namn ?
+description	vilken färg ha pippi långstrump på hår ?
+concept	när man samla hår i en tofs i nacke heta det som något som finnas på en djur .
+concept	vad kalla en hel löshår med en annan namn ?
+concept	vilken frisyr bruka Obelix alltid ha hår i ?
+concept	vad kalla det när man gå till frisör och med hjälp av en kemisk vätska få lock i hår som sitta kvar ?
+concept	vad kalla den frisyr med raka skalle och en krans med hår som munk traditionell bär ?
+concept	vad kalla det nära en barn få sin namn i kyrka ?
+concept	när använda ibland ord " i nöd och lust " i kyrka ?
+concept	vad kalla den utbildning som mången tonåring gå igenom och som avsluta högtidlig i kyrka ?
+definition	vad kalla den mycket tidig mässa som hållas på juldag morgon ?
+description	vilken uppgift i kyrka ha en kantor ?
+concept	vad kalla det när man servera vin och oblat i kyrka ?
+description	under vilken årstid ta den fler svensk ut sin mycken semester ?
+concept	vilken färdsätt använda den fler svensk som semestra i Thailand för att ta sig dit ?
+concept	vad kalla den plats där man mot avgift kunna ställa upp sin tält eller sin husvagn tillsammans med andra ?
+concept	vad kalla resa köpa på en resebyrå där resa , hotell och ibland mat ingå ?
+concept	vad kalla den billig form av hotell där man ofta få städa rum själv ?
+duration	hur mången vecka semester ha man enligt lag i Sverige ?
+person	vad kalla vanlig människa som inte vara trollkarl ?
+concept	vad vara en åskvigg för något ?
+amount	hur mången huvud ha hagrids hund fluffy ?
+location	nämna ett av den två skolhus på hogwarts utom slytherin och gryffindor ?
+concept	vad kalla sten som Harry söka i första bok ?
+concept	vilken djur föreställa Harry patronus-besvärjelse ?
+person	vem vara den ond av de alla ?
+person	vad heta den ond trollkarl som ansluta sig till Sauron ?
+location	vara någonstans 1 midgård befinna sig Sauron ?
+amount	hur mången ringvålnad finnas det ?
+concept	vilken sort varelse bestå de armé av , som Sauron och Saruman bygga upp ?
+	" en ring att sämja de , en ring att främja de , en ring att djupt i mörker vid rike ...
+other	vad heta pettso katt ?
+concept	vilken sort tårta gilla Findus bra ?
+concept	vilken sort djur mycket än Findus ha pettson ?
+person	vad heta den liten fantasifigur i pettso värld ?
+person	vad heta pettso granne ?
+concept	hur mången hängsle ha Findus på sin byxa ?
+person	vad heta kall anka flickvän ?
+person	vad heta den tre knatte ?
+concept	vilken byggnad i ankeborg innehålla mycket peng ?
+concept	vad heta den typ av scout där knatte vara med ?
+person	vad heta ankeborgs god uppfinnare ?
+person	vad heta kall anka självsäker kusin , som alltid ha tur med sig ?
+person	vad heta olle lillasyster ?
+person	vad heta flicka som vara berättare i bok och film ?
+concept	vad köpa olle pappa till han av skomakare snäll ?
+person	vad heta det två syster som bo i Norrgården ?
+location	vara på gård sova bullerbybarnen tillsammans en natt ?
+location	vara gå bullerbybarnen i skola ?
+description	vilken färg på rustning ha Darth vad ?
+person	vad heta prinsessa Leia bror ?
+description	på vilken sätt vara luke Skywalker och Darth vad släkt ?
+concept	vilket vara jediriddarnas huvudvapen ?
+person	vem vara kapten på rymdskepp Millenium Falcon ?
+person	vem ha vara både luke Skywalker och Darth Vader tränare ?
+concept	vilken sort djur vara huvudperson i film aristocats ?
+description	vilken färg ha kattunge marie ?
+person	hankatten thomas hjälpa duchess och hennes unge .
+concept	vad vara syster Abigail och Amelia och deras onkel Waldo för sort fågel ?
+person	vad heta den elak betjänt som vilja ha bort katt ?
+person	två hund jaga betjänt .
+concept	vad vara robin hood för sort djur ?
+person	vad heta robin Hood fästmö ?
+person	vad heta robin Hood god kompis ?
+person	vad heta prins Johns Orm som vara hans rådgivare ?
+description	vilken jobb ha broder Tuck ?
+concept	vilken flicknamn kalla gam trigger sin armborst för ?
+person	vad heta Mowgli björnkompis ?
+concept	vad vara överste Hati och hans djungelpatrull för sort djur ?
+person	vad heta tiger som försöka döda Mowgli ?
+concept	vilken sort djur vara Kaa ?
+person	vem sjunga " jag kung vara över alla här " ?
+concept	vilken sort djur vara bagheera ?
+person	vad heta den två grannbarn som pippi leka mycket med ?
+description	vad ha kling och klang för yrke ?
+person	vem vara kung på kurrekurreduttön ?
+person	vad kalla pippi den dam som alltid försöka skicka pippi till barnhem ?
+person	vem vara en ängel i himmel enligt pippi ?
+person	vad heta den två tjuv som vilja stjäla pippi guldpeng ?
+location	vad heta pippi hus ?
+concept	vem vara herr Nilsson ?
+person	vad kalla pippi häst ?
+concept	i pippi träd kunna man ibland hitta något att dricka .
+concept	vad vara hoppetossa ?
+description	vad kalla pippi multiplikationstabell för ?
+location	vad heta gård där Emil och hans familj bo ?
+other	vad göra emil när han sitta i snickarboden ?
+person	vad heta Emils gris ?
+description	vilken jobb ha Emils vän alfred ?
+person	vad heta Emils mamma ?
+person	vad heta den gammal liten gumma som ibland jobba i Emils familj ?
+concept	vilken sort porslinsskål stoppa Emil huvud i ?
+concept	vilken sort djur nypa Emils pappa i tå när de komma lösa ?
+concept	Emil låsa in sin pappa i trisseboda .
+concept	vad äta Emil och hans gris så att de bli full ?
+concept	vad se Ida ut som när hon vara upphissad i flaggstång ?
+person	vem fånga Emil i sin varggrop ?
+concept	vem vara båtsman ?
+person	vad kalla Tjorven två syster ?
+person	vilka ha lanthandel på Saltkråkan ?
+person	vad kalla barn på Saltkråkan säl som komma ditsimmande ?
+person	vad heta teddy och Freddy lärare , som bli kär i Malin ?
+person	vad heta Stina morfar korp ?
+location	vad heta gård som familj Melkerson hyra på Saltkråkan ?
+description	vad vara det som Tjorven bruka fråga farbror Melker när han trilla i vatten ?
+person	vad heta Pelles två gammal bror ?
+person	vad heta Malin dotter , som vara med i en av den sen saltkråkanfilmerna ?
+description	varför gå farbror Melker abborrgryta inte att äta ?
+description	vilken yrke ha farbror Melker ?
+person	vad heta Madicken lillasyster ?
+location	varifrån hoppa Madicken med en paraply som fallskärm ?
+location	vad heta hus där Madicken familj bo ?
+concept	vad vara det Abbe , Madicken vän , baka ?
+concept	vilken sort maskin köpa Madicken pappa i födelsedagspresent till sin fru ?
+person	vad heta den gammal dam som bruka städa och hjälpa husa Alva hemma hos Madicken ?
+person	vad heta pojke som bli Ronja god kompis ?
+person	vad heta rövare som vara fiende till mattisrövarna ?
+person	vad heta den gammal rövare som dö i slut av film ?
+concept	vad kalla den flyga varelse som skrämma Ronja ?
+location	vad heta den ränna som dela mattisborgen i två del ?
+person	vad heta Ronja mamma ?
+location	vad heta dal som bror Lejonhjärta först komma till ?
+person	vad heta drake ?
+location	vad heta land där körsbärsdalen och törnrosdalen ligga ?
+person	vad heta skorpa egentligen ?
+concept	vilken sort djur ha Sofia hand om ?
+person	nämna ett av den två namn på bror häst
+person	vad heta Mio god kompis som rida med han ?
+person	vad heta den ond riddare ?
+concept	vem vara miramis ?
+person	vad heta Mio god kompis i Stockholm ?
+location	vad heta land där Mio pappa vara kung ?
+concept	vad vara tecken som Mio ha i hand för att visa ande vem han vara ?
+concept	vad ha Karlsson på rygg som göra att han kunna flyga ?
+concept	vilken djur önska sig lillebror ?
+concept	vad bestå kuckelimuckmedicin av ?
+concept	vad klä Karlsson ut sig till när han skrämma tjuv på flykt ?
+description	vad kalla Karlsson sig själv som syfta på hans kropp och ålder ?
+concept	vilken teknisk leksak förstöra Karlsson för lillebror ?
+description	vad göra lotta med den jumper hon få som ho inte gilla ?
+person	vad heta den snäll tant som lotta burka besöka ?
+location	vart flytta lotta när hon bli osams med sin mamma ?
+person	nämna ett av den två namn på lotta gammal syskon ?
+other	Lotta gosedjur vara en gris .
+other	vad bruka lotta säga när hon bli arg och " svära " ?
+concept	vara rymma Rasmus ifrån när han hamna på luff ?
+description	vem bo Kajsa kava hos ?
+concept	vad sälja Kajsa kava på torg ?
+description	vad skola man säga för att bli lika liten som Nils Karlsson pyssling ?
+concept	vad vara tjoffsan för djur , som skrämma Nils Karlsson pyssling ?
+person	vad heta Rasmus på luff luffarkompis ?
+concept	vad flyga Aladdin på för något ?
+location	vara bo ande som hjälpa Aladdin ?
+person	vad heta Aladdin flickvän ?
+concept	vilken sort djur ha Aladdin som kompis från allra första början ?
+concept	vad vara Jago för en djur ?
+person	vilken titel ha den ond Jafar ?
+description	vad måste man säga för att få grotta i saga om Ali baba att öppna sig ?
+amount	hur mången rövare ha Ali Baba med sig ?
+concept	vad heta den stor österländsk sagosamling där Scheherazade berätta saga i 1001 natt ?
+location	vad heta Irak huvudstad där saga i tusen och en natt utspela sig ?
+concept	vad kalla den mössa som mången person i österländsk saga bära , och som bestå av en lång tygstycke som vira rund huvud ?
+person	vilken hjälte ha efternamn sjöfarare ?
+person	vad heta den liten sjöjungfru ?
+concept	vad vara sebastian för sort djur ?
+concept	vad vara Ariel kompis blunder för djur ?
+person	vilken titel ha Ariel pappa ?
+person	vad heta dansk som ha skriva saga som vara förlaga till film ?
+concept	vad ha Ariel pappa för vapen i hand ?
+other	vad ha kejsare i kejsare ny kläder egentligen på sig ?
+concept	vilken sort fågel vara egentligen den ful ankunge ?
+concept	vad lägga man under madrass för att undersöka om det vara en riktig prinsessa ?
+amount	hur mången ben ha den ståndaktig tennsoldat ?
+person	vad heta flicka som inte vara stor än en finger i saga ?
+title	en saga heta flicka med svavelsticka .
+title	vilken tidning ha en geting som symbol ?
+title	vad heta Sverige stor och gammal kvällstidning , som också vara stor på nät ?
+location	från vilken stad komma dag nyhet ?
+title	vad heta den gratistidning som dela ut i mången svensk stad , med namn efter pari tunnelbana ?
+concept	vad kalla den tidningssida som sitta utanför butik och kiosk och göra reklam för vad som stå i tidning ?
+title	nämna lite en av tidning som förkorta GP och SvD
+title	vilken veckotidning ha ord " revy " med i titel ?
+title	vad heta ungdomstidningen som handla om popmusik och popartist med en engelsk ord ?
+title	vilken veckotidning ha en namn som antyda att den finnas hel år ?
+description	vad kalla en person som ge sig ut på uppdrag för att skriva åt en veckotidning ?
+title	vilken " skvallertidning " anknyta i sin namn till två av vår fem sinne ?
+title	vad heta Sverige stor veckotidning , med namn efter en matbutikskedja ?
+location	vilka få snövit bo ho när hon fly från den elak drottning ?
+concept	vilken frukt förgifta snövit med ?
+person	vem väcka snövit med en kyss ?
+other	vad fråga drottning den magisk spegel om ?
+person	vad förvandla sig drottning till ?
+person	vad heta dvärg som vara sur och arg och spela orgel när snövit dansa med toker och Prosit ?
+concept	vad tappa askunge när hon springa från bale ?
+concept	vilka hjälpa askunge mycket än fågel att sy färdig balklänning ?
+timepoint	när måste askunge vara hemma efter bale ?
+person	vilka bo askunge hos ?
+definition	hur hitta prins askunge ?
+concept	vad vara det som den god fe förvandla till en vacker vagn att åka till bale i ?
+person	vad kalla den figur som förr rida runt i vild väster precis som lucky luke ?
+concept	vad heta Lucky Lukes häst ?
+person	vad heta den fyra gangster som lucky luke slåss mot ?
+description	hur snabbt skjuta lucky luke ?
+concept	vad vara Ratata för djur ?
+location	när bruka lucky luke sjunga sång i ' m a poor lonesome cowboy ?
+person	vad heta Asterix god kompis , den väldig gall ?
+concept	vad dricka Asterix för att bli stark ?
+concept	vad tycka galler vara god att grilla ?
+concept	vem vara idef9 ?
+person	vad heta den romersk härskare som Asterix ofta kämpa mot ?
+person	vilken titel ha trollkarl Miraculix ?
+person	vad heta eva god tjejkompis ?
+concept	vilken instrument spela Adam ?
+person	vem vara Tobbe ?
+location	från vilken land komma Adams pappa ?
+title	vad heta långfilm om Eva och Adam ?
+person	nämna förnamn på en av den två som teckna och skriva Eva och Adam ?
+concept	vad vara muminmamman alltid klä i ?
+person	vad heta Mumin hungrig och feg kompis ?
+person	vem uppfinna massa av sak ?
+person	vad heta figur som samla på blomma och frimärke ?
+person	vad heta liten mys storasyster ?
+person	vem frysa allting till is när hon komma ?
+person	vem bli ringbäraren ?
+person	vad heta den god trollkarl ?
+person	vem följa Frodo och simma till domedagsklyftan ?
+description	vad heta andra bok i serie härskarringen ?
+concept	vilken sort varelse vara Legolas ?
+person	vem ha skriva bok ?
+person	vad heta den två första människa på jord enligt bibel ?
+concept	vad bygga Noa för att rädda djur ?
+person	vem väcka den död och göra vatten till vin ?
+concept	vad heta bibel två huvuddel ?
+amount	hur mången lärjunge ha jesus ?
+location	från vilken land leda Moses israel barn tillbaka till israel ?
+concept	Babar bli kung över elefant .
+person	vad heta den disneyelefant som ha så stor öra att han kunna flyga ?
+concept	vad vara dumbos god kompis timothy för en liten djur ?
+other	vad fattas : " fem myra vara fler än ...
+definition	vad kalla elefant förlänga framtand ?
+description	vem vara celest i film och bok om Babar ?
+description	vem vara Pluto ?
+person	vad heta Musse flickvän ?
+person	vad heta Musse pigg kompis , den långörad som ofta råka illa ut ?
+person	vad heta Musse pigg fiende som ha en färg i sin namn ?
+person	vad heta Musse pigg fiende som se ut som att han ha en svart lakan över sig ?
+person	vad heta polischef som Musse ofta hjälpa ?
+person	vad heta den snäll björn som bli stark av dunderhonung och som ha en egen tidning ?
+title	tidning om kall anka heta mycket än bara kall anka .
+title	vilken tidning med avdelning " kropp & knopp " förkorta kp ?
+title	vad heta tjejtidningen på J som ha samma namn som flicka med namnsdag 16 februari ?
+title	vad heta tidning som handla om en man som också kalla mr walker eller vandra vålnad ?
+title	vad heta tidning där du hitta schassen , fröken fröjd och nolla
+concept	vad tycka nalle Puh vara god att äta ?
+person	vem bruka studsa fram på sin svans ?
+person	vad heta pojke som vara kompis med nalle puh ?
+concept	vad tycka kanin vara viktig att odla i grönsakslandet ?
+person	vilket av djur hos nalle puh anse sig vara klok än den annan ?
+description	hur sitta Ior svans fast på han ?
+person	vad heta Harry gudfar ?
+other	när Harry ärr i panna värka vara det en tecken på att ...
+person	vad vara fångvaktare på trollkarlsfängelset azkaban för något ?
+other	i den fjärde bok dras Harry namn ur den flamma bägare , vilket innebära att han måste ställa upp i ...
+description	vad vara det för återkomma dröm som plåga harry i den femte bok ?
+person	vem regissera den tredje film harry potter och fånge från Azkaban ?
+location	vara bo hoberna ?
+person	vem spela Frodo i film ?
+other	vad vara lavskägge för något ?
+person	vad kalla Aragorn i den första film ?
+person	vem regissera den tre film om härskarringen ?
+person	nämna sex av den nio som tillsammans utgöra ring brödraskap
+person	vad heta Pelles flickvän maja i efternamn ?
+person	vad heta den två enfaldig katt som vara kompis med en elak mån ?
+person	vad heta Pelles tjock kompis ?
+person	vem bo i domkyrkotorn
+location	i vilken stad norr om Stockholm bo pelle och hans kompis ?
+person	vem ha skriva bok om pelle svanslös ?
+person	vad heta Georges hund som utföra nummer 5 i skara ?
+person	vad heta George egentligen ?
+person	vem vara ung av den fyra barn ?
+description	hur vara george släkt med den annan barn ?
+person	vad heta Georges pappa i förnamn ?
+person	vad heta hus där Georges familj bo ?
+description	vilken färg ha Tintin hund Milou ?
+person	vad heta Tintin vän , den högljudd kapten ?
+person	vad heta den två klantig detektiv som vara tvilling ?
+person	vilken av figur i Tintin ha problem med hörsel ?
+description	vilken yrke ha Tintin
+location	vad heta kapten Haddock slott ?
+person	vad heta den teckna hund som gilla att sova på tak till sin hundkoja ?
+person	vilken katt slåss alltid med mus Jerry ?
+person	vad heta den teckna seriekatten som älska lasagne ?
+person	vad heta hund som vara kompis med räv Micke i en disneyfilm ?
+person	vad heta den hund som tillsammans med kompis Shaggy jaga spöke på film ?
+person	vad heta hund som vara seriekatten Gustafs kompis ?
+concept	vad vara lady och lufsen för sort djur ?
+concept	vad äta lady och lufsen för maträtt varje julafton ?
+person	vad heta pojkvalpen i lady och lufsens första kulle ?
+concept	vilken hundras vara lady ?
+concept	i vad sätta de sin tassavtryck i den våt cement ?
+concept	vad spela stor tjock tony för instrument för den två ?
+person	vad skola groda förvandla till när prinsessa kyssa den ?
+concept	vilken metall vara prinsessa krona som regel göra av i saga ?
+person	vad heta prinsessa som sticka sig på en slända och sova i 100 år ?
+concept	vad bruka den pojke som erövra prinsessa i saga dessutom få ?
+concept	i en känna balett och saga förvandla trollkarl prinsessa till en fågel .
+description	hur kunna rapunzels älska prins klättra upp och rädda hon ?
+person	vem bli värld stark björn när han äta dunderhonung ?
+person	vad heta Disney teckna hjortunge som mången felaktig ta för en rådjur ?
+person	vad kalla buse som alltid försöka stjäla farbror Joakim peng ?
+person	vad heta Bambi kaninkompis ?
+description	vilken färg ha barbapapa ?
+person	vad heta den teckna mus Bernard flickvän i disneyfilmen ?
+person	vad heta harry pott vit uggla ?
+person	vad heta den tjej , duktig på att trolla , som bli Harry vän under första år på hogwarts ?
+person	vad heta hogwarts jättelik skogvaktare som vara vän till harry ?
+person	vad heta Harry god vän ro i efternamn ?
+person	vem vara rektor på hogwarts när harry komma dit ?
+concept	vilken djur tappa Neville alltid bort ?
+person	vem gilla att spränga sak ?
+person	vem köra alltid bil ?
+person	vem vara dynamit-harry kär i ?
+person	vad vara Sickan riktig förnamn ?
+other	vad vara det för färg på diamant jönssonligan jaga i en film ?
+person	vad heta liga rik fiende ?
+concept	vad vara Aslan för sort djur ?
+person	vad heta Lucy , Edmunds och Susan storebror som bli kung i Narnia ?
+timepoint	vilken årstid vad det alltid när häxa regera ?
+location	hur komma peter och hans syskon till Narnia första gång ?
+person	vad heta land som bebo av ond människa och vara fiende till Narnia innevånare ?
+location	vad vara parravel i Narnia ?
+person	vad heta serieälgen som alltid bli jaga ?
+concept	vilken sort djur vara kall kompis Hobbe ?
+person	vilken nummer ha soldat som egentligen heta mandel Karlsson
+concept	hur se oppfinnar-jockes medhjälpare huvud ut ?
+person	vad heta den lat torpare med hustru Malin som gärna ligga på sofflock ?
+person	vem vara gift med Selma Olsson
+concept	vilken farlig sagodjur kunna spruta eld ?
+concept	Casper vara snäll .
+person	vad heta den greve som suga blod och kunna förvandla sig till en fladdermus ?
+concept	hur skola måne vara för att en människa förvandla sig till en varulv
+concept	vilken grönsak skrämma bort vampyr ?
+concept	vad vara den animera shrek för sort monster ?
+person	vem skola Rödluvan gå med mat till ?
+description	vad hända med Pinocchio när han ljuga ?
+amount	hur många vara saga bock Bruse ?
+concept	vilka bo i hus där guldlock gå in och äta och sova ?
+person	vad heta man som bli skeppsbruten i land lilleputt ?
+person	vad heta flicka som hamna i land oz med sin hund toto ?
+concept	vilken sport syssla Anja Pärson med ?
+concept	vilken enskild gren vara den snabb av de som Anja tävla i ?
+concept	vad kalla käpp man köra igenom i slalom och storslalom när de stå parvis ?
+description	Anja egen segergest kalla " säl " .
+person	en av Anja släkting träna hon och den svensk alpin damlaget .
+location	Anja Pärson vara uppvuxen i samma liten Fjällby som bland annat Ingemar Stenmark .
+location	i vilken land gå sommar-OS 2004 ?
+location	vilken vara den enda svensk stad som arrangera Os ?
+location	vilken stad i australien ha sommar-OS 2000 ?
+location	i vilka två nordisk land ha Os aldrig arrangera ?
+location	vilken stad i amerikansk utah arrangera vinter-OS 2002 ?
+location	i vilken sydtysk stad gå sommar-OS 1972 ?
+concept	vad påverka segel i en båt så att båt ta sig fram ?
+concept	vad kalla den hög stång som bära upp segel på en båt ?
+verb	vad göra man när man hala segel ?
+verb	vad använda man en roder till ?
+concept	vad kalla den segelbåt för nybörjare som man lära sig segla i ?
+verb	vid motvind kunna man inte segla rakt fram utan måste ta sig fram lite snett mot vind .
+verb	vad göra man när man tävla i dart ?
+definition	vad kalla den spänna tråd som sitta på en pilbåge ?
+amount	hög möjlig poäng för en pil i dart vara 60 .
+description	vilken färg ha den liten prick i mitt på en darttavla ?
+concept	viss naturfolk använda sig av lång rör för att skjuta iväg pil .
+description	vad vara en koger ?
+concept	vilken sport utöva Malin baryard och jan brink ?
+concept	vad kalla sport där en kusk köra häst på en snabb bana , till exempel på Solvalla eller Åby ?
+concept	vad kalla ryttare på en galopphäst med en annan namn ?
+concept	vad kalla det när man tävla med fyra häst spänna framför en vagn ?
+concept	vad kalla den ridsport där man skola visa upp häst lydnad genom olik rörelse på en bana ?
+location	i vilken landskap ligga hästsportcentrat Flyinge ?
+concept	vad kalla den löpgren där fyra i en lag avlösa varandra på bana ?
+distance	vilken vara den kort löpsträckan på Os ?
+concept	vad kalla den hinder löpare springa över i en lopp , till exempel på distans 110 m ?
+concept	vad kalla den löpgren där man springa 42 195 meter ?
+distance	om man springa två varv rund löpbanan , vilken löpgren ha man då delta i ?
+concept	vad kalla en kortdistanslöpare med en annan ord ?
+concept	vilken sport utöva Kajsa Bergqvist och Stefan Holm med framgång ?
+concept	i vilken sport ha Christian Olsson och jonathan edwards dominera länge ?
+concept	vad kalla den hoppsport där man hoppa allra högt ?
+concept	i vilken friidrottsgren använda man sig av något som förr vara en kastvapen i bland annat nord ?
+concept	vad kalla den friidrottsgren där man kasta iväg en sort skiva ?
+concept	vad heta den kastgren där kula sitta i en stålvajer ?
+person	vad bruka tidning kall carolina som smeknamn ?
+concept	vilken vara Carolina huvudsaklig gren inom friidrott ?
+concept	vilken medalj vinna carolina i sjukampstävlingen vid Os i Aten 2004 ?
+concept	förutom sjukamp tävla carolina i en hoppgren .
+location	Carolina bo sedan 7 år ålder i Växjö .
+other	nämna tre av den gren som ingå i sjukamp ?
+concept	vilken redskap ha man i hand när man spela golf ?
+concept	vad sitta i hål på en golfbana så man se de på lång håll ?
+person	vad heta den svensk golfspelerska som dominera damgolfen i mången år ?
+concept	vad kalla det område med extra fin gräs som finnas runt hål ?
+amount	hur mången hål vara det i en komplett golfbana ?
+concept	vad kalla den kort slag man göra för att få ner boll i hål ?
+concept	vilken simsätt vara uppkalla efter en insekt ?
+person	vilken svensk simtjej med mästerskapsmedalj 2004 kalla Tessan ?
+concept	vilket vara den enda simsätt där man starta i vatten ?
+distance	hur lång vara en kort bassäng i simtävlingssammanhang ?
+concept	vad kalla simsätt crawl 1 tävlingssammanhang ?
+concept	vad kalla den simtävling där all fyra simsätt ingå ?
+concept	istället för att säga att man skola bada kunna man säga att man skola ta sig en ...?
+concept	vad kalla det märke med olik färg från år till år som man kunna få om man simma 200 meter ?
+concept	vad skola man alltid ha på sig för säkerhet skull , när man ge sig ut på sjö ?
+distance	hur långt måste man simma för att få märke silverfisk ?
+location	vad böra man ha vara innan man kasta sig i den iskall vatten vid vinterbad ?
+concept	vad vara en jacuzzi för något ?
+concept	vad ha en dykare på fot ?
+concept	vad vara det som dra en vattenskidåkare i en tävling ?
+concept	vad kalla den genomskinlig mask som dykare bära för öga ?
+concept	vilken simsport tävla anna Lindberg framgångsrik i ?
+multiplechoice	vad vara den hög höjd i Simhoppstävlingen i en os – 8 , 10 eller 12 m
+concept	vad heta den sport som se ut som handboll i vatten ?
+concept	vad kalla den gummitrissa som man använda i ishockey ?
+person	vad vara ishockeyspelare peter Forsberg smeknamn ?
+amount	hur mången utespelare vara det på plan i en ishockeylag ?
+location	vad heta Stockholms stor ishockeyarena ?
+concept	vad heta det göteborgslag som spela i elitserie under mången år ?
+duration	vad vara den vanlig tid att sitta utvisa ?
+concept	vad ha man i hand när man åka längdskida ?
+concept	vad kunna skidsko kalla med en annan ord ?
+concept	vad smörja man under skida för att få de att glida god ?
+concept	vad kalla den anordning på skida där du fästa pjäxa ?
+concept	vad heta det stor långlopp som gå i dal varje år i mars ?
+distance	vad vara den lång herrsträckan på en skid-sm ?
+description	hur se målflaggan ut i motorsport ?
+concept	vad stå förkortning f1 i motorsport för ?
+person	vem sitta bredvid rallyföraren och planera väg ?
+concept	vad heta sport där man köra motorcykel på en backig terrängbana , och där ' carla ' Carlqvist vara stjärna ?
+person	vad heta den svensk stjärnracerförare i Indycar som vinna indianapolis 500 ?
+concept	vilken vara den snabb motorsport som köra på kort rak bana ?
+amount	hur mången person måste man lite vara för att kunna gunga på en gungbräde ?
+concept	vad kalla spel där man rulla liten rund föremål tillverka av glas , sten eller metall ?
+concept	till vilken spel behöva man en tennisboll , slagträ och en brännplatta ?
+verb	vad kalla lek där man hoppa på en ben på en uppritat rutmönster ?
+verb	vad göra man om man hoppa till exempel ' strömhopp ' eller ' klocka ' ?
+verb	vad kalla det när två person ha en elastisk band om ben , och en tredje hoppa i olik kombination ?
+concept	vad måste man ha på hund om man gå i skog , särskilt på vår ?
+concept	i vilken snabb hundsport vara det vanlig med greyhound och vinthund ?
+verb	vad kalla det när hund gå fint bredvid husse eller matte ?
+concept	vad vara det eskimå åka 1 som dras av deras hund ?
+concept	vad säga man till hund när man kasta en boll eller pinne och vilja att hund skola hämta den ?
+concept	vad kalla det när man springa en hinderbana på tid med sin hund ?
+concept	vilken olympisk skjutgren få en att tänka på robin hood ?
+concept	vad använda man för tävlingsvapen om man hålla det i en hand när man skjuta ?
+amount	vad vara den hög poäng för en skott när man skjuta på en tavla ?
+concept	vad kalla en gevär som man ' ladda ' genom att böja ner gevärspipa och sätta i en blyhagel ?
+concept	vilken fågel ha få ge namn äta det lerföremål man skjuta på i trapskytte ?
+concept	vilken vinterbetonad skjutgren ha magdalena Forsberg ta mången medalj i ?
+amount	hur mången kägla skola man slå ner ?
+amount	hur mången hål vara det vanligen i en bowlingklot ?
+amount	hur mången slag ha man på sig att få ner kägla ?
+concept	vad måste man ta på sig innan man gå ut på bowlingbana ?
+concept	vad kalla det när man slå ner all kägla på en slag ?
+concept	i vilken geometrisk form stå kägla på bana ?
+location	från vilken stad komma Hammarby ?
+location	från vilken skånsk stad komma den anrik fotbollslag hif ?
+location	från vilken stad komma mff ?
+location	från vilken stad komma häck ?
+location	från vilken stad komma öster ?
+location	från vilken stad komma dif-älvsjö ?
+concept	vad kalla bordtennis i daglig tal ?
+concept	i vilken racketsport använda man en fjäderboll ?
+concept	vad ha två badmintonspelare mellan sig på plan ?
+concept	vad kalla den första slag 1 racketsport ?
+concept	vilken racketsport spela både på grus och gräs ?
+concept	vilken racketsport heta som en grönsak ?
+person	vad heta Sverige god tennisspelare genom tid , av många anse som värld god ?
+person	vem sitta utmed plan långsida i en hög stol under tennismatch ?
+amount	hur mången poäng få man för första vinna boll i varje game ?
+amount	hur mången game måste man lite vinna för att vinna en set ?
+organization	vad heta den stor engelsk grästennistävlingen varje sommar ?
+organization	vad heta världsmästerskap i lagtennis för herre ?
+concept	vad måste en proffscyklist ha på huvud för att få ställa upp ?
+concept	vad finnas mellan trampa och bakhjul som göra att cykel driva fram ?
+concept	vad kalla den speciell typ av cykel som man stå på med ena ben , medan den annan skjuta fart ?
+description	vara på cykelhjulet sitta nav ?
+concept	vad bruka den som leda ett cykellopp , som gå under flera dag , få bära för plagg ?
+concept	vad kalla den speciell motorcykelsport som köra på en isbana ?
+multiplechoice	vara en handboll stor eller liten än en fotboll ?
+amount	hur mången utespelare per lag finnas det på plan ?
+amount	hur mången steg få en handbollsspelare springa utan studsa boll ?
+concept	vad kunna man också kalla en sjumeterskast ?
+multiplechoice	vilken svensk herrlag ha vinna fler sm på sen år - lugi , redbergslid eller Skövde ?
+person	vem ha under mången år vara framgångsrik handbollstränare för Sverige ?
+concept	hur se mål i basket ut ?
+concept	vad kalla det om man tackla sin motståndare i basket ?
+concept	vad betyda den engelsk ord basketball på svenska ?
+description	vad vara typisk för mången basketspelares kroppsbyggnad ?
+amount	hur mången poäng få man om man få boll i korg från lång håll ?
+location	från vilken land den s K dream team i basket ?
+description	vilken färg vara det på ordinarie speldräkt byxa ?
+person	vilken smeknamn ha Henrik Larsson ?
+concept	vad ta damlandslaget för medalj 1 usa-vm 2003 ?
+person	vad få fotbollstränare Lars Lagerbäck och tommy Söderberg för gemensam smeknamn ?
+concept	vilken medalj ta Sverige 1 usa-vm 1994 ?
+definition	vad kalla den som leda och träna landslag med en speciell namn ?
+person	vad heta den anfallare i förnamn som heta Ibrahimovic i efternamn ?
+organization	till vilken storlag gå Henrik Larsson när han lämna celtic ?
+person	vad heta den landslagsspelare som av press fåt smeknamn " drottning Vickan " ?
+organization	i vilken svensk lag spela Kim Källström senast innan han bli utlandsproffs ?
+person	två svensk landlagsstjärna vid namn hanna och Fredrik ha samma efternamn .
+person	vad heta Malmö och damlandslagets duktig målvakt som vara med i VM 2003 ?
+location	i vilken lan höra lag som bayern münchen och kaiserslautern hemma ?
+location	från vilken nordisk land komma fotbollslag Rosenborg ?
+organization	till vilken italiensk storlag gå Zlatan när han lämna ajax ?
+location	i vilken land hitta man lag som porto och benfica ?
+location	i vilken stad höra den spansk topplaget i vit dräkt hemma , som heta real före stadsnamnet ?
+organization	vilken engelsk topplag kalla också the red devils
+concept	vad kalla den metallögla på sadel som ryttare hålla sin fot i ?
+concept	vad vara en trippelbarr för något ?
+amount	hur mången fel få man när häst riva en hinder i hoppning ?
+concept	vad skruva man i häst sko vintertid för att den inte skola halka på snö och is ?
+concept	vad kalla det dressyrmoment i den hög skola där häst trava på ställe ?
+concept	vad kalla ryttare ben med en fackuttryck ?
+concept	när man köra en häst använda man töm .
+concept	vad kalla den läderrem som man lägga på häst för att kunna spänna den för en vagn ?
+concept	vad kalla den sort sadel där man rida med båda ben på samma sida om häst ?
+concept	vad kalla remmare utan bett som man sätta på häst huvud för att till exempel leda eller binda den ?
+concept	under vad placera man en vojlock ?
+concept	vad vara en rockard ?
+concept	vem i ishockeylaget ha en plockhandske ?
+duration	hur lång vara en period i ishockey ?
+concept	vad kalla nedsläpp av puck med en annan ord ?
+concept	vad kalla det ögon och ansiktsskydd som alla juniorspelare måste bära
+concept	vad kalla det när man otillåten slå undan motståndare fot med klubba ?
+concept	vad kalla skydd för underliv ?
+verb	vad kalla det när man gå på två käpp som ha fotsteg en bit ovanför mark ?
+concept	vad kalas den bräda med fyra hjul som mången tonåring åka och göra konst på ?
+concept	vad kalla det spel med träklot i flera färg och båge som man spela på trädgård gräsmatt ?
+verb	vad göra du om du hålla i en lång lina som ha en bit plast , spänna på en ram med svans , i annan ände ?
+concept	vad kalla den liten sladdlösa bil som styra med hjälp av en kontrollpanel som man hålla i hand ?
+concept	vad kalla den rund skiva av plast som man kasta så den spinna i luft ?
+location	från vilken stad komma djurgård ?
+concept	vad heta Karlstads ishockeylag i elitserie ?
+location	från vilken stad komma Brynäs ?
+location	från vilken stad komma modo ?
+organization	vad heta Jönköpings ishockeylag i elitserie ?
+location	från vilken stad komma björklöv ?
+concept	vad kalla den bräda med upphöja ände och bindning för fot som man åka nedför backe med ?
+concept	vilken lagsport på is , med böja klubba och röd boll , ha elva spelare i lag ?
+verb	vad göra curlingspelarna för att sten skola glida bra på is ?
+concept	vad kalla den skidgren där man skola komma så långt som möjlig i 70 eller 90-metersbacken ?
+concept	vad kalla en båt som ha till uppgift att köra sönder is så att annan båt kunna åka där ?
+concept	vad kalla den sort isfiske där man sitta och fiska genom en hål i is ?
+concept	vad vara bra att ha med sig för att lätt kunna ta upp en fisk man fånga ur vatten ?
+concept	vad kalla den ofta rödvit sak som gå under vattenyta när man få napp ?
+concept	vad kalla den sort fiske där man sitta med spö och mask på krok ?
+concept	vad kalla det fiskespö där man kasta med drag och rulle ?
+concept	vad använda man föra fångstredskap på den stor fiskebåt för att få så mycken fisk som möjlig ?
+concept	vad kalla den del av krok som göra att fisk inte kunna ta sig loss igen ?
+concept	vad kalla den typ av japansk brottning där deltagare vara extremt tjock ?
+description	vilken färg ha ofta en judodräkt ?
+description	vad ha man på fot i österländsk kampsport ?
+multiplechoice	vara det judo eller ju-jutsu som vara en olympisk sport ?
+title	vad heta den populär film om den ung karatekillen och hans gammal läromästare miyag1 ?
+location	från vilken land komma den defensiv försvarstekniken aikido ?
+concept	vad kalla den knut man lära sig knyta som scout ?
+other	vad vara scout valspråk ?
+other	1 hur många av vår sex bebo världsdel finnas scouting ?
+concept	vad kalla det prov man måste avlägga för att få använda kniv som scout ?
+concept	vad vara en jamboree ?
+person	vem grunda scoutrörelse ?
+description	vem göra första drag i en schackparti ?
+other	vad kalla det om man fånga motståndare kung så den inte kunna undvika att slåss ut ?
+concept	vilken pjäs gå två steg fram och ett åt sida , eller en steg fram och två åt sida ?
+description	vad innebära det när en parti sluta med remi ?
+amount	hur mången ruta vara det på en schackbräde ?
+description	hur kunna man få en bonde att bli förvandla till en dam ?
+concept	i vilken gammal spel med fyra färg på pjäs kunna du knuffa ut di motståndare ?
+concept	vad spela man med när man spela svart Petter ?
+concept	vad heta den spel där man skola få fem kryss eller nolla i rad på rutad papper ?
+verb	vad heta spel där man på rutad papper försöka hitta den annan gömma fartyg ?
+other	vad skola man slå med tärning för att få en Yatzy i spel med samma namn ?
+concept	i vilken spel med stjärnformad spelplan , skola man gå med sin pjäs , ofta kula , till bo på annan sida ?
+money	hur mycken peng få man varje gång man passera gå ?
+location	vilken gata höra ihop med Norrmalmstorg sist 1 spelvarvet ?
+concept	vad heta den två olik sort kort man få dra och läsa från ?
+location	vilken gata få man lite hyra för när man bygga hotell ?
+location	vilken station komma först efter gå ?
+money	vad kosta en hus på Strandvägen ?
+concept	vad kalla den 2 eller ibland 3 kort som ingå i en kortlek och föreställa en man i Narrmössa ?
+amount	hur mången kort vara det i en vanlig kortlek , bortse från joker ?
+concept	räkna upp den fyra färg i en kortlek ?
+verb	vad gå spel svälta räv ut på ?
+concept	vad heta den klassisk kortspel med fem kort där man kunna få till exempel kåk , triss eller två par ?
+concept	vad kalla en kortspel för bara en person ?
+title	vad kalla lek där en räkna medan den annan gömma sig ?
+title	vad kalla lek där man sitta i en ring runt en flaska ?
+title	i vilken lek säga man " fågel , fisk eller mitt emellan " ?
+concept	vad heta den lek där en person få öga förbinda , sedan snurra runt och skola hitta någon ?
+title	vilken namn ha lek där man gå runt stol till musik , och det alltid fattas en stol ?
+concept	vad kalla den lek där man med hjälp av kropp försöka föreställa en ord eller en mening ?
+concept	en kanotist använda en paddel .
+description	åt vilken håll sitta man vända när man ro en roddbåt ?
+amount	hur mången sitta i kanot i tävlingsklass k2 ?
+description	finnas både gren ro och kanot med 1 sommar-OS ?
+concept	vilken medalj ta kanotist marcus Oscarsson och Henrik Nilsson vid sommar-OS i Aten 2004 ?
+location	i vilken land gå den berömma roddtävling mellan den två universitet oxford och cambridge ?
+description	betyda motionera detsamma som att träna ?
+description	den enkel form av motion vara att gå .
+concept	vad kalla motionslöpning i lugn tempo med en ord från engelska ?
+concept	vilken sort skida motionera mången skidåkare med sommartid ?
+concept	vad heta den populär förening som syssla med motionsgympa och förkorta F & S ?
+concept	vilket vara den engelsk ord föra motionsformen där en eller flera tillsammans trampa motionscykel ?
+concept	vad behövas som underlag om du till exempel skola göra volt ?
+concept	vad kalla den stege som bruka finnas på vägg i den fler gymnastiksal ?
+concept	om man tävla på redskap bock eller plint , vilken gymnastikgren tävla man då i ?
+concept	vad kalla den två ring , hänga från tak , som gymnast träna och tävla i ?
+concept	vad kalla det tävlingsredskap som man gå balansgång på ?
+concept	vilken namn , med anknytning till djurrike , ha den redskap som se ut som en bock med två handtag överst ?
+concept	vad kalla issporten som vara en uppvisning på skridsko ?
+concept	vad vara hockeyrör för något ?
+verb	vad göra ismaskinen för att is skola bli blank och fin före till exempel en ishockeymatch ?
+concept	om man göra en dubbel axel , vilken sport syssla man då med ?
+concept	vad kalla den typ av skridsko man åka flera mil med , till exempel på sjö ?
+distance	vilken vara den lång sträcka man åka när man tävla i skridskoåkning på bana ?
+concept	vad kalla den populär sport där man spela med en böja plastklubba och plastboll inomhus ?
+concept	vad slå man till boll med när man serva i volleyboll ?
+concept	vad vara en annan namn för bangolf , som mången spela på semester ?
+concept	på vilken underlag spela beachvolleyboll ?
+concept	vilken sport kalla soccer i usa och england ?
+concept	vad kalla den typ av bollspel , vanlig i Usa , med oval boll där man måste ha hjälm och skydd ?
+location	vad heta den stor inomhusarenan i Göteborg ?
+location	i vilken stad befinna du du om du gå på en rockkonsert på ny Ullevi ?
+location	vad heta Sverige nationalarena i fotboll ?
+location	i vilken stad ligga den berömma engelsk fotbollsarena wembley stadium ?
+concept	fransk öppen mästerskap i paris spela på roland garros-arenan .
+location	i vilken stad i dal ligga skidanläggning lugn ?
+concept	vad ha man på när man 1 sportsammanhang hoppa ut från flygplan ?
+concept	vad hindra du från att falla till mark när du hoppa bungy jump ?
+location	vara befinna du du om du ta hiss upp till 274 meter höjd i paris ?
+concept	vad kalla en flygplan utan motor ?
+concept	vad få vanligen en luftballong att flyga ?
+concept	vilken våga sport kräva rep , speciell sko och en sort spik kalla pitonger ?
+concept	vilken sport syssla peter " Foppa " Forsberg med ?
+concept	Andreas Isaksson vara svensk landslagsmålvakt vi em i portugal 2004 .
+concept	vilken sport syssla Jesper Parnevik med ?
+concept	vilken typ av motorsport ha tony Rickardsson ta mången medalj i ?
+concept	vad bli Ingemar Stenmark världsmästare i för spörja ?
+concept	vilken vintersport förknippa man bror mathias och Thobias Fredriksson med ?
+concept	vilken sport förknippa man hanna Ljungberg med ?
+person	vilken svensk utförsåkartjej få smeknamn pillan ?
+concept	vilken sport förknippa man Annika Sörenstam och lotta neumann med ?
+concept	vilken sport förknippa man med Josefin Lillhage och Anna-Karin Kammerling ?
+person	vad heta den svensk löpartvillingarna Jenny och Susanna i efternamn
+concept	vilken sport förknippa man helena Lundbäck och Paula Törnqvist med ?
+location	J-o Waldner förlora os-guld i sydney mot kong linghui och os-bro i Aten mot Wang Liqin .
+concept	vilken sport förknippa man Zinedine Zidane med ?
+concept	Michael Schumacher ha vinna formel 1 flera gång på 2000-tal .
+person	vad heta den golfspelare , med förnamn som en rovdjur , som dominera sport länge ?
+location	från vilken nordisk land komma skidåkare thomas alsgaard och Anders Aukland ?
+concept	amerikan Michael Phelps ta 8 medalj i Os i Aten 2004 .
+concept	i vilken sport kunna domare döma icing eller tripping ?
+concept	med klubba i hand och skridsko på fot lägga spelare en hörna med sin boll .
+concept	om man tävla på räck , barr eller fristående , vilken sport syssla man då med ?
+concept	om man slå en smash eller forehand på en grusbana , vilken sport handla det då om ?
+concept	om man slå en slice med järnsjuan , vilken sport ägna man sig troligen åt då ?
+concept	om häst göra piaff och passage , vilken ridgren tävla den då i ?
+concept	vilken sport syssla Pelé , diego maradona och roland Nilsson med ?
+concept	vilken sport syssla Gunde svan och björn Dählie med ?
+concept	vilken sport syssla wayne gretzky och Leif " honken " Holmkvist med ?
+concept	vilken sport syssla John Mcenroe och Mats Wilander med ?
+concept	vilken sport syssla Ludmila Engkvist med ?
+concept	vilken sport syssla Muhamad ali med ?
+concept	vad ha man i hand när man spela trumma ?
+concept	vad kalla pinne som en höjdhoppare måste över för att klara sin hopp ?
+concept	vad ha man i hand när man ändra kanal på TV ?
+concept	vad ha man i hand när man spela squash ?
+concept	vad kalla den liten ” hållare ” man sätta boll på vid utspel i golf ?
+concept	vad ha man i hand när man spela bridge ?
+person	vem sjunga den svensk vinnarlåten 2004 det göra ond ?
+person	vad kalla sig Kayo , Gladys och Blossom som grupp när de vinna 2002 med never let it go ?
+person	vem vara en känna hårtofs och vinna Melodifestival 2000 med när vind viska min namn ?
+person	vem skriva text och musik till låt det göra ont som len Philipsson van med 2004 ?
+title	vad sjunga bror Herrey att de ha på fot när de vinna 1984 ?
+title	vad heta charlotte Nilsson Perrelli låt take me to your heaven på svenska , som ho vinna med 1999 ?
+location	från vilken land komma sånggruppen Abba ?
+person	säga förnamn på en av abba:s medlem ?
+organization	vad döpa tonårsgruppen abba-teens om sig till när de inte länge få ha Abba i namn ?
+person	vad heta abba-agneta i efternamn ?
+title	vad heta den musikal med abba-låt som visa över hel värld ?
+title	vad sjunga en av tjej i Abba att hon göra med lärare i en känna låt ?
+concept	vad raska räv över i vise ?
+concept	vad vara visa tre gubbe göra av ?
+concept	vilka slå i glas och skola lustig vara ?
+concept	vad vara det som komma mellan jul och påsk i visa ?
+description	hur vara det i hus i visa midnatt råda ?
+description	varför kunna ren Rudolf lysa upp väg för tomte i visa ?
+person	vilket vara Carola flicknamn ( efternamn ) ?
+title	vilken låt slå Carola igenom med i Melodifestival ?
+title	med vilken låt vinna Carola den internationell Melodifestival 1991 ?
+person	vad heta Carola son ?
+location	från vilken land komma Rune , som Carola tidigare vara gift med ?
+location	vilken stad finnas i titel på Carola gulskiva ?
+amount	hur mången juleljus vara det som tända i psalm som börja med " nu tända … " ?
+title	vilken psalm med nummer 199 i psalmbok vara den klassisk skolavslutning psalm ?
+other	vilken vara ord 3 och 4 i psalm stilla natt ?
+concept	vilket vara den klassisk instrument man spela i kyrka till psalmsång ?
+timepoint	vid vilken tid på år sjunga psalm hosianna i kyrka ?
+description	vilka vara det som vara så trygg i psalm trygg kunna ingen vara ?
+person	vem sjunga " tjolahopp tjolahej tjolahoppsan-sa " i visa om sig själv ?
+concept	vad skola ekorre skala i den känna barnvisa ?
+other	vad fråga man broder Jakob i visa ?
+concept	vad få lillebror av lamm i visa bä bä vit lamm ?
+person	vem sjunga visa liten katt i en film ?
+concept	vilken ädelsten sjunga man om i blinka liten stjärna ?
+title	vad heta barnversionen av TV4 sikta mot stjärna ?
+title	vilken program på vår vara en tävling i musik mellan europeisk land , och som vinna bl. a av Carola och Abba ?
+title	vilken program , avse att vaska fram ny musiktalang , förkorta ofta ff ?
+person	vem bli programledare för allsång på skans efter lasse Berghagen ?
+person	vem ha under mången år vara programledare för musikfrågeprogrammet så skola det låta ?
+person	vem ha vara programledare för program diggiloo ända sedan start ?
+location	från vilken nordisk land komma markoolio ursprungligen ?
+title	i vilken tv-program med vikingatema spela markoolio bärsärk ?
+person	vilken superskurk som slåss mot kapten filling ha markoolio spela i en tv-serie för barn ?
+person	vad heta markoolio egentligen i förnamn ?
+title	vilken astrid lindgrenfigur spela markoolio vår 2004 på teater i Stockholm ?
+title	vad heta markoolios officiell låt till Em 2004 i fotboll ?
+organization	vad heta den band som Per slå igenom med och som nu återförena igen ?
+person	vad heta den världsberömd duon där per sjunga ihop med Marie Fredriksson ?
+title	vilken bakverk ha per soloskiva från 2003 namn efter ?
+location	från vilken stad komma per ?
+other	vara sitta Per i början av låt här komma all känsla på en och samma gång ?
+person	vad heta pers förstfödd i förnamn ?
+location	från vilken land komma britney ?
+title	titel på en sång med britney gå i did it again .
+person	vilken kvinnlig superstjärna ge en uppmärksamma kyss till britney på en mtv-gala ?
+organization	Britney vara länge tillsammans med Justin timberlake .
+title	vad heta titellåten på Britney första skiva från 1999 ?
+person	vad heta Britney lillasyster , som också vilja in i bransch ?
+description	hur vara Nicke och Nilla släkt med varandra ?
+description	när Nicke och Nilla rycka ut och hjälpa barn , vad kalla de sig då ?
+concept	Nicke sjunga om sin kompis kaj .
+location	vara i hus finnas Nicke och Nilla rum ?
+concept	vilken sort farlig fisk simma i Nicke pool i en sång ?
+person	vad heta Niclas och Pernilla , som spela Nicke och Nilla i efternamn ?
+amount	hur mången person ingå i en duo ?
+title	vad heta sång som after dark tävla med i Melodifestival 2004 ?
+organization	vad heta sångduon med Jessica och Magnus som vinna Melodifestival 2003 med give me your love ?
+location	från vilken land komma bror Olsen som vinna eurovision song contest 2000 ?
+person	tillsammans med vem sjunga Pernilla Wahlgren låt let your spirit fly i Melodifestival 2003 ?
+person	art garfunkel bilda på 60 och 70-tal en världsberömd Sångduo .
+organization	vad heta tjejbandet som tävla i Melodifestival 2003 med tko ( knock you out ) och 2004 med blow the spot ?
+person	nämna förnamn på lite en av den båda tjej som hoppa av från grupp friends ?
+organization	vad heta den svensk rocktjejbandet från Robertsfors som få en att tänka på öken ?
+person	nämna efternamn på en av tjej i trio Kikki , Bettan och lotta ?
+person	nämna förnamn på en av den tre veteran som tävla i Melodifestival 2004 med c ' est la vie ?
+other	tjej i Raymond & Maria sjunga i en låt " ingen vilja veta vara du köpa … " ja , vad då ?
+title	vad heta skiva där simmare åka på semester ?
+description	vad hända om man inte bygga en toalett äta sin simma ?
+title	på vilken skiva kunna simmare skaffa husdjur ?
+description	på vilken två sätt kunna simmare söka jobb ?
+concept	vilken sort poäng få man när simmare måla tavla ?
+description	vart bli barn skicka om de inte läsa sin läxa ?
+title	vad heta SVT sportmagasin för barn ?
+title	vad heta SVT konsumentprogram för barn som test olik sak ?
+person	vad heta den liten grön tv3-figur vars mössa bestå av nordisk flagga ?
+title	vad heta det populär frågesportsprogrammet för femteklassare ?
+concept	vad kalla hushållsmaskinen som johanna laga mat med i program rätt i ruta ?
+other	på vilken språk vara barnprogrammet karamelli på SVT ?
+location	från vilken land komma Evert Taube , som skriva mången känna visa ?
+person	vad heta den kompositör 1 efternamn som heta wolfgang Amadeus i förnamn ?
+concept	österrikare Strauss skriva en vals om blå Donau .
+location	vilken nordisk land komma Edvard Grieg från ?
+description	Beethoven kunna till slut inte höra sin egen musik .
+location	från vilken land i södra Europa komma tonsättare Vivaldi , Puccini och verdi ?
+description	vilken två färg bruka tangent på en piano ha ?
+concept	vad heta det instrument med bälg och knapp som hållas på mage och som dräng alfred i Lönneberga spela på ?
+concept	vad heta den flöjt , ofta av trä , som den fler börja spela på ?
+concept	vad kalla det man föra över sträng för att få ljud ur en fiol ?
+concept	vad heta det blåsinstrument , forma som en påse , som vara vanlig i Skottland ?
+concept	vad spela du om du spela slagverk , bland annat på virvelkagge och cymbal ?
+concept	vilken djur synas först på Bolibompa ?
+description	vilken färg ha bolibompadraken ?
+timepoint	vilken tid börja bolibompa på vinter ?
+concept	vad landa drake i för något när hon hamna framför TV ?
+description	vilken färg vara drake ballong ?
+concept	nämna två av drake vän ?
+person	vilken vara B1 och B2 ?
+concept	vad använda barn som ringa till lattjo lajban för att styra dataspel Yumi ?
+person	vem äga affär som banan i pyjamas bruka handla ?
+person	vem i lattjo lajban bruka snoka reda på sak ?
+person	vad heta den två råtta som ha en detektivbyrå i lattjo lajban ?
+person	vem i lattjo lajban bruka prova olik sport men lyckas inte alltid så bra ?
+organization	vilken tv-kanal gå jeopardy på ?
+amount	hur mången tävla mot varandra i en jeopardyomgång ?
+person	vem ha vara jeopardys programledare i Sverige sedan start 1991 ?
+money	vad vara den liten belopp man kunna vinna på en ruta ?
+concept	den tävla skola inte ge svar .
+person	vad kalla den som vinna en dag tävling ?
+timepoint	vilken dag gå sist avsnitt av en julkalender på TV ?
+person	vad ha Håkan för smeknamn i julkalender 2003 som handlägga om han ?
+person	vilken julkalender ha katt som huvudperson ?
+title	vad heta julkalender där lucky Closette ofta säga " äckelpotta " ?
+description	all huvudperson utom julhunden i kalender jul hjälte vara samma sort sak .
+person	vad heta pojke som bo med sin morfar i nudådalen ?
+concept	vad kalla den speciell tecken man ha när man skriva musik ?
+amount	hur mången sjunga när det vara solosång ?
+definition	vad kalla det när mången person , ibland flera hundra , sjunga tillsammans ?
+multiplechoice	vem sjunga den hög ton , barytonsångaren eller sopransångaren ?
+concept	när musik vara lite ledsen kalla det moll .
+concept	vad kalla det när någon börja sjunga en vers , och andra börja senare på samma vers , som till exempel i broder Jakob ?
+person	sjua vara en av två figur med ett siffernamn .
+person	vad heta den mörkhyad kille ombord på rymdskepp ?
+person	vad heta Peo fru som bli bortröva ?
+description	vilken jobb ha Peo innan han åka ut i rymd ?
+person	vad heta den rysk flicka som hitta nedfrysa i en sputnik ?
+person	vad heta kvinna som stå på rymdmacken innan Peo ta över ?
+title	vad heta TV4 gör-det-självprogram för händig som under flera år ledas av Martin Timell ?
+title	vad heta nyhetsprogram som gå på SVT 1:a halv åtta varje kväll ?
+multiplechoice	vara innehåll i en dokumentär påhittad eller verklig ?
+location	från vilken plats i Stockholm bruka det sända allsång på TV varje sommar ?
+concept	vad vara packa och klar och när och fjärran för sort tv-program
+concept	vad kalla bild som visa i tv-ruta när ingen program sända , och som kunna använda för att ställa in TV ?
+concept	vilken djur finnas i skattkammare ?
+concept	vad kalla den rum där de tävla få göra olik uppgift ?
+location	var befinna sig far fouras och dag Bäckman , som ställa fråga till den tävla ?
+concept	vad vara " boyarderna " som lag skola samla så som möjlig av från skattkammare ?
+location	i vilken land ligga fort boyard , där program spela in ?
+person	vem leda hans Fahlén program ihop med ?
+concept	vad måste man ha köpa för att kunna vinna på bingo-lotto ?
+amount	om du vinna en bil men ha en dubbellott , hur mången bil få du då ?
+concept	vad kalla tävling där man öppna numrera lucka , och inte få öppna mycket än en i varje färg ?
+person	vem vara bingo-lottos förste programledare ?
+person	vem bli ny programledare för bingo-lotto 2004 efter lasse Kronér ( och en kort tid med " lok " )
+location	från vilken stad i Sverige sända bingo-lotto ?
+other	vad kalla den samling i slut av varje program där en person bli utröstad ?
+other	vad bruka den två tävla lag kalla ?
+person	vad heta hon i förnamn som vinna SVT allra sist robinsonfinal 2004 ?
+location	expedition robinson sända från ö i thailand eller malaysia .
+person	vem vara programledare för expedition robinson sommar 2004 ?
+title	vad kalla den tävling i slut av varje säsong där deltagare balansera på stock ovanför vatten ?
+organization	på vilken kanal gå tv-program farmen ?
+person	vad bli den utnämna till som skola få bestämma komma vecka ?
+location	en efterföljare till den första farmen-serien spela in i en annan världsdel .
+concept	vad kalla den tävling där två person skola redogöra för sin kunskap om lantliv ?
+person	vilken smeknamn ha bonde som bruka hjälpa den tävla med viss praktisk sak ?
+verb	vad utse den två som skola tävla i vecka tvekamp till ?
+person	vad heta den förra skidåkare som leda program i mången år ?
+concept	vilken vara alltid den sist och avgöra gren i varje tävling ?
+multiplechoice	vilken av följa vara inte en gladiator : amber , Elektra eller Gaia
+description	vilken vara dag " dagg " Olsson funktion i program ?
+concept	vad kalla gren där man skola springa fort genom en 45 m lång bana med 5 gladiator ?
+concept	vad kalla den gren där boll skola ner i korg , vakta av gladiator ?
+verb	vad bruka publik göra när teaterpjäs precis vara slut ?
+concept	vilka bruka sitta i ett s k dike framföra scen på en musikteater ?
+concept	vad kalla den draperi som hissa upp eller dras ifrån scen när teater börja ?
+concept	vad kalla den sort musikteater dit till exempel mamma mia och chess räkna ?
+concept	en teaterstycke som vara rolig kunna kalla komedi .
+concept	vad kalla den sort musikteater där man sjunga hel tid , och där det sjunga hög sång , som kalla aria ?
+person	vad heta SVT " bildoktorn " i förnamn ?
+person	vad heta den skånsk kocktjej 1 förnamn som bli känna för uttryck " jättegott !
+title	i vilken sommarprogram för händig ha Ernst Kirchsteiger vara programledare ?
+title	i vilken tv-program för folk som gilla gammal grej kunna man få sin sak värdera av en expert ?
+title	i vilken av SVT nyhetsprogram ha man kunna se Katarina Sandström och Claes Elfsberg i ruta ?
+title	vad heta konsumentprogrammet med test av olik sak där Sverker Olofsson länge vara programledare ?
+person	vem slå igenom i 2004 år Melodifestival med min kärlek ?
+person	vad heta den countrytjej som göra succé i Melodifestival 2003 med crazy in love ?
+person	vilken artistnamn ha sångerska anna Sahlin ?
+organization	Nina Persson göra 2003 solodebut med a camp .
+person	vad heta den poptjej med efternamn Carlsson som sjunga bland annat keep this fire burning och don ' t stop the music ?
+person	vad heta den Sara i efternamn som ha framgång med låt stark och som storm i Melodifestival ?
+concept	vilken instrument förknippa man robert wells med ?
+person	vilken artistnamn använda Martin Eriksson , som göra paradise i Melodifestival 2004 ?
+person	vad heta den popkille som alltid uppträda O underlig klänningsliknande dräkt och sjunga om rymd och kärlek ?
+person	vad heta den artist som göra både sensuell Isabella och i natt vara jag di ?
+person	vad heta latinokillen som tävla i Melodifestival 2003 med just like a boomerang och 2004 med Olé Olé ?
+person	vad heta björn i efternamn som skådespelat 1 drömkåken och få en hit 2003 med håll mitt hjärta ?
+organization	vad kalla sig brandman som bli schlagerartist ?
+organization	vad heta den grupp där dogge doggelito vara sångare ?
+organization	vad kalla sig den norrländsk folkpopgrupp som göra bland annat genom eld och vatten och älva ?
+organization	vad heta grupp med Ola Salo som frontfigur ?
+organization	vad kalla sig den skämtsam popare som tävla i Melodifestival med maria och ho komma med solsken ?
+organization	vad heta grupp , vars namn vara en pojknamn , och som släppa bland annat vapen och ammunition ?
+organization	vilken låt göra spansk tjejgruppen La ketchup succé med 2003 ?
+organization	vad heta flickbandet med karaktär som posh , sporty och baby som vara som stor på 1990-tal ?
+organization	vad heta den amerikansk tjejgruppen med Beyoncé som frontfigur som göra say my name ?
+organization	vad heta band med klös som göra bland annat whole again och cover eternal flame ?
+organization	vad heta den engelsk tjejgrupp som göra singel som hole in the head och too lost in you ?
+title	vad heta låt med namn som en pålägg , där bland annat christina Aguilera och Li ' l kim sjunga med missy Elliott ?
+location	från vilken land komma band backstreet boys ?
+location	från vilken ö-land komma band Westlife ?
+organization	vad heta den klassisk engelsk popbandet som göra bland annat help , yesterday och all you need is love ?
+location	från vilken land komma band the Rasmus ?
+person	vilken amerikansk superstjärna kompa av e street band ?
+organization	vad heta hiphopgruppen som få en hit med hey ya ?
+description	vad vara gubbe Noak för sort man enligt Bellman visa ?
+location	vara synas fjäril vingad i Bellman visa ?
+person	vilken två förnamn , som börja på C och M , ha Bellman ?
+timepoint	under vilken århundrade leva Bellman ?
+person	vilken svensk kung hjälpa Bellman mycket ?
+person	vad heta flicka Winblad 1 förnamn som Bellman skriva mycket om ?
+organization	vad heta dansband där mathias Holmgren efterträda Magnus Carlsson som sångare ?
+organization	till vilken band gå Magnus Carlsson som 2003 få en hit med låt not a Sinner nor a saint ?
+organization	vilken dansband bilda genom en dokusåpa på TV4 som följa de på turné ?
+organization	vad heta det dansband med sångare Christer Sjögren som göra mången kramgoa låt ?
+organization	vad heta dansband med bland annat Casper Janebrink och Lasseman Larsson ?
+organization	vad heta dansband där såväl Kikki Danielsson , charlotte Perrelli som paula Pennsäter vara sångerska ?
+title	vilken dans sjunga petra Nielsen om i Melodifestival 2004 ?
+concept	i vilken dans inom hip-hopen göra man movesen " backspin " och " headspin " där man snurra kropp snabbt ?
+concept	vad heta den dansform som uppföra på scen till klassisk musik , och där flicka ha tåspetssko ?
+concept	om du sikta mot stjärna eller fame factory vara det lämplig att gå en kurs i …
+concept	vad vara det för dans i tre fjärdedel takt som kunna heta Wiener- före namn ?
+concept	vilken dans förknippa man med brasilien och karneval i Rio ?
+concept	vad kalla en musikskiva som bara innehålla en eller två låt ?
+organization	vad heta den stor småländsk rockfestival som äga rum varje sommar ?
+title	i vilken musikprogram på TV 4 bedöma en jury , tillsammans med tittare , sångare som vilja bli popstjärna ?
+amount	hur mången år fylla gyllene tid på sin jubileumsturné 2004 ?
+concept	vad kalla det nära amatör sjunga till förinspelad musik till exempel på en restaurang ?
+location	i vilken stad hållas sommar klassisk rockfestival i danmark ?
+concept	inuti vad bruka en cirkus uppträda ?
+concept	vad kalla den rolig figur , ofta med röd näsa , som bruka finnas på varje cirkus ?
+concept	vilka vara den stor djur som bruka uppträda på cirkus ?
+concept	vem vara den finklädd man som bruka presentera artist ?
+concept	vad ligga på manege golv , där häst springa ?
+concept	vad kalla den sort gunga som artist hänga i när de göra konst högt över publik ?
+person	vad heta den tjock liten man med röd keps och mustasch som det finnas mången tv-spel om ?
+concept	om du köpa en fifaspel till din dator , vilken sort spel vara det då ?
+other	vad heta Nintendo sen tv-spelskonsol ?
+other	vad heta den liten bärbar spelkonsol från Nintendo ?
+title	i vilken tv-spelsserie vara den grönklädde link hjälte ?
+person	vad heta hjältinna i den klassisk tombraider-spelen ?
+person	främling , vad dölja du föra jag … ?
+organization	sitta på en sten vid en sjö i en skog … ?
+person	mycken mål , vi vilja ha mycken mål … ?
+person	sommar vara kort , den mycken regna bort … ?
+organization	you are the dancing queen , young and sweet , only seventeen … ?
+person	stockholm i min hjärta , låta jag besjunga du nu … ?
+organization	sommartid hej hej …
+person	jag leva i delirium … ?
+organization	hej hej monika , hej på du monika … ?
+organization	we all live in a yellow submarin … ?
+person	helt galen , galen i du … ?
+organization	snäll ta jag tillbaka till liv vi leva igen , 1985 … ?
+organization	morgonprogram med nyhet kunna man se på TV4 och en av SVT kanal .
+organization	vilken tv-kanal ha sända underhållningsprogram gladiator ?
+organization	vilken tv-kanal ha en kort namn på bara en bokstav + TV ?
+organization	vad heta sportkanalen som ha en del av vår världsdel i namn ?
+organization	på vilken kanal gå Sverige radio lokalradio ?
+organization	vilken radiokanal sända nästan bara pratprogram som debatt och reportage ?
+title	vad heta radioprogram där man presentera vecka 10 mycket populär svensk låt ?
+title	vad heta morgonprogrammet på Rix Fm med roger , Titti och Gert ?
+other	vad heta den musiktopplista som rösta fram på olik plats med S k mentometer varje sommar ?
+organization	på vilken kanal gå musiklisteprogrammet tracks ?
+title	vad heta program på lördagmorgon där lyssnare ringa in , svara på en fråga och önska en skiva ?
+title	vad kalla det p4-program på lördag där man skola lösa en korsord med hjälp av olik musikstycke ?
+person	vad heta den tuff tjej som göra bland annat get the party started och just like a pill och vars namn betyda rosa på engelska ?
+person	vad heta den amerikansk superstjärna som bland annat göra american life och like a virgin ?
+person	vad heta amerikanska som göra bland annat genie in a bottle och album stripped med låt beautiful ?
+person	vad heta sångerska , syster till michael jackson , som göra album som Damita JO och all fara You ?
+person	vad heta sångerska och skådespelare som göra waiting for tonight , och kalla J .
+person	vilken ung kanadensiska ha ha hit som complicated och sk8er Boi ?
+person	vad heta den amerikansk superstjärna som vara känna för sin speciell moonwalk-dag ?
+person	vad heta den spansk sångare Enrique , med låt som hero och not in love , i efternamn ?
+person	vad heta den vit amerikansk rappare som bland annat göra låt stad med sångerska Dido ?
+person	vad heta den förra beatlesmedlem som bli adla till sir paul och göra en stor turné 2004 ?
+person	vad heta den engelsk sångare som sjunga i band take that och göra låt som angel , strong , feel och something beautiful ?
+person	vad heta den amerikan som göra bland annat U remind me och album confessions med låt burn ?
+title	vilken teckna Indianflicka sjunga om färg i en vind ?
+person	i vilken gammal film finnas sång jag fånga en räv och hej hå , hej hå , vi nu till gruva gå ?
+title	i vilken film förekomma sång hakuna matata ?
+person	i vilken film med den känna melodi se du stjärna i den blå bli en trädocka leva ?
+title	i vilken film finnas låt hav vara djup ?
+concept	vilka sjunga du skola vän ha för Mowgli i Djungelboken ?
+person	vem sjunga om sjörövarfabbe ?
+other	vilka vara den första sju ord i idas sommarvisa ?
+title	vilken astridfigur sjunga att han vara värld god ?
+person	vem i film om Emil sjunga fattig bonddräng
+person	vem vara huvudperson i film där " pilutta du " sjunga ?
+title	i vilken film förekomma vargsången ?
+description	vara sova björn i barnvisa björn sova ?
+title	i vilken film sjunga björn Baloo vara nöjd med allt som liv ge ?
+person	för vem äta björn upp blåbär i den känna barnvisa ?
+person	vilken teckna sagobjörn sjunga om att snö vräka ner , tiddelipom ?
+title	vad heta den disneyfilm om björn , från 2003 , som phil collins göra musik till ?
+person	vad heta lasse Berghagen teddybjörn som han sjunga om ?
+description	Beatles sjunga om en ubåt , a submarin på engelska .
+concept	i sång vem kunna segla förutan vind fråga också om en roddbåt .
+concept	Petronella från Plaskeby i visa behöva fälla upp något för att skydda sig mot regn .
+concept	gubbe Noak råka enligt bibel ut för en syndaflod .
+person	vad heta piraya som electric bana band sjunga om ?
+location	i peter Lundblad sommardoftande hit från 1986 göra han till kung om han få komma vart ?
+other	Sverige nationalsång ?
+other	pepparkakevisan ?
+other	sockerbagare ?
+other	Sankta Lucia ( luciasång ) ?
+other	det göra ond ?
+other	apa King Louie sång ur Djungelboken ?
+multiplechoice	vara myra i bralla ett naturprogram , en nyhetsprogram eller en musikprogram ?
+organization	vilken tv-kanal gå myra i bralla på ?
+multiplechoice	vilken färg bruka den teckna myra i program ha , grön , rosa eller gul ?
+concept	vad som djur lämna efter sig få man gissa på i program ?
+concept	i program ha man titta på djur som kunna gömma sig genom att kamouflera sig .
+person	vad heta träfågeln som snurra på frågehjulet ?
+verb	vad göra man på en playstation ?
+verb	vad göra man på en playstation ?
+description	på playstation 2 , xbox och gamecube kunna man spela online .
+organization	vilken japansk spelföretag ha utveckla spel som phantasy star , Sonic och Shenmue ?
+title	i vilken klassisk spelserie kunna man hitta karaktär som Cloud , aeris , squall och Tidus ?
+location	starbreeze och digital illusion ha göra spel som The Chonicles of riddick och battlefield 1942 .
+concept	om man vilja ha en utskrift , vad behöva man ha koppla till dator då ?
+concept	vad kalla en kamera där man kunna föra över bild till dator ?
+concept	vad kalla det datortillbehör som göra att man kunna se den man prata med ?
+concept	vad kalla en bildläsare med en ursprungligen engelsk ord ?
+concept	i vilken gammaldags måttenhet mäta storlek på datorskärm ?
+concept	vad kalla den kontakt till vilken man koppla till exempel en digitalkamera ?
+concept	vad styra man med i bil ?
+concept	vilken säkerhetsdetalj måste alla bil ha på sig ?
+verb	vad tänka man göra om man slå på bil blinkers ?
+concept	vad kalla den sort vinterdäck som det vara liten metallstift i ?
+concept	vilken fotpedal sitta normalt till höger i bil ?
+concept	vad kalla den ljus som vara stark , och som slå på vid mörkerkörning ?
+concept	hur förkorta personal computer i datavärlden ?
+concept	vad kalla den operativsystem till PC som finnas i version som 98 , 2000 och xp ?
+concept	vad kalla den del av dator där allt lagra ?
+concept	vad kalla en snabb internetanslutning ?
+concept	vilken sort dator ha en äpple som symbol ?
+concept	vad heta den operativsystem som finnas att ladda gratis på nät , och som uppfinna av finsk Linus Torvald ?
+verb	om du använda explorer , netscape eller firefox , vad göra du då ?
+verb	vad göra man i microsoft word ?
+concept	vad kalla den typ av program som skydda mot virus och spyware i dator ?
+multiplechoice	vilket av följa program använda man för att redigera bild - photoshop , powerpoint eller excel ?
+concept	vilken typ av program vara till exempel windows och mac os , som du måste ha för att kunna använda dator ?
+other	vilken ändelse få en wordfil när man spara den ?
+concept	vilken apparat uppfinna alexander graham bell , som ge vi möjlighet att prata med varandra på lång avstånd ?
+concept	Alexander Fleming få nobelpris för sin upptäckt av en viktig medicin som ofta tas mot till exempel halsfluss .
+concept	Håkan Lans ha uppfinna färgskärmen till dator , men också pekdonet .
+concept	vad konstruera bror Orville och Wilbur Wright , som idag vara det snabb färdmedel när vi skola resa ?
+concept	vilken uppfinning som göra tillvaro ljus stå Thomas Alva Edison bakom ?
+concept	John Ericsson uppfinna något som få fartyg att gå framåt .
+location	vilken kontinent upptäcka viking Leif Eriksson redan år 1000 , fast någon annan bli mycket känna för det ?
+person	vem ha få ära av att vara den som upptäcka Amerika 1492 ?
+timepoint	under vilken århundrade leva upptäcktsresanden och missionär David Livingstone som utforska inre afrika ?
+location	vilken sydlig men kall plats vara Roald Amundsen förste man att beträda ?
+location	från vilken sydeuropeiskt land med huvudstad lissabon , upptäcktsresanden vasco da gama ?
+location	till vilken kall plats försöka ingenjör André ta sig med luftballong örn ?
+concept	vad kalla skriva efter en fråga ?
+concept	vad kalla skrivtecken som vara en vågrät streck och som använda när man behöva dela på en ord ?
+concept	vad skriva viking med för tecken ?
+description	vi läsa från vänster till höger .
+concept	vad kalla skrivtecken som bestå av två prick , den ena under den annan ?
+multiplechoice	vad kalla sådan skönskrift som ibland räkna som konst - biologi , kalligrafi eller geometri ?
+concept	vad kalla den del på cykel som man sitta på ?
+concept	vad kalla den metallpinne som hålla ihop cykelhjulet ?
+multiplechoice	sitta den stor kuggdrevet vid trampa eller i bakhjul ?
+definition	vad vara det som vara fylla av luft och ligga innanför däck ?
+description	vilken färg skola man ha på cykel sidoreflex ( till exempel på eker ) ?
+concept	vad kalla en cykel för två person ?
+amount	hur mången visper bruka den fler elvisp ha ?
+concept	vad kalla den redskap som man kunna skära mycket tunn ostskiva med ?
+concept	med vilken redskap riva du till exempel morot ?
+concept	vad kalla den apparat som värma mat med hjälp av magnetstrålning , ofta med en rotera platta ?
+concept	vad lägga man kaffepulver 1 när man brygga det i en kaffebryggare ?
+concept	vilken apparat ge minusgrad på en begränsa utrymme med hjälp av en kompressor ?
+concept	vad använda man för att slå i en spik ?
+concept	om man inte använda eldriven verktyg , vad behöva man då för att skruva i en skruv ?
+verb	vad använda man en tumstock till ?
+verb	vad använda man en vattenpass till ?
+concept	vad vara en fogsvans för något ?
+verb	vad använda man en skiftnyckel till ?
+concept	vad kalla krigsfartyg som färdas under vatten ?
+person	vilka vara det som använda drakskepp i strid ?
+person	vad heta den hög chef ombord på en krigsfartyg ?
+concept	vad heta det 1600-tal krigsfartyg som bärga och nu ha en egen museum i Stockholm ?
+concept	vad vara det som normalt driva krigsfartyg framåt förr i värld , till exempel på 1700-tal ?
+concept	vad kalla den stor krigsfartyg som fungera som landningsplats för stridsflygplan ?
+concept	om en fartyg vilja stanna en bit från land , vad släppa man i vatten då ?
+concept	vad kalla en fartyg som huvudsakligen transportera människa ?
+concept	vad vara en eka ?
+concept	en stor brygga , ofta av sten , där båt kunna lägga till heta som en ovanlig pojknamn .
+concept	vad kalla den sort verkstad där man bygga och reparera fartyg ?
+concept	vad vara en kajak ?
+concept	vad kalla det ställe med mången doktor där man kunna bli tvinga att stanna om man bli mycket sjuk ?
+concept	vad kalla den bil som hämta människa vid sjukdom och olycka ?
+concept	vad kalla den apparat som fotografera skelett så man se om ett ben vara bryta ?
+other	vad bruka doktor vilja att man säga för bokstav när hals bli undersöka ?
+multiplechoice	vad kalla den instrument doktor lyssna på hjärta med - mikroskop , pickup eller stetoskop ?
+concept	vad kalla den doktor som göra operation ?
+concept	vad kalla den sort stol som viss handikappa människa använda för att ta sig fram ?
+concept	vad kalla den två käpp man få som gånghjälpmedel om man till exempel göra illa en knä ?
+concept	vad kalla den säng som ambulanspersonal bära sjuk människa på ?
+concept	vad kalla det gånghjälpmedel på hjul som mången gammal skjuta framför sig som stöd ?
+concept	vad ha man fel på om man få en pacemaker inopererad ?
+concept	om man förlora till exempel en ben kunna man få en konstgjord ben i ställe .
+concept	vad kalla den vit kladdig material som man sätta på till exempel en bryta arm och som stelna där ?
+concept	vad kalla den klistrig lapp man sätta på en liten sår till exempel på ben ?
+concept	om du få en stick i finger av sköterska , vad vara det hon suga upp i sin provrör ?
+concept	vad kalla den spruta man få för att man inte skola få en viss sjukdom ?
+concept	vad kalla det för om man vara överkänslig mot viss ämne , till exempel pollen ?
+concept	vad kalla den klia utslag som ofta finnas i arm eller benveck ?
+concept	vad vara alvedon och treo för sort medicin ?
+multiplechoice	vad kalla man ibland medicintablett - pastill , piller eller pupill ?
+concept	vad äta många på vinter för att hålla sig frisk , som finnas som till exempel A , B och c ?
+concept	vad kalla den vätska i mörk flaska som ofta förvara 1 kylskåp och tas vid besvär i luftrör ?
+concept	ha man en öroninflammation orsaka av bakterie få man antibiotikum .
+concept	vilken sjukdom ha man om man måste ta insulin ?
+concept	om man köpa en back med 33 centiliter läskflaska , vilken material vara flaska av ?
+concept	vad vara vår mjölkförpackning göra av för material ?
+concept	vad kalla den förpackning vi vanligen stoppa en brev 1 innan vi posta det ?
+concept	vilken material vara S k pet-flaska göra av ?
+concept	vad förpacka man i en konservburk ?
+concept	vilken sort metall vara det i läskburk som man kunna panta i Sverige ?
+concept	vilken gulaktig metall med beteckning Au vara vanlig i smycke ?
+concept	den kemisk beteckning för tenn vara Sn .
+concept	vad heta metall som beteckna fe och kunna rosta ?
+multiplechoice	vilken kemisk beteckning ha vatten - H2O , a4 eller x9 ?
+concept	vilken gulröd metall med beteckning Cu göra man förr kastrull och kaffepanna av ?
+concept	vilken grundämne med beteckning o finnas i vår luft och vara nödvändig för vi ?
+concept	vad kalla den olikfärgad halvcirkel man kunna se på himmel när solljus bryta i liten vattendroppe , till exempel när det regna ?
+duration	vad kalla den tidsmått som ange hur lång ljus gå på en år ?
+concept	vad gå genom den stor kraftledning som man ofta se på hög stolpe ?
+multiplechoice	vid vilken temperatur koka vatten : 50 ° , 75 ° eller 100 ° ?
+other	vilken kalla den båda pol på en batteri ?
+concept	vad kalla den liten apparat som sitta vid Cykelhjulet och producera elektrisk ström till Cykellyset ?
+concept	på vilken underlag spela den fler fotbollsmatch ?
+concept	vad bestå mark av på den fler badstrand ?
+concept	vad kalla en upptrampa väg i skog ?
+concept	vad kalla den svart material som den fler väg vara belägga med ?
+concept	vad kalla liten landsbygdsväg som inte vara asfaltera ?
+concept	vad kalla småsten eller stor grus som man lägga till exempel på garageuppfart eller trädgårdsgång ?
+concept	vilken material bestå en parkettgolv av ?
+concept	vad kalla den matta som väva av gammal kläder , klippa i remsa ?
+concept	i utrymme där man använda vatten bruka man lägga en våtrumsmatta .
+concept	förr i tid ha man jordgolv inne .
+concept	sätta man porslinsplatta på vägg kalla den kakel .
+concept	fin golv i gammal slott vara ofta göra av en sort sten , som man också göra staty av .
+location	vara sitta trumhinna ?
+location	vara sitta pupill ?
+concept	vad kalla man saliv som du ha i mun med en vanlig ord ?
+location	var finnas smaklök ?
+concept	på pojke vara struphuvud ofta stor än på flicka .
+location	vara någonstans ha du emalj ?
+concept	vad kalla den liten tå ?
+description	vilken färg bruka en tånagel som bli skada och så småningom trilla av få ?
+concept	vad heta den runda ben som sitta på knä framsida ?
+concept	kropp stor sen sitta på ben baksida , mellan vad och fot .
+concept	vad kalla den sak man sticka ner bakom häl för att ta på sig en trång sko ?
+location	vara i ben sitta menisk ?
+concept	vad kalla ben i kropp med en gemensam namn ?
+concept	vilken röd vätska transportera syre rund i kropp ?
+concept	vilken organ i kropp ta emot luft du andas in ?
+concept	vad heta den kraftig pump som pumpa runt blod i vår kropp och vara helt livsnödvändig ?
+concept	vad färdas mat igenom i kropp , som finnas bland annat som tjock och tunn ?
+concept	vad heta den två organ som tillverka urin ( kiss ) ?
+concept	vad kalla den speciell underbyxa som småbarn ha eftersom de inte kunna gå på toa ?
+duration	hur mången månad ligga en baby normalt i mamma mage ?
+concept	vad kalla den förbindelse mellan mamma och barn som klippa när barn föda ?
+concept	vilken del av barn bruka komma ut först vid födsel ?
+concept	vad kalla det nära babyn dricka mjölk från mamma bröst ?
+concept	vad kalla den operation som innebära att man skära en snitt i mamma mage och ta ut barn den väg ?
+concept	vad kalla den person som ha som jobb att laga sko ?
+verb	vad göra en skräddare ?
+concept	vad kalla den som använda städ och hammare för att forma metallföremål ?
+concept	vem dra rör och vatten vid bygge av till exempel en badrum ?
+verb	vad göra en hovslagare ?
+concept	i vilken sort affär hitta man som regel en florist ?
+concept	vad kalla den som ha som yrke att ta bild ?
+concept	vad kunna man behöva till eller på kamera om det vara mörk när man fotografera ?
+verb	vad måste man göra med film i en vanlig kamera innan man kunna få papperskopia ?
+concept	vad kalla det stöd med tre ben man sätta fast en kamera på för att bild skola bli stadig ?
+amount	hur mången bild vara det vanligen på en filmrulle ?
+concept	vad kalla det slipa glas i objektiv som ljus passera så att det bli en bild ?
+multiplechoice	vad vara en flygplan - dumbo-get eller jumbo-jet ?
+person	vad kalla den som köra en flygplan ?
+concept	vad kalla den bred väg på en flygplats där flygplan landa ?
+concept	vad kalla en flygplan utan motor ?
+concept	det finnas jetdrivna plan och en annan sort motorplan .
+concept	en flygplan som landa på vatten ha inte hjul .
+concept	vilken explosiv ämne få fyrverkeri-raketerna att lyfta på nyårsafton ?
+concept	vad skola kunna landa på den stor platta märka med en h på tak till storsjukhus och stor fartyg ?
+concept	vad färdas passagerare i för något när de åka luftballong ?
+concept	ibland prata vi om flyga tefat .
+concept	vad heta den stor avlång luftskepp som förr använda i passagerartrafik ?
+concept	vad kalla den stor propeller på helikopter tak ?
+concept	om du skola till åttonde våning och inte vilja gå i trappa , vad kunna du ofta åka med ?
+concept	vad kalla den lång repliknande växt i djungel som till exempel Tarzan svinga sig i ?
+concept	vad kalla den eldriven trappa som finnas till exempel på varuhus och järnvägsstation ?
+concept	vad använda brandman för att snabbt ta sig ner från andra våning på brandstation ?
+concept	vad kalla den sort färdmedel där man ta sig upp på hög berg sitta i en korg eller gondol ?
+concept	vad ha du på fot om du åka släplift ?
+concept	vad kalla den motordriven tvåhjuling som man få köra när man vara 15 år ?
+description	vad vara det för speciell med en buss som kalla dubbeldäckare ?
+other	vilken sätt resa du på om du resa med till exempel sas eller lufthansa ?
+concept	vilken fordon förkorta ibland mc ?
+concept	vilken spårbunden färdmedel finnas fortfarande i Göteborg och Norrköping ?
+definition	vad stå förkortning SJ för när det gälla tågtransport ?
+concept	vad kalla den liten apparat en sångartist bruka hålla och sjunga i på scen ?
+concept	vad spela man in på innan man kunna bränna in ljud på cd-skiva ?
+other	vad vara förkortning på den vanlig dataformat man använda då man spela in musik från nät ?
+other	den vanlig vinylskivorna förr vara på 33 varv och heta long playing .
+concept	vilken två del till stereo innehålla vibrera membran som göra att det bli ljud ?
+concept	diskant säga man om hög ton .
+verb	vad hända om man trycka på eject-knappen på video ?
+verb	om du trycka på rec-knappen på video , vad göra du då ?
+concept	en videofilm ligga på en band .
+duration	hur mången timme kunna man spela in på en 240-videoband i normal inspelningshastighet ?
+multiplechoice	vara det i video eller dvd-spelare det finnas en laser ?
+concept	att spela in ljud på en kanal kalla mono .
+concept	vad kalla det när man skicka kort textmeddelanden mellan mobiltelefon ?
+organization	vad heta det stor finsk mobiltelefonföretaget ?
+concept	vad kalla det kort som man sätta i mobiltelefon ?
+concept	vad kalla det när man ha en hörsnäcka koppla till mobil , och inte behöva använda hand ?
+other	när man tala om tredje generation mobiltelefon använda man ofta en förkortning .
+concept	vilken program krävas för a ladda ner spel på mobiltelefon ?
+concept	vad kalla den del av telefon man hålla i när man prata ?
+description	om du ringa någon och det komma tät tutningar i lur , vad betyda det ?
+concept	vad kalla den maskin som likt en bandspelare spela in en meddelande från den som ringa ?
+concept	om du skola ringa till någon i annan ände av Sverige måste du slå någon siffra först .
+amount	vad vara telefonnummer till telias nummerupplysning ?
+organization	han heta lars Magnus , och utveckla telefon .
+concept	vad kalla en behållare där man kunna slänga papper och annan skräp ?
+concept	vad kalla vi den pappersrulle vi använda i kök ?
+concept	vad vara råvara till papper ?
+other	vad heta den vanlig pappersformat , som passa i skrivare och kopiator ?
+concept	vad kalla sådan papper som vara tillverka av gammal , återvinna papper ?
+concept	vad heta det papper , tillverka av vass , som man använda i den gammal Egypten ?
+concept	vad vilja man se om man titta i en teleskop ?
+concept	vad kalla den två rör med lins i som man använda för att se på lång avstånd ?
+concept	vad kalla den tittpryl som förknippa med detektiv som Ture sventon och Sherlock holmes ?
+concept	om man se dåligt och inte vilja ha glasögon , vad kunna man då använda ?
+concept	vad kalla den apparat som forskare använda för att se bakterie och annan minimal sak ?
+multiplechoice	vad kalla den sort glasögon som sitta för bara ena öga , och vara modern förr – monokel , motell eller mosaik ?
+person	vilken naturfolk använda förr röksignal för att meddela sig ?
+concept	vilken språk kommunicera ofta döv och hörselskadad med ?
+description	vilka ha nytta av braille-skrift , som bestå av upphöja punkt som kunna kännas med finger ?
+multiplechoice	vad kalla den person som ha som jobb att översätta vad annan säga – skolk , tolk eller dolk ?
+other	vad betyda tre korta-tre långa-tre kort , med morsealfabet ?
+concept	skånsk , småländsk och norrländsk vara exempel på olik ...
+location	vilken plan med en namn som en disneyfigur anse ligga länge från sol ?
+location	vilken plan vara känna för sin ring och börja på s ?
+location	vad heta planet som också kalla aftonstjärna och börja på v ?
+location	vilken plan kalla den röd planet och förknippa med en fantasinamn på " utomjording " ?
+location	vilken plan vara stor ?
+location	vilken plan ligga nära sol ?
+location	vilken himlakropp i vår solsystem vara absolut varm ?
+location	vilken himlakropp förutom jord ha människa trampa på ?
+location	vilken av Jupiter måne , uppkalla efter vår egen världsdel , tro man att det kunna finnas liv på ?
+location	vad kalla den himlakropp som cirkla runt en planet ?
+multiplechoice	hur mången planet finnas i vår solsystem - 9 , 10 eller 12 ?
+concept	vad kalla det bälte av småplanet som finnas mellan mars och Jupiter ?
+amount	på hur mången planet i världsrymd veta man säker att det finnas liv ?
+duration	hur lång tid ta det för jord att snurra ett varv rund sin egen axel ?
+duration	det ta fyra årstid föra jord att gå att varv kring sol ?
+multiplechoice	vilken plan i ordning , från sol räkna , vara vår plan – den första eller den tredje ?
+location	vad kalla vår egen jord med en latinsk namn ?
+concept	om en meteor brinna upp i atmosfär , vad kalla vi det lite poetisk då ?
+person	vad kalla vi rymdfarare med en annan namn ?
+location	vilken land vara det hittills enda som skicka upp rymdfärja ?
+concept	vad sväva i rymd och skicka ner tv-program till parabolantenn ?
+other	vara det sann att man kunna se kinesisk mur med blott öga från måne ?
+multiplechoice	vilken år landa människa för första gång på måne - 1909 , 1969 eller 1999 ?
+location	på vilken plan ha vi landa bil , och hoppas snart få dit människa ?
+description	vilken färg ha de s K hål som finnas i rymd och som ha oändlig tyngdkraft ?
+concept	vad kalla en himlakropp som själv utstråla ljus , och som blinka enligt visa ?
+location	en galax vara en stjärnhop som bestå av miljard stjärna .
+location	vad kalla vi med en speciell namn hel rymd ?
+location	vad kalla vi den känna stjärnbild som ligga i stor björn och se ut som en kärra ?
+location	vilken stjärna kunna man använda för att avgöra vara norr ligga ?
+concept	vad elda man med i braskamin ?
+concept	vad använda man vanligen för att få en glödbädd när man grilla ?
+concept	man kunna ibland se hög mast med propellervinge .
+concept	vad kalla stor kraftverk som ligga i till exempel Norrland älv ?
+concept	ur vilken ämne utvinna man bensin och diesel för att till exempel tanka bil med ?
+concept	vad kalla den platt panel som ligga på viss hustak och med hjälp av sol ge värme ?
+concept	vad kalla den del av en hus som ligga under jordyta ?
+concept	vilken sort tåg med underjordisk station finnas i Sverige bara i Stockholm ?
+concept	vad kalla en naturlig håla i en berg , som man ibland komma in till via en gång ?
+verb	vad göra man för att komma ner i berggrund för att få upp olja ?
+description	kunna man gräva sig rakt igenom jord ?
+concept	vad kalla den stor hål och djup gång vi gräva för att bryta bland annat järnmalm och koppar ?
+concept	vad kalla den liten energipaket man stoppa i till exempel en ficklampa för att den skola lysa ?
+concept	vad bruka vi vanligen kalla elektricitet som vi få till exempel från en kontakt i vägg ?
+concept	vad kalla en person som jobba med elektricitet , till exempel att dra elledning ?
+amount	hur mången volt vara det i svensk vägguttag ?
+concept	ibland kunna det hända att ström där hemma plötsligt försvinna och ljus släcka .
+verb	vad göra generator i en bil ?
+distance	vad kunna man säga i ställe för 10 km ?
+amount	hur mången sekund gå det på en minut ?
+amount	hur mången deciliter vara en liter
+other	vad kunna man säga i ställe för 1 000 gram ?
+amount	hur mången kilo gå det på en ton ?
+other	i England och Usa väga man fortfarande i en viktenhet som vara ca en halvkilo .
+other	om du ha 38,5 grad i kropp , ha du då feber ?
+amount	vilken vara kropp normal temperatur ?
+verb	vad hända med vatten när de värma upp till 100 grad ?
+multiplechoice	det tala mycket om växthuseffekt .
+person	vilken temperaturskala använda vi i Sverige , uppkalla efter svensk anders ?
+person	vilken temperaturskala , där fryspunkt ligga på 32 grad , använda många fortfarande i Usa ?
+concept	vad behöva man när man sticka , förutom sticka ?
+verb	vad säga man att man göra när man med en böja grov nål tillverka till exempel grytlapp och duk ?
+concept	vad kalla den sort broderi där man brodera liten x som tillsammans bilda mönster ?
+concept	vad kalla den speciell täcke som bestå av mången olikfärgad lapp , ihopfogade till mönster ?
+verb	vad syssla man med när man använda en skyttel och en bom ?
+concept	vad kalla det att tillverka spets med hjälp av en dyna och mången nål ?
+concept	vad kalla en byggnad som förknippa med en kung och en drottning ?
+concept	vad kalla en liten extrahus som man ibland bygga på sin tomt till barn att leka i ?
+concept	vad kalla en liten hus som barn gärna bygga på skoj , i till exempel en träd ?
+concept	vad kalla den jättehöga hus som finnas i till exempel Usa och Japan ?
+concept	vad kalla det när flera bostad i en eller två våning vara ihopbyggda på längd ?
+concept	vad kalla en Snöhus föra eskimå ?
+concept	vad kalla man en asfaltera väg i en stad ?
+concept	vad kalla det ställe på gata som utmärka med bred vit streck och en skylt med en gubbe på ?
+concept	vad kalla den plats där lite två väg möta ?
+concept	vad kalla de väg i Sverige där det alltid vara tillåta att köra 110 km / H ?
+concept	vad kalla en gata som man inte komma vidare på och som sluta i en vändplats ?
+concept	vad kalla en plats där mången väg möta och bil köra runt för att komma in på en ny väg ?
+concept	vad kalla en liten hus där man kunna parkera en eller flera bil ?
+concept	vad kalla det band eller den plastbricka man böra ha på sig så man synas ordentligt även om det vara mörk ?
+description	vilken tre färg ha ljus på en vanlig trafikljus ?
+description	vilken färg ha en stoppskylt ?
+concept	vad vara en annan namn på en gångbana för fotgängare ?
+amount	vilken hastighet skola man hålla utanför mången skola och dagis ?
+concept	vad mäta vi tid med ?
+concept	vad mäta vi vika med ?
+concept	vad mäta man till exempel en längshopp i skola med ?
+concept	vad kalla den mätmanick du använda för att mäta och dra rak linje i skolbok ?
+concept	vad kalla den apparat som vi mäta temperatur med ?
+concept	vad kalla den mätare som sitta på bil instrumentpanel och mäta fart man köra i ?
+concept	vad kalla en såg som kunna driva med bensin eller el och bruka använda vid trädfällning ?
+concept	vad kalla den sort färg som köpa på flaska med hög tryck i så den gå att spruta ?
+concept	om man kunna byta däck på bil , kunna man hissa upp den med en sådan här .
+concept	vad kalla den apparat som blåsa ut vatten med stor kraft och som ofta använda till rengöring ?
+description	vad vara en skruvdragare ?
+concept	vad kalla en borr som också kunna hamra sig igenom betongvägg ?
+multiplechoice	vad kalla den maskinsöm som se ut som en rad z - sicksack eller här och tvärs ?
+multiplechoice	vad kalla den liten platta som hålla ner tyg där nål gå fram - pressarfot eller tryckmätare ?
+multiplechoice	vad kalla den liten rulle som undertråd sitta upprullad på - rullator , spole eller spinnare ?
+amount	hur mången tråd sy man som regel en vanlig Raksöm med ?
+concept	vad kalla två nål till symaskin som sitta ihop ?
+location	vad heta den ort nära Jönköping i Småland som bli känna för sin symaskinstillverkning ?

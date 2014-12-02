@@ -16,30 +16,21 @@ import se.su.ling.stagger.Tagger;
 import se.su.ling.stagger.Token;
 import se.su.ling.stagger.Tokenizer;
 
+/**
+ * PosTagger
+ * 
+ * Uses Stagger to tag sentences
+ * Singleton object so that the model only will be loaded once per run
+ * 
+ * @author timdolck
+ *
+ */
 public class PosTagger {
-	public static void test() throws ClassNotFoundException, IOException,
-			TagNameException {
-		String s = "Det var en gång en katt som hette Nils och bodde i Rio de Janeiro.";
-		try {
-			PosTagger t = new PosTagger();
-			List<Word[]> res = t.tagString(s);
-			for (Word[] sent : res) {
-				for (Word token : sent) {
-					System.out.println(token);
-				}
-			}
-		} catch (Exception e) {
-			System.err.println(e.getMessage());
-		}
-
-	}
-
 	private Tagger tagger;
-	private boolean silent;
+	private boolean silent = true; // set to false for a verbose output
 	private static PosTagger instance = null;
 
 	protected PosTagger() throws IOException {
-		this.silent = true;
 		String modelFile = "./model/swedish.bin";
 
 		ObjectInputStream modelReader;
@@ -66,7 +57,13 @@ public class PosTagger {
 		}
 		return instance;
 	}
-
+	
+	/**
+	 * Tags a string(document)
+	 * 
+	 * @param document
+	 * @return list of tagged sentences
+	 */
 	public List<Word[]> tagString(String document) {
 		print(document);
 		BufferedReader reader = new BufferedReader(new StringReader(document));

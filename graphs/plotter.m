@@ -5,16 +5,13 @@ function plotter()
   [xtfdf,ytfdf] = scan_data("tfdf.txt");
   [xbm25doc,ybm25doc] = scan_data("bm25-doc.txt");
   [xtfdfdoc,ytfdfdoc] = scan_data("tfdf-doc.txt");
-  %rgb(230, 126, 34)
-  plot(xbm25,ybm25,'marker','o','color', [230/255 126/255 34/255]);
+  plot(xbm25doc,ybm25doc,'marker','o','color', [46/255 204/255 113/255]);
   hold on;
-  %rgb(52, 152, 219)
+  plot(xtfdfdoc,ytfdfdoc,'marker','o','color', [155/255 89/255 182/255]);
+  plot(xbm25,ybm25,'marker','o','color', [230/255 126/255 34/255]);
   plot(xtfdf,ytfdf,'marker','o','color', [52/255 152/255 219/255]);
-  plot(xbm25doc,ybm25doc,'marker','o','color', [211/255 84/255 0/255]);
-  plot(xtfdfdoc,ytfdfdoc,'marker','o','color', [41/255 128/255 185/255]);
   xlim([1 350])
-
-  legend('BM25 Paragraphs', 'TFDF Paragraphs', 'BM25 Documents', 'TFDF Documents');
+  legend('BM25 Documents', 'TFDF Documents', 'BM25 Paragraphs', 'TFDF Paragraphs', 'location', 'southeast');
   xlabel('#Passages')
   ylabel('Answers present')
   a=[cellstr(num2str(get(gca,'ytick')'*100))]; 

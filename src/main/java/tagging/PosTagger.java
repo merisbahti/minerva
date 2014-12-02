@@ -89,7 +89,7 @@ public class PosTagger {
 					taggedSent = tagger.tagSentence(sent, true, false);
 				}catch (Exception e){
 					for(Token t : sentence){
-						System.out.print(t.value);
+						System.err.print(t.value + " ");
 					}
 					System.err.println();
 					continue;

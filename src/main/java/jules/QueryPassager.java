@@ -30,7 +30,7 @@ import org.apache.lucene.store.FSDirectory;
 import tagging.PosTagger;
 import tagging.Word;
 
-public class QueryPassenger {
+public class QueryPassager {
 	public static List<Map<String, String>> query(String querystr, int nbrHits) {
 		Analyzer analyzer = new SwedishAnalyzer();
 		String[] fieldNames = { "title", "text" };

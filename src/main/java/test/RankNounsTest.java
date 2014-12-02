@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import jules.QueryPassenger;
+import jules.QueryPassager;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -45,10 +45,10 @@ public class RankNounsTest {
 		//writer.println(Integer.toString(questions.entrySet().size()));
 		for (Entry<String, String> question : questions.entrySet()) {
 			//System.out.println(question.getKey());
-			List<Map<String, String>> res = QueryPassenger.query(
+			List<Map<String, String>> res = QueryPassager.query(
 					question.getKey(), 10);
 
-			LinkedHashMap<String, Integer> lm = QueryPassenger
+			LinkedHashMap<String, Integer> lm = QueryPassager
 					.findTopNouns(res);
 			
 			int i = 0;

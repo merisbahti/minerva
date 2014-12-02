@@ -1,0 +1,38 @@
+I vilken stad finns Parthenon?	Aten	Location
+Vad kallas den musikstil som bl a Faust, Can och Amon Duul företrädde?	Krautrock	Entity
+Vad är du rädd för om du lider av xenofobi?	Främlingar	Misc
+Vilken är världens dyraste krydda?	Saffran	Entity
+Vad heter urbefolkningen i norra Kanada?	Inuiter	Entity
+Vad heter floden som rinner genom både Wien och Budapest?	Donau	Location
+Vem ansågs som den största stjärnan under fotbolls-VM 1998 efter att ha gjort två mål för Frankrike i finalen?	Zidane	Person
+Under vilket århundrade började tobak rökas i Europa?	1500-talet	Numeric
+Vilken flod förknippar du med Aswandammen?	Nilen 	Location
+Vilken grupp har sedan 70-talet varit en av världens mest populära heavy metal-grupper, och består bland annat av bröderna Angus och Malcolm Young? 	AC/DC	Entity
+Vilken färg har Brasiliens fotbollslandslag på tröjorna?	Gul	Description
+Vilket år dog Elvis Presley?	1977 	Numeric
+Vad heter blodådrorna som syrerikt blod transporteras genom?	Artärerna	Entity
+Vilken engelsk stad kallades för Jorvik av vikingarna? 	York	Location
+Från vilken världsdel kommer kaffet ursprungligen?	Afrika	Location
+Vilket år föddes boxaren Muhammad Ali?	1942 	Numeric
+Vad hette den svenska musikstudio, grundad av bl a Denniz PoP, som ligger bakom en mängd låtar åt bl a Britney Spears, Bon Jovi och Westlife?	Cheiron	Entity
+Vilken slags djur förknippar man med en hippodrom?	Hästar	Entity
+Vita hästen är en operett men också en idrottsklubb. I vilken sport har de nosat på eliten?	Ishockey	Profession
+En konstriktning som är en blandning av kubism och surrealism uppstod 1916 i Zürich. Vad heter konstriktningen?	Dadaismen	Misc
+Vilket land har tidigare kallats för Öst-Pakistan? 	Bangladesh	Location
+Vilken typ av galax är Andromedagalaxen?	Spiralgalax	Entity
+Vad samlar en numismatiker på?	Mynt 	Entity
+Vad heter hustrun till Zeus i grekisk mytologi?	Hera 	Person
+Finns det flest katoliker eller protestanter i Kanada?	Katoliker	Misc
+Vad kallas tekniken som går ut på att tillverka spetsar för hand?	Knyppling
+Vilken stil, som även blev kallad kejsarstilen, utvecklades i Napoleons Frankrike under perioden 1800-1815?	Empire	Misc
+Varifrån kommer den fyrstängade gitarren ukulele?	Hawaii	Location
+Från vilket land härstammar maträtten gulasch? 	Ungern	Location
+Vilken färg har gröngölingen ovanpå huvudet?	Röd	Description
+Ragnar Skanåker har för alltid skrivit in sig i den olympiska historien. I vilken sport tävlade han?	Skytte	Profession
+Från vilket land kommer dansen fandango?	Spanien	Location
+Vad heter måttenheten för radioaktiv strålning?	Becquerel 	Misc
+Vad kallas den utmärkelse som tidningen Aftonbladet varje år delar ut till årets bästa fotbollsspelare i Sverige?	Guldbollen	Entity
+Vilken sorts sten använde eqyptierna för att bygga sina berömda pyramider?	Kalksten	Entity
+I vilken stad inledde Norge och Sverige förhandlingar om unionsupplösningen den 31 augusti 1905?	Karlstad	Location
+Hur många celler har en amöba?	En	Numeric
+Vad hette Charlie Chaplins film från 1940 som driver med nazismen?	Diktatorn	Entity

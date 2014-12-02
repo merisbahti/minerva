@@ -1,5 +1,8 @@
-function [median, mrr] = median_and_mrr()
-  [x,y] = scan_data("rankNounsMedianMRR1.txt");
+function [median, mrr] = median_and_mrr(infile)
+	fileID = fopen(infile)
+	data = textscan(fileID,'%u\t%u');
+	x = data{1,1};
+	y = data{1,2};
   mrr = 0.0;
   for idx = 1:numel(x)
       element = x(idx);

@@ -31,10 +31,6 @@ import edu.jhu.nlp.wikipedia.WikiXMLParserFactory;
 public class Indexer {
 	public static void main(String[] args) {
 		bzIndexer();
-		/*
-		 * while(true){ System.out.println("Enter query:");
-		 * System.out.print("> "); query(System.console().readLine(), false); }
-		 */
 	}
 
 	private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
@@ -63,8 +59,8 @@ public class Indexer {
 			}
 		}
 		for (File f : files) {
-			//doIndexDocuments(f.getAbsolutePath());
-			doIndex(f.getAbsolutePath());
+			doIndexDocuments(f.getAbsolutePath());
+			//doIndex(f.getAbsolutePath());
 		}
 		try {
 			writer.commit();
@@ -75,6 +71,11 @@ public class Indexer {
 
 	}
 
+	/**
+	 * Do index by paragrafs
+	 * 
+	 * @param file
+	 */
 	public static void doIndex(String file) {
 		try {
 			BufferedReader br = getBufferedReaderForBZ2File(file);
@@ -121,6 +122,11 @@ public class Indexer {
 
 	}
 	
+	/**
+	 * Do index by documents
+	 * 
+	 * @param file
+	 */
 	public static void doIndexDocuments(String file){
 		try {
 			BufferedReader br = getBufferedReaderForBZ2File(file);
@@ -158,7 +164,7 @@ public class Indexer {
 
 	}
 
-	public static BufferedReader getBufferedReaderForBZ2File(String fileIn)
+	private static BufferedReader getBufferedReaderForBZ2File(String fileIn)
 			throws FileNotFoundException, CompressorException {
 		FileInputStream fin = new FileInputStream(fileIn);
 		BufferedInputStream bis = new BufferedInputStream(fin);

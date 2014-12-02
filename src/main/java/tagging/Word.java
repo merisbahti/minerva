@@ -1,12 +1,18 @@
 package tagging;
 
+/**
+ * Simple java bean to contain tagged content
+ * 
+ * @author timdolck
+ *
+ */
 public class Word {
 	public String word;
 	public String lemma;
 	public String pos;
 	public String neTag;
 	public String neTypeTag;
-	//To be continued
+	//Might be continued
 	
 	public Word(String word, String lemma, String pos, String neTag, String neTypeTag){
 		this.word = word;

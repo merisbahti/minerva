@@ -1,5 +1,5 @@
 package test;
-import jules.QueryPassenger;
+import jules.QueryPassager;
 
 import org.junit.*;
 
@@ -32,7 +32,7 @@ public class CeilingTest {
     @Test
     public void firstQuestionTest() {
         for (Pair<String, String> qa : al) {
-            List<Map<String, String>> results = QueryPassenger.query(qa.fst, 100);
+            List<Map<String, String>> results = QueryPassager.query(qa.fst, 100);
             ResultDetails occs = occursIn(qa.snd, results);
             System.out.println("FO: " + occs.firstOccurence+"\tTOTO: " + occs.totalOccurences + "\t" + qa.fst );
         }

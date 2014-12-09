@@ -11,7 +11,10 @@ import util.Pair;
 public class Categorizer {
 	
 	public static void main(String[] args){
-		getCategories("Vad heter Sveriges huvudstad?");
+		String q = "";
+		while(!(q = System.console().readLine("Enter a question: ")).equals("q")){
+			getCategories(q);
+		}
 	}
 
 	public static List<Pair> getCategories(String q) {

@@ -71,6 +71,7 @@ public class WebService {
             System.out.println("serving response");
             t.setAttribute("content-type", "application/json");
             Headers h = t.getResponseHeaders();
+            h.add("Access-Control-Allow-Origin", "*");
             h.add("content-type", "application/json; charset=utf-8");
             t.sendResponseHeaders(200, response.getBytes().length);
             OutputStream os = t.getResponseBody();

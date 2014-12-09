@@ -17,7 +17,7 @@ public class Categorizer {
 		}
 	}
 
-	public static List<Pair> getCategories(String q) {
+	public static List<Pair<String, Double>> getCategories(String q) {
 		String question = q;
 		StringBuffer output = new StringBuffer();
 		String[] cmdarray = {"bash","-c", "cd ./libshorttext-1.1 && ./demo.py " + q};
@@ -27,7 +27,6 @@ public class Categorizer {
 		
 		    BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		 
-		    StringBuilder sb = new StringBuilder();
 		    String line = "";
 		    String categories = "";
 		    String decvals = "";
@@ -54,10 +53,9 @@ public class Categorizer {
 			
 			String[] cats = categories.split("\\s+");
 			String[] vals = decvals.split("\\s+");
-			List<Pair> prs = new ArrayList<Pair>();
+			List<Pair<String, Double>> prs = new ArrayList<Pair<String, Double>>();
 			for(int i = 0; i < cats.length; i++){
-				Pair pa = new Pair(cats[i], new BigDecimal(vals[i]));
-				System.out.println(pa.fst + "=" + pa.snd);
+				Pair<String, Double> pa = new Pair<String, Double>(cats[i], new BigDecimal(vals[i]).doubleValue());
 				prs.add(pa);
 			}
 			return prs;

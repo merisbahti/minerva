@@ -9,7 +9,8 @@ import tagging.Word;
  *
  */
 public class ScoreWord extends Word implements Comparable<ScoreWord>{
-	private int nounRank = 1;
+	private int occurances = 0;
+	private double nounRank = 1;
 	private double liblinRank = 1;
 	private double totalRank;
 	
@@ -21,18 +22,25 @@ public class ScoreWord extends Word implements Comparable<ScoreWord>{
 		super(word, lemma, pos, neTag, neTypeTag);
 	}
 	
-	public void addNounIndex(int index){
-		this.nounRank = index;
-		totalRank = nounRank*liblinRank;
+	public ScoreWord(Word word){
+		super(word.word, word.lemma, word.pos, word.neTag, word.neTypeTag);
+	}
+	
+	public void addNounIndexScore(double score){
+		this.nounRank = score;
 	}
 	
 	public void addliblinRank(double rank){
 		this.liblinRank = rank;
-		totalRank = nounRank*liblinRank;
 	}
 	
 	public double getTotalRank(){
+		totalRank = nounRank*liblinRank;
 		return totalRank;
+	}
+	
+	public void incOccurances(){
+		this.occurances++;
 	}
 
 	/**
@@ -40,7 +48,7 @@ public class ScoreWord extends Word implements Comparable<ScoreWord>{
 	 */
 	@Override
 	public int compareTo(ScoreWord other) {
-		return Double.compare(this.totalRank, other.totalRank);
+		return Double.compare(other.totalRank, this.totalRank);
 	}
 
 

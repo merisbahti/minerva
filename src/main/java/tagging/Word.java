@@ -26,5 +26,20 @@ public class Word {
 	public String toString() {
 		return word + "\t" + "\t" + pos + "\t" + neTag + "\t" + neTypeTag;
 	}
+	
+	@Override
+	public boolean equals (Object o){
+		try{
+			Word w = (Word) o;
+			return this.lemma.equalsIgnoreCase(w.lemma);
+		} catch (Exception e){
+			return false;
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return this.lemma.hashCode();
+	}
 
 }

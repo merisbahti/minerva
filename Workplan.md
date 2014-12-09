@@ -1,9 +1,8 @@
-TODO
+Workplan
 ====
 
-This is the todo list and working plan
+This is the working plan and small todo
 
-- Create an indexer using Lucene and wikixmlj
 ````
 
                 OR

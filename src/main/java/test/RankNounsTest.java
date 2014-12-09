@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import jules.QueryPassager;
+import jules.ScoreWord;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +27,7 @@ public class RankNounsTest {
 	public void setUp() throws Exception {
 		questions = new HashMap<String, String>();
 		File dir = new File(qDir);
-		writer = new PrintWriter("rankNounsMedianMrrD10test.txt", "UTF-8");
+		writer = new PrintWriter("test.txt", "UTF-8");
 		for (File f : dir.listFiles()) {
 			System.out.println("Reading file: " + f.getName());
 			BufferedReader br = new BufferedReader(new FileReader(f));
@@ -48,14 +49,17 @@ public class RankNounsTest {
 			List<Map<String, String>> res = QueryPassager.query(
 					question.getKey(), 10);
 
-			LinkedHashMap<String, Integer> lm = QueryPassager
+			List<ScoreWord> lm = QueryPassager
 					.findTopNouns(res);
 			
 			int i = 0;
-			for (String s : lm.keySet()) {
+			System.out.println(lm.get(0).getTotalRank());
+			for (ScoreWord sw : lm) {
+				String s = sw.lemma;
 				i++;
 				if (s.equalsIgnoreCase(question.getValue())){
-					writer.println(i + "\t" + lm.keySet().size());
+					//			  index found 		rank				total number of nouns
+					writer.println(i + "\t" + sw.getTotalRank() + "\t" + lm.size());
 					writer.flush();
 					break;
 				}

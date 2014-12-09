@@ -10,6 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 import org.apache.lucene.analysis.Analyzer;
@@ -34,14 +35,14 @@ import tagging.Word;
 
 public class QueryPassager {
 	public static List<Map<String, String>> query(String querystr, int nbrHits) {
-		Analyzer analyzer = new SwedishAnalyzer();
-
+		Analyzer analyzer = new CustomAnalyzer();
 		String[] fieldNames = { "title", "text" };
 		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames,
 				analyzer);
 		Query query = null;
 		try {
-			query = mfqp.parse(querystr.toLowerCase().replaceAll("[^a-zåäö\\s]", ""));
+			query = mfqp.parse(querystr.toLowerCase().replaceAll(
+					"[^a-zåäö\\s]", ""));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -89,53 +90,52 @@ public class QueryPassager {
 
 	private static String[] nounTags = { "NN", "PM" };
 
-	public static LinkedHashMap<String, Integer> findTopNouns(
+	public static List<ScoreWord> findTopNouns(
 			List<Map<String, String>> docs) {
 		PosTagger posTagger = null;
 		try {
 			posTagger = PosTagger.getInstance();
 		} catch (IOException e1) {
 			e1.printStackTrace();
-			return new LinkedHashMap<String, Integer>();
+			return new ArrayList<ScoreWord>();
 		}
 
-		TreeMap<String, Integer> freqs = new TreeMap<String, Integer>();
+		HashMap<Word, Double> freqs = new HashMap<Word, Double>();
+		
 		for (Map<String, String> doc : docs) {
-			for (String fieldValue : doc.values()) {
+			//Extract score and use it in ScoreWord
+			double score = Double.parseDouble(doc.get("Score"));
+			Set<String> keys = doc.keySet();
+			keys.remove("Score");
+
+			for (String fieldKey : keys) {
+				String fieldValue = doc.get(fieldKey);
 				List<Word[]> sents = posTagger.tagString(fieldValue);
 				for (Word[] sent : sents) {
 					for (Word word : sent) {
 						if (matchingPos(nounTags, word.pos)) {
-							if (freqs.containsKey(word.lemma)) {
-								freqs.put(word.lemma, freqs.get(word.lemma) + 1);
+							if (freqs.containsKey(word)) {
+								freqs.put(word, freqs.get(word) + score);
 							} else {
-								freqs.put(word.lemma, 1);
+								freqs.put(word, (double) score);
 							}
 						}
 					}
 				}
 			}
 		}
-
-		return sortByValue(freqs);
-	}
-
-	private static <K, V extends Comparable<? super V>> LinkedHashMap<K, V> sortByValue(
-			Map<K, V> map) {
-		List<Map.Entry<K, V>> list = new LinkedList<>(map.entrySet());
-		Collections.sort(list, new Comparator<Map.Entry<K, V>>() {
-			@Override
-			public int compare(Map.Entry<K, V> o1, Map.Entry<K, V> o2) {
-				return (o2.getValue()).compareTo(o1.getValue());
-			}
-		});
-
-		LinkedHashMap<K, V> result = new LinkedHashMap<>();
-		for (Map.Entry<K, V> entry : list) {
-			result.put(entry.getKey(), entry.getValue());
+		
+		ArrayList<ScoreWord> scores = new ArrayList<ScoreWord>();
+		for (Word freqKey : freqs.keySet()){
+			ScoreWord sw = new ScoreWord(freqKey);
+			sw.addNounIndexScore(freqs.get(freqKey));
+			scores.add(sw);
 		}
-		return result;
+
+		Collections.sort(scores);
+		return scores;
 	}
+
 
 	private static boolean matchingPos(String[] tags, String pos) {
 		for (String tag : tags) {

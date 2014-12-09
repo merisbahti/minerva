@@ -13,6 +13,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.core.SimpleAnalyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.analysis.sv.SwedishAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
@@ -33,6 +35,7 @@ import tagging.Word;
 public class QueryPassager {
 	public static List<Map<String, String>> query(String querystr, int nbrHits) {
 		Analyzer analyzer = new SwedishAnalyzer();
+
 		String[] fieldNames = { "title", "text" };
 		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames,
 				analyzer);

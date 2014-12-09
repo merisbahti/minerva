@@ -25,7 +25,7 @@ public class WebService {
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
-        PosTagger.getInstance();
+        //PosTagger.getInstance();
         server.start();
     }
 

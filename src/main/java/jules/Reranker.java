@@ -15,6 +15,7 @@ import de.bwaldvogel.liblinear.*;
  * @author timdolck
  *
  */
+
 public class Reranker {
 	private Model model;
 	private String modelFile = "Something";
@@ -33,5 +34,5 @@ public class Reranker {
 		Collections.sort(input);
 		return input;
 	}
-	
+
 }

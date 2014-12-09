@@ -4,15 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeMap;
-
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.sv.SwedishAnalyzer;
 import org.apache.lucene.document.Document;
@@ -33,7 +28,7 @@ import tagging.Word;
 
 public class QueryPassager {
 	public static List<Map<String, String>> query(String querystr, int nbrHits) {
-		Analyzer analyzer = new CustomAnalyzer();
+		Analyzer analyzer = new SwedishAnalyzer();
 		String[] fieldNames = { "title", "text" };
 		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames,
 				analyzer);

@@ -33,7 +33,7 @@ import tagging.Word;
 
 public class QueryPassager {
 	public static List<Map<String, String>> query(String querystr, int nbrHits) {
-		Analyzer analyzer = new SwedishAnalyzer();
+		Analyzer analyzer = new CustomAnalyzer();
 		String[] fieldNames = { "title", "text" };
 		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames,
 				analyzer);

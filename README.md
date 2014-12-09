@@ -12,6 +12,7 @@ Project in computer science.
 - [Wikipedia Extractor](http://medialab.di.unipi.it/Project/SemaWiki/Tools/WikiExtractor.py)
 - [Stagger swedish model](http://mumin.ling.su.se/projects/stagger/swedish.bin.bz2)
 - [libshorttext](http://www.csie.ntu.edu.tw/~cjlin/libshorttext/)
+- [liblinear-java](http://liblinear.bwaldvogel.de/)
 
 ## Guides
 [Lucene in 5 minutes](http://www.lucenetutorial.com/lucene-in-5-minutes.html)  

@@ -58,10 +58,14 @@ var removeResults = function() {
   });*/
 }
 
+$("#search").click(function(){
+  $("#search").val('');
+});
+
 $("#gosearch").click(function(){
   var searchText = $("#search").val()
   if (/^\s*$/.test(searchText)) {
-    addError("Tom sökning.", "prova att skriva lite mer i sökrutan!")
+    addError("Tom sökning.", "Prova att skriva lite mer i sökrutan!")
   } else {
     removeResults()
     showSpinner()
@@ -81,7 +85,6 @@ $("#gosearch").click(function(){
       }
     );
   }
-  $("#search").val('');
 }); 
 
 

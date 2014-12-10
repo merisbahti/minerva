@@ -1,7 +1,7 @@
 @relation category
 
 @attribute word string
-@attribute category {concept, location, definition, description, multiplechoice, amount, organization, other, person, abbreviation, verb}
+@attribute category {concept, location, definition, description, multiplechoice, amount, organization, other, person, abbreviation, verb, title, timepoint, duration}
 
 @data
 sto,concept
@@ -198,7 +198,6 @@ plommon,concept
 körsbär,concept
 rabarber,concept
 spindel,concept
-( dagg ) mask,concept
 vårtbitare,concept
 gråsugga,concept
 bärfis,concept
@@ -645,7 +644,6 @@ blå,other
 Strutglass,concept
 piggelin,concept
 Magnum,concept
-88:a N,concept
 must,concept
 äpple,concept
 Fanta,concept
@@ -662,7 +660,6 @@ kebab,concept
 panpizza,concept
 falafel,concept
 Ikea,organization
-H & M,definition
 Ica,organization
 stadium,organization
 Jysk,organization
@@ -864,7 +861,6 @@ Kerstin,person
 Lisa,person
 ljussvärd,concept
 katt,concept
-o ' malley,person
 Edgar,person
 Napoleon,person
 Bettan,concept
@@ -908,7 +904,6 @@ karamell,concept
 killevippen,description
 paradis-oskar,person
 Jasmine,person
-( stor ) vesir,person
 40,amount
 Bagdad,location
 Turban,concept
@@ -1003,7 +998,7 @@ peter,person
 vinter,timepoint
 calormen,person
 Hälge,person
-91:a n,person
+91:an,person
 Kronblom,person
 vitlök,concept
 mormor,person
@@ -1025,7 +1020,6 @@ bågsträng,definition
 180,amount
 röd,description
 blåsrör,concept
-( ban ) hoppning,concept
 travsport,concept
 Jockey,concept
 fyrspann,concept
@@ -1065,7 +1059,7 @@ Foppa,person
 fem,amount
 glob,location
 stav,concept
-( skid ) pjäxa,concept
+pjäxa,concept
 valla,concept
 bindning,concept
 Vasaloppet,concept
@@ -1077,7 +1071,7 @@ kulspel,concept
 brännboll,concept
 koppel,concept
 hundkapplöpning,concept
-( hund ) släde,concept
+släde,concept
 apport,concept
 agility,concept
 bågskytte,concept
@@ -1273,7 +1267,6 @@ Gabriel,person
 Usa,location
 oops,title
 Madonna,person
-N's Ync,organization
 barnväktarna,description
 Wahlgren,person
 två,amount
@@ -1447,7 +1440,7 @@ skriva,verb
 antivirusprogram,concept
 photoshop,multiplechoice
 operativsystem,concept
-. doc,other
+.doc,other
 telefon,concept
 penicillin,concept
 mus,concept
@@ -1514,7 +1507,7 @@ kopp,concept
 syre,concept
 regnbåge,concept
 ljusår,duration
-100 °,multiplechoice
+100°,multiplechoice
 dynamo,concept
 Gräs,concept
 sand,concept
@@ -1583,7 +1576,7 @@ sim-kort,concept
 handsfree,concept
 3g,other
 Java,concept
-( telefon ) lur,concept
+telefonlur,concept
 telefonsvarare,concept
 riktnummer,concept
 118118,amount
@@ -1651,11 +1644,11 @@ tio,amount
 tusen,amount
 pund,other
 ja,other
-37 °,amount
+37°,amount
 Celsius,person
 Fahrenheit,person
 garn,concept
-korsstygn ( Sbroderi ),concept
+korsstygn,concept
 lapptäcke,concept
 knyppling,concept
 slott,concept

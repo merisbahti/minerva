@@ -6,6 +6,9 @@ import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.io.FileInputStream;
+import java.io.File;
+import java.net.URI;
 
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
@@ -23,20 +26,21 @@ public class WebService {
 
     public static void runner() throws Exception {
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
-        server.createContext("/", new MyHandler());
+        server.createContext("/query", new QueryHandler());
+        server.createContext("/", new StaticHandler());
         server.setExecutor(null); // creates a default executor
         //PosTagger.getInstance();
         server.start();
     }
 
-    static class MyHandler implements HttpHandler {
+    static class QueryHandler implements HttpHandler {
         public void handle(HttpExchange t) throws IOException {
             String response = "No query found, specify the query parameter.";
             Map <String,String> qMap = queryToMap(t.getRequestURI().getQuery() == null ? "" : t.getRequestURI().getQuery());
             if (qMap.containsKey("q")) {
                 StringBuilder sb = new StringBuilder();
                 String q = qMap.get("q").toLowerCase();
-                List<Map<String, String>> results =  jules.QueryPassager.query(q, 100);
+                List<Map<String, String>> results = jules.QueryPassager.query(q, 100);
                 JSONArray jsonResults = new JSONArray();
                 for (Map<String, String> result : results) {
                     JSONObject res = new JSONObject();
@@ -69,7 +73,7 @@ public class WebService {
                 response = jsonResults.toString();
             }
             System.out.println("serving response");
-            t.setAttribute("content-type", "application/json");
+            //t.setAttribute("content-type", "application/json");
             Headers h = t.getResponseHeaders();
             h.add("Access-Control-Allow-Origin", "*");
             h.add("content-type", "application/json; charset=utf-8");
@@ -77,6 +81,49 @@ public class WebService {
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());
             os.close();
+        }
+    }
+    static class StaticHandler implements HttpHandler {
+        public void handle(HttpExchange t) throws IOException {
+            String root = "./wwwroot";
+            URI uri = t.getRequestURI();
+            System.out.println("looking for: "+ root + uri.normalize().getPath());
+            String path = uri.normalize().getPath();
+            System.out.println(path);
+            File file = new File(path.equals("/") ? (root + "/index.html"): root+path).getCanonicalFile();
+            System.out.println(file.getPath());
+            System.out.println(file.isFile());
+            if (uri.normalize().getPath().contains("..")) {
+              String response = "420 blaze it. (Seriously, try a bit harder maybe.)\n";
+              t.sendResponseHeaders(420, response.length());
+              OutputStream os = t.getResponseBody();
+              os.write(response.getBytes());
+              os.close();
+            } else if (!file.isFile()) {
+              // Object does not exist or is not a file: reject with 404 error.
+              String response = "404 (Not Found)\n";
+              t.sendResponseHeaders(404, response.length());
+              OutputStream os = t.getResponseBody();
+              os.write(response.getBytes());
+              os.close();
+            } else {
+              // Object exists and is a file: accept with response code 200.
+              String mime = "text/html";
+              if(path.endsWith(".js")) mime = "application/javascript";
+              if(path.endsWith(".css")) mime = "text/css";            
+              Headers h = t.getResponseHeaders();
+              h.set("Content-Type", mime);
+              t.sendResponseHeaders(200, 0);              
+              OutputStream os = t.getResponseBody();
+              FileInputStream fs = new FileInputStream(file);
+              final byte[] buffer = new byte[0x10000];
+              int count = 0;
+              while ((count = fs.read(buffer)) >= 0) {
+                os.write(buffer,0,count);
+              }
+              fs.close();
+              os.close();
+            }  
         }
     }
 

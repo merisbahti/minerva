@@ -1,11 +1,10 @@
 package jules;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-import de.bwaldvogel.liblinear.*;
+import util.Pair;
+
 
 /**
  * VERY experimental
@@ -16,19 +15,22 @@ import de.bwaldvogel.liblinear.*;
  *
  */
 public class Reranker {
-	private Model model;
-	private String modelFile = "Something";
 	
-	public Reranker() throws IOException{
-		model = Model.load(new File(modelFile));
+	private final static double notInTop5 = -100;
 	
-	}
-	
-	
-	public List<ScoreWord> rerank(List<ScoreWord> input, Feature[] features){
+	public static List<ScoreWord> rerank(List<ScoreWord> input, List<Pair<String,Double>> categories){
 		for(ScoreWord sw : input){
-			double res = Linear.predict(model, features);
-			sw.addliblinRank(res);
+			boolean setRank = false;
+			for(Pair<String,Double> category : categories){
+				if(sw.neTypeTag.equalsIgnoreCase(category.fst)){
+					sw.addliblinRank(category.snd);
+					setRank = true;
+					break;
+				}
+			}
+			if(setRank){
+				sw.addliblinRank(notInTop5);
+			}
 		}
 		Collections.sort(input);
 		return input;

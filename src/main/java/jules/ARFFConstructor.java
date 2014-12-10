@@ -23,6 +23,8 @@ public class ARFFConstructor {
 			writer.println("@relation category");
 			writer.println();
 			writer.println("@attribute word string");
+			writer.println("@attribute category {concept, location, definition, description, multiplechoice, amount, organization, other, person, abbreviation, verb}");
+			/*
 			writer.println("@attribute concept {TRUE, FALSE}");
 			writer.println("@attribute location {TRUE, FALSE}");
 			writer.println("@attribute definition {TRUE, FALSE}");
@@ -34,6 +36,7 @@ public class ARFFConstructor {
 			writer.println("@attribute person {TRUE, FALSE}");
 			writer.println("@attribute abbreviation {TRUE, FALSE}");
 			writer.println("@attribute verb {TRUE, FALSE}");
+			*/
 			writer.println();
 			writer.println("@data");
 			String[] cats = {"concept", "location", "definition", "description", "multiplechoice", "amount", "organization", "other", "person", "abbreviation", "verb"};
@@ -53,6 +56,7 @@ public class ARFFConstructor {
 						lq += w.lemma + " ";
 					}
 					//String print = category + "\t" + lq.trim();
+					/*
 					String catlist = "";
 					for (String s : cats){
 						catlist += ",";
@@ -62,8 +66,10 @@ public class ARFFConstructor {
 							catlist += fa;
 						}
 					}
+					*/
+					
 					System.out.println(lq);
-					String print = lq.trim() + catlist;
+					String print = lq.trim() + "," + category.trim();
 					writer.println(print);
 				}
 			}

@@ -1,4 +1,4 @@
-function plotter()
+function bm25_plotter()
   graphics_toolkit ("gnuplot")
   % Scan the data from the incomplete data-set.
   [xbm25,ybm25] = scan_data("bm25.txt");

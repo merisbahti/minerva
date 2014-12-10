@@ -1,4 +1,4 @@
-function [median, mrr] = median_and_mrr(infile)
+function [median, mrr] = scan_median_and_mrr(infile)
 	fileID = fopen(infile)
 	data = textscan(fileID,'%u\t%u');
 	x = data{1,1};

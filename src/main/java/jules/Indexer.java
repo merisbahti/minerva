@@ -42,7 +42,7 @@ public class Indexer {
 	private static IndexWriter writer;
 
 	public static void bzIndexer() {
-		analyzer = new SwedishAnalyzer();
+		analyzer = new CustomAnalyzer();
 		iwc = new IndexWriterConfig(Version.LATEST, analyzer);
 		iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 		try {
@@ -59,8 +59,8 @@ public class Indexer {
 			}
 		}
 		for (File f : files) {
-			doIndexDocuments(f.getAbsolutePath());
-			//doIndex(f.getAbsolutePath());
+			//doIndexDocuments(f.getAbsolutePath());
+			doIndex(f.getAbsolutePath());
 		}
 		try {
 			writer.commit();
@@ -178,7 +178,7 @@ public class Indexer {
 	
 
 	public static void index() {
-		Analyzer analyzer = new SwedishAnalyzer();
+		Analyzer analyzer = new CustomAnalyzer();
 		IndexWriterConfig iwc = new IndexWriterConfig(Version.LATEST, analyzer);
 		iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 		try {

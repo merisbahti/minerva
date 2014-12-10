@@ -14,6 +14,7 @@ import util.Pair;
  * @author timdolck
  *
  */
+
 public class Reranker {
 	
 	private final static double notInTop5 = -100;
@@ -35,5 +36,5 @@ public class Reranker {
 		Collections.sort(input);
 		return input;
 	}
-	
+
 }

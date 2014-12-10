@@ -53,7 +53,7 @@ public class RankNounsTest {
 					.findTopNouns(res);
 			
 			int i = 0;
-			System.out.println(lm.get(0).getTotalRank());
+			//System.out.println(lm.get(0).getTotalRank());
 			for (ScoreWord sw : lm) {
 				String s = sw.lemma;
 				i++;

@@ -49,9 +49,9 @@ public class Categorizer {
 				}
 				output.append(line + "\n");
 			}
-			//System.out.println(output.toString());
-			//System.out.println(categories);
-			//System.out.println(decvals);
+			System.out.println(output.toString());
+			System.out.println(categories);
+			System.out.println(decvals);
 			
 			String[] cats = categories.split("\\s+");
 			String[] vals = decvals.split("\\s+");

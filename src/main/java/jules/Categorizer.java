@@ -47,16 +47,23 @@ public class Categorizer {
 				}
 				output.append(line + "\n");
 			}
-			System.out.println(output.toString());
-			System.out.println(categories);
-			System.out.println(decvals);
+			//System.out.println(output.toString());
+			//System.out.println(categories);
+			//System.out.println(decvals);
 			
 			String[] cats = categories.split("\\s+");
 			String[] vals = decvals.split("\\s+");
 			List<Pair<String, Double>> prs = new ArrayList<Pair<String, Double>>();
-			for(int i = 0; i < cats.length; i++){
+			for(int i = 0; i < vals.length; i++){
+				try{
 				Pair<String, Double> pa = new Pair<String, Double>(cats[i], new BigDecimal(vals[i]).doubleValue());
 				prs.add(pa);
+				} catch (Exception e){
+					System.out.println(question);
+					System.out.println(categories);
+					System.out.println(decvals);
+					prs.add(new Pair<String, Double>("other", 0.0));
+				}
 			}
 			return prs;
 		} catch (Exception e) {

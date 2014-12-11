@@ -34,7 +34,7 @@ public class Indexer {
 	}
 
 	private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
-	public static String indexDir = "./indexDirPara/";
+	public static String indexDir = "./indexDir/";
 	private static String outputDir = "./output/";
 	private static int counter = 0;
 	private static Analyzer analyzer;

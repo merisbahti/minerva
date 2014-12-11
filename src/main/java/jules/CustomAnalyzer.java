@@ -18,6 +18,12 @@ import org.apache.lucene.analysis.util.WordlistLoader;
 import org.apache.lucene.util.IOUtils;
 import org.tartarus.snowball.ext.SwedishStemmer;
 
+/**
+ * Exactly the same as Swedish analyzer except it doesn't do any stemming
+ * 
+ * @author timdolck
+ *
+ */
 public class CustomAnalyzer extends StopwordAnalyzerBase {
 	private final CharArraySet stemExclusionSet;
 

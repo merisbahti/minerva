@@ -33,3 +33,9 @@ Att fixa:
 * Använd libshorttext för att predict category
 * liblinear - logistikregression
 * Reranking
+
+F1: Question Words
+F2: Answer Words
+F3: Categories Question
+
+Korsvalidering!

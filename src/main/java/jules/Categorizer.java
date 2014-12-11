@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import util.Pair;
@@ -20,7 +22,7 @@ public class Categorizer {
 	public static List<Pair<String, Double>> getCategories(String q) {
 		String question = q;
 		StringBuffer output = new StringBuffer();
-		String[] cmdarray = {"bash","-c", "cd ./libshorttext-1.1 && ./demo.py " + q};
+		String[] cmdarray = {"bash","-c", "cd ./libshorttext-1.1 && python3 ./demo.py " + q};
 		try {
 			Process p = Runtime.getRuntime().exec(cmdarray);
 		    p.waitFor();
@@ -53,9 +55,17 @@ public class Categorizer {
 			
 			String[] cats = categories.split("\\s+");
 			String[] vals = decvals.split("\\s+");
-			List<Pair<String, Double>> prs = new ArrayList<Pair<String, Double>>();
+            List<Double> valDubsAbs = new ArrayList<Double>();
+            for (String val : vals) {
+                if (!"".equals(val.trim()) &&  !val.trim().isEmpty())
+                    valDubsAbs.add(Math.abs(new BigDecimal(val).doubleValue()));
+            }
+
+            double maxAbs = Collections.max(valDubsAbs);
+            List<Pair<String, Double>> prs = new ArrayList<Pair<String, Double>>();
+
 			for(int i = 0; i < cats.length; i++){
-				Pair<String, Double> pa = new Pair<String, Double>(cats[i], new BigDecimal(vals[i]).doubleValue());
+				Pair<String, Double> pa = new Pair<String, Double>(cats[i], ((new BigDecimal(vals[i]).doubleValue())/maxAbs+1)/2);
 				prs.add(pa);
 			}
 			return prs;

@@ -69,8 +69,16 @@ public class Reranker {
 		return instance;
 	}
 	
-	public List<ScoreWord> rerank(List<ScoreWord> input,List<String> question, List<Pair<String,Double>> predictedCategories){
-		for(ScoreWord sw : input){
+	/**
+	 * Reranks the topwords using liblinear prediction
+	 * 
+	 * @param topWords
+	 * @param question
+	 * @param predictedCategories
+	 * @return
+	 */
+	public List<ScoreWord> rerank(List<ScoreWord> topWords, List<String> question, List<Pair<String,Double>> predictedCategories){
+		for(ScoreWord sw : topWords){
 			ArrayList<Feature> features = new ArrayList<Feature>();
 			for(Pair<String,Double> f : predictedCategories){
 				features.add(new FeatureNode(this.categoriesMap.get(f.fst), f.snd));
@@ -91,8 +99,8 @@ public class Reranker {
 			double prediction = Linear.predict(model, instance);
 			sw.addliblinRank(prediction);
 		}
-		Collections.sort(input);
-		return input;
+		Collections.sort(topWords);
+		return topWords;
 	}
 
 }

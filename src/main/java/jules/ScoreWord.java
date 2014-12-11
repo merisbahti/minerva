@@ -28,11 +28,15 @@ public class ScoreWord extends Word implements Comparable<ScoreWord>{
 	
 	public void addNounIndexScore(double score){
 		this.nounRank = score;
-		totalRank = nounRank*liblinRank;
+		updateTotalRank();
 	}
 	
 	public void addliblinRank(double rank){
 		this.liblinRank = rank;
+		updateTotalRank();
+	}
+	
+	private void updateTotalRank(){
 		totalRank = nounRank*liblinRank;
 	}
 	
@@ -45,7 +49,7 @@ public class ScoreWord extends Word implements Comparable<ScoreWord>{
 	}*/
 
 	/**
-	 * Used to sort the scorewords.
+	 * Compare scorewords on totalRank.
 	 */
 	@Override
 	public int compareTo(ScoreWord other) {

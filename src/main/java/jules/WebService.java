@@ -20,10 +20,6 @@ import org.json.*;
 import tagging.PosTagger;
 
 public class WebService {
-    public static void main(String[] args) throws Exception {
-        runner();
-    }
-
     public static void runner() throws Exception {
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
         server.createContext("/query", new QueryHandler());

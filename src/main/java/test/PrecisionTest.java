@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 import jules.*;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * Simple naive precision test for query results.
@@ -16,10 +18,14 @@ import jules.*;
  */
 public class PrecisionTest {
 	private static Map<String,String> testStrings = new HashMap<String,String>();
-	
-	public static void main(String[] args) {
-		initMap(testStrings);
-		
+
+    @Before
+    public void setUp() throws Exception {
+        initMap(testStrings);
+    }
+
+    @Test
+	public void test() {
 		System.out.println("====================");
 		System.out.println("Precision test");
 		System.out.println("====================");
@@ -28,6 +34,8 @@ public class PrecisionTest {
 			System.out.println("Query: " + query + "\t Score: " + score);
 		}
 	}
+
+
 	
 	private static double testQuery(String query, String answer){
 		List<Map<String, String>> result = QueryPassager.query(query, 100);
@@ -51,7 +59,7 @@ public class PrecisionTest {
 							matches ++;
 					}
 					
-					if(matches == n)
+					if (matches == n)
 						ansOcc++;
 				}
 				

@@ -27,8 +27,8 @@ import util.Pair;
 
 public class Reranker {
 	
-	private static String modelFile = "MDOELFILE";
-	private static final String indexFile = "index";
+	private static String modelFile = "./model/train_file.scale.model";
+	private static final String indexFile = "./model/training_indexes.txt";
 	private Reranker instance = null;
 	private Model model;
 	private Map<String, Integer> questionsMap, answersMap, categoriesMap;

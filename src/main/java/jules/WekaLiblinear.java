@@ -104,10 +104,14 @@ public class WekaLiblinear {
 					line += "\t" + (uniqueAnswers.headSet(str).size() + qSize)
 							+ ":1";
 					for (int j = 0; j < uniqueCategories.length; j++) {
+						try{
 						for (Pair<String, Double> cs : catstats.get(i)){
 							if(cs.fst.equalsIgnoreCase(uniqueCategories[j])){
 								line += "\t" + (qaSize+j+1) + ":" + cs.snd;
 							}
+						}
+						}catch(Exception e){
+							continue;
 						}
 					}
 					file += line + "\n";
@@ -117,6 +121,7 @@ public class WekaLiblinear {
 			}
 			
 			} catch (NullPointerException npe){
+				npe.printStackTrace();
 				System.out.println("nullpointer");
 				System.out.println(line);
 			}

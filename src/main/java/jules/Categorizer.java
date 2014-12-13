@@ -66,6 +66,7 @@ public class Categorizer {
 
 			for(int i = 0; i < cats.length; i++){
 				try{
+					System.out.println(cats[i] + " " + vals[i]);
 				Pair<String, Double> pa = new Pair<String, Double>(cats[i], ((new BigDecimal(vals[i]).doubleValue())/maxAbs+1)/2);
 				prs.add(pa);
 				} catch (Exception e){

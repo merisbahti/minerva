@@ -35,7 +35,7 @@ public class LiblinearInit {
 	static String[] uniqueCategories = { "concept", "location", "definition",
 			"description", "multiplechoice", "amount", "organization",
 			"other", "person", "abbreviation", "verb", "title",
-			"timepoint", "duration" };
+			"timepoint", "duration", "money" };
 	
 	
 	public static void headerCreator(){

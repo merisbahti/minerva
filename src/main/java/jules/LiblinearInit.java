@@ -15,7 +15,7 @@ import tagging.Word;
 import util.Constants;
 import util.Pair;
 
-public class WekaLiblinear {
+public class LiblinearInit {
 	/**
 	 * iterate over questions 
 	 * 		gather unique question words 

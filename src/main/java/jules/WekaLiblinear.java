@@ -12,6 +12,7 @@ import java.util.TreeSet;
 
 import tagging.PosTagger;
 import tagging.Word;
+import util.Constants;
 import util.Pair;
 
 public class WekaLiblinear {
@@ -25,44 +26,21 @@ public class WekaLiblinear {
 	 * @param args
 	 */
 
-	public static void headerCreator(){
-		String qDir = "./questions/";
-		File dir = new File(qDir);
+	static File dir = new File(Constants.qDir);
 
-		TreeSet<String> uniqueQuestions = new TreeSet<String>();
-		TreeSet<String> uniqueAnswers = new TreeSet<String>();
-		String[] uniqueCategories = { "concept", "location", "definition",
-				"description", "multiplechoice", "amount", "organization",
-				"other", "person", "abbreviation", "verb", "title",
-				"timepoint", "duration" };
+	static TreeSet<String> uniqueQuestions = new TreeSet<String>();
+	static TreeSet<String> uniqueAnswers = new TreeSet<String>();
+	static String[] uniqueCategories = { "concept", "location", "definition",
+			"description", "multiplechoice", "amount", "organization",
+			"other", "person", "abbreviation", "verb", "title",
+			"timepoint", "duration" };
+	
+	
+	public static void headerCreator(){
 
 		try{
-			PosTagger tagger = PosTagger.getInstance();
 			PrintWriter writer = new PrintWriter("train_header.txt", "UTF-8");
 			
-			for (File f : dir.listFiles()) {
-				if (f.getName().startsWith(".")) continue;
-				System.out.println("Reading file: " + f.getName());
-				BufferedReader br = new BufferedReader(new FileReader(f));
-				String line, question, corrAnswer;
-
-				while ((line = br.readLine()) != null) {
-					String[] cols = line.split("\t");
-					corrAnswer = cols[6].toLowerCase();
-					if (corrAnswer.contains(" ")) continue;
-
-					question = cols[5].toLowerCase();
-
-					for (ScoreWord sw : QueryPassager.findTopNouns(QueryPassager.query(question, 100))) {
-						uniqueAnswers.add(sw.lemma);
-					}
-
-					for (Word w : tagger.tagString(question).get(0)) {
-						uniqueQuestions.add(w.lemma);
-					}
-				}
-
-			}
 			String line = "";
 			int i = 1;
 			
@@ -91,15 +69,6 @@ public class WekaLiblinear {
 	}
 	
 	public static void createLiblinearTrain() {
-		String qDir = "./questions/";
-		File dir = new File(qDir);
-
-		TreeSet<String> uniqueQuestions = new TreeSet<String>();
-		TreeSet<String> uniqueAnswers = new TreeSet<String>();
-		String[] uniqueCategories = { "concept", "location", "definition",
-				"description", "multiplechoice", "amount", "organization",
-				"other", "person", "abbreviation", "verb", "title",
-				"timepoint", "duration" };
 
 		List<String> corrAnswers = new ArrayList<String>();
 		List<String> questions = new ArrayList<String>();
@@ -119,17 +88,14 @@ public class WekaLiblinear {
 				while ((line = br.readLine()) != null) {
 					String[] cols = line.split("\t");
 					corrAnswer = cols[6].toLowerCase();
-					if (corrAnswer.contains(" "))
-						continue;
-					corrAnswers
-							.add(tagger.tagString(corrAnswer).get(0)[0].lemma);
+					if (corrAnswer.contains(" ")) continue;
+					corrAnswers.add(tagger.tagString(corrAnswer).get(0)[0].lemma);
 
 					question = cols[5].toLowerCase();
 					questions.add(question);
 
 					List<String> as = new ArrayList<String>();
-					for (ScoreWord sw : QueryPassager
-							.findTopNouns(QueryPassager.query(question, 100))) {
+					for (ScoreWord sw : QueryPassager.findTopNouns(QueryPassager.query(question, 100))) {
 						as.add(sw.lemma);
 						uniqueAnswers.add(sw.lemma);
 					}
@@ -138,8 +104,7 @@ public class WekaLiblinear {
 					for (Word w : tagger.tagString(question).get(0)) {
 						uniqueQuestions.add(w.lemma);
 					}
-					List<Pair<String, Double>> cStat = Categorizer
-							.getCategories(question);
+					List<Pair<String, Double>> cStat = Categorizer.getCategories(question);
 					catstats.add(cStat);
 				}
 				br.close();
@@ -190,6 +155,7 @@ public class WekaLiblinear {
 				System.out.println(line);
 			}
 			writer.close();
+			headerCreator();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

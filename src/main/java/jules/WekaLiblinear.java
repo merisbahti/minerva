@@ -29,6 +29,71 @@ public class WekaLiblinear {
 	 * @param args
 	 */
 
+	public static void headerCreator(){
+		String qDir = "./questions/";
+		File dir = new File(qDir);
+
+		TreeSet<String> uniqueQuestions = new TreeSet<String>();
+		TreeSet<String> uniqueAnswers = new TreeSet<String>();
+		String[] uniqueCategories = { "concept", "location", "definition",
+				"description", "multiplechoice", "amount", "organization",
+				"other", "person", "abbreviation", "verb", "title",
+				"timepoint", "duration" };
+
+		try{
+			PosTagger tagger = PosTagger.getInstance();
+			PrintWriter writer = new PrintWriter("train_header.txt", "UTF-8");
+			
+			for (File f : dir.listFiles()) {
+				if (f.getName().startsWith(".")) continue;
+				System.out.println("Reading file: " + f.getName());
+				BufferedReader br = new BufferedReader(new FileReader(f));
+				String line, question, corrAnswer;
+
+				while ((line = br.readLine()) != null) {
+					String[] cols = line.split("\t");
+					corrAnswer = cols[6].toLowerCase();
+					if (corrAnswer.contains(" ")) continue;
+
+					question = cols[5].toLowerCase();
+
+					for (ScoreWord sw : QueryPassager.findTopNouns(QueryPassager.query(question, 100))) {
+						uniqueAnswers.add(sw.lemma);
+					}
+
+					for (Word w : tagger.tagString(question).get(0)) {
+						uniqueQuestions.add(w.lemma);
+					}
+				}
+
+			}
+			String line = "";
+			int i = 1;
+			
+			for(String q : uniqueQuestions){
+				line += "\t" + i + ":" + q;
+				i++;
+			}
+			writer.println(line.trim());
+			line = "";
+			for(String a : uniqueAnswers){
+				line += "\t" + i + ":" + a;
+				i++;
+			}
+
+			writer.println(line.trim());
+			line = "";
+			for(String c : uniqueCategories){
+				line += "\t" + i + ":" + c;
+				i++;
+			}
+			writer.println(line.trim());
+			writer.close();
+		} catch (Exception e){
+			
+		}
+	}
+	
 	public static void createLiblinearTrain() {
 		String qDir = "./questions/";
 		File dir = new File(qDir);

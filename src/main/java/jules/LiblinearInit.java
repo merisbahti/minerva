@@ -81,7 +81,7 @@ public class LiblinearInit {
 			PosTagger tagger = PosTagger.getInstance();
 			PrintWriter writer = new PrintWriter(Constants.liblinearTrain, "UTF-8");
 			for (File f : dir.listFiles()) {
-				if (!f.getName().startsWith("langt"))
+				if (f.getName().startsWith("."))
 					continue;
 				System.out.println("Reading file: " + f.getName());
 				BufferedReader br = new BufferedReader(new FileReader(f));

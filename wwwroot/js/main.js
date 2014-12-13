@@ -26,6 +26,9 @@ var switchToP = function() {
   $("#tabResultsP").attr("class", "active");
   $("#tabResultsTA").attr("class", "");
   $("#tabResultsRTA").attr("class", "");
+  $("#resultsP").css("display","");
+  $("#resultsTA").css("display","none");
+  $("#resultsRTA").css("display","none");
 }
 $( "#tabResultsP" ).click(function(event) {
   event.preventDefault();
@@ -36,6 +39,9 @@ var switchToTA = function() {
   $("#tabResultsP").attr("class", "");
   $("#tabResultsTA").attr("class", "active");
   $("#tabResultsRTA").attr("class", "");
+  $("#resultsP").css("display","none");
+  $("#resultsTA").css("display","");
+  $("#resultsRTA").css("display","none");
 }
 $( "#tabResultsTA" ).click(function(event) {
   event.preventDefault();
@@ -46,6 +52,9 @@ var switchToRTA = function() {
   $("#tabResultsP").attr("class", "");
   $("#tabResultsTA").attr("class", "");
   $("#tabResultsRTA").attr("class", "active");
+  $("#resultsP").css("display","none");
+  $("#resultsTA").css("display","none");
+  $("#resultsRTA").css("display","");
 }
 
 $( "#tabResultsRTA" ).click(function(event) {
@@ -64,7 +73,7 @@ var showSpinner = function () {
         $("<div>").attr("class", "double-bounce1"),
         $("<div>").attr("class", "double-bounce2")
       ]
-    ).appendTo("#results")
+    ).appendTo("#spinner")
   })
 }
 
@@ -86,11 +95,16 @@ var removeResults = function() {
   $("#resultsP").empty();
   $("#resultsTA").empty();
   $("#resultsRTA").empty();
+  $("#spinner").empty();
 }
 
 $("#search").click(function(){
   $("#search").val('');
 });
+
+var trunc = function(dub, decs) {
+  return Math.floor(dub * Math.pow(10, decs)) / Math.pow(10, decs);
+}
 
 $("#gosearch").click(function(){
   var searchText = $("#search").val()
@@ -102,14 +116,36 @@ $("#gosearch").click(function(){
     showSpinner()
     //$.getJSON("http://localhost:8081/?q="+$("#search").val(), function( data ) {
     $.getJSON("/query/?q="+$("#search").val(), function( data ) {
-      if (data.length == 0) { 
+      if (data.length == 0 || (data["topAnswers"].length == 0 && data["rankedTopAnswers"].length == 0 && data["paragraphs"].length == 0)) { 
           addError("Inga träffar.", "Prova med en annan fråga?");
         } else {
           removeResults()
           $("ul").show()
-          $.each(data, function(i, item) {
-            addResult(item.title, item.text, "#resultsP")
-          }); 
+          $("#tabResultsRTAAmount").text(data["rankedTopAnswers"].length);
+          $("#tabResultsTAAmount").text(data["topAnswers"].length);
+          $("#tabResultsPAmount").text(data["paragraphs"].length);
+          if (data["paragraphs"].length == 0) {
+            addResult("No paragraphs found, try another query?", "" ,"#resultsP")
+          } else {
+            $.each(data["paragraphs"], function(i, item) {
+              addResult(item.title, item.text, "#resultsP")
+            }); 
+          }
+          $.each(data, function(i, item) { console.log(item.length) })
+          if (data["rankedTopAnswers"].length == 0) {
+            addResult("The reranker couldn't find any candidates, try another query?","", "#resultsRTA")
+          } else {
+            $.each(data["rankedTopAnswers"], function(i, item) {
+              addResult(item.word, "Score: " + trunc(item.score, 2), "#resultsRTA")
+            }); 
+          }
+          if (data["topAnswers"].length == 0) {
+            addResult("The POS-tagger couldn't find any candidates, try another query?", "", "#resultsTA")
+          } else {
+            $.each(data["topAnswers"], function(i, item) {
+              addResult(item.word, "Score: " + trunc(item.score, 2), "#resultsTA")
+            }); 
+          }
       }
     }).error(
       function() {

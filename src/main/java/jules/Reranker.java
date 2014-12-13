@@ -25,7 +25,7 @@ import util.*;
  */
 
 public class Reranker {
-	private Reranker instance = null;
+	private static Reranker instance = null;
 	private Model model;
 	private Map<String, Integer> questionsMap, answersMap, categoriesMap;
 	
@@ -61,7 +61,7 @@ public class Reranker {
 		}
 	}
 	
-	public Reranker getInstance() throws IOException{
+	public static Reranker getInstance() throws IOException{
 		if(instance == null){
 			instance = new Reranker();
 		}

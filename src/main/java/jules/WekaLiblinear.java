@@ -138,15 +138,11 @@ public class WekaLiblinear {
 
 	}
 	public static void testRankTopNouns(String q) throws IOException{
-		List<Map<String, String>> res = QueryPassager.query(q, 10);
+		List<Map<String, String>> res = QueryPassager.query(q, 100);
 		List<ScoreWord> lm = QueryPassager.findTopNouns(res);
 		for(ScoreWord sw : lm){
 			System.out.println(sw.word + " : " + sw.lemma + " : " + sw.getTotalRank());
 		}
-		
-		PosTagger stagger = PosTagger.getInstance();
-		List<Word[]> ss = stagger.tagString("stockholms");
-		System.out.println(ss.get(0)[0].word + " : " + ss.get(0)[0].lemma);
 		
 	}
 }

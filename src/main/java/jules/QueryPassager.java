@@ -105,6 +105,7 @@ public class QueryPassager {
 				List<Word[]> sents = posTagger.tagString(fieldValue);
 				for (Word[] sent : sents) {
 					for (Word word : sent) {
+						if(word.word.length() < 2 && !word.word.equalsIgnoreCase("ö|å")) continue;
 						if (matchingPos(nounTags, word.pos)) {
 							if (freqs.containsKey(word)) {
 								freqs.put(word, freqs.get(word) + score);
@@ -125,7 +126,7 @@ public class QueryPassager {
 		}
 
 		Collections.sort(scores);
-		return scores.subList(0, scores.size() > 100 ? 100 : scores.size());
+		return scores.size() > 100 ? scores.subList(0, 100) : scores;
 	}
 
 

@@ -15,6 +15,8 @@ import de.bwaldvogel.liblinear.Feature;
 import de.bwaldvogel.liblinear.FeatureNode;
 import de.bwaldvogel.liblinear.Linear;
 import de.bwaldvogel.liblinear.Model;
+import tagging.PosTagger;
+import tagging.Word;
 import util.*;
 
 /**
@@ -28,6 +30,26 @@ public class Reranker {
 	private static Reranker instance = null;
 	private Model model;
 	private Map<String, Integer> questionsMap, answersMap, categoriesMap;
+	public static void rerankTest() throws IOException{
+		String q = "Vad heter Sveriges huvudstad?";
+		List<Map<String, String>> list = QueryPassager.query(q, 100);
+		List<ScoreWord> topN = QueryPassager.findTopNouns(list);
+		for(ScoreWord s : topN){
+			System.out.println(s.toString());
+		}
+		List<Pair<String, Double>> cat = Categorizer.getCategories(q);
+		Reranker ins = Reranker.getInstance();
+		PosTagger tagger = PosTagger.getInstance();
+		List<Word[]> words = tagger.tagString(q);
+		List<String> qLemmas = new ArrayList<String>();
+		for(Word w : words.get(0)){
+			qLemmas.add(w.lemma);
+		}
+		List<ScoreWord> results = ins.rerank(topN, qLemmas, cat);
+		for(ScoreWord res : results){
+			System.out.println(res.lemma + ": " + res.getTotalRank());
+		}
+	}
 	
 	protected Reranker() throws IOException{
 		File file = new File(Constants.liblinearModel);
@@ -40,13 +62,13 @@ public class Reranker {
 		String line;
 		Map<String,Integer> current = questionsMap;
 		while((line = br.readLine()) != null){
-			if(line.isEmpty())
-				current = changeCurrentMap(current);
 			String[] splits = line.split("\t");
 			for(String unit : splits){
-				String[] ic = unit.split(":");
-				current.put(ic[1], Integer.getInteger(ic[0]));
+				String[] ic = unit.split(":", 2);
+				int c = Integer.parseInt(ic[0]);
+				current.put(ic[1], c-1);
 			}
+			current = changeCurrentMap(current);
 		}
 		br.close();
 	}
@@ -80,13 +102,18 @@ public class Reranker {
 		for(ScoreWord sw : topWords){
 			ArrayList<Feature> features = new ArrayList<Feature>();
 			for(Pair<String,Double> f : predictedCategories){
+				try{
 				features.add(new FeatureNode(this.categoriesMap.get(f.fst), f.snd));
+				}catch(Exception e){
+					
+				}
 			}
 			for(String word : question){
 				features.add(new FeatureNode(this.questionsMap.get(word), 1));
 			}
+			try{
 			features.add(new FeatureNode(this.answersMap.get(sw.lemma), 1));
-			
+			}catch(Exception e){}
 			Collections.sort(features, new Comparator<Feature>(){
 				@Override
 				public int compare(Feature f1, Feature f2) {
@@ -94,10 +121,12 @@ public class Reranker {
 	            }
 			});
 			
-			Feature[] instance = (Feature[]) features.toArray();
-			double prediction = Linear.predict(model, instance);
-			System.out.println("prediction: " + prediction);
-			sw.addliblinRank(prediction);
+			Feature[] f = new Feature[features.size()];
+			f = (Feature[]) features.toArray(f);
+			double prediction = Linear.predict(model, f);
+			double[] dbs = {(double) 0,(double) 1};
+			Linear.predictProbability(model, f, dbs);
+			sw.addliblinRank(dbs[1]);
 		}
 		Collections.sort(topWords);
 		return topWords;

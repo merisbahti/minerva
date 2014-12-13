@@ -8,10 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.core.SimpleAnalyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.analysis.sv.SwedishAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
@@ -27,25 +25,23 @@ import org.apache.lucene.store.FSDirectory;
 
 import tagging.PosTagger;
 import tagging.Word;
+import util.Constants;
 
 public class QueryPassager {
 	public static List<Map<String, String>> query(String querystr, int nbrHits) {
 		Analyzer analyzer = new CustomAnalyzer();
 		String[] fieldNames = { "title", "text" };
-		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames,
-				analyzer);
+		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer);
 		Query query = null;
 		try {
-			query = mfqp.parse(querystr.toLowerCase().replaceAll(
-					"[^a-zåäö\\s]", ""));
+			query = mfqp.parse(querystr.toLowerCase().replaceAll("[^a-zåäö\\s]", ""));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 		// 3. search
 		IndexReader reader = null;
 		try {
-			reader = DirectoryReader.open((FSDirectory.open(new File(
-					Indexer.indexDir))));
+			reader = DirectoryReader.open((FSDirectory.open(new File(Constants.indexDir))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -53,8 +49,7 @@ public class QueryPassager {
 		IndexSearcher searcher = new IndexSearcher(reader);
 		searcher.setSimilarity(new BM25Similarity());
 
-		TopScoreDocCollector collector = TopScoreDocCollector.create(nbrHits,
-				true);
+		TopScoreDocCollector collector = TopScoreDocCollector.create(nbrHits, true);
 		try {
 			searcher.search(query, collector);
 		} catch (IOException e) {
@@ -85,8 +80,7 @@ public class QueryPassager {
 
 	private static String[] nounTags = { "NN", "PM" };
 
-	public static List<ScoreWord> findTopNouns(
-			List<Map<String, String>> docs) {
+	public static List<ScoreWord> findTopNouns(List<Map<String, String>> docs) {
 		PosTagger posTagger = null;
 		try {
 			posTagger = PosTagger.getInstance();
@@ -96,9 +90,9 @@ public class QueryPassager {
 		}
 
 		HashMap<Word, Double> freqs = new HashMap<Word, Double>();
-		
+
 		for (Map<String, String> doc : docs) {
-			//Extract score and use it in ScoreWord
+			// Extract score and use it in ScoreWord
 			double score = Double.parseDouble(doc.get("Score"));
 			Set<String> keys = doc.keySet();
 			keys.remove("Score");
@@ -108,6 +102,8 @@ public class QueryPassager {
 				List<Word[]> sents = posTagger.tagString(fieldValue);
 				for (Word[] sent : sents) {
 					for (Word word : sent) {
+						if (word.word.length() < 2 && !word.word.equalsIgnoreCase("ö|å"))
+							continue;
 						if (matchingPos(nounTags, word.pos)) {
 							if (freqs.containsKey(word)) {
 								freqs.put(word, freqs.get(word) + score);
@@ -119,18 +115,17 @@ public class QueryPassager {
 				}
 			}
 		}
-		
+
 		ArrayList<ScoreWord> scores = new ArrayList<ScoreWord>();
-		for (Word freqKey : freqs.keySet()){
+		for (Word freqKey : freqs.keySet()) {
 			ScoreWord sw = new ScoreWord(freqKey);
 			sw.addNounIndexScore(freqs.get(freqKey));
 			scores.add(sw);
 		}
 
 		Collections.sort(scores);
-		return scores.subList(0, scores.size() > 100 ? 100 : scores.size());
+		return scores.size() > 100 ? scores.subList(0, 100) : scores;
 	}
-
 
 	private static boolean matchingPos(String[] tags, String pos) {
 		for (String tag : tags) {

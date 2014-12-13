@@ -16,7 +16,6 @@ import org.apache.lucene.analysis.util.CharArraySet;
 import org.apache.lucene.analysis.util.StopwordAnalyzerBase;
 import org.apache.lucene.analysis.util.WordlistLoader;
 import org.apache.lucene.util.IOUtils;
-import org.tartarus.snowball.ext.SwedishStemmer;
 
 /**
  * Exactly the same as Swedish analyzer except it doesn't do any stemming

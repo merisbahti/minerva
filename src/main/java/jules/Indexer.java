@@ -13,7 +13,6 @@ import org.apache.commons.compress.compressors.CompressorException;
 import org.apache.commons.compress.compressors.CompressorInputStream;
 import org.apache.commons.compress.compressors.CompressorStreamFactory;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.sv.SwedishAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.IntField;
@@ -23,15 +22,13 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
+import util.Constants;
 import edu.jhu.nlp.wikipedia.PageCallbackHandler;
 import edu.jhu.nlp.wikipedia.WikiPage;
 import edu.jhu.nlp.wikipedia.WikiXMLParser;
 import edu.jhu.nlp.wikipedia.WikiXMLParserFactory;
 
 public class Indexer {
-	private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
-	public static String indexDir = "./indexDir/";
-	private static String outputDir = "./output/";
 	private static int counter = 0;
 	private static Analyzer analyzer;
 	private static IndexWriterConfig iwc;
@@ -42,12 +39,12 @@ public class Indexer {
 		iwc = new IndexWriterConfig(Version.LATEST, analyzer);
 		iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 		try {
-			writer = new IndexWriter(FSDirectory.open(new File(indexDir)), iwc);
+			writer = new IndexWriter(FSDirectory.open(new File(Constants.indexDir)), iwc);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		File output = new File(outputDir);
+		File output = new File(Constants.outputDir);
 		ArrayList<File> files = new ArrayList<File>();
 		for (File f : output.listFiles()) {
 			for (File g : f.listFiles()) {
@@ -179,8 +176,8 @@ public class Indexer {
 		iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 		try {
 			final IndexWriter writer = new IndexWriter(
-					FSDirectory.open(new File(indexDir)), iwc);
-			WikiXMLParser wxsp = WikiXMLParserFactory.getSAXParser(wikiFile);
+					FSDirectory.open(new File(Constants.indexDir)), iwc);
+			WikiXMLParser wxsp = WikiXMLParserFactory.getSAXParser(Constants.wikiFile);
 			wxsp.setPageCallback(new PageCallbackHandler() {
 				@Override
 				public void process(WikiPage page) {

@@ -3,7 +3,9 @@ package jules;
 import tagging.Word;
 
 /**
- * Very experimental right now
+ * Word containing rankpoints
+ * 
+ * still some experimental stuff here
  * 
  * @author timdolck
  *

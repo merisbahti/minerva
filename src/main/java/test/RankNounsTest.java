@@ -29,6 +29,7 @@ public class RankNounsTest {
 		File dir = new File(qDir);
 		writer = new PrintWriter("test.txt", "UTF-8");
 		for (File f : dir.listFiles()) {
+			if(!f.getName().startsWith(".")) continue;
 			System.out.println("Reading file: " + f.getName());
 			BufferedReader br = new BufferedReader(new FileReader(f));
 			String line;

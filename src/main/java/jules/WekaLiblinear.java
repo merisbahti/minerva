@@ -2,11 +2,17 @@ package jules;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeSet;
+
+import org.junit.Before;
 
 import tagging.PosTagger;
 import tagging.Word;
@@ -131,5 +137,16 @@ public class WekaLiblinear {
 		}
 
 	}
-
+	public static void testRankTopNouns(String q) throws IOException{
+		List<Map<String, String>> res = QueryPassager.query(q, 10);
+		List<ScoreWord> lm = QueryPassager.findTopNouns(res);
+		for(ScoreWord sw : lm){
+			System.out.println(sw.word + " : " + sw.lemma + " : " + sw.getTotalRank());
+		}
+		
+		PosTagger stagger = PosTagger.getInstance();
+		List<Word[]> ss = stagger.tagString("stockholms");
+		System.out.println(ss.get(0)[0].word + " : " + ss.get(0)[0].lemma);
+		
+	}
 }

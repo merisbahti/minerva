@@ -24,7 +24,7 @@ public class Categorizer {
 		String question = q;
 		StringBuffer output = new StringBuffer();
 		String[] cmdarray = { "bash", "-c",
-				"cd ./libshorttext-1.1 && python3 ./demo.py " + q };
+				"cd ./libshorttext-1.1 && python3 ./demo.py \"" + q + "\""};
 		try {
 			Process p = Runtime.getRuntime().exec(cmdarray);
 			p.waitFor();
@@ -52,11 +52,12 @@ public class Categorizer {
 				}
 				output.append(line + "\n");
 			}
+			/*
 			System.out.println(output.toString());
 			System.out.println(categories);
-			System.out.println(decvals);
-
+			System.out.println(decvals);*/
 			String[] cats = categories.split("\\s{1,10}");
+
 			String[] vals = decvals.split("\\s+");
 			List<Double> valDubsAbs = new ArrayList<Double>();
 			for (String val : vals) {
@@ -71,10 +72,7 @@ public class Categorizer {
 				cats[i] = cats[i].trim();
 				if (!cats[i].isEmpty()) {
 					try {
-						Pair<String, Double> pa = new Pair<String, Double>(
-								cats[i],
-								((new BigDecimal(vals[i]).doubleValue())
-										/ maxAbs + 1) / 2);
+						Pair<String, Double> pa = new Pair<String, Double>(cats[i],((new BigDecimal(vals[i]).doubleValue())/ maxAbs + 1) / 2);
 						prs.add(pa);
 					} catch (Exception e) {
 						System.err.println("Something went wrong in categorizer: ");
@@ -83,9 +81,6 @@ public class Categorizer {
 						System.out.println(decvals);
 						//prs.add(new Pair<String, Double>("other", 0.0));
 					}
-				}else{
-					int h = 9;
-					System.out.println(categories);
 				}
 			}
 			return prs;

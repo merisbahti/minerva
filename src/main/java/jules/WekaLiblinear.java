@@ -2,17 +2,13 @@ package jules;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
-
-import org.junit.Before;
 
 import tagging.PosTagger;
 import tagging.Word;
@@ -49,12 +45,11 @@ public class WekaLiblinear {
 			PosTagger tagger = PosTagger.getInstance();
 			PrintWriter writer = new PrintWriter("train_file.scale", "UTF-8");
 			for (File f : dir.listFiles()) {
-				if (!f.getName().startsWith("langt"))
-					continue;
+				//if (!f.getName().startsWith("langt"))
+				//	continue;
 				System.out.println("Reading file: " + f.getName());
 				BufferedReader br = new BufferedReader(new FileReader(f));
-				String line, answer, question, lq, corrAnswer;
-				List<Pair<String, Double>> currcatstats;
+				String line, question, corrAnswer;
 
 				while ((line = br.readLine()) != null) {
 					String[] cols = line.split("\t");
@@ -82,6 +77,7 @@ public class WekaLiblinear {
 							.getCategories(question);
 					catstats.add(cStat);
 				}
+				br.close();
 
 			}
 			int qSize = uniqueQuestions.size();
@@ -90,7 +86,6 @@ public class WekaLiblinear {
 
 			String line = "";
 			try{
-			String file = "";
 			for (int i = 0; i < questions.size(); i++) {
 				for (String str : answers.get(i)) {
 					line = "";
@@ -120,8 +115,6 @@ public class WekaLiblinear {
 							continue;
 						}
 					}
-					file += line + "\n";
-					//System.out.println(line);
 					writer.println(line);
 				}
 			}

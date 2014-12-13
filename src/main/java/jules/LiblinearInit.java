@@ -79,7 +79,7 @@ public class LiblinearInit {
 
 		try {
 			PosTagger tagger = PosTagger.getInstance();
-			PrintWriter writer = new PrintWriter("train_file.scale", "UTF-8");
+			PrintWriter writer = new PrintWriter(Constants.liblinearTrain, "UTF-8");
 			for (File f : dir.listFiles()) {
 				if (!f.getName().startsWith("langt"))
 					continue;

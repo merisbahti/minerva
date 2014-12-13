@@ -41,7 +41,7 @@ public class LiblinearInit {
 	public static void headerCreator(){
 
 		try{
-			PrintWriter writer = new PrintWriter("./model/training_indexes.txt", "UTF-8");
+			PrintWriter writer = new PrintWriter(Constants.liblinearWordMap, "UTF-8");
 			
 			String line = "";
 			int i = 1;

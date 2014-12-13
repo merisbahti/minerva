@@ -15,8 +15,7 @@ import de.bwaldvogel.liblinear.Feature;
 import de.bwaldvogel.liblinear.FeatureNode;
 import de.bwaldvogel.liblinear.Linear;
 import de.bwaldvogel.liblinear.Model;
-import util.Pair;
-
+import util.*;
 
 /**
  * VERY experimental
@@ -26,17 +25,14 @@ import util.Pair;
  */
 
 public class Reranker {
-	
-	private static String modelFile = "./model/train_file.scale.model";
-	private static final String indexFile = "./model/training_indexes.txt";
 	private Reranker instance = null;
 	private Model model;
 	private Map<String, Integer> questionsMap, answersMap, categoriesMap;
 	
 	protected Reranker() throws IOException{
-		File file = new File(modelFile);
+		File file = new File(Constants.liblinearModel);
 		model = Model.load(file);
-		BufferedReader br = new BufferedReader(new FileReader(new File(indexFile)));
+		BufferedReader br = new BufferedReader(new FileReader(new File(Constants.liblinearWordMap)));
 		questionsMap = new HashMap<String,Integer>();
 		answersMap = new HashMap<String,Integer>();
 		categoriesMap = new HashMap<String,Integer>();

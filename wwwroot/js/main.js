@@ -7,22 +7,55 @@ $('#search').keypress(function (e) {
   }
 });   
 
-var addResult = function(head, foot) {   
+var addResult = function(head, foot, id) {   
   $(function() {
-      $("<div>").attr("style", "margin-top: 20px").html(
-        $("<div>").attr("class", "panel panel-default").html(
-          [
-            $("<div>").attr({
-                "class" : "panel-body",
-                "style" : "font-weight: bold"
-            }).text(head),
-            $("<div>").attr({
-                "class" : "panel-footer" 
-            }).text(foot)
-          ]
-      )).appendTo("#results");
+      $("<div>").attr("class", "list-group-item").html(
+        [
+          $("<h4>").attr({
+              "class" : "list-group-item-heading"
+          }).text(head),
+          $("<p>").attr({
+              "class" : "list-group-item-text" 
+          }).text(foot)
+        ]
+      ).appendTo(id);
   });
 }
+
+var switchToP = function() {
+  $("#tabResultsP").attr("class", "active");
+  $("#tabResultsTA").attr("class", "");
+  $("#tabResultsRTA").attr("class", "");
+}
+$( "#tabResultsP" ).click(function(event) {
+  event.preventDefault();
+  switchToP();
+});
+
+var switchToTA = function() {
+  $("#tabResultsP").attr("class", "");
+  $("#tabResultsTA").attr("class", "active");
+  $("#tabResultsRTA").attr("class", "");
+}
+$( "#tabResultsTA" ).click(function(event) {
+  event.preventDefault();
+  switchToTA();
+});
+
+var switchToRTA = function() {
+  $("#tabResultsP").attr("class", "");
+  $("#tabResultsTA").attr("class", "");
+  $("#tabResultsRTA").attr("class", "active");
+}
+
+$( "#tabResultsRTA" ).click(function(event) {
+  event.preventDefault();
+  switchToRTA();
+});
+
+$( "#tabResultsRTA" ).click(function() {
+  switchToRTA();
+});
 
 var showSpinner = function () {
   $(function () {
@@ -36,7 +69,7 @@ var showSpinner = function () {
 }
 
 var addError = function(title, text) {
- //<div class="alert alert-danger" role="alert">...</div>
+  $("ul").hide()
   removeResults()
   $(function() {
     $("<div>").attr("class", "alert alert-danger").html(
@@ -44,18 +77,15 @@ var addError = function(title, text) {
         $("<b>").text(title + " "),
         $("<span>").text(text)
       ]
-    ).appendTo("#results");
+    ).appendTo("#error");
   });
 }
 
 var removeResults = function() {
-  $("#results").empty();
-  /*var childr = $("#results").children()
-  $.each(childr, function (idx, val) {
-    $(this).slideDown(250, function() {
-      $(this).remove();
-    });
-  });*/
+  $("#error").empty();
+  $("#resultsP").empty();
+  $("#resultsTA").empty();
+  $("#resultsRTA").empty();
 }
 
 $("#search").click(function(){
@@ -65,9 +95,10 @@ $("#search").click(function(){
 $("#gosearch").click(function(){
   var searchText = $("#search").val()
   if (/^\s*$/.test(searchText)) {
-    addError("Tom sökning.", "Prova att skriva lite mer i sökrutan!")
+   addError("Tom sökning.", "Prova att skriva lite mer i sökrutan!")
   } else {
     removeResults()
+    $("ul").hide()
     showSpinner()
     //$.getJSON("http://localhost:8081/?q="+$("#search").val(), function( data ) {
     $.getJSON("/query/?q="+$("#search").val(), function( data ) {
@@ -75,8 +106,9 @@ $("#gosearch").click(function(){
           addError("Inga träffar.", "Prova med en annan fråga?");
         } else {
           removeResults()
+          $("ul").show()
           $.each(data, function(i, item) {
-            addResult(item.title, item.text)
+            addResult(item.title, item.text, "#resultsP")
           }); 
       }
     }).error(

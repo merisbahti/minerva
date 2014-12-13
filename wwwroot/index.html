@@ -8,6 +8,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/spinner.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -16,8 +17,8 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container" style="margin-top:20px;">
-      <form action="#"> 
+    <div class="container" style="margin-top:20px; ">
+      <form action="#" style="margin-bottom:20px;"> 
         <div class="input-group input-group-lg">
           <input autocomplete="off" id="search" type="text" class="form-control" placeholder="Fråga mig vad som helst.">
           <span class="input-group-btn">
@@ -27,8 +28,18 @@
           </span>
         </div>
       </form>
-      <div id="results" style="margin-top:20px">
-        <!-- Results will be stored here when the user triggers #gosearch -->
+      <ul class="nav nav-tabs nav-justified" id="tabs" style="display: none">
+        <li id="tabResultsRTA" role="presentation" class="active"><a href="#">Reranked Top Answers</a></li>
+        <li id="tabResultsTA" role="presentation"><a href="#">Top Answers</a></li>
+        <li id="tabResultsP" role="presentation"><a href="#">Paragraphs</a></li>
+      </ul>
+      <div id="error">
+      </div>
+      <div class="list-group" id="resultsP">
+      </div>
+      <div class="list-group" id="resultsTA">
+      </div>
+      <div class="list-group" id="resultsRTA">
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

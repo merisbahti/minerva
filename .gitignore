@@ -6,6 +6,7 @@
 *.arff
 .cache
 .classpath
+.project
 .metadata/*
 lib/*
 model/*

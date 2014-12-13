@@ -16,7 +16,11 @@ public class Word {
 	
 	public Word(String word, String lemma, String pos, String neTag, String neTypeTag){
 		this.word = word;
-		this.lemma = lemma;
+		// Manual rule
+		if (lemma.endsWith("s") && !lemma.isEmpty() && Character.isUpperCase(lemma.charAt(0)))
+			this.lemma = lemma.toLowerCase().substring(0,lemma.length()-1);
+		else
+            this.lemma = lemma;
 		this.pos = pos;
 		this.neTag = neTag;
 		this.neTypeTag = neTypeTag;

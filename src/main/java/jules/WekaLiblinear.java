@@ -79,8 +79,8 @@ public class WekaLiblinear {
 			PosTagger tagger = PosTagger.getInstance();
 			PrintWriter writer = new PrintWriter("train_file.scale", "UTF-8");
 			for (File f : dir.listFiles()) {
-				//if (!f.getName().startsWith("langt"))
-				//	continue;
+				// if (!f.getName().startsWith("langt"))
+				// continue;
 				System.out.println("Reading file: " + f.getName());
 				BufferedReader br = new BufferedReader(new FileReader(f));
 				String line, question, corrAnswer;
@@ -89,6 +89,7 @@ public class WekaLiblinear {
 					String[] cols = line.split("\t");
 					corrAnswer = cols[6].toLowerCase();
 					if (corrAnswer.contains(" ")) continue;
+
 					corrAnswers.add(tagger.tagString(corrAnswer).get(0)[0].lemma);
 
 					question = cols[5].toLowerCase();
@@ -115,41 +116,39 @@ public class WekaLiblinear {
 			int qaSize = qSize + aSize;
 
 			String line = "";
-			try{
-			for (int i = 0; i < questions.size(); i++) {
-				for (String str : answers.get(i)) {
-					line = "";
-					if (str.equalsIgnoreCase(corrAnswers.get(i))) {
-						line += "1";
-					} else {
-						line += "0";
-					}
-					TreeSet<String> ulq = new TreeSet<String>();
-					for (Word word : tagger.tagString(questions.get(i)).get(0)) {
-						ulq.add(word.lemma);
-					}
-					for (String sulq : ulq) {
-						line += "\t" + uniqueQuestions.headSet(sulq).size()
-								+ ":1";
-					}
-					line += "\t" + (uniqueAnswers.headSet(str).size() + qSize)
-							+ ":1";
-					for (int j = 0; j < uniqueCategories.length; j++) {
-						try{
-						for (Pair<String, Double> cs : catstats.get(i)){
-							if(cs.fst.equalsIgnoreCase(uniqueCategories[j])){
-								line += "\t" + (qaSize+j+1) + ":" + cs.snd;
+			try {
+				for (int i = 0; i < questions.size(); i++) {
+					for (String str : answers.get(i)) {
+						line = "";
+						if (str.equalsIgnoreCase(corrAnswers.get(i))) {
+							line += "1";
+						} else {
+							line += "0";
+						}
+						TreeSet<String> ulq = new TreeSet<String>();
+						for (Word word : tagger.tagString(questions.get(i)).get(0)) {
+							ulq.add(word.lemma);
+						}
+						for (String sulq : ulq) {
+							line += "\t" + uniqueQuestions.headSet(sulq).size() + ":1";
+						}
+						line += "\t" + (uniqueAnswers.headSet(str).size() + qSize) + ":1";
+						for (int j = 0; j < uniqueCategories.length; j++) {
+							try {
+								for (Pair<String, Double> cs : catstats.get(i)) {
+									if (cs.fst.equalsIgnoreCase(uniqueCategories[j])) {
+										line += "\t" + (qaSize + j + 1) + ":" + cs.snd;
+									}
+								}
+							} catch (Exception e) {
+								continue;
 							}
 						}
-						}catch(Exception e){
-							continue;
-						}
+						writer.println(line);
 					}
-					writer.println(line);
 				}
-			}
-			
-			} catch (NullPointerException npe){
+
+			} catch (NullPointerException npe) {
 				npe.printStackTrace();
 				System.out.println("nullpointer");
 				System.out.println(line);
@@ -161,12 +160,13 @@ public class WekaLiblinear {
 		}
 
 	}
-	public static void testRankTopNouns(String q) throws IOException{
+
+	public static void testRankTopNouns(String q) throws IOException {
 		List<Map<String, String>> res = QueryPassager.query(q, 100);
 		List<ScoreWord> lm = QueryPassager.findTopNouns(res);
-		for(ScoreWord sw : lm){
+		for (ScoreWord sw : lm) {
 			System.out.println(sw.word + " : " + sw.lemma + " : " + sw.getTotalRank());
 		}
-		
+
 	}
 }

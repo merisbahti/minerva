@@ -47,7 +47,10 @@ public class Reranker {
 			if(line.isEmpty())
 				current = changeCurrentMap(current);
 			String[] splits = line.split("\t");
-			current.put(splits[1], Integer.getInteger(splits[0]));
+			for(String unit : splits){
+				String[] ic = unit.split(":");
+				current.put(ic[1], Integer.getInteger(ic[0]));
+			}
 		}
 		br.close();
 	}

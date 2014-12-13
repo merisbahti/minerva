@@ -1,13 +1,19 @@
 *.class
 *.log
 *.swp
+*.xml
+*.ARFF
+*.arff
 .cache
 .classpath
+.metadata/*
 lib/*
 model/*
 
 questions/*
 libshorttext-1.1/*
+indexDir/*
+output/*
 
 # sbt specific
 .cache/

@@ -7,14 +7,14 @@ Project in computer science.
 
 - [Stagger.tar.bz2](http://mumin.ling.su.se/projects/stagger/snapshot.tar.bz2)  
 - [wikixmlj-r43.jar](https://wikixmlj.googlecode.com/files/wikixmlj-r43.jar)  
+- [Stagger swedish model](http://mumin.ling.su.se/projects/stagger/swedish.bin.bz2)
+- [libshorttext](http://www.csie.ntu.edu.tw/~cjlin/libshorttext/)
+- [liblinear-java](http://liblinear.bwaldvogel.de/)
 
 ### Deprecated dependencies?
 - [Apache Solr](http://lucene.apache.org/solr/mirrors-solr-latest-redir.html?)  
 - [Apache Lucene](http://apache.mirrors.spacedump.net/lucene/java/4.10.2)  
 - [Wikipedia Extractor](http://medialab.di.unipi.it/Project/SemaWiki/Tools/WikiExtractor.py)
-- [Stagger swedish model](http://mumin.ling.su.se/projects/stagger/swedish.bin.bz2)
-- [libshorttext](http://www.csie.ntu.edu.tw/~cjlin/libshorttext/)
-- [liblinear-java](http://liblinear.bwaldvogel.de/)
 
 ## Guides
 [Lucene in 5 minutes](http://www.lucenetutorial.com/lucene-in-5-minutes.html)  

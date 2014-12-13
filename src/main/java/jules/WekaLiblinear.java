@@ -17,8 +17,10 @@ import util.Pair;
 
 public class WekaLiblinear {
 	/**
-	 * iterate over questions gather unique question words query qs and gather
-	 * all answer words gather question category stats (scaled?)
+	 * iterate over questions 
+	 * 		gather unique question words 
+	 * 		query qs and gather all answer words 
+	 * 		gather question category stats (scaled?)
 	 * 
 	 * 
 	 * 0/1 List<question> List<Answer> List<catstats>

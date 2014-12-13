@@ -7,12 +7,12 @@ import java.io.PrintWriter;
 
 import tagging.PosTagger;
 import tagging.Word;
+import util.Constants;
 
 public class QuestionCategoryExtractor {
 
 	public static void run() {
-		String qDir = "./questions/";
-		File dir = new File(qDir);
+		File dir = new File(Constants.qDir);
 		try{
 			PosTagger tagger = PosTagger.getInstance();
 			PrintWriter writer = new PrintWriter("train_file.txt", "UTF-8");

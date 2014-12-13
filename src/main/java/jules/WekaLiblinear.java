@@ -41,7 +41,7 @@ public class WekaLiblinear {
 	public static void headerCreator(){
 
 		try{
-			PrintWriter writer = new PrintWriter("train_header.txt", "UTF-8");
+			PrintWriter writer = new PrintWriter("./model/training_indexes.txt", "UTF-8");
 			
 			String line = "";
 			int i = 1;
@@ -81,8 +81,8 @@ public class WekaLiblinear {
 			PosTagger tagger = PosTagger.getInstance();
 			PrintWriter writer = new PrintWriter("train_file.scale", "UTF-8");
 			for (File f : dir.listFiles()) {
-				// if (!f.getName().startsWith("langt"))
-				// continue;
+				if (f.getName().startsWith("."))
+					continue;
 				System.out.println("Reading file: " + f.getName());
 				BufferedReader br = new BufferedReader(new FileReader(f));
 				String line, question, corrAnswer;

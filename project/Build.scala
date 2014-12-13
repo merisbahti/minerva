@@ -14,6 +14,7 @@ object ProjectBuild extends Build {
       libraryDependencies += "org.apache.lucene" % "lucene-analyzers-common" % "4.10.2",
       libraryDependencies += "org.json" % "json" % "20131018",
       libraryDependencies += "org.apache.commons" % "commons-compress" % "1.9",
+      libraryDependencies += "de.bwaldvogel" % "liblinear" % "1.95",
       libraryDependencies += "junit" % "junit" % "4.12"
   )
 

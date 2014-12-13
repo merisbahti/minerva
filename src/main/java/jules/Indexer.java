@@ -29,10 +29,6 @@ import edu.jhu.nlp.wikipedia.WikiXMLParser;
 import edu.jhu.nlp.wikipedia.WikiXMLParserFactory;
 
 public class Indexer {
-	public static void main(String[] args) {
-		bzIndexer();
-	}
-
 	private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
 	public static String indexDir = "./indexDir/";
 	private static String outputDir = "./output/";

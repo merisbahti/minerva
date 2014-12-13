@@ -128,7 +128,7 @@ public class QueryPassager {
 		}
 
 		Collections.sort(scores);
-		return scores.subList(0, 100);
+		return scores.subList(0, scores.size() > 100 ? 100 : scores.size());
 	}
 
 

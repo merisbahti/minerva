@@ -13,12 +13,11 @@ import util.Pair;
 public class Categorizer {
 
 	public static void main(String[] args) {
-//		String q = "";
-//		while (!(q = System.console().readLine("Enter a question: "))
-//				.equals("q")) {
-//			getCategories(q);
-//		}
-		WekaLiblinear.createLiblinearTrain();
+		String q = "";
+		while (!(q = System.console().readLine("Enter a question: "))
+				.equals("q")) {
+			getCategories(q);
+		}
 	}
 
 	public static List<Pair<String, Double>> getCategories(String q) {
@@ -57,7 +56,7 @@ public class Categorizer {
 			System.out.println(categories);
 			System.out.println(decvals);
 
-			String[] cats = categories.split("\\s{1,15}");
+			String[] cats = categories.split("\\s{1,10}");
 			String[] vals = decvals.split("\\s+");
 			List<Double> valDubsAbs = new ArrayList<Double>();
 			for (String val : vals) {
@@ -78,11 +77,15 @@ public class Categorizer {
 										/ maxAbs + 1) / 2);
 						prs.add(pa);
 					} catch (Exception e) {
+						System.err.println("Something went wrong in categorizer: ");
 						System.out.println(question);
 						System.out.println(categories);
 						System.out.println(decvals);
-						prs.add(new Pair<String, Double>("other", 0.0));
+						//prs.add(new Pair<String, Double>("other", 0.0));
 					}
+				}else{
+					int h = 9;
+					System.out.println(categories);
 				}
 			}
 			return prs;

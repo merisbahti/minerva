@@ -33,6 +33,7 @@ public class QuestionCategoryExtractor {
 					String print = category + "\t" + lq.trim();
 					writer.println(print);
 				}
+				br.close();
 			}
 			writer.close();
 		} catch (Exception e){

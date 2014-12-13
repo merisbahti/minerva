@@ -18,14 +18,19 @@ import com.sun.net.httpserver.HttpServer;
 import org.json.*;
 
 import tagging.PosTagger;
+import tagging.Word;
 
 public class WebService {
     public static void runner() throws Exception {
+        System.out.println("Initializing server... plz w8");
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
+        System.out.println("Initializing Pos-tagger ... plz w8");
+        //Reranker reranker = Reranker.getInstance();
+        PosTagger.getInstance();
+        System.out.println("Pos-tagger initialized....");
         server.createContext("/query", new QueryHandler());
         server.createContext("/", new StaticHandler());
         server.setExecutor(null); // creates a default executor
-        //PosTagger.getInstance();
         server.start();
     }
 
@@ -33,15 +38,19 @@ public class WebService {
         public void handle(HttpExchange t) throws IOException {
             String response = "No query found, specify the query parameter.";
             Map <String,String> qMap = queryToMap(t.getRequestURI().getQuery() == null ? "" : t.getRequestURI().getQuery());
+            JSONObject jsonResponse = new JSONObject();
             if (qMap.containsKey("q")) {
                 StringBuilder sb = new StringBuilder();
                 String q = qMap.get("q").toLowerCase();
                 List<Map<String, String>> results = jules.QueryPassager.query(q, 100);
-                JSONArray jsonResults = new JSONArray();
+                JSONArray paragraphs = new JSONArray();
                 for (Map<String, String> result : results) {
-                    JSONObject res = new JSONObject();
+                    JSONObject currArticle = new JSONObject();
                     for (Map.Entry<String, String> entry : result.entrySet()) {
                         // If it's text... we'll just take the context in this baseline
+
+                        // Lägg till all text i allArticles
+
                         sb.append(entry.getKey() + ": \n");
                         if (entry.getKey().equals("text")) {
                             int indexOfHit = entry.getValue().toLowerCase().indexOf(q);
@@ -49,7 +58,7 @@ public class WebService {
                             String context = entry.getValue();
                             sb.append(context);
                             try {
-								res.put(entry.getKey(), entry.getValue());
+								currArticle.put(entry.getKey(), entry.getValue());
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
@@ -57,16 +66,27 @@ public class WebService {
                         } else {
                             sb.append(entry.getValue() + "\n");
                             try {
-								res.put(entry.getKey(), entry.getValue());
+								currArticle.put(entry.getKey(), entry.getValue());
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
                         }
                     }
-                    jsonResults.put(res);
+                    paragraphs.put(currArticle);
                 }
-                response = jsonResults.toString();
+                List<ScoreWord> topNouns = jules.QueryPassager.findTopNouns(results);
+                JSONArray topAnswers = new JSONArray();
+                for (ScoreWord sw : topNouns) {
+                    JSONObject topAnswerObject = new JSONObject();
+                    topAnswerObject.put("score", sw.getTotalRank());
+                    topAnswerObject.put("word", sw.word);
+                    topAnswers.put(topAnswerObject);
+                }
+                jsonResponse.put("paragraphs", paragraphs);
+                jsonResponse.put("topAnswers", topAnswers);
+                jsonResponse.put("rankedTopAnswers", new JSONArray()); //TODO: Add this later.
+                response = jsonResponse.toString();
             }
             System.out.println("serving response");
             //t.setAttribute("content-type", "application/json");

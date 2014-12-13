@@ -21,13 +21,16 @@ import tagging.PosTagger;
 import tagging.Word;
 
 public class WebService {
+    private static Reranker  reranker;
     public static void runner() throws Exception {
         System.out.println("Initializing server... plz w8");
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
-        System.out.println("Initializing Pos-tagger ... plz w8");
-        //Reranker reranker = Reranker.getInstance();
+        System.out.println("Initializing pos-tagger ... plz w8");
         PosTagger.getInstance();
         System.out.println("Pos-tagger initialized....");
+        System.out.println("Initializing re-ranker... plz w8");
+        reranker = Reranker.getInstance();
+        System.out.println("Re-ranker initialized....");
         server.createContext("/query", new QueryHandler());
         server.createContext("/", new StaticHandler());
         server.setExecutor(null); // creates a default executor
@@ -76,13 +79,8 @@ public class WebService {
                     paragraphs.put(currArticle);
                 }
                 List<ScoreWord> topNouns = jules.QueryPassager.findTopNouns(results);
-                JSONArray topAnswers = new JSONArray();
-                for (ScoreWord sw : topNouns) {
-                    JSONObject topAnswerObject = new JSONObject();
-                    topAnswerObject.put("score", sw.getTotalRank());
-                    topAnswerObject.put("word", sw.word);
-                    topAnswers.put(topAnswerObject);
-                }
+                JSONArray topAnswers = scoreWordToJsonArray(topNouns);
+                //JSONArray rankedTopAnswers = scoreWordToJsonArray(reranker.rerank(topNouns));
                 jsonResponse.put("paragraphs", paragraphs);
                 jsonResponse.put("topAnswers", topAnswers);
                 jsonResponse.put("rankedTopAnswers", new JSONArray()); //TODO: Add this later.
@@ -99,6 +97,18 @@ public class WebService {
             os.close();
         }
     }
+
+    static JSONArray scoreWordToJsonArray(List<ScoreWord> sws) {
+        JSONArray topAnswers = new JSONArray();
+        for (ScoreWord sw : sws) {
+            JSONObject topAnswerObject = new JSONObject();
+            topAnswerObject.put("score", sw.getTotalRank());
+            topAnswerObject.put("word", sw.word);
+            topAnswers.put(topAnswerObject);
+        }
+        return topAnswers;
+    }
+
     static class StaticHandler implements HttpHandler {
         public void handle(HttpExchange t) throws IOException {
             String root = "./wwwroot";

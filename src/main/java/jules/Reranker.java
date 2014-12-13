@@ -96,6 +96,7 @@ public class Reranker {
 			
 			Feature[] instance = (Feature[]) features.toArray();
 			double prediction = Linear.predict(model, instance);
+			System.out.println("prediction: " + prediction);
 			sw.addliblinRank(prediction);
 		}
 		Collections.sort(topWords);

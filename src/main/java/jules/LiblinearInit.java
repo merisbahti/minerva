@@ -35,7 +35,7 @@ public class LiblinearInit {
 	static String[] uniqueCategories = { "concept", "location", "definition",
 			"description", "multiplechoice", "amount", "organization",
 			"other", "person", "abbreviation", "verb", "title",
-			"timepoint", "duration" };
+			"timepoint", "duration", "money" };
 	
 	
 	public static void headerCreator(){
@@ -79,7 +79,7 @@ public class LiblinearInit {
 
 		try {
 			PosTagger tagger = PosTagger.getInstance();
-			PrintWriter writer = new PrintWriter("train_file.scale", "UTF-8");
+			PrintWriter writer = new PrintWriter(Constants.liblinearTrain, "UTF-8");
 			for (File f : dir.listFiles()) {
 				if (f.getName().startsWith("."))
 					continue;
@@ -132,9 +132,9 @@ public class LiblinearInit {
 							ulq.add(word.lemma);
 						}
 						for (String sulq : ulq) {
-							line += "\t" + uniqueQuestions.headSet(sulq).size() + ":1";
+							line += "\t" + (uniqueQuestions.headSet(sulq).size()+1) + ":1";
 						}
-						line += "\t" + (uniqueAnswers.headSet(str).size() + qSize) + ":1";
+						line += "\t" + (uniqueAnswers.headSet(str).size()+1 + qSize) + ":1";
 						for (int j = 0; j < uniqueCategories.length; j++) {
 							try {
 								for (Pair<String, Double> cs : catstats.get(i)) {

@@ -29,8 +29,6 @@ import edu.jhu.nlp.wikipedia.WikiXMLParser;
 import edu.jhu.nlp.wikipedia.WikiXMLParserFactory;
 
 public class Indexer {
-	private static String wikiFile = "./sewiki-20141104-pages-meta-current.xml";
-	private static String outputDir = "./output/";
 	private static int counter = 0;
 	private static Analyzer analyzer;
 	private static IndexWriterConfig iwc;
@@ -46,7 +44,7 @@ public class Indexer {
 			e.printStackTrace();
 		}
 
-		File output = new File(outputDir);
+		File output = new File(Constants.outputDir);
 		ArrayList<File> files = new ArrayList<File>();
 		for (File f : output.listFiles()) {
 			for (File g : f.listFiles()) {
@@ -179,7 +177,7 @@ public class Indexer {
 		try {
 			final IndexWriter writer = new IndexWriter(
 					FSDirectory.open(new File(Constants.indexDir)), iwc);
-			WikiXMLParser wxsp = WikiXMLParserFactory.getSAXParser(wikiFile);
+			WikiXMLParser wxsp = WikiXMLParserFactory.getSAXParser(Constants.wikiFile);
 			wxsp.setPageCallback(new PageCallbackHandler() {
 				@Override
 				public void process(WikiPage page) {

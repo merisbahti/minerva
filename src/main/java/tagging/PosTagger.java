@@ -15,6 +15,7 @@ import se.su.ling.stagger.TaggedToken;
 import se.su.ling.stagger.Tagger;
 import se.su.ling.stagger.Token;
 import se.su.ling.stagger.Tokenizer;
+import util.Constants;
 
 /**
  * PosTagger
@@ -31,7 +32,7 @@ public class PosTagger {
 	private static PosTagger instance = null;
 
 	protected PosTagger() throws IOException {
-		String modelFile = "./model/swedish.bin";
+		String modelFile = Constants.staggerModel;
 
 		ObjectInputStream modelReader;
 		try {

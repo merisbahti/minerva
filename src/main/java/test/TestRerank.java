@@ -61,9 +61,11 @@ public class TestRerank {
 			List<Pair<String, Double>> cat;
 			try{
 				cat = Categorizer.getCategories(question.getKey());
-			}catch(NoSuchElementException e){
+			}catch(Exception e){
 				continue;
 			}
+			if(cat==null)
+				continue;
 			Reranker ins = Reranker.getInstance();
 			PosTagger tagger = PosTagger.getInstance();
 			List<Word[]> words = tagger.tagString(question.getKey());

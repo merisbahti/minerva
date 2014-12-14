@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="container" style="margin-top:20px; ">
-      <form action="#" style="margin-bottom:20px;"> 
+      <form action="#" style="margin-bottom:10px;"> 
         <div class="input-group input-group-lg">
           <input autocomplete="off" id="search" type="text" class="form-control" placeholder="Fråga mig vad som helst.">
           <span class="input-group-btn">
@@ -28,16 +28,18 @@
           </span>
         </div>
       </form>
-      <ul class="nav nav-tabs nav-justified" id="tabs" style="display: none">
-        <li id="tabResultsRTA" role="presentation" class="active"><a href="#">Reranked Top Answers</a></li>
-        <li id="tabResultsTA" role="presentation"><a href="#">Top Answers</a></li>
-        <li id="tabResultsP" role="presentation"><a href="#">Paragraphs</a></li>
+      <ul class="nav nav-pills nav-justified" id="tabs" style="display: none; margin-bottom: 10px">
+        <li id="tabResultsRTA" role="presentation" class="active"><a href="#" style="outline: none;"><span class="badge" id="tabResultsRTAAmount">0</span> Reranked Top Answers</a></li>
+        <li id="tabResultsTA" role="presentation"><a href="#" style="outline: none;"><span class="badge" id="tabResultsTAAmount">0</span> Top Answers</a></li>
+        <li id="tabResultsP" role="presentation"><a href="#" style="outline: none;"><span class="badge" id="tabResultsPAmount">0</span> Paragraphs</a></li>
       </ul>
       <div id="error">
       </div>
-      <div class="list-group" id="resultsP">
+      <div id="spinner">
       </div>
-      <div class="list-group" id="resultsTA">
+      <div class="list-group" id="resultsP" style="display: none">
+      </div>
+      <div class="list-group" id="resultsTA" style="display: none">
       </div>
       <div class="list-group" id="resultsRTA">
       </div>

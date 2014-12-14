@@ -100,7 +100,7 @@ public class LiblinearInit {
 					questions.add(question);
 
 					List<String> as = new ArrayList<String>();
-					for (ScoreWord sw : QueryPassager.findTopNouns(QueryPassager.query(question, 100))) {
+					for (ScoreWord sw : RankNouns.findTopNouns(QueryPassager.query(question, 100))) {
 						as.add(sw.lemma);
 						uniqueAnswers.add(sw.lemma);
 					}
@@ -167,7 +167,7 @@ public class LiblinearInit {
 
 	public static void testRankTopNouns(String q) throws IOException {
 		List<Map<String, String>> res = QueryPassager.query(q, 100);
-		List<ScoreWord> lm = QueryPassager.findTopNouns(res);
+		List<ScoreWord> lm = RankNouns.findTopNouns(res);
 		for (ScoreWord sw : lm) {
 			System.out.println(sw.word + " : " + sw.lemma + " : " + sw.getTotalRank());
 		}

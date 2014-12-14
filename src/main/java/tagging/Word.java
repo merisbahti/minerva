@@ -28,7 +28,7 @@ public class Word {
 
 	@Override
 	public String toString() {
-		return word + "\t" + "\t" + pos + "\t" + neTag + "\t" + neTypeTag;
+		return lemma + "\t" + "\t" + pos + "\t" + neTag + "\t" + neTypeTag;
 	}
 	
 	@Override

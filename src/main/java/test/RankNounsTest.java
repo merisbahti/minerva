@@ -59,8 +59,7 @@ public class RankNounsTest {
 			List<Map<String, String>> res = QueryPassager.query(
 					question.getKey(), queries);
 
-			List<ScoreWord> lm = RankNouns
-					.findTopNouns(res);
+			List<ScoreWord> lm = RankNouns.findTopNouns(res);
 			
 			int i = 0;
 			//System.out.println(lm.get(0).getTotalRank());

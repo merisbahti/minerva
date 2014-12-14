@@ -18,6 +18,8 @@ Project in computer science.
 
 
 ```
-$ cd lib/
-$ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -v 5 rcv1_train.binary
+Cross validation:
+$ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 -v 10 ".scale file" "model file"
+Train model:
+$ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 ".scale file" "model file"
 ```

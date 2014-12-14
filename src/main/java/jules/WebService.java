@@ -167,7 +167,7 @@ public class WebService {
     static private Map<String, String> queryToMap(String query){
         Map<String, String> result = new HashMap<String, String>();
         System.out.println("parsing: " + query);
-        for (String param : query.split("&")) {
+        for (String param : query.split("&",1)) {
             String pair[] = param.split("=");
             if (pair.length>1) {
                 result.put(pair[0], pair[1]);

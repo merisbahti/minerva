@@ -3,6 +3,7 @@ package jules;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,9 +20,9 @@ import org.json.*;
 
 import tagging.PosTagger;
 import tagging.Word;
+import util.Pair;
 
 public class WebService {
-    private static Reranker  reranker;
     public static void runner() throws Exception {
         System.out.println("Initializing server... plz w8");
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
@@ -29,7 +30,7 @@ public class WebService {
         PosTagger.getInstance();
         System.out.println("Pos-tagger initialized....");
         System.out.println("Initializing re-ranker... plz w8");
-        reranker = Reranker.getInstance();
+        Reranker.getInstance();
         System.out.println("Re-ranker initialized....");
         server.createContext("/query", new QueryHandler());
         server.createContext("/", new StaticHandler());
@@ -51,9 +52,6 @@ public class WebService {
                     JSONObject currArticle = new JSONObject();
                     for (Map.Entry<String, String> entry : result.entrySet()) {
                         // If it's text... we'll just take the context in this baseline
-
-                        // Lägg till all text i allArticles
-
                         sb.append(entry.getKey() + ": \n");
                         if (entry.getKey().equals("text")) {
                             int indexOfHit = entry.getValue().toLowerCase().indexOf(q);
@@ -80,10 +78,20 @@ public class WebService {
                 }
                 List<ScoreWord> topNouns = jules.QueryPassager.findTopNouns(results);
                 JSONArray topAnswers = scoreWordToJsonArray(topNouns);
-                //JSONArray rankedTopAnswers = scoreWordToJsonArray(reranker.rerank(topNouns));
+
+                List<Pair<String, Double>> cat = Categorizer.getCategories(q);
+                Reranker ins = Reranker.getInstance();
+                PosTagger tagger = PosTagger.getInstance();
+                List<Word[]> words = tagger.tagString(q);
+                List<String> qLemmas = new ArrayList<String>();
+                for(Word w : words.get(0)){
+                    qLemmas.add(w.lemma);
+                }
+                JSONArray rankedTopAnswers = scoreWordToJsonArray(ins.rerank(topNouns, qLemmas, cat));
+
                 jsonResponse.put("paragraphs", paragraphs);
                 jsonResponse.put("topAnswers", topAnswers);
-                jsonResponse.put("rankedTopAnswers", new JSONArray()); //TODO: Add this later.
+                jsonResponse.put("rankedTopAnswers", rankedTopAnswers);
                 response = jsonResponse.toString();
             }
             System.out.println("serving response");

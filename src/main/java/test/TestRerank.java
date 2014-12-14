@@ -29,7 +29,7 @@ public class TestRerank {
 	static PrintWriter writer;
 	static int queries = 100;
 	
-	public static void setUp() throws Exception {
+	private static void setUp() throws Exception {
 		questions = new HashMap<String, String>();
 		File dir = new File(Constants.qDir);
 		Date date = new Date();

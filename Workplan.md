@@ -20,6 +20,9 @@ WikiPage        || bz2 Files
        ||
 Query abstraction (http request)
 ````
+![System layout](https://drive.google.com/open?id=0B0C1N1mjRsAFaFJuRXo3bTJVQU0&authuser=1)
+
+
 
 ====================================================
                         MÖTE

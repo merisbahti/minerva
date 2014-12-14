@@ -1,4 +1,4 @@
-EDAN70
+MINERVA
 ======
 
 Project in computer science.

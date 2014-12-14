@@ -113,7 +113,7 @@ public class WebService {
         	try{
 	            JSONObject topAnswerObject = new JSONObject();
 	            topAnswerObject.put("score", sw.getTotalRank());
-	            topAnswerObject.put("word", sw.word);
+	            topAnswerObject.put("word", sw.lemma);
 	            topAnswers.put(topAnswerObject);
         	} catch (Exception e){}
         }

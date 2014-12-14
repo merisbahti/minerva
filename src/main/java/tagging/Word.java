@@ -43,7 +43,7 @@ public class Word {
 
 	@Override
 	public int hashCode() {
-		return this.lemma.hashCode();
+		return this.lemma.toLowerCase().hashCode();
 	}
 
 }

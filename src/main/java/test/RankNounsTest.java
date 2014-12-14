@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import jules.QueryPassager;
+import jules.RankNouns;
 import jules.ScoreWord;
 
 import org.junit.Before;
@@ -50,7 +51,7 @@ public class RankNounsTest {
 			List<Map<String, String>> res = QueryPassager.query(
 					question.getKey(), 10);
 
-			List<ScoreWord> lm = QueryPassager
+			List<ScoreWord> lm = RankNouns
 					.findTopNouns(res);
 			
 			int i = 0;

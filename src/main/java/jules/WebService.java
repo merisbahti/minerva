@@ -75,7 +75,7 @@ public class WebService {
                     }
                     paragraphs.put(currArticle);
                 }
-                List<ScoreWord> topNouns = jules.QueryPassager.findTopNouns(results);
+                List<ScoreWord> topNouns = jules.RankNouns.findTopNouns(results);
                 JSONArray topAnswers = new JSONArray();
                 for (ScoreWord sw : topNouns) {
                     JSONObject topAnswerObject = new JSONObject();

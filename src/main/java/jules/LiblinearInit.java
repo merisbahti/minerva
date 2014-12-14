@@ -80,10 +80,12 @@ public class LiblinearInit {
 		try {
 			PosTagger tagger = PosTagger.getInstance();
 			PrintWriter writer = new PrintWriter(Constants.liblinearTrain, "UTF-8");
+			int n = 0;
 			for (File f : dir.listFiles()) {
 				if (f.getName().startsWith("."))
 					continue;
-				System.out.println("Reading file: " + f.getName());
+				n++;
+				System.out.println("Reading file: (" + n+"/7) " + f.getName());
 				BufferedReader br = new BufferedReader(new FileReader(f));
 				String line, question, corrAnswer;
 

@@ -4,6 +4,7 @@
 *.xml
 *.ARFF
 *.arff
+*.tar.gz
 .cache
 .classpath
 .project

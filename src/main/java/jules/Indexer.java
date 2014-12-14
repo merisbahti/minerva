@@ -13,6 +13,7 @@ import org.apache.commons.compress.compressors.CompressorException;
 import org.apache.commons.compress.compressors.CompressorInputStream;
 import org.apache.commons.compress.compressors.CompressorStreamFactory;
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.sv.SwedishAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.IntField;
@@ -35,7 +36,7 @@ public class Indexer {
 	private static IndexWriter writer;
 
 	public static void bzIndexer() {
-		analyzer = new CustomAnalyzer();
+		analyzer = new SwedishAnalyzer();
 		iwc = new IndexWriterConfig(Version.LATEST, analyzer);
 		iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 		try {

@@ -82,7 +82,7 @@ public class LiblinearInit {
 			PrintWriter writer = new PrintWriter(Constants.liblinearTrain, "UTF-8");
 			int n = 0;
 			for (File f : dir.listFiles()) {
-				if (!f.getName().startsWith("langt"))
+				if (f.getName().startsWith("."))
 					continue;
 				n++;
 				System.out.println("Reading file: (" + n+"/7) " + f.getName());

@@ -38,7 +38,7 @@ public class LiblinearInit {
 			"timepoint", "duration", "money" };
 	
 	
-	public static void headerCreator(){
+	private static void headerCreator(){
 
 		try{
 			PrintWriter writer = new PrintWriter(Constants.liblinearWordMap, "UTF-8");

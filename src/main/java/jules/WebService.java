@@ -88,10 +88,12 @@ public class WebService {
                     qLemmas.add(w.lemma);
                 JSONArray rankedTopAnswers = scoreWordToJsonArray(ins.rerank(topNouns, qLemmas, cat));
 
-                jsonResponse.put("paragraphs", paragraphs);
-                jsonResponse.put("topAnswers", topAnswers);
-                jsonResponse.put("rankedTopAnswers", rankedTopAnswers);
-                response = jsonResponse.toString();
+                try{
+	                jsonResponse.put("paragraphs", paragraphs);
+	                jsonResponse.put("topAnswers", topAnswers);
+	                jsonResponse.put("rankedTopAnswers", rankedTopAnswers);
+	                response = jsonResponse.toString();
+                } catch(Exception e){}
             }
             System.out.println("serving response");
             //t.setAttribute("content-type", "application/json");
@@ -108,10 +110,12 @@ public class WebService {
     static JSONArray scoreWordToJsonArray(List<ScoreWord> sws) {
         JSONArray topAnswers = new JSONArray();
         for (ScoreWord sw : sws) {
-            JSONObject topAnswerObject = new JSONObject();
-            topAnswerObject.put("score", sw.getTotalRank());
-            topAnswerObject.put("word", sw.word);
-            topAnswers.put(topAnswerObject);
+        	try{
+	            JSONObject topAnswerObject = new JSONObject();
+	            topAnswerObject.put("score", sw.getTotalRank());
+	            topAnswerObject.put("word", sw.word);
+	            topAnswers.put(topAnswerObject);
+        	} catch (Exception e){}
         }
         return topAnswers;
     }

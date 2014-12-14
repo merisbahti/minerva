@@ -20,11 +20,11 @@ import util.Constants;
 /**
  * PosTagger
  * 
- * Uses Stagger to tag sentences
+ * Uses Stagger to tag sentences 
  * Singleton object so that the model only will be loaded once per run
  * 
  * @author timdolck
- *
+ * 
  */
 public class PosTagger {
 	private Tagger tagger;
@@ -58,7 +58,7 @@ public class PosTagger {
 		}
 		return instance;
 	}
-	
+
 	/**
 	 * Tags a string(document)
 	 * 
@@ -82,11 +82,11 @@ public class PosTagger {
 					id = sentIdx + ":" + tok.offset;
 					sent[j] = new TaggedToken(tok, id);
 				}
-				TaggedToken[] taggedSent; 
-				try{
+				TaggedToken[] taggedSent;
+				try {
 					taggedSent = tagger.tagSentence(sent, true, false);
-				}catch (Exception e){
-					for(Token t : sentence){
+				} catch (Exception e) {
+					for (Token t : sentence) {
 						System.err.print(t.value + " ");
 					}
 					System.err.println();
@@ -119,8 +119,7 @@ public class PosTagger {
 						neTypetag = "-";
 					}
 
-					words[i] = new Word(token.token.value, token.lf, posTag,
-							neTag, neTypetag);
+					words[i] = new Word(token.token.value, token.lf, posTag, neTag, neTypetag);
 				}
 
 				taggedSents.add(words);
@@ -128,7 +127,8 @@ public class PosTagger {
 				sentIdx++;
 			}
 		} catch (IOException e) {
-			//Do nothing more if we cant read more sentences
+			// Do nothing more if we cant read more sentences
+			//TODO: Could be improved exception handling, remove non swedish letters?
 		}
 
 		try {

@@ -15,3 +15,9 @@ Project in computer science.
 ## Guides
 - [Lucene in 5 minutes](http://www.lucenetutorial.com/lucene-in-5-minutes.html)  
 - [Wikipedia Extractor usage](http://medialab.di.unipi.it/wiki/Wikipedia_Extractor)
+
+
+```
+$ cd lib/
+$ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -v 5 rcv1_train.binary
+```

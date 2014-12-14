@@ -19,7 +19,7 @@ Project in computer science.
 
 ```
 Cross validation:
-$ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 -v 10 ".scale file" "model file"
+$ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 -v 10 ".scale file"
 Train model:
 $ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 ".scale file" "model file"
 ```

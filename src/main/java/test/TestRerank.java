@@ -17,23 +17,18 @@ import jules.RankNouns;
 import jules.Reranker;
 import jules.ScoreWord;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import tagging.PosTagger;
 import tagging.Word;
 import util.Constants;
 import util.Pair;
 
-public class RankNounsTest {
-
-	Map<String, String> questions;
-	PrintWriter writer;
-	int queries = 100;
-
-	@SuppressWarnings("resource")
-	@Before
-	public void setUp() throws Exception {
+public class TestRerank {
+	
+	static Map<String, String> questions;
+	static PrintWriter writer;
+	static int queries = 100;
+	
+	public static void setUp() throws Exception {
 		questions = new HashMap<String, String>();
 		File dir = new File(Constants.qDir);
 		writer = new PrintWriter("test.txt", "UTF-8");
@@ -48,28 +43,32 @@ public class RankNounsTest {
 					questions.put(cols[5].trim().toLowerCase(), cols[6].trim()
 							.toLowerCase());
 			}
+			br.close();
 		}
 	}
-
-	@Test
-	public void test() {
+	
+	public static void testReranker() throws Exception {
+		setUp();
 		//writer.println(Integer.toString(questions.entrySet().size()));
 		for (Entry<String, String> question : questions.entrySet()) {
-			//System.out.println(question.getKey());
-			List<Map<String, String>> res = QueryPassager.query(
-					question.getKey(), queries);
-
-			List<ScoreWord> lm = RankNouns
-					.findTopNouns(res);
-			
+			List<Map<String, String>> list = QueryPassager.query(question.getKey(), queries);
+			List<ScoreWord> topN = RankNouns.findTopNouns(list);
+			List<Pair<String, Double>> cat = Categorizer.getCategories(question.getKey());
+			Reranker ins = Reranker.getInstance();
+			PosTagger tagger = PosTagger.getInstance();
+			List<Word[]> words = tagger.tagString(question.getKey());
+			List<String> qLemmas = new ArrayList<String>();
+			for(Word w : words.get(0)){
+				qLemmas.add(w.lemma);
+			}
+			List<ScoreWord> results = ins.rerank(topN, qLemmas, cat);
 			int i = 0;
-			//System.out.println(lm.get(0).getTotalRank());
-			for (ScoreWord sw : lm) {
+			for (ScoreWord sw : results) {
 				String s = sw.lemma;
 				i++;
 				if (s.equalsIgnoreCase(question.getValue())){
 					//			  index found 		rank				total number of nouns
-					writer.println(i + "\t" + sw.getTotalRank() + "\t" + lm.size());
+					writer.println(i + "\t" + sw.getTotalRank() + "\t" + results.size());
 					writer.flush();
 					break;
 				}
@@ -77,4 +76,6 @@ public class RankNounsTest {
 		}
 		writer.close();
 	}
+
+
 }

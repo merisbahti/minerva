@@ -109,7 +109,8 @@ public class Reranker {
 				}
 			}
 			for(String word : question){
-				features.add(new FeatureNode(this.questionsMap.get(word), 1));
+				if(questionsMap.containsKey(word))
+					features.add(new FeatureNode(this.questionsMap.get(word), 1));
 			}
 			try{
 			features.add(new FeatureNode(this.answersMap.get(sw.lemma), 1));

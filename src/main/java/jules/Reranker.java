@@ -33,7 +33,7 @@ public class Reranker {
 	public static void rerankTest() throws IOException{
 		String q = "Vad heter Sveriges huvudstad?";
 		List<Map<String, String>> list = QueryPassager.query(q, 100);
-		List<ScoreWord> topN = QueryPassager.findTopNouns(list);
+		List<ScoreWord> topN = RankNouns.findTopNouns(list);
 		for(ScoreWord s : topN){
 			System.out.println(s.toString());
 		}
@@ -66,7 +66,7 @@ public class Reranker {
 			for(String unit : splits){
 				String[] ic = unit.split(":", 2);
 				int c = Integer.parseInt(ic[0]);
-				current.put(ic[1], c-1);
+				current.put(ic[1], c);
 			}
 			current = changeCurrentMap(current);
 		}
@@ -123,7 +123,6 @@ public class Reranker {
 			
 			Feature[] f = new Feature[features.size()];
 			f = (Feature[]) features.toArray(f);
-			double prediction = Linear.predict(model, f);
 			double[] dbs = {(double) 0,(double) 1};
 			Linear.predictProbability(model, f, dbs);
 			sw.addliblinRank(dbs[1]);

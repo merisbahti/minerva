@@ -28,7 +28,7 @@ public class Word {
 
 	@Override
 	public String toString() {
-		return word + "\t" + "\t" + pos + "\t" + neTag + "\t" + neTypeTag;
+		return lemma + "\t" + "\t" + pos + "\t" + neTag + "\t" + neTypeTag;
 	}
 	
 	@Override
@@ -43,7 +43,7 @@ public class Word {
 
 	@Override
 	public int hashCode() {
-		return this.lemma.hashCode();
+		return this.lemma.toLowerCase().hashCode();
 	}
 
 }

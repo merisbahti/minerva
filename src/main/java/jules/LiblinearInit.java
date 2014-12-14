@@ -38,7 +38,7 @@ public class LiblinearInit {
 			"timepoint", "duration", "money" };
 	
 	
-	public static void headerCreator(){
+	private static void headerCreator(){
 
 		try{
 			PrintWriter writer = new PrintWriter(Constants.liblinearWordMap, "UTF-8");
@@ -80,10 +80,12 @@ public class LiblinearInit {
 		try {
 			PosTagger tagger = PosTagger.getInstance();
 			PrintWriter writer = new PrintWriter(Constants.liblinearTrain, "UTF-8");
+			int n = 0;
 			for (File f : dir.listFiles()) {
 				if (!f.getName().startsWith("langt"))
 					continue;
-				System.out.println("Reading file: " + f.getName());
+				n++;
+				System.out.println("Reading file: (" + n+"/7) " + f.getName());
 				BufferedReader br = new BufferedReader(new FileReader(f));
 				String line, question, corrAnswer;
 
@@ -98,7 +100,7 @@ public class LiblinearInit {
 					questions.add(question);
 
 					List<String> as = new ArrayList<String>();
-					for (ScoreWord sw : QueryPassager.findTopNouns(QueryPassager.query(question, 100))) {
+					for (ScoreWord sw : RankNouns.findTopNouns(QueryPassager.query(question, 100))) {
 						as.add(sw.lemma);
 						uniqueAnswers.add(sw.lemma);
 					}
@@ -165,7 +167,7 @@ public class LiblinearInit {
 
 	public static void testRankTopNouns(String q) throws IOException {
 		List<Map<String, String>> res = QueryPassager.query(q, 100);
-		List<ScoreWord> lm = QueryPassager.findTopNouns(res);
+		List<ScoreWord> lm = RankNouns.findTopNouns(res);
 		for (ScoreWord sw : lm) {
 			System.out.println(sw.word + " : " + sw.lemma + " : " + sw.getTotalRank());
 		}

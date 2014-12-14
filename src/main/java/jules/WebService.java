@@ -76,7 +76,7 @@ public class WebService {
                     }
                     paragraphs.put(currArticle);
                 }
-                List<ScoreWord> topNouns = jules.QueryPassager.findTopNouns(results);
+                List<ScoreWord> topNouns = jules.RankNouns.findTopNouns(results);
                 JSONArray topAnswers = scoreWordToJsonArray(topNouns);
 
                 List<Pair<String, Double>> cat = Categorizer.getCategories(q);
@@ -84,9 +84,8 @@ public class WebService {
                 PosTagger tagger = PosTagger.getInstance();
                 List<Word[]> words = tagger.tagString(q);
                 List<String> qLemmas = new ArrayList<String>();
-                for(Word w : words.get(0)){
+                for(Word w : words.get(0))
                     qLemmas.add(w.lemma);
-                }
                 JSONArray rankedTopAnswers = scoreWordToJsonArray(ins.rerank(topNouns, qLemmas, cat));
 
                 jsonResponse.put("paragraphs", paragraphs);

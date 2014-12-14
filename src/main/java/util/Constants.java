@@ -3,7 +3,7 @@ package util;
 public class Constants {
 	// Dirs
 	public static final String qDir = "./questions/";
-	public static final String indexDir = "./indexDirPara/";
+	public static final String indexDir = "./indexDir/";
 	public static final String modelsDir = "./model/";
 	public static final String outputDir = "./output/";
 	public static final String trainDir = "./train/";

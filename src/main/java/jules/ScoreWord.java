@@ -39,11 +39,19 @@ public class ScoreWord extends Word implements Comparable<ScoreWord>{
 	}
 	
 	private void updateTotalRank(){
-		totalRank = nounRank*liblinRank*liblinRank;
+		totalRank = Math.sqrt(nounRank)*liblinRank*liblinRank;
 	}
 	
 	public double getTotalRank(){
 		return totalRank;
+	}
+	
+	public double getLiblinRank(){
+		return liblinRank;
+	}
+	
+	public double getNounIndexRank(){
+		return nounRank;
 	}
 	
 	/*public void incOccurances(){

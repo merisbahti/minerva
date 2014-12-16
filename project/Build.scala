@@ -7,7 +7,6 @@ object ProjectBuild extends Build {
       name := "edan70-unknown",
       version := "1.0",
       organization := "se.lth.cs",
-      scalaVersion := "2.11.2",
       
       libraryDependencies += "org.apache.lucene" % "lucene-core" % "4.10.2",
       libraryDependencies += "org.apache.lucene" % "lucene-queryparser" % "4.10.2",
@@ -17,7 +16,7 @@ object ProjectBuild extends Build {
       //libraryDependencies += "de.bwaldvogel" % "liblinear" % "1.95",
       libraryDependencies += "junit" % "junit" % "4.12"
   )
-
+  autoScalaLibrary := false
   val myProject = Project("edan70-unknown", file("."), settings = projectSettings)
 
 }

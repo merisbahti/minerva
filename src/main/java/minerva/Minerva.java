@@ -24,6 +24,11 @@ public class Minerva {
 	private Puncher puncher;
 	private List<Pair<String, Double>> predictedCategories;
 
+	public Minerva(String query, int nbrHits) {
+		q = Constants.whiteList(query);
+		lastQuery = QueryPassager.query(q, nbrHits);
+	}
+
 	public Minerva(String query) {
 		q = Constants.whiteList(query);
 		lastQuery = QueryPassager.query(q, 100);

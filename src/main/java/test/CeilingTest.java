@@ -1,8 +1,9 @@
 package test;
-import jules.QueryPassager;
+import minerva.Minerva;
 
 import org.junit.*;
 
+import util.Constants;
 import util.Pair;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ public class CeilingTest {
     @Test
     public void firstQuestionTest() {
         for (Pair<String, String> qa : al) {
-            List<Map<String, String>> results = QueryPassager.query(qa.fst, 100);
+            List<Map<String, String>> results = new Minerva(qa.fst, 100).getPassages();
             ResultDetails occs = occursIn(qa.snd, results);
             System.out.println("FO: " + occs.firstOccurence+"\tTOTO: " + occs.totalOccurences + "\t" + qa.fst );
         }
@@ -48,10 +49,10 @@ public class CeilingTest {
             for (Map.Entry<String, String> entry : result.entrySet()) {
                 // Put stagger magic here, extract nouns
                 // And create relative frequency?
-                String[] words = entry.getValue().toLowerCase().replaceAll("[^a-zåäö0-9\\s]","").split("\\s+");
+                String[] words = Constants.whiteList(entry.getValue()).split("\\s+");
                 for (String word : words) {
                     totalWords++;
-                    if (word.equals(answer))  {
+                    if (word.equalsIgnoreCase(answer))  {
                         if (firstOccurence == -1) firstOccurence = curResultNumber;
                         totalOccurences++;
                     }
@@ -64,6 +65,7 @@ public class CeilingTest {
     private static class ResultDetails {
        public final int firstOccurence;
        public final int totalOccurences;
+       @SuppressWarnings("unused")
        public final int totalWords;
        ResultDetails(int firstOccurence, int totalOccurences, int totalWords)  {
            this.firstOccurence = firstOccurence;

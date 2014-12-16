@@ -3,27 +3,18 @@ package test;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import jules.Categorizer;
-import jules.QueryPassager;
-import jules.RankNouns;
-import jules.Reranker;
 import jules.ScoreWord;
 
+import minerva.Minerva;
 import org.junit.Before;
 import org.junit.Test;
 
-import tagging.PosTagger;
-import tagging.Word;
 import util.Constants;
-import util.Pair;
 
 public class RankNounsTest {
 
@@ -53,22 +44,15 @@ public class RankNounsTest {
 
 	@Test
 	public void test() {
-		//writer.println(Integer.toString(questions.entrySet().size()));
 		for (Entry<String, String> question : questions.entrySet()) {
-			//System.out.println(question.getKey());
-			List<Map<String, String>> res = QueryPassager.query(
-					question.getKey(), queries);
-
-			List<ScoreWord> lm = RankNouns.findTopNouns(res);
-			
 			int i = 0;
-			//System.out.println(lm.get(0).getTotalRank());
-			for (ScoreWord sw : lm) {
+			Minerva min = new Minerva(question.getKey(), queries);
+			for (ScoreWord sw : min.getTopNouns()) {
 				String s = sw.lemma;
 				i++;
 				if (s.equalsIgnoreCase(question.getValue())){
 					//			  index found 		rank				total number of nouns
-					writer.println(i + "\t" + sw.getTotalRank() + "\t" + lm.size());
+					writer.println(i + "\t" + sw.getTotalRank() + "\t" + min.getTopNouns().size());
 					writer.flush();
 					break;
 				}

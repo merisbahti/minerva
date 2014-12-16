@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jules.QueryPassager;
+import minerva.Minerva;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +45,7 @@ public class AnswerPresentTest {
 		for(int size : querySizes){
 			presentAnswers = 0;
 			for(Map.Entry<String, String> entry : questions.entrySet()){
-				List<Map<String, String>> results = QueryPassager.query(entry.getKey(), size);
+				List<Map<String, String>> results = new Minerva(entry.getKey(), size).getPassages();
 				if(checkAnswer(results, entry.getValue()))
 					presentAnswers++;
 			}

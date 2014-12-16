@@ -5,23 +5,14 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.NoSuchElementException;
-
-import jules.Categorizer;
-import jules.QueryPassager;
-import jules.RankNouns;
-import jules.Reranker;
 import jules.ScoreWord;
-import tagging.PosTagger;
-import tagging.Word;
+import minerva.Minerva;
 import util.Constants;
-import util.Pair;
 
 public class TestRerank {
 	
@@ -56,24 +47,8 @@ public class TestRerank {
 		setUp();
 		//writer.println(Integer.toString(questions.entrySet().size()));
 		for (Entry<String, String> question : questions.entrySet()) {
-			List<Map<String, String>> list = QueryPassager.query(question.getKey(), queries);
-			List<ScoreWord> topN = RankNouns.findTopNouns(list);
-			List<Pair<String, Double>> cat;
-			try{
-				cat = Categorizer.getCategories(question.getKey());
-			}catch(Exception e){
-				continue;
-			}
-			if(cat==null)
-				continue;
-			Reranker ins = Reranker.getInstance();
-			PosTagger tagger = PosTagger.getInstance();
-			List<Word[]> words = tagger.tagString(question.getKey());
-			List<String> qLemmas = new ArrayList<String>();
-			for(Word w : words.get(0)){
-				qLemmas.add(w.lemma);
-			}
-			List<ScoreWord> results = ins.rerank(topN, qLemmas, cat);
+			Minerva min = new Minerva(question.getKey(), queries);
+			List<ScoreWord> results = min.getRerankedTopNouns();
 			int i = 0;
 			for (ScoreWord sw : results) {
 				String s = sw.lemma;

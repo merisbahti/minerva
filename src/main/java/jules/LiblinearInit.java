@@ -93,7 +93,6 @@ public class LiblinearInit {
 					String[] cols = line.split("\t");
 					corrAnswer = cols[6].toLowerCase();
 					if (corrAnswer.contains(" ")) continue;
-					System.out.println(corrAnswer);
 
                     corrAnswers.add(tagger.tagString(corrAnswer).get(0)[0].lemma);
 

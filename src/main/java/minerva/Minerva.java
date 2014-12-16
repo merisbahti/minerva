@@ -32,7 +32,7 @@ public class Minerva {
 
 	public List<ScoreWord> findTopNouns(){
 		if (lastTopNouns == null) {
-			List<ScoreWord> topNouns = RankNouns.findTopNouns(lastQuery);
+			topNouns = RankNouns.findTopNouns(lastQuery);
 		}
 		return topNouns;
 	}

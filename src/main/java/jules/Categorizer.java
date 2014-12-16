@@ -22,8 +22,7 @@ public class Categorizer {
 	public static List<Pair<String, Double>> getCategories(String q) {
 		String question = Constants.whiteList(q);
 		StringBuffer output = new StringBuffer();
-		String tmpQ = q.replace("&", "\\&");
-		String[] cmdarray = { "bash", "-c", "cd ./libshorttext-1.1 && python3 ./demo.py \"" + tmpQ + "\"" };
+		String[] cmdarray = { "bash", "-c", "cd ./libshorttext-1.1 && python3 ./demo.py \"" + question + "\"" };
 		try {
 			Process p = Runtime.getRuntime().exec(cmdarray);
 			p.waitFor();

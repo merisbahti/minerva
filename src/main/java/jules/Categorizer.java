@@ -19,7 +19,7 @@ public class Categorizer {
 	}
 
 	public static List<Pair<String, Double>> getCategories(String q) {
-		String question = q;
+		String question = q.replaceAll("[^åäöa-zA-ZÅÄÖ\\s]","");
 		System.out.println(q);
 		StringBuffer output = new StringBuffer();
 		String tmpQ = q.replace("&", "\\&");

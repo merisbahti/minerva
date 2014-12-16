@@ -67,6 +67,7 @@ public class PosTagger {
 	 */
 	public List<Word[]> tagString(String document) {
 		print(document);
+		document = document.replaceAll("[^åäöa-zA-ZÅÄÖ\\s]","");
 		BufferedReader reader = new BufferedReader(new StringReader(document));
 
 		Tokenizer tokenizer = new SwedishTokenizer(reader);

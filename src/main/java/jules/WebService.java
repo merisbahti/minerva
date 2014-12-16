@@ -46,6 +46,7 @@ public class WebService {
             if (qMap.containsKey("q")) {
                 StringBuilder sb = new StringBuilder();
                 String q = qMap.get("q").toLowerCase();
+                q = q.replaceAll("[^åäöa-zA-ZÅÄÖ\\s]","");
                 List<Map<String, String>> results = jules.QueryPassager.query(q, 100);
                 JSONArray paragraphs = new JSONArray();
                 for (Map<String, String> result : results) {

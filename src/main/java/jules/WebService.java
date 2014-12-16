@@ -16,6 +16,7 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 import minerva.Minerva;
+
 import org.json.*;
 
 import tagging.PosTagger;
@@ -38,7 +39,8 @@ public class WebService {
     }
 
     static class QueryHandler implements HttpHandler {
-        public void handle(HttpExchange t) throws IOException {
+        @SuppressWarnings("unused")
+		public void handle(HttpExchange t) throws IOException {
             String response = "No query found, specify the query parameter.";
             Map <String,String> qMap = queryToMap(t.getRequestURI().getQuery() == null ? "" : t.getRequestURI().getQuery());
             JSONObject jsonResponse = new JSONObject();
@@ -62,7 +64,6 @@ public class WebService {
                             try {
 								currArticle.put(entry.getKey(), entry.getValue());
 							} catch (JSONException e) {
-								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
                         } else {
@@ -70,7 +71,6 @@ public class WebService {
                             try {
 								currArticle.put(entry.getKey(), entry.getValue());
 							} catch (JSONException e) {
-								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
                         }

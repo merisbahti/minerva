@@ -14,4 +14,7 @@ public class Constants {
 	public static final String liblinearTrain = trainDir + "train_file.scale";
 	public static final String liblinearModel = modelsDir + "train_file.scale.model";
 
+	public static String whiteList(String s) {
+		return s.replaceAll("[^åäöa-zA-ZÅÄÖ0-9\\s]","");
+	}
 }

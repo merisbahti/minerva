@@ -7,6 +7,7 @@ import java.util.Map;
 
 import tagging.PosTagger;
 import tagging.Word;
+import util.Constants;
 import util.Pair;
 import jules.Categorizer;
 import jules.QueryPassager;
@@ -15,41 +16,38 @@ import jules.Reranker;
 import jules.ScoreWord;
 
 public class Minerva {
-	private static Pair<String, List<Map<String,String>>> lastQuery;
-	private static Pair<String, List<ScoreWord>> lastTopNouns;
-	
-	public static List<Map<String, String>> queryParagraphs(String query){
-		List<Map<String, String>> list = QueryPassager.query(query, 100);
-		lastQuery = new Pair<String, List<Map<String, String>>>(query, list);
-		return list;
+	private static List<Map<String,String>> lastQuery;
+	private static List<ScoreWord> lastTopNouns;
+	private static List<ScoreWord> topNouns;
+	private static String q;
+	private static List<ScoreWord> topRerankedNouns;
+
+	public Minerva(String query) {
+		q = Constants.whiteList(query);
+		lastTopNouns = null;
+		topNouns = null;
+		topRerankedNouns = null;
+		lastQuery = QueryPassager.query(q, 100);
 	}
-	
-	public static List<ScoreWord> findTopNouns(String query){
-		List<Map<String, String>> paragraphs;
-		if(lastQuery.fst.equalsIgnoreCase(query)){
-			paragraphs = lastQuery.snd;
-		}else{
-			paragraphs = queryParagraphs(query);
+
+	public List<ScoreWord> findTopNouns(){
+		if (lastTopNouns == null) {
+			List<ScoreWord> topNouns = RankNouns.findTopNouns(lastQuery);
 		}
-		List<ScoreWord> topNouns = RankNouns.findTopNouns(paragraphs);
-		lastTopNouns = new Pair<String, List<ScoreWord>>(query, topNouns);
 		return topNouns;
 	}
 	
-	public static List<ScoreWord> findRerankedNouns(String query) throws IOException{
-		List<ScoreWord> nouns;
-		if(lastTopNouns.fst.equalsIgnoreCase(query)){
-			nouns = lastTopNouns.snd;
-		}else{
-			nouns = findTopNouns(query);
+	public List<ScoreWord> findRerankedNouns() throws IOException{
+		if (topRerankedNouns == null) {
+			List<Pair<String, Double>> predictedCategories = Categorizer.getCategories(q);
+			List<Word[]> words = PosTagger.getInstance().tagString(q);
+			List<String> qLemmas = new ArrayList<String>();
+			for (Word w : words.get(0)) {
+				qLemmas.add(w.lemma);
+			}
+			topRerankedNouns = Reranker.getInstance().rerank(findTopNouns(), qLemmas, predictedCategories);
 		}
-		List<Pair<String, Double>> predictedCategories = Categorizer.getCategories(query);
-		List<Word[]> words = PosTagger.getInstance().tagString(query);
-		List<String> qLemmas = new ArrayList<String>();
-		for(Word w : words.get(0)){
-			qLemmas.add(w.lemma);
-		}
-		return Reranker.getInstance().rerank(nouns, qLemmas, predictedCategories);
+		return topRerankedNouns;
 	}
 
 }

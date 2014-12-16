@@ -103,7 +103,8 @@ $("#search").click(function(){
 });
 
 var trunc = function(dub, decs) {
-  return Math.floor(dub * Math.pow(10, decs)) / Math.pow(10, decs);
+//  return Math.floor(dub * Math.pow(10, decs)) / Math.pow(10, decs);
+   return dub;
 }
 
 $("#gosearch").click(function(){

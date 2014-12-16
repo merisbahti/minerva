@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
+import minerva.Minerva;
 import tagging.PosTagger;
 import tagging.Word;
 import util.Constants;
@@ -101,7 +102,8 @@ public class LiblinearInit {
 					questions.add(question);
 
 					List<String> as = new ArrayList<String>();
-					for (ScoreWord sw : RankNouns.findTopNouns(QueryPassager.query(question, 100))) {
+					Minerva min = new Minerva(question, 100);
+					for (ScoreWord sw : min.getTopNouns()) {
 						as.add(sw.lemma);
 						uniqueAnswers.add(sw.lemma);
 					}
@@ -171,9 +173,8 @@ public class LiblinearInit {
 	}
 
 	public static void testRankTopNouns(String q) throws IOException {
-		List<Map<String, String>> res = QueryPassager.query(q, 100);
-		List<ScoreWord> lm = RankNouns.findTopNouns(res);
-		for (ScoreWord sw : lm) {
+		Minerva min = new Minerva(q, 100);
+		for (ScoreWord sw : min.getTopNouns()) {
 			System.out.println(sw.word + " : " + sw.lemma + " : " + sw.getTotalRank());
 		}
 

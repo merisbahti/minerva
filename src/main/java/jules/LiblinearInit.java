@@ -11,6 +11,7 @@ import java.util.TreeSet;
 
 import minerva.Minerva;
 import tagging.PosTagger;
+import tagging.ScoreWord;
 import tagging.Word;
 import util.Constants;
 import util.Pair;

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import tagging.PosTagger;
+import tagging.ScoreWord;
 import tagging.Word;
 import util.Constants;
 import util.Pair;
@@ -14,7 +15,6 @@ import jules.Puncher;
 import jules.QueryPassager;
 import jules.RankNouns;
 import jules.Reranker;
-import jules.ScoreWord;
 
 public class Minerva {
 	private List<Map<String,String>> lastQuery;

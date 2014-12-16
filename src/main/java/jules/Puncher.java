@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import tagging.ScoreWord;
 import util.Pair;
 
 public class Puncher {

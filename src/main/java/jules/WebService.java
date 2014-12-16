@@ -20,6 +20,7 @@ import minerva.Minerva;
 import org.json.*;
 
 import tagging.PosTagger;
+import tagging.ScoreWord;
 import util.Constants;
 
 public class WebService {

@@ -8,12 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import jules.ScoreWord;
-
 import minerva.Minerva;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import tagging.ScoreWord;
 import util.Constants;
 
 public class RankNounsTest {

@@ -6,9 +6,9 @@ import java.util.List;
 
 import jules.Categorizer;
 import jules.Reranker;
-import jules.ScoreWord;
 import minerva.Minerva;
 import tagging.PosTagger;
+import tagging.ScoreWord;
 import tagging.Word;
 import util.Pair;
 

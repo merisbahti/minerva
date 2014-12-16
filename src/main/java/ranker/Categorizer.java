@@ -1,4 +1,4 @@
-package jules;
+package ranker;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

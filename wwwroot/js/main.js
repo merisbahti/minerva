@@ -25,10 +25,12 @@ var addResult = function(head, foot, id) {
 var switchToP = function() {
   $("#tabResultsP").attr("class", "active");
   $("#tabResultsTA").attr("class", "");
-  $("#tabResultsRTA").attr("class", "");
+  $("#tabResultsPTA").attr("class", "");
   $("#resultsP").css("display","");
   $("#resultsTA").css("display","none");
-  $("#resultsRTA").css("display","none");
+  $("#resultsPTA").css("display","none");
+  $("#tabResultsRPTA").attr("class", "");
+  $("#resultsRPTA").css("display","none");
 }
 $( "#tabResultsP" ).click(function(event) {
   event.preventDefault();
@@ -38,33 +40,48 @@ $( "#tabResultsP" ).click(function(event) {
 var switchToTA = function() {
   $("#tabResultsP").attr("class", "");
   $("#tabResultsTA").attr("class", "active");
-  $("#tabResultsRTA").attr("class", "");
+  $("#tabResultsPTA").attr("class", "");
   $("#resultsP").css("display","none");
   $("#resultsTA").css("display","");
-  $("#resultsRTA").css("display","none");
+  $("#resultsPTA").css("display","none");
+  $("#tabResultsRPTA").attr("class", "");
+  $("#resultsRPTA").css("display","none");
 }
 $( "#tabResultsTA" ).click(function(event) {
   event.preventDefault();
   switchToTA();
 });
 
-var switchToRTA = function() {
+var switchToPTA = function() {
   $("#tabResultsP").attr("class", "");
   $("#tabResultsTA").attr("class", "");
-  $("#tabResultsRTA").attr("class", "active");
+  $("#tabResultsPTA").attr("class", "active");
   $("#resultsP").css("display","none");
   $("#resultsTA").css("display","none");
-  $("#resultsRTA").css("display","");
+  $("#resultsPTA").css("display","");
+  $("#tabResultsRPTA").attr("class", "");
+  $("#resultsRPTA").css("display","none");
 }
-
-$( "#tabResultsRTA" ).click(function(event) {
+$( "#tabResultsPTA" ).click(function(event) {
   event.preventDefault();
-  switchToRTA();
+  switchToPTA();
 });
 
-$( "#tabResultsRTA" ).click(function() {
-  switchToRTA();
+var switchToRPTA = function() {
+  $("#tabResultsP").attr("class", "");
+  $("#tabResultsTA").attr("class", "");
+  $("#tabResultsPTA").attr("class", "");
+  $("#resultsP").css("display","none");
+  $("#resultsTA").css("display","none");
+  $("#resultsPTA").css("display","none");
+  $("#tabResultsRPTA").attr("class", "active");
+  $("#resultsRPTA").css("display","");
+}
+$( "#tabResultsRPTA" ).click(function(event) {
+  event.preventDefault();
+  switchToRPTA();
 });
+
 
 var showSpinner = function () {
   $(function () {
@@ -94,7 +111,8 @@ var removeResults = function() {
   $("#error").empty();
   $("#resultsP").empty();
   $("#resultsTA").empty();
-  $("#resultsRTA").empty();
+  $("#resultsPTA").empty();
+  $("#resultsRPTA").empty();
   $("#spinner").empty();
 }
 
@@ -116,12 +134,13 @@ $("#gosearch").click(function(){
     showSpinner()
     //$.getJSON("http://localhost:8081/?q="+$("#search").val(), function( data ) {
     $.getJSON("/query/?q="+$("#search").val(), function( data ) {
-      if (data.length == 0 || (data["topAnswers"].length == 0 && data["rankedTopAnswers"].length == 0 && data["paragraphs"].length == 0)) { 
+      if (data.length == 0 || (data["topAnswers"].length == 0 && data["punchedTopAnswers"].length == 0 && data["paragraphs"].length == 0)) { 
           addError("Inga träffar.", "Prova med en annan fråga?");
         } else {
           removeResults()
           $("ul").show()
-          $("#tabResultsRTAAmount").text(data["rankedTopAnswers"].length);
+          $("#tabResultsRPTAAmount").text(data["rankedPunchedTopAnswers"].length);
+          $("#tabResultsPTAAmount").text(data["punchedTopAnswers"].length);
           $("#tabResultsTAAmount").text(data["topAnswers"].length);
           $("#tabResultsPAmount").text(data["paragraphs"].length);
           if (data["paragraphs"].length == 0) {
@@ -132,11 +151,11 @@ $("#gosearch").click(function(){
             }); 
           }
           $.each(data, function(i, item) { console.log(item.length) })
-          if (data["rankedTopAnswers"].length == 0) {
-            addResult("The reranker couldn't find any candidates, try another query?","", "#resultsRTA")
+          if (data["punchedTopAnswers"].length == 0) {
+            addResult("The reranker couldn't find any candidates, try another query?","", "#resultsPTA")
           } else {
-            $.each(data["rankedTopAnswers"], function(i, item) {
-              addResult(item.word, "Confidence: " + trunc(item.score, 2) + "%", "#resultsRTA")
+            $.each(data["punchedTopAnswers"], function(i, item) {
+              addResult(item.word, "Confidence: " + trunc(item.score, 2) + "%", "#resultsPTA")
             }); 
           }
           if (data["topAnswers"].length == 0) {
@@ -144,6 +163,13 @@ $("#gosearch").click(function(){
           } else {
             $.each(data["topAnswers"], function(i, item) {
               addResult(item.word, "Score: " + trunc(item.score, 2), "#resultsTA")
+            }); 
+          }
+          if (data["rankedPunchedTopAnswers"].length == 0) {
+            addResult("The POS-tagger couldn't find any candidates, try another query?", "", "#resultsRPTA")
+          } else {
+            $.each(data["rankedPunchedTopAnswers"], function(i, item) {
+              addResult(item.word, "Score: " + trunc(item.score, 2), "#resultsRPTA")
             }); 
           }
       }

@@ -1,6 +1,5 @@
-package jules;
+package tagging;
 
-import tagging.Word;
 
 /**
  * Word containing rankpoints

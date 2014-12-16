@@ -1,4 +1,4 @@
-package jules;
+package web;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -19,7 +19,9 @@ import minerva.Minerva;
 
 import org.json.*;
 
+import ranker.Reranker;
 import tagging.PosTagger;
+import tagging.ScoreWord;
 import util.Constants;
 
 public class WebService {
@@ -78,11 +80,13 @@ public class WebService {
                     paragraphs.put(currArticle);
                 }
                 JSONArray topAnswers = scoreWordToJsonArray(min.getTopNouns());
-                JSONArray rankedTopAnswers = scoreWordToJsonArray(min.getRerankedTopNouns());
+                JSONArray punchedTopAnswers= scoreWordToJsonArray(min.getPunchedTopNouns());
+                JSONArray rankedPunchedTopAnswers = scoreWordToJsonArray(min.getRankedPunchedTopNouns());
                 try{
 	                jsonResponse.put("paragraphs", paragraphs);
 	                jsonResponse.put("topAnswers", topAnswers);
-	                jsonResponse.put("rankedTopAnswers", rankedTopAnswers);
+	                jsonResponse.put("punchedTopAnswers", punchedTopAnswers);
+                    jsonResponse.put("rankedPunchedTopAnswers", rankedPunchedTopAnswers);
 	                response = jsonResponse.toString();
                 } catch(Exception e){}
             }

@@ -1,4 +1,4 @@
-package jules;
+package ranker;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Set;
 
 import tagging.PosTagger;
+import tagging.ScoreWord;
 import tagging.Word;
 
 public class RankNouns {

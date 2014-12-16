@@ -10,8 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import jules.ScoreWord;
+
 import minerva.Minerva;
+import tagging.ScoreWord;
 import util.Constants;
 
 public class TestRerank {
@@ -48,7 +49,7 @@ public class TestRerank {
 		//writer.println(Integer.toString(questions.entrySet().size()));
 		for (Entry<String, String> question : questions.entrySet()) {
 			Minerva min = new Minerva(question.getKey(), queries);
-			List<ScoreWord> results = min.getRerankedTopNouns();
+			List<ScoreWord> results = min.getRankedPunchedTopNouns();
 			int i = 0;
 			for (ScoreWord sw : results) {
 				String s = sw.lemma;

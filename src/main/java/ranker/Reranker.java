@@ -1,4 +1,4 @@
-package jules;
+package ranker;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import tagging.ScoreWord;
 import util.Constants;
 import util.Pair;
 import de.bwaldvogel.liblinear.Feature;

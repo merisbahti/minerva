@@ -1,4 +1,4 @@
-package jules;
+package ranker;
 
 import java.util.ArrayList;
 import java.util.HashMap;

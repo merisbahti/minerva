@@ -1,4 +1,4 @@
-package jules;
+package web;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -19,6 +19,7 @@ import minerva.Minerva;
 
 import org.json.*;
 
+import ranker.Reranker;
 import tagging.PosTagger;
 import tagging.ScoreWord;
 import util.Constants;

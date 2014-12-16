@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import ranker.Categorizer;
+import ranker.Puncher;
+import ranker.RankNouns;
+import ranker.Reranker;
 import tagging.PosTagger;
 import tagging.ScoreWord;
 import tagging.Word;
 import util.Constants;
 import util.Pair;
-import jules.Categorizer;
-import jules.Puncher;
-import jules.QueryPassager;
-import jules.RankNouns;
-import jules.Reranker;
+import lucene.QueryPassager;
 
 public class Minerva {
 	private List<Map<String,String>> lastQuery;

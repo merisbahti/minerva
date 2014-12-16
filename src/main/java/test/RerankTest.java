@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import jules.Categorizer;
-import jules.Reranker;
 import minerva.Minerva;
+import ranker.Categorizer;
+import ranker.Reranker;
 import tagging.PosTagger;
 import tagging.ScoreWord;
 import tagging.Word;

@@ -36,7 +36,7 @@ public class Indexer {
 	private static IndexWriter writer;
 
 	public static void bzIndexer() {
-		analyzer = new SwedishAnalyzer();
+		analyzer = new CustomAnalyzer();
 		iwc = new IndexWriterConfig(Version.LATEST, analyzer);
 		iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 		try {

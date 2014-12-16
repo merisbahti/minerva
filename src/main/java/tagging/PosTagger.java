@@ -40,15 +40,15 @@ public class PosTagger {
 		} catch (Exception e) {
 			throw new IOException("Couldn't load modelfile");
 		}
-		print("Loading Stagger model ...");
 
+		System.out.println("Loading stagger model...");
 		try {
 			tagger = (Tagger) modelReader.readObject();
 		} catch (Exception e) {
 			modelReader.close();
 			throw new IOException("Model file found but unable to be loaded.");
 		}
-		print("Model loaded!");
+		System.out.println("Model loaded!");
 		modelReader.close();
 	}
 
@@ -67,6 +67,7 @@ public class PosTagger {
 	 */
 	public List<Word[]> tagString(String document) {
 		print(document);
+		document = document.replaceAll("[^åäöa-zA-ZÅÄÖ\\s]","");
 		BufferedReader reader = new BufferedReader(new StringReader(document));
 
 		Tokenizer tokenizer = new SwedishTokenizer(reader);
@@ -86,10 +87,10 @@ public class PosTagger {
 				try {
 					taggedSent = tagger.tagSentence(sent, true, false);
 				} catch (Exception e) {
-					for (Token t : sentence) {
+					/*for (Token t : sentence) {
 						System.err.print(t.value + " ");
 					}
-					System.err.println();
+					System.err.println();*/
 					continue;
 				}
 				TagSet tagset = tagger.getTaggedData().getPosTagSet();

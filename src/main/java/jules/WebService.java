@@ -25,7 +25,7 @@ import util.Pair;
 public class WebService {
     public static void runner() throws Exception {
         System.out.println("Initializing server... plz w8");
-        HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(1337), 0);
         System.out.println("Initializing pos-tagger ... plz w8");
         PosTagger.getInstance();
         System.out.println("Pos-tagger initialized....");
@@ -46,6 +46,7 @@ public class WebService {
             if (qMap.containsKey("q")) {
                 StringBuilder sb = new StringBuilder();
                 String q = qMap.get("q").toLowerCase();
+                q = q.replaceAll("[^åäöa-zA-ZÅÄÖ\\s]","");
                 List<Map<String, String>> results = jules.QueryPassager.query(q, 100);
                 JSONArray paragraphs = new JSONArray();
                 for (Map<String, String> result : results) {

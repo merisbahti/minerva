@@ -25,6 +25,7 @@ import util.Constants;
 
 public class QueryPassager {
 	public static List<Map<String, String>> query(String querystr, int nbrHits) {
+		querystr = querystr.replaceAll("[^a-zåäöA-ZÅÄÖ\\s]","");
 		Analyzer analyzer = new CustomAnalyzer();
 		String[] fieldNames = { "title", "text" };
 		MultiFieldQueryParser mfqp = new MultiFieldQueryParser(fieldNames, analyzer);

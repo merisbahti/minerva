@@ -104,6 +104,10 @@ public class LiblinearInit {
 						as.add(sw.lemma);
 						uniqueAnswers.add(sw.lemma);
 					}
+					if(!as.contains(corrAnswer)){
+						as.add(corrAnswer);
+						uniqueAnswers.add(corrAnswer);
+					}
 					answers.add(as);
 
 					for (Word w : tagger.tagString(question).get(0)) {

@@ -11,13 +11,9 @@ import tagging.Word;
  *
  */
 public class ScoreWord extends Word implements Comparable<ScoreWord>{
-	private int occurances = 0;
 	private double nounRank = 1;
 	private double liblinRank = 1;
 	private double totalRank;
-	
-	//Experimental feature where we can use the type from stagger to boost the score??
-	private final double staggerTypeBoost = 0.5;
 
 	public ScoreWord(String word, String lemma, String pos, String neTag,
 			String neTypeTag) {
@@ -39,16 +35,20 @@ public class ScoreWord extends Word implements Comparable<ScoreWord>{
 	}
 	
 	private void updateTotalRank(){
-		totalRank = nounRank*liblinRank*liblinRank;
+		totalRank = Math.sqrt(nounRank)*liblinRank*liblinRank;
 	}
 	
 	public double getTotalRank(){
 		return totalRank;
 	}
 	
-	/*public void incOccurances(){
-		this.occurances++;
-	}*/
+	public double getLiblinRank(){
+		return liblinRank;
+	}
+	
+	public double getNounIndexRank(){
+		return nounRank;
+	}
 
 	/**
 	 * Compare scorewords on totalRank.

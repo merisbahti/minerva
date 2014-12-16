@@ -31,12 +31,9 @@ public class Reranker {
 	private Model model;
 	private Map<String, Integer> questionsMap, answersMap, categoriesMap;
 	public static void rerankTest() throws IOException{
-		String q = "Vad heter Sveriges huvudstad?";
+		String q =  "Vad heter Sveriges huvudstad?";//"Vilket land ligger Reykjavik i?";
 		List<Map<String, String>> list = QueryPassager.query(q, 100);
 		List<ScoreWord> topN = RankNouns.findTopNouns(list);
-		for(ScoreWord s : topN){
-			System.out.println(s.toString());
-		}
 		List<Pair<String, Double>> cat = Categorizer.getCategories(q);
 		Reranker ins = Reranker.getInstance();
 		PosTagger tagger = PosTagger.getInstance();
@@ -44,10 +41,11 @@ public class Reranker {
 		List<String> qLemmas = new ArrayList<String>();
 		for(Word w : words.get(0)){
 			qLemmas.add(w.lemma);
+			System.out.println(w);
 		}
 		List<ScoreWord> results = ins.rerank(topN, qLemmas, cat);
 		for(ScoreWord res : results){
-			System.out.println(res.lemma + ": " + res.getTotalRank());
+			System.out.println(res.lemma + ": " + res.getTotalRank() + " : " + res.getLiblinRank() + " : " + res.getNounIndexRank());
 		}
 	}
 	

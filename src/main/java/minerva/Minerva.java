@@ -21,6 +21,11 @@ public class Minerva {
 	private List<ScoreWord> topRerankedNouns;
 	private String q;
 
+	public Minerva(String query, int nbrHits) {
+		q = Constants.whiteList(query);
+		lastQuery = QueryPassager.query(q, nbrHits);
+	}
+
 	public Minerva(String query) {
 		q = Constants.whiteList(query);
 		lastQuery = QueryPassager.query(q, 100);

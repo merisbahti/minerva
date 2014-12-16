@@ -2,6 +2,7 @@ MINERVA
 ======
 
 Project in computer science.
+![System overview](Question-answering-system.png)
 
 ## Dependencies
 

@@ -1,4 +1,4 @@
-package jules;
+package lucene;
 
 import java.io.IOException;
 import java.io.Reader;

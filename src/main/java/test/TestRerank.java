@@ -10,8 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import jules.ScoreWord;
+
 import minerva.Minerva;
+import tagging.ScoreWord;
 import util.Constants;
 
 public class TestRerank {

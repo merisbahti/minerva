@@ -19,7 +19,6 @@ import lucene.QueryPassager;
 public class Minerva {
 	private List<Map<String,String>> lastQuery;
 	private List<ScoreWord> topNouns;
-	private List<ScoreWord> topRerankedNouns;
 	private String q;
 	private Puncher puncher;
 	private List<Pair<String, Double>> predictedCategories;

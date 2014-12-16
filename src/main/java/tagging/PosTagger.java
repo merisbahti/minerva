@@ -86,10 +86,10 @@ public class PosTagger {
 				try {
 					taggedSent = tagger.tagSentence(sent, true, false);
 				} catch (Exception e) {
-					for (Token t : sentence) {
+					/*for (Token t : sentence) {
 						System.err.print(t.value + " ");
 					}
-					System.err.println();
+					System.err.println();*/
 					continue;
 				}
 				TagSet tagset = tagger.getTaggedData().getPosTagSet();

@@ -20,10 +20,8 @@ public class Categorizer {
 
 	public static List<Pair<String, Double>> getCategories(String q) {
 		String question = q;
-		System.out.println(q);
 		StringBuffer output = new StringBuffer();
 		String tmpQ = q.replace("&", "\\&");
-		tmpQ = tmpQ.replace("?", "");
 		String[] cmdarray = { "bash", "-c", "cd ./libshorttext-1.1 && python3 ./demo.py \"" + tmpQ + "\"" };
 		try {
 			Process p = Runtime.getRuntime().exec(cmdarray);
@@ -58,7 +56,6 @@ public class Categorizer {
 			String[] cats = categories.split("\\s{1,10}");
 
 			String[] vals = decvals.split("\\s+");
-			System.out.println(decvals);
 			List<Double> valDubsAbs = new ArrayList<Double>();
 			for (String val : vals) {
 				if (!"".equals(val.trim()) || !val.trim().isEmpty())

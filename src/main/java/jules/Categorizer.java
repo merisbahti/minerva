@@ -19,7 +19,7 @@ public class Categorizer {
 	}
 
 	public static List<Pair<String, Double>> getCategories(String q) {
-		String question = q;
+		String question = q.replaceAll("[^åäöa-zA-ZÅÄÖ\\s]","");
 		StringBuffer output = new StringBuffer();
 		String tmpQ = q.replace("&", "\\&");
 		String[] cmdarray = { "bash", "-c", "cd ./libshorttext-1.1 && python3 ./demo.py \"" + tmpQ + "\"" };

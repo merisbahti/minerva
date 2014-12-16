@@ -20,6 +20,7 @@ import org.json.*;
 
 import tagging.PosTagger;
 import tagging.Word;
+import util.Constants;
 import util.Pair;
 
 public class WebService {
@@ -46,7 +47,7 @@ public class WebService {
             if (qMap.containsKey("q")) {
                 StringBuilder sb = new StringBuilder();
                 String q = qMap.get("q").toLowerCase();
-                q = q.replaceAll("[^åäöa-zA-ZÅÄÖ\\s]","");
+                q = Constants.whiteList(q);
                 List<Map<String, String>> results = jules.QueryPassager.query(q, 100);
                 JSONArray paragraphs = new JSONArray();
                 for (Map<String, String> result : results) {

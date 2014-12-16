@@ -97,6 +97,7 @@ public class Reranker {
 	 * @return
 	 */
 	public List<ScoreWord> rerank(List<ScoreWord> topWords, List<String> question, List<Pair<String,Double>> predictedCategories){
+		double sum = 0;
 		for(ScoreWord sw : topWords){
 			ArrayList<Feature> features = new ArrayList<Feature>();
 			for(Pair<String,Double> f : predictedCategories){
@@ -125,8 +126,13 @@ public class Reranker {
 			double[] dbs = {(double) 0,(double) 1};
 			Linear.predictProbability(model, f, dbs);
 			sw.addliblinRank(dbs[1]);
+			sum += sw.getTotalRank();
 		}
 		Collections.sort(topWords);
+		
+		for(ScoreWord sw : topWords){
+			sw.normalizeScore(sum);
+		}
 		return topWords;
 	}
 

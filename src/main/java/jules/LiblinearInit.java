@@ -32,12 +32,6 @@ public class LiblinearInit {
 
 	static TreeSet<String> uniqueQuestions = new TreeSet<String>();
 	static TreeSet<String> uniqueAnswers = new TreeSet<String>();
-	static String[] uniqueCategories = { "concept", "location", "definition",
-			"description", "multiplechoice", "amount", "organization",
-			"other", "person", "abbreviation", "verb", "title",
-			"timepoint", "duration", "money" };
-	
-	
 	private static void headerCreator(){
 
 		try{
@@ -59,7 +53,7 @@ public class LiblinearInit {
 
 			writer.println(line.trim());
 			line = "";
-			for(String c : uniqueCategories){
+			for(String c : Constants.uniqueCategories){
 				line += "\t" + i + ":" + c;
 				i++;
 			}
@@ -141,10 +135,10 @@ public class LiblinearInit {
 							line += "\t" + (uniqueQuestions.headSet(sulq).size()+1) + ":1";
 						}
 						line += "\t" + (uniqueAnswers.headSet(str).size()+1 + qSize) + ":1";
-						for (int j = 0; j < uniqueCategories.length; j++) {
+						for (int j = 0; j < Constants.uniqueCategories.length; j++) {
 							try {
 								for (Pair<String, Double> cs : catstats.get(i)) {
-									if (cs.fst.equalsIgnoreCase(uniqueCategories[j])) {
+									if (cs.fst.equalsIgnoreCase(Constants.uniqueCategories[j])) {
 										line += "\t" + (qaSize + j + 1) + ":" + cs.snd;
 									}
 								}

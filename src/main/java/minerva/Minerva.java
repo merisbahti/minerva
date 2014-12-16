@@ -10,6 +10,7 @@ import tagging.Word;
 import util.Constants;
 import util.Pair;
 import jules.Categorizer;
+import jules.Puncher;
 import jules.QueryPassager;
 import jules.RankNouns;
 import jules.Reranker;
@@ -21,6 +22,8 @@ public class Minerva {
 	private static List<ScoreWord> topNouns;
 	private static String q;
 	private static List<ScoreWord> topRerankedNouns;
+	private Puncher puncher;
+	private List<Pair<String, Double>> predictedCategories;
 
 	public Minerva(String query) {
 		q = Constants.whiteList(query);
@@ -28,18 +31,22 @@ public class Minerva {
 		topNouns = null;
 		topRerankedNouns = null;
 		lastQuery = QueryPassager.query(q, 100);
+		puncher = new Puncher();
+		predictedCategories = Categorizer.getCategories(q);
 	}
 
 	public List<ScoreWord> findTopNouns(){
 		if (lastTopNouns == null) {
 			List<ScoreWord> topNouns = RankNouns.findTopNouns(lastQuery);
 		}
+		topNouns = puncher.punch(topNouns, predictedCategories);
+		
 		return topNouns;
 	}
 	
 	public List<ScoreWord> findRerankedNouns() throws IOException{
 		if (topRerankedNouns == null) {
-			List<Pair<String, Double>> predictedCategories = Categorizer.getCategories(q);
+			
 			List<Word[]> words = PosTagger.getInstance().tagString(q);
 			List<String> qLemmas = new ArrayList<String>();
 			for (Word w : words.get(0)) {

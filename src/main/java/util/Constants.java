@@ -17,4 +17,9 @@ public class Constants {
 	public static String whiteList(String s) {
 		return s.replaceAll("[^åäöa-zA-ZÅÄÖ0-9\\s]","");
 	}
+
+	public static String[] uniqueCategories = { "concept", "location", "definition",
+	"description", "multiplechoice", "amount", "organization",
+	"other", "person", "abbreviation", "verb", "title",
+	"timepoint", "duration", "money" };
 }

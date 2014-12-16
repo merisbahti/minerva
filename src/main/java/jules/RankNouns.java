@@ -59,7 +59,7 @@ public class RankNouns {
 		}
 	
 		Collections.sort(scores);
-		return scores.size() > 100 ? scores.subList(0, 100) : scores;
+		return scores;
 	}
 
 	private static boolean matchingPos(String[] tags, String pos) {

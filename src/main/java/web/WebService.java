@@ -1,4 +1,4 @@
-package webgui;
+package web;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,6 +25,15 @@ import tagging.ScoreWord;
 import util.Constants;
 
 public class WebService {
+
+    public static void main(String[] args) {
+        try {
+            runner();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void runner() throws Exception {
         System.out.println("Initializing server... plz w8");
         HttpServer server = HttpServer.create(new InetSocketAddress(1337), 0);

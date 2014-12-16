@@ -13,6 +13,7 @@ import tagging.Word;
 public class ScoreWord extends Word implements Comparable<ScoreWord>{
 	private double nounRank = 1;
 	private double liblinRank = 1;
+	private double punchDown = 1;
 	private double totalRank;
 
 	public ScoreWord(String word, String lemma, String pos, String neTag,
@@ -34,8 +35,13 @@ public class ScoreWord extends Word implements Comparable<ScoreWord>{
 		updateTotalRank();
 	}
 	
+	public void addPunchDown(double down){
+		this.punchDown = down;
+		updateTotalRank();
+	}
+	
 	private void updateTotalRank(){
-		totalRank = Math.sqrt(nounRank)*liblinRank*liblinRank;
+		totalRank = Math.sqrt(nounRank)*liblinRank*liblinRank*punchDown;
 	}
 	
 	public double getTotalRank(){

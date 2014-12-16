@@ -11,13 +11,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import minerva.Minerva;
+import tagging.PosTagger;
+import tagging.Word;
+import util.Constants;
+import util.Pair;
 import de.bwaldvogel.liblinear.Feature;
 import de.bwaldvogel.liblinear.FeatureNode;
 import de.bwaldvogel.liblinear.Linear;
 import de.bwaldvogel.liblinear.Model;
-import tagging.PosTagger;
-import tagging.Word;
-import util.*;
 
 /**
  * VERY experimental
@@ -30,10 +32,12 @@ public class Reranker {
 	private static Reranker instance = null;
 	private Model model;
 	private Map<String, Integer> questionsMap, answersMap, categoriesMap;
+	
 	public static void rerankTest() throws IOException{
 		String q =  "Vad heter Sveriges huvudstad?";//"Vilket land ligger Reykjavik i?";
-		List<Map<String, String>> list = QueryPassager.query(q, 100);
-		List<ScoreWord> topN = RankNouns.findTopNouns(list);
+		Minerva minerva = new Minerva(q, 100);
+		List<Map<String, String>> list = minerva.getPassages();
+		List<ScoreWord> topN = minerva.getTopNouns();
 		List<Pair<String, Double>> cat = Categorizer.getCategories(q);
 		Reranker ins = Reranker.getInstance();
 		PosTagger tagger = PosTagger.getInstance();

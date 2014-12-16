@@ -1,4 +1,4 @@
-package web;
+package webgui;
 
 import java.io.IOException;
 import java.io.OutputStream;

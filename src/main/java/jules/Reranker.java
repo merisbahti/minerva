@@ -11,9 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import minerva.Minerva;
-import tagging.PosTagger;
-import tagging.Word;
 import util.Constants;
 import util.Pair;
 import de.bwaldvogel.liblinear.Feature;
@@ -32,26 +29,6 @@ public class Reranker {
 	private static Reranker instance = null;
 	private Model model;
 	private Map<String, Integer> questionsMap, answersMap, categoriesMap;
-	
-	public static void rerankTest() throws IOException{
-		String q =  "Vad heter Sveriges huvudstad?";//"Vilket land ligger Reykjavik i?";
-		Minerva minerva = new Minerva(q, 100);
-		List<Map<String, String>> list = minerva.getPassages();
-		List<ScoreWord> topN = minerva.getTopNouns();
-		List<Pair<String, Double>> cat = Categorizer.getCategories(q);
-		Reranker ins = Reranker.getInstance();
-		PosTagger tagger = PosTagger.getInstance();
-		List<Word[]> words = tagger.tagString(q);
-		List<String> qLemmas = new ArrayList<String>();
-		for(Word w : words.get(0)){
-			qLemmas.add(w.lemma);
-			System.out.println(w);
-		}
-		List<ScoreWord> results = ins.rerank(topN, qLemmas, cat);
-		for(ScoreWord res : results){
-			System.out.println(res.lemma + ": " + res.getTotalRank() + " : " + res.getLiblinRank() + " : " + res.getNounIndexRank());
-		}
-	}
 	
 	protected Reranker() throws IOException{
 		File file = new File(Constants.liblinearModel);

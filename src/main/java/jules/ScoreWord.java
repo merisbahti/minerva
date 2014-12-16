@@ -58,5 +58,10 @@ public class ScoreWord extends Word implements Comparable<ScoreWord>{
 		return Double.compare(other.totalRank, this.totalRank);
 	}
 
+	public void normalizeScore(double sum) {
+		if(sum > 0)
+			this.totalRank = 100*totalRank/sum;
+	}
+
 
 }

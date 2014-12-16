@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import jules.QueryPassager;
 import minerva.Minerva;
 
 import org.junit.Before;

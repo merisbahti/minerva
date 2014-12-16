@@ -3,28 +3,18 @@ package test;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import jules.Categorizer;
-import jules.QueryPassager;
-import jules.RankNouns;
-import jules.Reranker;
 import jules.ScoreWord;
 
 import minerva.Minerva;
 import org.junit.Before;
 import org.junit.Test;
 
-import tagging.PosTagger;
-import tagging.Word;
 import util.Constants;
-import util.Pair;
 
 public class RankNounsTest {
 

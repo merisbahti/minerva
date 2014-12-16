@@ -1,5 +1,4 @@
 package test;
-import jules.QueryPassager;
 import minerva.Minerva;
 
 import org.junit.*;
@@ -66,6 +65,7 @@ public class CeilingTest {
     private static class ResultDetails {
        public final int firstOccurence;
        public final int totalOccurences;
+       @SuppressWarnings("unused")
        public final int totalWords;
        ResultDetails(int firstOccurence, int totalOccurences, int totalWords)  {
            this.firstOccurence = firstOccurence;

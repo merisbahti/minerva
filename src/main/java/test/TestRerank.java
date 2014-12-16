@@ -18,6 +18,7 @@ import jules.QueryPassager;
 import jules.RankNouns;
 import jules.Reranker;
 import jules.ScoreWord;
+import minerva.Minerva;
 import tagging.PosTagger;
 import tagging.Word;
 import util.Constants;
@@ -56,24 +57,8 @@ public class TestRerank {
 		setUp();
 		//writer.println(Integer.toString(questions.entrySet().size()));
 		for (Entry<String, String> question : questions.entrySet()) {
-			List<Map<String, String>> list = QueryPassager.query(question.getKey(), queries);
-			List<ScoreWord> topN = RankNouns.findTopNouns(list);
-			List<Pair<String, Double>> cat;
-			try{
-				cat = Categorizer.getCategories(question.getKey());
-			}catch(Exception e){
-				continue;
-			}
-			if(cat==null)
-				continue;
-			Reranker ins = Reranker.getInstance();
-			PosTagger tagger = PosTagger.getInstance();
-			List<Word[]> words = tagger.tagString(question.getKey());
-			List<String> qLemmas = new ArrayList<String>();
-			for(Word w : words.get(0)){
-				qLemmas.add(w.lemma);
-			}
-			List<ScoreWord> results = ins.rerank(topN, qLemmas, cat);
+			Minerva min = new Minerva(question.getKey(), queries);
+			List<ScoreWord> results = min.getRerankedTopNouns();
 			int i = 0;
 			for (ScoreWord sw : results) {
 				String s = sw.lemma;

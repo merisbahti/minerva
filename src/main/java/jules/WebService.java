@@ -78,13 +78,13 @@ public class WebService {
                     paragraphs.put(currArticle);
                 }
                 JSONArray topAnswers = scoreWordToJsonArray(min.getTopNouns());
-                JSONArray rankedTopAnswers = scoreWordToJsonArray(min.getRerankedTopNouns());
-                JSONArray punchedRankedTopAnswers = scoreWordToJsonArray(min.getPunchedRankedTopNouns());
+                JSONArray punchedTopAnswers= scoreWordToJsonArray(min.getPunchedTopNouns());
+                JSONArray rankedPunchedTopAnswers = scoreWordToJsonArray(min.getRankedPunchedTopNouns());
                 try{
 	                jsonResponse.put("paragraphs", paragraphs);
 	                jsonResponse.put("topAnswers", topAnswers);
-	                jsonResponse.put("rankedTopAnswers", rankedTopAnswers);
-                    jsonResponse.put("punchedRankedTopAnswers", punchedRankedTopAnswers);
+	                jsonResponse.put("punchedTopAnswers", punchedTopAnswers);
+                    jsonResponse.put("rankedPunchedTopAnswers", rankedPunchedTopAnswers);
 	                response = jsonResponse.toString();
                 } catch(Exception e){}
             }

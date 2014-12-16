@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import jules.*;
+import minerva.Minerva;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -38,7 +39,9 @@ public class PrecisionTest {
 
 	
 	private static double testQuery(String query, String answer){
-		List<Map<String, String>> result = QueryPassager.query(query, 100);
+		//List<Map<String, String>> result = QueryPassager.query(query, 100);
+		Minerva min = new Minerva(query, 100);
+		List<Map<String, String>> result = min.getPassages();
 		// find all occurrences of the answer
 		// divide by all words in the result
 		int ansOcc = 0;

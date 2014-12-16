@@ -21,6 +21,7 @@ public class Puncher {
 		for (ScoreWord sw : topNouns) {
 			if (match(sw.neTypeTag, categories)) {
 				result.add(sw);
+				System.out.println(sw.lemma);
 			}
 		}
 		return result.size() > 100 ? result.subList(0, 100) : result;
@@ -28,10 +29,13 @@ public class Puncher {
 
 	private boolean match(String neTypeTag, List<Pair<String, Double>> categories) {
 		int noMatch = 0;
+		double limit = 0.001;
+		
 		for (Pair<String, Double> p : categories) {
-			if (matchMap.containsKey(p.snd)) {
+			if (p.snd > limit && matchMap.containsKey(p.fst)) {
 				String[] staggTags = matchMap.get(p.snd);
 				for (String s : staggTags) {
+					System.out.println(p.fst + " " + s);
 					if (s.equalsIgnoreCase(neTypeTag))
 						return true;
 				}

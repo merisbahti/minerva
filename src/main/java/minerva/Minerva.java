@@ -17,26 +17,26 @@ import jules.Reranker;
 import jules.ScoreWord;
 
 public class Minerva {
-	private static List<Map<String,String>> lastQuery;
-	private static List<ScoreWord> lastTopNouns;
-	private static List<ScoreWord> topNouns;
-	private static String q;
-	private static List<ScoreWord> topRerankedNouns;
+	private List<Map<String,String>> lastQuery;
+	private List<ScoreWord> topNouns;
+	private List<ScoreWord> topRerankedNouns;
+	private String q;
 	private Puncher puncher;
 	private List<Pair<String, Double>> predictedCategories;
 
 	public Minerva(String query) {
 		q = Constants.whiteList(query);
-		lastTopNouns = null;
-		topNouns = null;
-		topRerankedNouns = null;
 		lastQuery = QueryPassager.query(q, 100);
 		puncher = new Puncher();
 		predictedCategories = Categorizer.getCategories(q);
 	}
 
-	public List<ScoreWord> findTopNouns(){
-		if (lastTopNouns == null) {
+	public List<Map<String, String>> getPassages() {
+		return lastQuery;
+	}
+
+	public List<ScoreWord> getTopNouns(){
+		if (topNouns == null) {
 			topNouns = RankNouns.findTopNouns(lastQuery);
 		}
 		topNouns = puncher.punch(topNouns, predictedCategories);
@@ -44,7 +44,7 @@ public class Minerva {
 		return topNouns;
 	}
 	
-	public List<ScoreWord> findRerankedNouns() throws IOException{
+	public List<ScoreWord> getRerankedTopNouns() throws IOException{
 		if (topRerankedNouns == null) {
 			
 			List<Word[]> words = PosTagger.getInstance().tagString(q);
@@ -52,7 +52,7 @@ public class Minerva {
 			for (Word w : words.get(0)) {
 				qLemmas.add(w.lemma);
 			}
-			topRerankedNouns = Reranker.getInstance().rerank(findTopNouns(), qLemmas, predictedCategories);
+			topRerankedNouns = Reranker.getInstance().rerank(getTopNouns(), qLemmas, predictedCategories);
 		}
 		return topRerankedNouns;
 	}

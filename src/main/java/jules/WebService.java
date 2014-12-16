@@ -3,7 +3,6 @@ package jules;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,12 +15,11 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
+import minerva.Minerva;
 import org.json.*;
 
 import tagging.PosTagger;
-import tagging.Word;
 import util.Constants;
-import util.Pair;
 
 public class WebService {
     public static void runner() throws Exception {
@@ -48,7 +46,8 @@ public class WebService {
                 StringBuilder sb = new StringBuilder();
                 String q = qMap.get("q").toLowerCase();
                 q = Constants.whiteList(q);
-                List<Map<String, String>> results = jules.QueryPassager.query(q, 100);
+                Minerva min = new Minerva(q);
+                List<Map<String, String>> results = min.getPassages();
                 JSONArray paragraphs = new JSONArray();
                 for (Map<String, String> result : results) {
                     JSONObject currArticle = new JSONObject();
@@ -78,18 +77,8 @@ public class WebService {
                     }
                     paragraphs.put(currArticle);
                 }
-                List<ScoreWord> topNouns = jules.RankNouns.findTopNouns(results);
-                JSONArray topAnswers = scoreWordToJsonArray(topNouns);
-
-                List<Pair<String, Double>> cat = Categorizer.getCategories(q);
-                Reranker ins = Reranker.getInstance();
-                PosTagger tagger = PosTagger.getInstance();
-                List<Word[]> words = tagger.tagString(q);
-                List<String> qLemmas = new ArrayList<String>();
-                for(Word w : words.get(0))
-                    qLemmas.add(w.lemma);
-                JSONArray rankedTopAnswers = scoreWordToJsonArray(ins.rerank(topNouns, qLemmas, cat));
-
+                JSONArray topAnswers = scoreWordToJsonArray(min.getTopNouns());
+                JSONArray rankedTopAnswers = scoreWordToJsonArray(min.getRerankedTopNouns());
                 try{
 	                jsonResponse.put("paragraphs", paragraphs);
 	                jsonResponse.put("topAnswers", topAnswers);

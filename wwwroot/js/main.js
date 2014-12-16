@@ -103,8 +103,7 @@ $("#search").click(function(){
 });
 
 var trunc = function(dub, decs) {
-//  return Math.floor(dub * Math.pow(10, decs)) / Math.pow(10, decs);
-   return dub;
+   return Math.floor(dub * Math.pow(10, decs)) / Math.pow(10, decs);
 }
 
 $("#gosearch").click(function(){
@@ -137,7 +136,7 @@ $("#gosearch").click(function(){
             addResult("The reranker couldn't find any candidates, try another query?","", "#resultsRTA")
           } else {
             $.each(data["rankedTopAnswers"], function(i, item) {
-              addResult(item.word, "Score: " + trunc(item.score, 2), "#resultsRTA")
+              addResult(item.word, "Confidence: " + trunc(item.score, 2) + "%", "#resultsRTA")
             }); 
           }
           if (data["topAnswers"].length == 0) {

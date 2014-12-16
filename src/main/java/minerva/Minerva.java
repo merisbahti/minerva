@@ -23,10 +23,13 @@ public class Minerva {
 	private String q;
 	private Puncher puncher;
 	private List<Pair<String, Double>> predictedCategories;
+	private List<ScoreWord> topPunchedRerankedNouns;
 
 	public Minerva(String query, int nbrHits) {
 		q = Constants.whiteList(query);
 		lastQuery = QueryPassager.query(q, nbrHits);
+		puncher = new Puncher();
+		predictedCategories = Categorizer.getCategories(q);
 	}
 
 	public Minerva(String query) {
@@ -44,14 +47,25 @@ public class Minerva {
 		if (topNouns == null) {
 			topNouns = RankNouns.findTopNouns(lastQuery);
 		}
-		topNouns = puncher.punch(topNouns, predictedCategories);
-		
 		return topNouns;
 	}
-	
+
+	public List<ScoreWord> getPunchedRankedTopNouns() throws IOException {
+		if (topPunchedRerankedNouns == null) {
+			List<Word[]> words = PosTagger.getInstance().tagString(q);
+			List<ScoreWord> punchedTopNouns = puncher.punch(topNouns, predictedCategories);
+			List<String> qLemmas = new ArrayList<String>();
+			for (Word w : words.get(0)) {
+				qLemmas.add(w.lemma);
+			}
+			topPunchedRerankedNouns = Reranker.getInstance().rerank(punchedTopNouns, qLemmas, predictedCategories);
+		}
+		return topPunchedRerankedNouns;
+
+	}
+
 	public List<ScoreWord> getRerankedTopNouns() throws IOException{
 		if (topRerankedNouns == null) {
-			
 			List<Word[]> words = PosTagger.getInstance().tagString(q);
 			List<String> qLemmas = new ArrayList<String>();
 			for (Word w : words.get(0)) {

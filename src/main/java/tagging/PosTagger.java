@@ -40,15 +40,15 @@ public class PosTagger {
 		} catch (Exception e) {
 			throw new IOException("Couldn't load modelfile");
 		}
-		print("Loading Stagger model ...");
 
+		System.out.println("Loading stagger model...");
 		try {
 			tagger = (Tagger) modelReader.readObject();
 		} catch (Exception e) {
 			modelReader.close();
 			throw new IOException("Model file found but unable to be loaded.");
 		}
-		print("Model loaded!");
+		System.out.println("Model loaded!");
 		modelReader.close();
 	}
 

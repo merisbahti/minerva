@@ -25,7 +25,7 @@ import util.Pair;
 public class WebService {
     public static void runner() throws Exception {
         System.out.println("Initializing server... plz w8");
-        HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(1337), 0);
         System.out.println("Initializing pos-tagger ... plz w8");
         PosTagger.getInstance();
         System.out.println("Pos-tagger initialized....");

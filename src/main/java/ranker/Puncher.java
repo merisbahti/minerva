@@ -1,6 +1,7 @@
 package ranker;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +28,7 @@ public class Puncher {
 			}
 			result.add(sw);
 		}
+		Collections.sort(result);
 		return result.size() > 100 ? result.subList(0, 100) : result;
 	}
 

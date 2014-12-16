@@ -23,6 +23,7 @@ public class Categorizer {
 		System.out.println(q);
 		StringBuffer output = new StringBuffer();
 		String tmpQ = q.replace("&", "\\&");
+		tmpQ = tmpQ.replace("?", "");
 		String[] cmdarray = { "bash", "-c", "cd ./libshorttext-1.1 && python3 ./demo.py \"" + tmpQ + "\"" };
 		try {
 			Process p = Runtime.getRuntime().exec(cmdarray);

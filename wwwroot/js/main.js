@@ -139,8 +139,8 @@ $("#gosearch").click(function(){
         } else {
           removeResults()
           $("ul").show()
-          $("#tabResultsRPTAAmount").text(data["rankedPunchedTopAnswers"].length);
-          $("#tabResultsPTAAmount").text(data["punchedTopAnswers"].length);
+          $("#tabResultsRPTAAmount").text(data["punchedRankedTopAnswers"].length);
+          $("#tabResultsPTAAmount").text(data["rankedTopAnswers"].length);
           $("#tabResultsTAAmount").text(data["topAnswers"].length);
           $("#tabResultsPAmount").text(data["paragraphs"].length);
           if (data["paragraphs"].length == 0) {
@@ -151,10 +151,10 @@ $("#gosearch").click(function(){
             }); 
           }
           $.each(data, function(i, item) { console.log(item.length) })
-          if (data["punchedTopAnswers"].length == 0) {
+          if (data["rankedTopAnswers"].length == 0) {
             addResult("The reranker couldn't find any candidates, try another query?","", "#resultsPTA")
           } else {
-            $.each(data["punchedTopAnswers"], function(i, item) {
+            $.each(data["rankedTopAnswers"], function(i, item) {
               addResult(item.word, "Score: " + trunc(item.score, 2), "#resultsPTA")
             }); 
           }
@@ -165,10 +165,10 @@ $("#gosearch").click(function(){
               addResult(item.word, "Score: " + trunc(item.score, 2), "#resultsTA")
             }); 
           }
-          if (data["rankedPunchedTopAnswers"].length == 0) {
+          if (data["punchedRankedTopAnswers"].length == 0) {
             addResult("The POS-tagger couldn't find any candidates, try another query?", "", "#resultsRPTA")
           } else {
-            $.each(data["rankedPunchedTopAnswers"], function(i, item) {
+            $.each(data["punchedRankedTopAnswers"], function(i, item) {
               addResult(item.word, "Confidence: " + trunc(item.score, 2) + "%", "#resultsRPTA")
             }); 
           }

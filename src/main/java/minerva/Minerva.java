@@ -46,7 +46,6 @@ public class Minerva {
 			sum += sw.getTotalRank();
 		for (ScoreWord sw : sws)
 			sw.normalizeScore(sum);
-		System.out.println(sum);
 	}
 
 	public List<Map<String, String>> getPassages() {

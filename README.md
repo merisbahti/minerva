@@ -34,8 +34,20 @@ $ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 ".scale file" "
     Class for creating indexes from bz2 files, either devided into paragraphs or entire atricles
   - QueryPassager  
     Parses a query and retrieves the desired number of documents
-- minerva
-- ranker
+- minerva  
+  The heart of the program, contains methods to be used for querying, ranking, and reranking.
+- ranker  
+  Contains classes for ranking and reranking results from passages.
+  - Categorizer  
+    Given a question, this class calculates its categories probabilities.
+  - LiblinearInit  
+    Creates a trainfile to be used for traing of the liblinear model, needs a question set
+  - Puncher  
+    Punches down improbable results, not in a working stage.
+  - RankNouns  
+    Rank nouns from passages according to their lucenescore and count.
+  - Reranker  
+    Reranks nouns, using the model from liblinear
 - tagging
 - test
 - util

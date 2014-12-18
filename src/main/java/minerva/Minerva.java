@@ -24,7 +24,6 @@ public class Minerva {
 	private Puncher puncher;
 	private List<Pair<String, Double>> predictedCategories;
 	private List<ScoreWord> topRerankedPunchedNouns;
-	private List<ScoreWord> topPunchedNouns;
 	private List<ScoreWord> rankedTopNouns;
 
 	public Minerva(String query, int nbrHits) {

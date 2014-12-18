@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -48,35 +50,50 @@ public class TestRerank {
 	public static void testReranker() throws Exception {
 		setUp();
 		PosTagger tagger = PosTagger.getInstance();
+		List<Integer> ts = new ArrayList<Integer>();
+		List<Integer> rs = new ArrayList<Integer>();
+		List<Integer> ps = new ArrayList<Integer>();
 		//writer.println(Integer.toString(questions.entrySet().size()));
 		for (Entry<String, String> question : questions.entrySet()) {
 			Minerva min = new Minerva(question.getKey(), queries);
-			List<ScoreWord> topNouns = min.getTopNouns();
-			List<ScoreWord> results = min.getRankedTopNouns();
-			List<ScoreWord> punched = min.getPunchedRankedTopNouns();
-			//int i = 0;
-//			for (ScoreWord sw : results) {
-//				String s = sw.lemma;
-//				//i++;
-//				if (s.equalsIgnoreCase(question.getValue())){
-//					//			  index found 		rank				total number of nouns
-//					writer.println(i + "\t" + sw.getTotalRank() + "\t" + results.size() + "\t" + question.getKey());
-//					writer.flush();
-//					break;
-//				}
-//			}
 			String ans = question.getValue();
-			
 			ScoreWord swAns = new ScoreWord(tagger.tagString(ans).get(0)[0]);
-			int t = topNouns.indexOf(swAns);
-			int r = results.indexOf(swAns);
-			int p = punched.indexOf(swAns);
-			if(t >= 0){
-				writer.println((t+1) + "\t" + (r+1) + "\t" + (p+1));
+			List<ScoreWord> topNouns = min.getTopNouns();
+			int t = 1 + topNouns.indexOf(swAns);
+			ts.add(t);
+			List<ScoreWord> results = min.getRankedTopNouns();
+			int r = 1 + results.indexOf(swAns);
+			rs.add(r);
+			List<ScoreWord> punched = min.getPunchedRankedTopNouns();
+			int p = 1 + punched.indexOf(swAns);
+			ps.add(p);
+			if(t > 0){
+				writer.println(t + "\t" + r + "\t" + p + "\t" + question);
 				writer.flush();
 			}
 			
 		}
+		Collections.sort(ts);
+		Collections.sort(rs);
+		Collections.sort(ps);
+		int tMedian = ts.get((int)(ts.size()/2));
+		int rMedian = rs.get((int)(rs.size()/2));
+		int pMedian = ps.get((int)(ps.size()/2));
+		writer.println();
+		writer.println(tMedian + "\t" + rMedian + "\t" + pMedian);
+		double tMean = 0;
+		double rMean = 0;
+		double pMean = 0;
+		for(int i = 0; i < ts.size(); i++){
+			tMean += ts.get(i);
+			rMean += rs.get(i);
+			pMean += ps.get(i);
+		}
+		tMean = tMean / ts.size();
+		rMean = rMean / rs.size();
+		pMean = pMean / ps.size();
+		writer.println(tMean + "\t" + rMean + "\t" + pMean);
+		
 		writer.close();
 	}
 

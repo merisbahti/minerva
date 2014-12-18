@@ -40,6 +40,15 @@ public class Minerva {
 		predictedCategories = Categorizer.getCategories(q);
 	}
 
+	public static void normalize(List<ScoreWord> sws) {
+		double sum = 0;
+		for (ScoreWord sw : sws)
+			sum += sw.getTotalRank();
+		for (ScoreWord sw : sws)
+			sw.normalizeScore(sum);
+		System.out.println(sum);
+	}
+
 	public List<Map<String, String>> getPassages() {
 		return lastQuery;
 	}
@@ -67,6 +76,7 @@ public class Minerva {
 	public List<ScoreWord> getPunchedRankedTopNouns() throws IOException {
 		if (topRerankedPunchedNouns == null) {
 			topRerankedPunchedNouns = puncher.punch(getRankedTopNouns(), predictedCategories);
+			normalize(topRerankedPunchedNouns);
 		}
 		return topRerankedPunchedNouns;
 

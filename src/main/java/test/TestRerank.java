@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import minerva.Minerva;
+import tagging.PosTagger;
 import tagging.ScoreWord;
 import util.Constants;
 
@@ -46,21 +47,35 @@ public class TestRerank {
 	
 	public static void testReranker() throws Exception {
 		setUp();
+		PosTagger tagger = PosTagger.getInstance();
 		//writer.println(Integer.toString(questions.entrySet().size()));
 		for (Entry<String, String> question : questions.entrySet()) {
 			Minerva min = new Minerva(question.getKey(), queries);
+			List<ScoreWord> topNouns = min.getTopNouns();
 			List<ScoreWord> results = min.getRankedTopNouns();
-			int i = 0;
-			for (ScoreWord sw : results) {
-				String s = sw.lemma;
-				i++;
-				if (s.equalsIgnoreCase(question.getValue())){
-					//			  index found 		rank				total number of nouns
-					writer.println(i + "\t" + sw.getTotalRank() + "\t" + results.size() + "\t" + question.getKey());
-					writer.flush();
-					break;
-				}
+			List<ScoreWord> punched = min.getPunchedRankedTopNouns();
+			//int i = 0;
+//			for (ScoreWord sw : results) {
+//				String s = sw.lemma;
+//				//i++;
+//				if (s.equalsIgnoreCase(question.getValue())){
+//					//			  index found 		rank				total number of nouns
+//					writer.println(i + "\t" + sw.getTotalRank() + "\t" + results.size() + "\t" + question.getKey());
+//					writer.flush();
+//					break;
+//				}
+//			}
+			String ans = question.getValue();
+			
+			ScoreWord swAns = new ScoreWord(tagger.tagString(ans).get(0)[0]);
+			int t = topNouns.indexOf(swAns);
+			int r = results.indexOf(swAns);
+			int p = punched.indexOf(swAns);
+			if(t >= 0){
+				writer.println((t+1) + "\t" + (r+1) + "\t" + (p+1));
+				writer.flush();
 			}
+			
 		}
 		writer.close();
 	}

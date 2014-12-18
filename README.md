@@ -28,11 +28,11 @@ $ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 ".scale file" "
 ## Packages
 - lucene  
   Contains classes used with the lucene library:
-  - CustomAnalyzer
+  - CustomAnalyzer  
     Same as SwedishAnalyzer, but without stemming.
-  - Indexer
+  - Indexer  
     Class for creating indexes from bz2 files, either devided into paragraphs or entire atricles
-  - QueryPassager
+  - QueryPassager  
     Parses a query and retrieves the desired number of documents
 - minerva
 - ranker

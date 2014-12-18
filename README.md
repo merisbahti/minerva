@@ -26,7 +26,7 @@ $ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 ".scale file" "
 ```
 
 ## Packages
-- lucene
+- lucene  
   Contains classes used with the lucene library:
   - CustomAnalyzer
     Same as SwedishAnalyzer, but without stemming.

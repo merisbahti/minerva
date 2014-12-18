@@ -60,14 +60,14 @@ public class TestRerank {
 			ScoreWord swAns = new ScoreWord(tagger.tagString(ans).get(0)[0]);
 			List<ScoreWord> topNouns = min.getTopNouns();
 			int t = 1 + topNouns.indexOf(swAns);
-			ts.add(t);
 			List<ScoreWord> results = min.getRankedTopNouns();
 			int r = 1 + results.indexOf(swAns);
-			rs.add(r);
 			List<ScoreWord> punched = min.getPunchedRankedTopNouns();
 			int p = 1 + punched.indexOf(swAns);
-			ps.add(p);
 			if(t > 0){
+				ts.add(t);
+				rs.add(r);
+				ps.add(p);
 				writer.println(t + "\t" + r + "\t" + p + "\t" + question);
 				writer.flush();
 			}

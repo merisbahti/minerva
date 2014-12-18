@@ -24,7 +24,7 @@ public class Puncher {
 			if (match(sw.neTypeTag, categories)) {
 				sw.addPunchDown(1);
 			}else{
-				sw.addPunchDown(0.5);
+				sw.addPunchDown(0.8);
 			}
 			result.add(sw);
 		}
@@ -34,7 +34,6 @@ public class Puncher {
 
 	private boolean match(String neTypeTag, List<Pair<String, Double>> categories) {
 		double limit = 0.5;
-		int noMatch = 0;
 		
 		for (Pair<String, Double> p : categories) {
 			if (p.snd > limit && matchMap.containsKey(p.fst)) {
@@ -43,12 +42,7 @@ public class Puncher {
 					if (s.equalsIgnoreCase(neTypeTag))
 						return true;
 				}
-			} else {
-				noMatch ++;
 			}
-		}
-		if(noMatch == categories.size()){
-			return true;
 		}
 		
 		return false;

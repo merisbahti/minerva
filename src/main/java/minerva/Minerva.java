@@ -2,6 +2,7 @@ package minerva;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -56,6 +57,7 @@ public class Minerva {
 		if (topNouns == null) {
 			topNouns = RankNouns.findTopNouns(lastQuery);
 			topNouns = topNouns.subList(0, topNouns.size()>100 ? 100 : topNouns.size());
+
 		}
 		return topNouns;
 	}
@@ -76,6 +78,7 @@ public class Minerva {
 		if (topRerankedPunchedNouns == null) {
 			topRerankedPunchedNouns = puncher.punch(getRankedTopNouns(), predictedCategories);
 			normalize(topRerankedPunchedNouns);
+			Collections.sort(topRerankedPunchedNouns);
 		}
 		return topRerankedPunchedNouns;
 

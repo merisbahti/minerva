@@ -24,3 +24,19 @@ $ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 -v 10 ".scale f
 Train model:
 $ java -cp liblinear-1.94.jar de.bwaldvogel.liblinear.Train -s 7 ".scale file" "model file"
 ```
+
+## Packages
+- lucene
+  Contains classes used with the lucene library:
+  - CustomAnalyzer
+    Same as SwedishAnalyzer, but without stemming.
+  - Indexer
+    Class for creating indexes from bz2 files, either devided into paragraphs or entire atricles
+  - QueryPassager
+    Parses a query and retrieves the desired number of documents
+- minerva
+- ranker
+- tagging
+- test
+- util
+- web

@@ -5,12 +5,17 @@ From these pieces of text our goal is to rank all the words and hopefully the ri
 
 To find possible answers we decided to focus on nouns and proper nouns. 
 From the list of passages we obtain scores for how well every paragraph fits our question, 
-this is used as well as the number of occurances to rank our words.
+this is used together with the number of occurances to rank our nouns.
 
-\[ wordrank = \sum_{paragraphs}(b*c) \]
+To find out which words that is nouns or proper nouns a Part of Speech (PoS) tagger is used, in our case we use Stagger \cite{stagger}.
 
-where b is the bm25 score on of the current paragraph and c is the number of occurances of a word in a paragraph
+For each noun that we can find in any of the found paragraphs we calculate the rank as follows:
+
+\[ nounrank = \sum_{p\:\in\:paragraphs}bm25(p) \cdot c \]
+
+where bm25(p) is the bm25 score on of the current paragraph and c is the number of occurances of a word in a paragraph
 
 \subsection{Reranker}
 
 Rerank them until OK
+

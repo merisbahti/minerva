@@ -5,9 +5,9 @@ The passage retriver is entirely built upon Lucene Core, an open source, Java-ba
 that is capable of fast and effective indexing, and smart querying.
 
 \subsection{Wikipedia}
-As mentioned, the Swedish Wikipedia is used as information source, downloaded from Wikimedia {reference here} as wikitext embedded in XML.
+The Swedish Wikipedia is used as information source, downloaded from Wikimedia {reference here} as wikitext embedded in XML.
 To gather the useful text, a python script was used to simply remove everything but the text. 
-This script were slightly modified to accomodate both indexing by entire articles, and indexing by paragraphs (article subsections).
+This script is modified to be able to do indexing by entire articles, and indexing by paragraphs (article subsections).
 
 \subsection{Lucene}
 
@@ -15,8 +15,8 @@ This script were slightly modified to accomodate both indexing by entire article
 Lucene comes with many analyzers, adapted to different languages. 
 These analyzers help lucene to parse text and provide stemming of words.
 The same analyzer should be used for indexing and querying, otherwise this will result in faulty interpretation.
-The SwedishAnalyzer was used at first, but it turned out to be more destructive than helpful. 
-So a CustomAnalyzer, built upon the SwedishAnalyzer but without the stemming, was created.
+The swedish analyzer was used at first, but it turned out to be more destructive than helpful. 
+So a custom analyzer, based upon the swedish analyzer but without the stemming, was created.
 
 \subsubsection{Indexing}
 Searching through entire documents for relevant text is extremely inefficient, 
@@ -41,8 +41,8 @@ $k_1$ and $b$ are free parameters, default is $k_1 = 1.2$ and $b = 0.75$,
 and $idf(q_i)$ is the inverse document frequency weight of the query term $q_i$.
 
 \subsubsection{Querying}
-To search the index for relevant text, both the title and the text field had to be checked. 
-This was done with Lucenes MultifieldQueryParser, that checked for all the query terms in both fields: \\
+To search the index for relevant text, both the title and the text field are searched. 
+This was done with Lucenes multifield query parser, searched for the query terms in both fields: \\
 \texttt{(title:term1 body:term1) (title:term2 body:term2)} \\
-How similar a query was to a certain passage was determined by the BM25 similarity.
-The result was a series of documents, sorted by their score.
+How similar a query is to a certain passage is determined by the BM25 similarity.
+The result is a series of documents, sorted by their score.

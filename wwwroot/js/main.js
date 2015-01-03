@@ -155,7 +155,7 @@ $("#gosearch").click(function(){
             addResult("The reranker couldn't find any candidates, try another query?","", "#resultsPTA")
           } else {
             $.each(data["rankedTopAnswers"], function(i, item) {
-              addResult(item.word, "Score: " + trunc(item.score, 2), "#resultsPTA")
+              addResult(item.word, "Confidence: " + trunc(item.score, 2) + "%", "#resultsPTA")
             }); 
           }
           if (data["topAnswers"].length == 0) {

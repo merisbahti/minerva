@@ -107,8 +107,9 @@ public class Reranker {
 			f = (Feature[]) features.toArray(f);
 			double[] dbs = {(double) 0,(double) 1};
 			double predict = Linear.predictProbability(model, f, dbs);
-			if(predict > 0.5)
+			if(predict > 0){
 				dbs[1] = dbs[1]+1;
+			}
 			sw.addliblinRank(dbs[1]);
 			sum += sw.getTotalRank();
 		}

@@ -11,9 +11,9 @@ To find out which words that is nouns or proper nouns a Part of Speech (PoS) tag
 
 For each noun that we can find in any of the found paragraphs we calculate the rank as follows:
 
-\[ nounrank = \sum_{paragraphs}(b*c) \]
+\[ nounrank = \sum_{p\:\in\:paragraphs}bm25(p) \cdot c \]
 
-where b is the bm25 score on of the current paragraph and c is the number of occurances of a word in a paragraph
+where bm25(p) is the bm25 score on of the current paragraph and c is the number of occurances of a word in a paragraph
 
 \subsection{Reranker}
 

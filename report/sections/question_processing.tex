@@ -11,8 +11,8 @@ For this system, the training data consists of 2300 questions
 from the swedish board game Kvitt eller Dubbelt transcribed 
 by Juri Pygg\"o, Rebecka Weegar, Piere Nugues \cite{QASYS}.
 
-The training data consists of 2300 questions containing 9 datafields each.
-The classifier only uses two datafields on each question:
+The training data consists of 2300 questions containing 9 fields each.
+The classifier only uses two fields on each question:
 \begin{itemize}
 \item Question Formulation - The original question taken from the transcribed
   card.
@@ -20,9 +20,11 @@ The classifier only uses two datafields on each question:
   Possible values: concept, location, description, multiplechoice, amount, organization, 
   other, person, abbreviation, verb, title, timepoint, duration, money.
 \end{itemize}
-After processing the training set using \texttt{libshorttext}, a model file is created.
-By using this model file, the system can classify 
-what class an answer is expected to have, for example the question \textit{vad heter sveriges huvudstad?} 
+A model file is trained using the training data. The model file is then used when the system 
+classifies question categories. For example the question \textit{vad heter sveriges huvudstad?} 
+%After processing the training set using \texttt{libshorttext}, a model file is created.
+%By using this model file, the system can classify 
+%what class an answer is expected to have, for example the question \textit{vad heter sveriges huvudstad?} 
 yields the following Class-Probability pairs:
 \begin{center}
   \begin{tabular} {l c}

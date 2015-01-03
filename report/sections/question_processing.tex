@@ -1,13 +1,28 @@
 \subsection{Preprocessing of questions}
 Given a question, the system will first of all convert the question
 to a format which can be used to perform a query to the indexed
-database. This is done by simply whitelisting all characters which
-aren not in our supported swedish alphabet. The question is also
-used to determine the category of our answers.
+database. This is done by whitelisting all characters which
+are not in our supported swedish alphabet. The question is also
+processed through a linear classifier to determine the category of our 
+answers.
 
 \subsection{Training the Question Categorizer}
-The training set used to predict the category of the questions
-are 3300 questions from the swedish board game. 
+A linear classifier is used to classify a given question
+such that the "class", of the answer can be determined.
+
+For this system, the training data consists of 2300 questions 
+from the swedish board game Kvitt eller Dubbelt transcribed 
+by Juri Pygg\"o, Rebecka Weegar, Piere Nugues \cite{QASYS}.
+
+The training data consists of 2300 rows containing 9 columns each.
+We will only be concerned with two columns of each row:
+\begin{itemize}
+\item Question Formulation - The original question taken from the transcribed
+  card.
+\item Answer Class - Which was manually determined during transcription. 
+  Possible values: action, binary, description, entity, human, location, numeric.
+\end{itemize}
+
 
 \subsection{Performing the query}
 \subsection{Post-processing}

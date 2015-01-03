@@ -1,1 +1,13 @@
-q
+\subsection{Preprocessing of questions}
+Given a question, the system will first of all convert the question
+to a format which can be used to perform a query to the indexed
+database. This is done by simply whitelisting all characters which
+aren not in our supported swedish alphabet. The question is also
+used to determine the category of our answers.
+
+\subsection{Training the Question Categorizer}
+The training set used to predict the category of the questions
+are 3300 questions from the swedish board game. 
+
+\subsection{Performing the query}
+\subsection{Post-processing}

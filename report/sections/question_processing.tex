@@ -6,23 +6,30 @@ are not in our supported swedish alphabet. The question is also
 processed through a linear classifier to determine the category of our 
 answers.
 
-\subsection{Training the Question Categorizer}
-A linear classifier is used to classify a given question
-such that the "class", of the answer can be determined.
-
+\subsection{Training the Question Classifier}
 For this system, the training data consists of 2300 questions 
 from the swedish board game Kvitt eller Dubbelt transcribed 
 by Juri Pygg\"o, Rebecka Weegar, Piere Nugues \cite{QASYS}.
 
 The training data consists of 2300 rows containing 9 columns each.
-We will only be concerned with two columns of each row:
+The system is only concerned with two columns of each row:
 \begin{itemize}
 \item Question Formulation - The original question taken from the transcribed
   card.
 \item Answer Class - Which was manually determined during transcription. 
-  Possible values: action, binary, description, entity, human, location, numeric.
+  Possible values: concept, location, description, multiplechoice, amount, organization, 
+  other, person, abbreviation, verb, title, timepoint, duration, money.
 \end{itemize}
-
-
-\subsection{Performing the query}
-\subsection{Post-processing}
+After processing the training set using \texttt{libshorttext}, a model file is created.
+By using this model file, the system can classify 
+what class an answer is expected to have, for example the question \textit{vad heter sveriges huvudstad?} 
+yields the following Class-Probability pairs:
+\begin{center}
+  \begin{tabular} {l c}
+    \texttt{location}    & \texttt{1.00} \\
+    \texttt{concept}     & \texttt{0.69} \\
+    \texttt{verb}        & \texttt{0.63} \\
+    \texttt{description} & \texttt{0.52} \\
+    \texttt{money}       & \texttt{0.50} \\
+  \end{tabular}
+\end{center}

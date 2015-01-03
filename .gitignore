@@ -9,6 +9,7 @@
 .classpath
 .project
 .metadata/*
+*.scale
 lib/*
 model/*
 

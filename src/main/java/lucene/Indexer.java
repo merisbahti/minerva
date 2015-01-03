@@ -35,6 +35,7 @@ public class Indexer {
 	private static IndexWriter writer;
 
 	public static void bzIndexer() {
+		long start = System.currentTimeMillis();
 		analyzer = new CustomAnalyzer();
 		iwc = new IndexWriterConfig(Version.LATEST, analyzer);
 		iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
@@ -61,6 +62,7 @@ public class Indexer {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Total time: " + (System.currentTimeMillis()-start)/1000);
 
 	}
 

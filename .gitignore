@@ -14,10 +14,14 @@
 *.scale
 lib/*
 model/*
+.DS_Store
+.history
+.settings
 
 questions/*
 libshorttext-1.1/*
 indexDir/*
+indexDir*
 output/*
 
 # sbt specific

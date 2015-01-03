@@ -1,1 +1,19 @@
-passages
+The purpose of the passage retriever is to reduce the information to a size that is more manageable.
+Given a question, the passage retriever translates this into a query, and searches the index for passages 
+relevant to this query. Where these passages are sorted by their similarity to the query.
+The passage retriver is entirely built upon Lucene Core, an open source, Java-based system, 
+that is capable of fast and effective indexing, and smart querying.
+
+\subsection{Wikipedia}
+As mentioned before, the Swedish Wikipedia is used as information source, downloaded from Wikimedia {reference here} as wikitext embedded in XML.
+To gather the useful text, a python script were used to simply remove everything but the text. 
+This script were slightly modified to accomodate both indexing by entire articles, and indexing by paragraphs.
+
+\subsection{Lucene}
+
+
+\subsubsection{Analyzer}
+
+\subsubsection{Indexing}
+
+\subsubsection{Querying}

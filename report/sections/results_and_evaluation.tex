@@ -24,7 +24,7 @@ Which means that 100 article passages might yield the same amount of data as 200
 We needed to decide if we should index our wikipedia database dump by articles or paragraphs.
 To decide this, we queried our two indexes, one indexed by paragraphs and
 one indexed by articles, with all questions in our training set. We then extracted and 
-ordered all nouns by frequency, and calculated the mean reciprocal rank.
+ordered all nouns by frequency, and calculated the mean reciprocal rank (MRR). \cite{mrr}
 If the answer was not present amongst the results, we disregarded the data point.
 
 \begin{figure}[h!]

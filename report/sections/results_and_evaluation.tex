@@ -1,5 +1,5 @@
 \subsection{Answer present}
-At first, we had to decide how we would build our index, would we devide each article into paragraphs, or leave them as is. 
+At first, we had to decide how we would build our index, would we divide each article into paragraphs, or leave them as is. 
 To determine this, we queried all of our questions, containing only one word, to both indexes, and checked if the correct answers was present.
 We did this for many number of passages, to see how the result evolved with increasing information.
 We also ran this test using both Lucene default, and BM25 similarity, to determine which of these similarity algorithms that best suited our system.
@@ -20,12 +20,11 @@ Which means that 100 article passages might yield the same amount of data as 200
 
 \subsection{Noun extraction}
 
-
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.5\textwidth]{figures/median.pdf}
   \caption{Comparison between indexing by articles, and indexing by paragraphs. 
-  Shows the median and MRR values for the rank of the correct answer for the questions where 
+  Shows the MRR values for the rank of the correct answer for the questions where 
   the answer is present.}
 \end{figure}
 

@@ -5,6 +5,6 @@ function [x,y] = scan_data(input_file)
   % Output: x = x-coordinates read from the input file.
   %         y = y-coordinates read from the input file.
 	fileID = fopen(input_file);
-	data = textscan(fileID,'%u\t%f');
+	data = textscan(fileID,'%u %f', 'delimiter', '\t');
 	x = data{1,1};
 	y = data{1,2};

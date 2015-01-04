@@ -1,5 +1,5 @@
 function [median, mrr] = scan_median_and_mrr(infile)
-	fileID = fopen(infile)
+	fileID = fopen(infile);
 	data = textscan(fileID,'%u %u', 'delimiter', '\t');
 	x = data{1,1};
 	y = data{1,2};

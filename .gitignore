@@ -11,17 +11,17 @@
 .project
 .metadata/*
 *.scale
-lib/*
-model/*
 .DS_Store
 .history
 .settings
 
-questions/*
-libshorttext-1.1/*
-indexDir/*
-indexDir*
-output/*
+minerva-source/questions/*
+minerva-source/libshorttext-1.1/*
+minerva-source/indexDir/*
+minerva-source/indexDir*
+minerva-source/output/*
+minerva-source/lib/*
+minerva-source/model/*
 
 # sbt specific
 .cache/

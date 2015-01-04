@@ -13,7 +13,7 @@ function bm25_plotter()
   xlim([1 350])
 
 
-  h = legend('BM25 Documents', 'TFDF Documents', 'BM25 Paragraphs', 'TFDF Paragraphs', 'location', 'southeast');
+  h = legend('BM25 Documents', 'TF-IDF Documents', 'BM25 Paragraphs', 'TF-IDF Paragraphs', 'location', 'southeast');
   set(h,'FontSize',18); 
   xlabel('#Passages')
   ylabel('Answers present')

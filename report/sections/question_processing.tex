@@ -7,12 +7,12 @@ processed through a linear classifier to determine the category of the
 answers.
 
 \subsection{Training the Question Classifier}
-For this system, the training data consists of 2300 questions 
+For this system, the training data consists of questions 
 from the swedish board game Kvitt eller Dubbelt transcribed 
 by Juri Pyykk\"o, Rebecka Weegar, Piere Nugues \cite{QASYS}.
 
 The training data consists of 2300 questions containing 9 fields each.
-The classifier only uses two fields on each question:
+The classifier only uses two fields from each question:
 \begin{itemize}
 \item Question Formulation - The original question taken from the transcribed
   card.
@@ -25,7 +25,7 @@ classifies question categories. For example the question \textit{vad heter sveri
 %After processing the training set using \texttt{libshorttext}, a model file is created.
 %By using this model file, the system can classify 
 %what class an answer is expected to have, for example the question \textit{vad heter sveriges huvudstad?} 
-yields the following Class-Probability pairs:
+yields the following Class-Score pairs:
 \begin{center}
   \begin{tabular} {l c}
     \texttt{location}    & \texttt{1.00} \\

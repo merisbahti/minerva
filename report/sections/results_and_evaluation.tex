@@ -13,7 +13,8 @@ The result can be seen in figure~\ref{fig:bm25_tfdf}.
   \label{fig:bm25_tfdf}
 \end{figure}
 
-As we can see, BM25 is slightly better than Lucene default on all passages $>$ 25, and no result can be considered acceptable with passages $<$ 25.
+As we can see, BM25 is slightly better than Lucene default on all test with more than 25 passages, and no result can be 
+considered acceptable using less than 25 passages.
 Not surprisingly indexing by entire articles gives a better result than paragraphs, 
 this can be explained by the fact that every article contains one or more paragraph. 
 Which means that 100 article passages might yield the same amount of data as 200 paragraph passages.
@@ -34,25 +35,32 @@ ordered all nouns by frequency, and calculated the mean repricocal rank.
 \end{figure}
 
 \subsection{Reranking}
+Just extracting all nouns from the passages is not enough to acquire a valid answer, this is where the reranking comes in.
+Using the trained model from all the questions, Liblinear is able to predict a probability that a specific noun is correct.
+Combining this value with the value from Lucene, as mentioned, would increase the score of valid answers, and decrease the score of invalid ones.
 
-\subsubsection{Median}
+Also, after reranking the answer candidates, there still exists some candidates that could be seen as impossible.
+so using the puncher, as described, could in some cases improve the result further.
 
+The result, measured using mean and median, can be seen in figure~\ref{fig:meanmedian}
 
 \begin{figure}[h!]
   \centering
   \hspace*{-0.6cm}
   \includegraphics[width=0.6\textwidth]{figures/meanMedian.png}
-  \caption{Comparison between indexing by articles, and indexing by paragraphs. 
-  Shows the median and MRR values for the rank of the correct answer.}
+  \caption{Comparison of answer ranks in the different stages of answer extraction.}
+  \label{fig:meanmedian}
 \end{figure}
 
-\subsubsection{MRR}
-
-
+The result, measured using MRR, can be seen in figure~\ref{fig:mrr}
 \begin{figure}[h!]
   \centering
   \hspace*{-0.6cm}
   \includegraphics[width=0.6\textwidth]{figures/mrr.png}
-  \caption{Comparison between indexing by articles, and indexing by paragraphs. 
-  Shows the median and MRR values for the rank of the correct answer.}
+  \caption{Comparison of answer ranks using MRR in the different stages of answer extraction.}
+  \label{fig:mrr}
 \end{figure}
+
+As we can see, the reranking improves the result significantly, and the puncher gives a small boost.
+By looking at the median values, we can see that for all the answers that are present, 
+in half the cases the answer is located at the first or second place.

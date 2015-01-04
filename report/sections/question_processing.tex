@@ -1,9 +1,9 @@
 \subsection{Preprocessing of questions}
 Given a question, the system will first of all convert the question
 to a format which can be used to perform a query to the indexed
-database. This is done by whitelisting all characters which
-are not in our supported swedish alphabet. The question is also
-processed through a linear classifier to determine the category of our 
+database. This is done by blacklisting all characters which
+are not in the supported swedish alphabet. The question is also
+processed through a linear classifier to determine the category of the 
 answers.
 
 \subsection{Training the Question Classifier}
@@ -20,7 +20,7 @@ The classifier only uses two fields on each question:
   Possible values: concept, location, description, multiplechoice, amount, organization, 
   other, person, abbreviation, verb, title, timepoint, duration, money.
 \end{itemize}
-A model file is trained using the training data. The model file is then used when the system 
+A model file was trained using the training data. The model file was then used when the system 
 classifies question categories. For example the question \textit{vad heter sveriges huvudstad?} 
 %After processing the training set using \texttt{libshorttext}, a model file is created.
 %By using this model file, the system can classify 

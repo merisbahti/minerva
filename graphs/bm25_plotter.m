@@ -5,11 +5,11 @@ function bm25_plotter()
   [xtfdf,ytfdf] = scan_data("data/v1_bm25_tfdf/tfdf.txt");
   [xbm25doc,ybm25doc] = scan_data("data/v1_bm25_tfdf/bm25-doc.txt");
   [xtfdfdoc,ytfdfdoc] = scan_data("data/v1_bm25_tfdf/tfdf-doc.txt");
-  plot(xbm25doc,ybm25doc,'marker','o','color', [46/255 204/255 113/255],'LineWidth',4);
+  plot(xbm25doc,ybm25doc,'marker','o','color', [46/255 204/255 113/255],'LineWidth',4,'marker','.','markersize', 15);
   hold on;
-  plot(xtfdfdoc,ytfdfdoc,'marker','o','color', [155/255 89/255 182/255],'LineWidth',4);
-  plot(xbm25,ybm25,'marker','o','color', [230/255 126/255 34/255],'LineWidth',4);
-  plot(xtfdf,ytfdf,'marker','o','color', [52/255 152/255 219/255],'LineWidth',4);
+  plot(xtfdfdoc,ytfdfdoc,'marker','o','color', [155/255 89/255 182/255],'LineWidth',4,'marker','.','markersize', 15);
+  plot(xbm25,ybm25,'marker','o','color', [230/255 126/255 34/255],'LineWidth',4,'marker','.','markersize', 15);
+  plot(xtfdf,ytfdf,'marker','o','color', [52/255 152/255 219/255],'LineWidth',4,'marker','.','markersize', 15);
   xlim([1 350])
 
 

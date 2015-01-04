@@ -1,5 +1,5 @@
 \subsection{Answer present}
-At first, we had to decide how we would build our index, would we divide each article into paragraphs, or leave them as is. 
+At first, we had to decide which similarity algorithm to use when querying the database. 
 To determine this, we queried all of our questions, containing only one word, to both indexes, and checked if the correct answers was present.
 We did this for many number of passages, to see how the result evolved with increasing information.
 We also ran this test using both Lucene default, and BM25 similarity, to determine which of these similarity algorithms that best suited our system.
@@ -21,10 +21,11 @@ Which means that 100 article passages might yield the same amount of data as 200
 
 \subsection{Noun extraction}
 
-To decide if we should index our wikipedia database dump by articles or paragraphs 
-we needed to know which. We queried our two indexes, one indexed by paragraphs and
+We needed to decide if we should index our wikipedia database dump by articles or paragraphs.
+To decide this, we queried our two indexes, one indexed by paragraphs and
 one indexed by articles, with all questions in our training set. We then extracted and 
-ordered all nouns by frequency, and calculated the mean repricocal rank.
+ordered all nouns by frequency, and calculated the mean reciprocal rank.
+If the answer was not present amongst the results, we disregarded the data point.
 
 \begin{figure}[h!]
   \centering
@@ -33,6 +34,13 @@ ordered all nouns by frequency, and calculated the mean repricocal rank.
   Shows the MRR values for the rank of the correct answer for the questions where 
   the answer is present.}
 \end{figure}
+
+As you can see, the mean reciprocal rank becomes lower as we extract more passages from the query, which
+is natural since the frequency of frequently used swedish words increases as you increase the number
+of passages extracted. Another phenomenon which we can observe is that the MRR for 
+paragraphs is consistently higher than the MRR for documents, this is due to the amount of irrelevant
+information contained in documents. Thus, the amount of relevant information is always more dense when
+using a database indexed by paragraphs.
 
 \subsection{Reranking}
 Just extracting all nouns from the passages is not enough to acquire a valid answer, this is where the reranking comes in.

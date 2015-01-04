@@ -8,9 +8,9 @@ The result can be seen in figure~\ref{fig:bm25_tfdf}.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.5\textwidth]{figures/bm25_tfdf.pdf}
-  \label{fig:bm25_tfdf}
   \caption{Comparison between Lucene default, and BM25 similarities, when indexing by articles and paragraphs. 
   Shows how many percentages of the answers that were present for different number of passages.}
+  \label{fig:bm25_tfdf}
 \end{figure}
 
 As we can see, BM25 is slightly better than Lucene default on all passages $>$ 25, and no result can be considered acceptable with passages $<$ 25.
@@ -36,7 +36,8 @@ Which means that 100 article passages might yield the same amount of data as 200
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.5\textwidth]{figures/meanMedian.png}
+  \hspace*{-0.6cm}
+  \includegraphics[width=0.6\textwidth]{figures/meanMedian.png}
   \caption{Comparison between indexing by articles, and indexing by paragraphs. 
   Shows the median and MRR values for the rank of the correct answer.}
 \end{figure}
@@ -46,7 +47,8 @@ Which means that 100 article passages might yield the same amount of data as 200
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.5\textwidth]{figures/mrr.png}
+  \hspace*{-0.6cm}
+  \includegraphics[width=0.6\textwidth]{figures/mrr.png}
   \caption{Comparison between indexing by articles, and indexing by paragraphs. 
   Shows the median and MRR values for the rank of the correct answer.}
 \end{figure}

@@ -20,6 +20,11 @@ Which means that 100 article passages might yield the same amount of data as 200
 
 \subsection{Noun extraction}
 
+To decide if we should index our wikipedia database dump by articles or paragraphs 
+we needed to know which. We queried our two indexes, one indexed by paragraphs and
+one indexed by articles, with all questions in our training set. We then extracted and 
+ordered all nouns by frequency, and calculated the mean repricocal rank.
+
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.5\textwidth]{figures/median.pdf}

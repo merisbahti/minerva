@@ -13,7 +13,8 @@ The result can be seen in figure~\ref{fig:bm25_tfdf}.
   \label{fig:bm25_tfdf}
 \end{figure}
 
-As we can see, BM25 is slightly better than Lucene default on all passages $>$ 25, and no result can be considered acceptable with passages $<$ 25.
+As we can see, BM25 is slightly better than Lucene default on all test with more than 25 passages, and no result can be 
+considered acceptable using less than 25 passages.
 Not surprisingly indexing by entire articles gives a better result than paragraphs, 
 this can be explained by the fact that every article contains one or more paragraph. 
 Which means that 100 article passages might yield the same amount of data as 200 paragraph passages.

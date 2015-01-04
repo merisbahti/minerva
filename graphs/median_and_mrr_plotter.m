@@ -1,4 +1,5 @@
 function median_plotter()
+
   graphics_toolkit ("gnuplot")
   % Scan the data from the incomplete data-set.
   [median1p,   mrr1p  ] = scan_median_and_mrr("data/v1_median_mrr/rankNounsMedianMrrP1.txt");
@@ -15,13 +16,13 @@ function median_plotter()
   mrrp  = [mrr1p, mrr10p, mrr100p, mrr200p];
   mrrd  = [mrr1d, mrr10d, mrr100d, mrr200d];
   xVals   = [1      , 10      , 100      , 200];
-  plot(xVals,mediansp,'marker','o','color', [46/255 204/255 113/255],'LineWidth',4);
+%  plot(xVals,mediansp,'marker','o','color', [46/255 204/255 113/255],'LineWidth',4);
+  plot(xVals,mrrp,'marker','o','color', [230/255 126/255 34/255],'LineWidth',6,'marker','.','markersize', 15);
   hold on;
-  plot(xVals,mrrp,'marker','o','color', [230/255 126/255 34/255],'LineWidth',4);
-  plot(xVals,mediansd,'marker','o','color', [155/255 89/255 182/255],'LineWidth',4);
-  plot(xVals,mrrd,'marker','o','color', [52/255 152/255 219/255],'LineWidth',4);
+%  plot(xVals,mediansd,'marker','o','color', [155/255 89/255 182/255],'LineWidth',4);
+  plot(xVals,mrrd,'marker','o','color', [52/255 152/255 219/255],'LineWidth',6,'marker','.','markersize', 15);
   xlim([1 200])
-  h = legend('Normalized Median Paragraphs', 'Mean Reciprocal Rank Paragraphs', 'Normalized Median Documents', 'Mean Reciprocal Rank Documents', 'location', 'northeast');
+  h = legend('Mean Reciprocal Rank Paragraphs', 'Mean Reciprocal Rank Documents', 'location', 'northeast');
   set(h,'FontSize',18); 
   xlabel('#Passages')
   ylabel('Score/Value')

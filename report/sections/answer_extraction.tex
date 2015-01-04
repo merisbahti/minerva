@@ -1,6 +1,6 @@
 After the passage retrieval a list of paragraphs is retrieved where the answer is likely exists. 
 From these pieces of text the goal is to rank all the words and hopefully the right one comes out on top.
-To find possible answers  decided to focus on nouns and proper nouns. 
+The system only focuses on nouns and proper nouns.
 
 \subsection{Rank nouns}
 
@@ -10,11 +10,14 @@ because found paragraphs should be closely related to the question.
 The nouns and proper nouns are extracted from all found paragraphs with the help of a Part of Speech (PoS) 
 tagger, in our case Stagger \cite{stagger}.
 
-From the list of passages we obtain scores for how well every paragraph fits our question, i.e the bm25 score. 
+From the obtained list of passages scores for how well every paragraph fits our question, i.e the bm25 score. 
 This is used together with the number of occurances of a noun to calculate the rank.
-More precisely: For each noun that is found in any of the paragraphs we calculate the rank as follows:
+More precisely: For each noun that is found in any of the paragraphs the rank is calculated as in the formula (\ref{eq:nounrank}).
 
-\[ nounrank = \sum_{p\:\in\:paragraphs}bm25(p) \cdot c_p \]
+\begin{equation}
+nounrank = \sum_{p\:\in\:paragraphs}bm25(p) \cdot c_p
+\label{eq:nounrank}
+\end{equation}
 
 where bm25(p) is the bm25 score of a paragraph and c is the number of occurances of the word in a paragraph
 
@@ -23,10 +26,21 @@ where bm25(p) is the bm25 score of a paragraph and c is the number of occurances
 Reranking the nouns further is done using machine learning and more specifically logistic regression.
 A model is trained with our training set and then used to predict the best answer candidate from a question.
 
-When training the model three feature vectors and a true/false value is used. 
+When training the model, three feature vectors and a true/false value is used. 
 The features vectors used is question words, answer words and question (predicted) categories, and the true/false
-value determines if the answer matches the right one.
+value determines if the answer matches the actual answer.
 
+To predict the probability for each of the ranked nouns to be the right answer, the question words and predicted categories
+is used together with each ranked noun. The resulting probability is then weighted together with the noun rank to get the
+reranked score (\ref{eq:rerank}). Finally the score is normalized to get an easier overview of the results.
+
+\begin{equation}
+rerank = \sqrt{n} \cdot p^2
+\label{eq:rerank}
+\end{equation}
+
+where n is the nounrank (\ref{eq:nounrank}) and p is the probability that the tested answer is correct according 
+to the trained model.
 
 \subsection{Puncher}
 

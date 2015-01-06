@@ -1,21 +1,24 @@
 \subsection{Answer present}
 At first, we had to decide which similarity algorithm to use when querying the database. 
-To determine this, we queried both indexes using our questions from the training set, and noted if the answer was present amongst the retrieved passages. 
-We did this for many number of passages, to see how the result evolved with increasing information.
-We also ran this test using both Lucene default, and BM25 similarity, to determine which of these similarity algorithms that best suited our system.
+To determine this, we queried both the paragraph index and article index using the questions from the training set, 
+and noted if the answer was present amongst the retrieved passages. 
+We did this for a different number of passages, to see how the result changed with an increasing amount information.
+We also ran this test using both the tf-idf and the BM25 similarity algorithm, 
+to determine which of these that best suited our system.
 The result can be seen in figure~\ref{fig:bm25_tfdf}.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.5\textwidth]{figures/bm25_tfdf.pdf}
-  \caption{Comparison between Lucene default, and BM25 similarities, when indexing by articles and paragraphs. 
-  Shows how many percentages of the answers that were present for different number of passages.}
+  \caption{Comparison between the tf-idf and the BM25 similarity algorithms, when indexing by articles and paragraphs. 
+  Shows the percentage answers that were present for different number of passages.}
   \label{fig:bm25_tfdf}
 \end{figure}
 
-As we can see, BM25 is slightly better than Lucene default on all test with more than 25 passages, and no result can be 
-considered acceptable using less than 25 passages.
-Not surprisingly indexing by entire articles gives a better result than paragraphs, 
+As we can see, BM25 is slightly better than tf-idf on all tests with more than 25 passages.
+For results using more than 100 passsages one can conclude that increasing the number of passages
+would not yield a worthwhile improvement.
+Not surprisingly, indexing by entire articles gives a better result than indexing by paragraphs, 
 this can be explained by the fact that every article contains one or more paragraph. 
 Which means that 100 article passages might yield the same amount of data as 200 paragraph passages.
 
@@ -23,8 +26,8 @@ Which means that 100 article passages might yield the same amount of data as 200
 
 We needed to decide if we should index our Wikipedia database dump by articles or paragraphs.
 To decide this, we queried our two indexes, one indexed by paragraphs and
-one indexed by articles, with all questions in our training set. We then extracted and 
-all nouns, which are ordered by a BM25 similarity index, and calculated the mean reciprocal rank (MRR). \cite{mrr}
+one indexed by articles, with all questions in our training set. We then extracted 
+all nouns and ordered them by nounrank using the BM25 similarity, and calculated the mean reciprocal rank (MRR). \cite{mrr}
 If the answer was not present amongst the results, we disregarded the data point.
 The result can be seen in figure~\ref{fig:median}.
 
@@ -37,17 +40,22 @@ The result can be seen in figure~\ref{fig:median}.
   \label{fig:median}
 \end{figure}
 
-As you can see, the MRR becomes lower as we extract more passages from the query, which
-is natural since the frequency of frequently used Swedish words increases as you increase the number
-of passages extracted. Another phenomenon which we can observe is that the MRR for 
+%As we can see, the MRR becomes lower as we extract more passages from the query, which
+%is natural since the quantity of frequently used Swedish words increases as you increase the number
+%of passages extracted. 
+As we can see, the MRR becomes lower as we extract more passages from the query. 
+This is due to that an increased number of passages yields an increase in the number of questions for which we find
+the answer. Due to this, the MRR of the newly found answers is lower.
+Another phenomenon which we can observe is that the MRR for 
 paragraphs is consistently higher than the MRR for documents, this is due to the amount of irrelevant
-information contained in documents. Thus, using a database indexed by paragraphs will increase 
+information contained in articles. Thus, using a database indexed by paragraphs will increase 
 the density of relevant information. 
 
 \subsection{Reranking}
 Just extracting all nouns from the passages is not enough to acquire a valid answer, this is where the reranking comes in.
-Using the trained model from all the questions, Liblinear is able to predict a probability that a specific noun is correct.
-Combining this value with the value from Lucene, as mentioned, would increase the score of valid answers, and decrease the score of invalid ones.
+Using the trained model from all the questions, Liblinear is able to predict a probability that a specific noun is correct, using
+our trained model.
+Combining this value with the value from Lucene, as mentioned, would increase the rank of valid answers, and decrease the score of invalid ones.
 
 Also, after reranking the answer candidates, there still exists some candidates that could be seen as impossible.
 So using the puncher, as described, could in some cases improve the result further.
@@ -73,4 +81,4 @@ The result, measured using MRR, can be seen in figure~\ref{fig:mrr}.
 
 As we can see, the reranking improves the result significantly, and the puncher gives a small boost.
 By looking at the median values, we can see that for all the answers that are present, 
-in half the cases the answer is located at the first or second place.
+in at least half of the cases, the answer is ranked at the first or second place.

@@ -3,16 +3,15 @@ Given a question, the system will convert the question
 to a format which can be used to perform a query to the indexed
 database. This is done by blacklisting all characters which
 are not present in the Swedish alphabet or is a number. The question is also
-processed through a linear classifier to determine the category of the 
-answers.
+processed through a linear classifier to predict the category of the 
+answer.
 
 \subsection{Training the Question Classifier}
 For this system, the training data consists of questions 
-from the Swedish board game Kvitt eller Dubbelt transcribed 
-by Juri Pyykk\"o, Rebecka Weegar, Pierre Nugues \cite{QASYS}.
-
-The training data consists of 2300 questions containing 9 fields each.
+from the Swedish board game Kvitt eller dubbelt 
+The data consists of 2300 questions containing 9 fields each.
 The classifier only uses two fields from each question:
+
 \begin{itemize}
 \item Question Formulation - The original question taken from the transcribed
   card.
@@ -20,8 +19,9 @@ The classifier only uses two fields from each question:
   Possible values: concept, location, description, multiplechoice, amount, organization, 
   other, person, abbreviation, verb, title, timepoint, duration, money.
 \end{itemize}
-A model file was trained using the training data. The model file was then used when the system 
-classifies question categories. For example the question \textit{vad heter sveriges huvudstad?} 
+
+A model file was created using the training data. This model is then used to classify
+the question category. For example the question \textit{vad heter sveriges huvudstad?} 
 %After processing the training set using \texttt{libshorttext}, a model file is created.
 %By using this model file, the system can classify 
 %what class an answer is expected to have, for example the question \textit{vad heter sveriges huvudstad?} 

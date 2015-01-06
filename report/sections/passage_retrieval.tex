@@ -1,12 +1,12 @@
 The purpose of the passage retrieval module is to reduce the information to a size that is more manageable 
 and accessible.
-Given a question, the passage retrieval module translates this into a query, and searches the index for passages 
-relevant to this query. Where these passages are sorted by their similarity to the query.
+Given a question, the passage retrieval module translates this into a query. It searches the index for passages 
+relevant to this query, where these passages are sorted by their similarity to the query.
 The passage retrieval module is entirely built upon Lucene Core, an open source, Java-based library, 
 that is capable of fast and effective indexing, and smart querying. \cite{lucenecore}
 
 \subsection{Wikipedia}
-The Swedish Wikipedia was used as information source, downloaded from Wikimedia \cite{wikimedia} as wikitext embedded in XML.
+The Swedish Wikipedia was used as the information source, downloaded from Wikimedia \cite{wikimedia} as wikitext embedded in XML.
 To gather the useful text, a python script \cite{wikiextractor} was used to remove everything but the text. 
 This script was modified to be able to do indexing by entire articles, and indexing by paragraphs (article subsections).
 
@@ -17,18 +17,18 @@ Lucene comes with many analyzers, adapted to different languages.
 These analyzers help Lucene to parse text and provide stemming of words.
 The same analyzer should be used for indexing and querying, otherwise this will result in faulty interpretation.
 The Swedish analyzer was used at first, but it turned out to be more destructive than helpful. 
-So a custom analyzer, based upon the Swedish analyzer but without the stemming, was created.
+So a custom analyzer, based upon the Swedish analyzer but without stemming, was created.
 
 \subsubsection{Indexing}
 Searching through entire documents for relevant text is extremely inefficient, 
 document indexing is a process of entering information from different documents into a searchable database. 
 Lucene uses documents to differ text segments from each other, and as mentioned, both articles and paragraphs were used as documents, separately.
-Eventually it was determined that indexing by paragraph was the more efficient way, due to the reduction of the irrelevant text.
-Each document had two sections, title and text. Where title is the article title, and text is the text body of the current subsection.
+%Eventually it was determined that indexing by paragraph was the more efficient way, due to the reduction of the irrelevant text.
+Each document had two sections, title and text. Where title is the article title, and text is the text body of the current document.
 
 \subsubsection{Similarity}
 An important part in the passage retrieval module concerning queries, is how to determine if a query is similar to a document.
-Lucenes default similarity function is a variant of the tf-idf similarity, 
+Lucenes default similarity function is a variant of tf-idf similarity, 
 which is defined as the scoring of the Vector Space Model (VSM) of a document $d$ and a query $q$.
 \[VSM score = \frac{V(q)\cdot V(d)}{|V(q)||V(d)|} \]
 Where $V(q) \cdot V(d)$ is the dot product of the weighted vectors, and $|V(q)|$ and $|V(d)|$ are their Euclidean norms. \cite{tfidfsimilarity}
@@ -48,7 +48,7 @@ and $idf(q_i)$ is the inverse document frequency weight of the query term $q_i$.
 
 \subsubsection{Querying}
 To search the index for relevant text, both the title and the text field are searched. 
-This was done with Lucenes multi field query parser, searched for the query terms in both fields: \\
+This was done with Lucenes multi field query parser, which searches for the query terms in both fields: \\
 \texttt{(title:term1 body:term1) (title:term2 body:term2)} \\
-How similar a query is to a certain passage is determined by the BM25 similarity.
+How similar a query is to a certain passage is determined by the similarity algorithm.
 The result is a series of documents, sorted by their score.

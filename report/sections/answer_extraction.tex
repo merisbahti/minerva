@@ -1,5 +1,5 @@
-After the passage retrieval a list of passages is retrieved where the answer likely exists. 
-From these pieces of text the goal is to rank all the words and hopefully the right one comes out on top.
+After the passage retrieval, a list of passages is retrieved which is where the answer likely exists. 
+From these pieces of text, the goal is to rank all the words and hopefully the right one comes out on top.
 The system only focuses on nouns and proper nouns.
 
 \subsection{Rank nouns}
@@ -10,30 +10,30 @@ because found passages should be closely related to the question.
 The nouns and proper nouns are extracted from all found passages with the help of a Part of Speech (PoS) 
 tagger, in our case Stagger \cite{stagger}.
 
-From the obtained list of passages scores for how well every passage fits our question, i.e the BM25 score. 
+From the obtained list of passages, scores for how well every passage fits our question, i.e the similarity score, is derived.
 This is used together with the number of occurrences of a noun to calculate the rank.
 More precisely, for each noun that is found in any of the passages the rank is calculated using equation (\ref{eq:nounrank}).
 
 \begin{equation}
-nounrank = \sum_{p\:\in\:passages}bm25(p) \cdot c_p
+nounrank = \sum_{p\:\in\:passages}sim(p) \cdot c_p
 \label{eq:nounrank}
 \end{equation}
 
-Where $bm25(p)$ is the BM25 score of a passage and $c$ is the number of occurrences of the word in a passage
+Where $sim(p)$ is the similarity score of a passage and $c_p$ is the number of occurrences of the word in a passage.
 
 \subsection{Reranker}
 
-Reranking the nouns further is done using machine learning and more specifically logistic regression.
+Reranking the nouns further is done using machine learning, and more specifically logistic regression.
 The logistic regression is done using Liblinear. \cite{liblinear}
-A model is trained with our training set and then used to predict the best answer candidate from a question.
+A model is trained with the training set and then used to predict the best answer candidate from a question.
 
 When training the model, three feature vectors and a true/false value is used. 
-The feature vectors used is question words, answer words and question (predicted) categories, and the true/false
+The feature vectors used are question words, answer words, and question (predicted) categories. The true/false
 value determines if the answer matches the actual answer. The training matrix is a sparse binary matrix where 
 all the trained words are represented if they match a word in the current question.
 
 To predict the probability for each of the ranked nouns to be the right answer, the question words and predicted categories
-is used together with each ranked noun. The resulting probability is then weighted together with the noun rank to get the
+are used together with each ranked noun. The resulting probability is then weighted together with the noun rank to get the
 reranked score as shown in equation (\ref{eq:rerank}). Finally the score is normalized to get an easier overview of the results.
 
 \begin{equation}
@@ -41,10 +41,10 @@ rerank = \sqrt{n} \cdot p^2
 \label{eq:rerank}
 \end{equation}
 
-Where $n$ is the noun rank (\ref{eq:nounrank}) and $p$ is the probability that the tested answer is correct according 
+Where $n$ is the $nounrank$ (\ref{eq:nounrank}) and $p$ is the probability that the tested answer is correct according 
 to the trained model.
 
 \subsection{Puncher}
 
-To slightly improve the ranking one more module was used. It's called the puncher and it simply boosts 
-answer candidates with a matching category (given by PoS tagger) to the predicted categories of the question. 
+To slightly improve the ranking, one more module was used. It's called the puncher and it boosts 
+answer candidates with a matching category, given by the PoS tagger, to the predicted category of the question. 

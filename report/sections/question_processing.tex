@@ -1,8 +1,8 @@
 \subsection{Preprocessing of questions}
-Given a question, the system will first of all convert the question
+Given a question, the system will convert the question
 to a format which can be used to perform a query to the indexed
 database. This is done by blacklisting all characters which
-are not in the supported swedish alphabet. The question is also
+are not present in the swedish alphabet or is a number. The question is also
 processed through a linear classifier to determine the category of the 
 answers.
 
@@ -16,7 +16,7 @@ The classifier only uses two fields from each question:
 \begin{itemize}
 \item Question Formulation - The original question taken from the transcribed
   card.
-\item Answer Class - Which was manually determined during transcription. 
+\item Answer Category - Which was manually determined during transcription. 
   Possible values: concept, location, description, multiplechoice, amount, organization, 
   other, person, abbreviation, verb, title, timepoint, duration, money.
 \end{itemize}
@@ -25,7 +25,7 @@ classifies question categories. For example the question \textit{vad heter sveri
 %After processing the training set using \texttt{libshorttext}, a model file is created.
 %By using this model file, the system can classify 
 %what class an answer is expected to have, for example the question \textit{vad heter sveriges huvudstad?} 
-yields the following Class-Score pairs:
+yields the following Category-Score pairs:
 \begin{center}
   \begin{tabular} {l c}
     \texttt{location}    & \texttt{1.00} \\

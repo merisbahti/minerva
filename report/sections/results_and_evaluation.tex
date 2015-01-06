@@ -26,6 +26,7 @@ To decide this, we queried our two indexes, one indexed by paragraphs and
 one indexed by articles, with all questions in our training set. We then extracted and 
 ordered all nouns by frequency, and calculated the mean reciprocal rank (MRR). \cite{mrr}
 If the answer was not present amongst the results, we disregarded the data point.
+The result can be seen in figure~\ref{fig:median}.
 
 \begin{figure}[h!]
   \centering
@@ -33,6 +34,7 @@ If the answer was not present amongst the results, we disregarded the data point
   \caption{Comparison between indexing by articles, and indexing by paragraphs. 
   Shows the MRR values for the rank of the correct answer for the questions where 
   the answer is present.}
+  \label{fig:median}
 \end{figure}
 
 As you can see, the mean reciprocal rank becomes lower as we extract more passages from the query, which

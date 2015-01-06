@@ -21,7 +21,7 @@ Which means that 100 article passages might yield the same amount of data as 200
 
 \subsection{Noun extraction}
 
-We needed to decide if we should index our wikipedia database dump by articles or paragraphs.
+We needed to decide if we should index our Wikipedia database dump by articles or paragraphs.
 To decide this, we queried our two indexes, one indexed by paragraphs and
 one indexed by articles, with all questions in our training set. We then extracted and 
 all nouns, which are ordered by a BM25 similarity index, and calculated the mean reciprocal rank (MRR). \cite{mrr}
@@ -38,7 +38,7 @@ The result can be seen in figure~\ref{fig:median}.
 \end{figure}
 
 As you can see, the MRR becomes lower as we extract more passages from the query, which
-is natural since the frequency of frequently used swedish words increases as you increase the number
+is natural since the frequency of frequently used Swedish words increases as you increase the number
 of passages extracted. Another phenomenon which we can observe is that the MRR for 
 paragraphs is consistently higher than the MRR for documents, this is due to the amount of irrelevant
 information contained in documents. Thus, using a database indexed by paragraphs will increase 
@@ -50,7 +50,7 @@ Using the trained model from all the questions, Liblinear is able to predict a p
 Combining this value with the value from Lucene, as mentioned, would increase the score of valid answers, and decrease the score of invalid ones.
 
 Also, after reranking the answer candidates, there still exists some candidates that could be seen as impossible.
-so using the puncher, as described, could in some cases improve the result further.
+So using the puncher, as described, could in some cases improve the result further.
 
 The result, measured using mean and median, can be seen in figure~\ref{fig:meanmedian}.
 

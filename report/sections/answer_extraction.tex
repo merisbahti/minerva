@@ -10,8 +10,8 @@ because found passages should be closely related to the question.
 The nouns and proper nouns are extracted from all found passages with the help of a Part of Speech (PoS) 
 tagger, in our case Stagger \cite{stagger}.
 
-From the obtained list of passages scores for how well every passage fits our question, i.e the bm25 score. 
-This is used together with the number of occurances of a noun to calculate the rank.
+From the obtained list of passages scores for how well every passage fits our question, i.e the BM25 score. 
+This is used together with the number of occurrences of a noun to calculate the rank.
 More precisely, for each noun that is found in any of the passages the rank is calculated using equation (\ref{eq:nounrank}).
 
 \begin{equation}
@@ -19,7 +19,7 @@ nounrank = \sum_{p\:\in\:passages}bm25(p) \cdot c_p
 \label{eq:nounrank}
 \end{equation}
 
-where bm25(p) is the bm25 score of a passage and c is the number of occurances of the word in a passage
+Where $bm25(p)$ is the BM25 score of a passage and $c$ is the number of occurrences of the word in a passage
 
 \subsection{Reranker}
 
@@ -41,7 +41,7 @@ rerank = \sqrt{n} \cdot p^2
 \label{eq:rerank}
 \end{equation}
 
-where n is the nounrank (\ref{eq:nounrank}) and p is the probability that the tested answer is correct according 
+Where $n$ is the noun rank (\ref{eq:nounrank}) and $p$ is the probability that the tested answer is correct according 
 to the trained model.
 
 \subsection{Puncher}

@@ -1,7 +1,7 @@
 Out of the 2300 questions, about 1600 of them had an answer containing only one word.
 When performing test on those 1600 questions, using only 100 passages per query, 
 in 78\% of the cases, i.e. 1248 questions, the answer existed somewhere in the text.
-Using only our simple nounranker, the median rank for these 1248 answers were 20.
+Using only our simple noun ranker, the median rank for these 1248 answers were 20.
 
 After improving this result using our reranker, the median rank for these 1248 questions was lowered to an astounding 2.
 The puncher, still in a developing stage, had very little impact, but still managed to improve the mean value slightly.
@@ -9,9 +9,9 @@ The puncher, still in a developing stage, had very little impact, but still mana
 Since this system is focused on simple questions, where the answer is a noun, there are many opportunities for improvement.
 Even though 78\% is a good result for answers present, it still has room for improvement. By adapting the system more to the swedish language, 
 and fully develop a swedish analyzer and stemmer, the percentage of answers present might increase.
-Also by parsing the question in a more effective way, e.g. only using the relevant words etc., could improve the querying.
+Also by parsing the question in a more effective way, e.g. reducing the query to the relevant words etc., could improve the querying.
 
-The current data that is extracted from wikipedia, is simply the raw text that can bee seen in an article. 
+The current data that is extracted from wikipedia is simply the raw text that can bee seen in an article. 
 Instead of just removing things we can't parse, the usage of another tool, like Sweble, could improve the index data itself.
 Also by branching out from wikipedia, and use other data sources, could improve the available data.
 

@@ -2,14 +2,14 @@ function median_plotter()
 
   graphics_toolkit ("gnuplot")
   % Scan the data from the incomplete data-set.
-  [median1p,   mrr1p  ] = scan_median_and_mrr("data/v1_median_mrr/rankNounsMedianMrrP1.txt");
-  [median10p,  mrr10p ] = scan_median_and_mrr("data/v1_median_mrr/rankNounsMedianMrrP10.txt");
-  [median100p, mrr100p] = scan_median_and_mrr("data/v1_median_mrr/rankNounsMedianMrrP100.txt");
-  [median200p, mrr200p] = scan_median_and_mrr("data/v1_median_mrr/rankNounsMedianMrrP200.txt");
-  [median1d,   mrr1d  ] = scan_median_and_mrr("data/v1_median_mrr/rankNounsMedianMrrD1.txt");
-  [median10d,  mrr10d ] = scan_median_and_mrr("data/v1_median_mrr/rankNounsMedianMrrD10.txt");
-  [median100d, mrr100d] = scan_median_and_mrr("data/v1_median_mrr/rankNounsMedianMrrD100.txt");
-  [median200d, mrr200d] = scan_median_and_mrr("data/v1_median_mrr/rankNounsMedianMrrD200.txt");
+  [median1p,   mrr1p  ] = scan_median_and_mrr("data/v1_median_bm25/p1.txt");
+  [median10p,  mrr10p ] = scan_median_and_mrr("data/v1_median_bm25/p10.txt");
+  [median100p, mrr100p] = scan_median_and_mrr("data/v1_median_bm25/p100.txt");
+  [median200p, mrr200p] = scan_median_and_mrr("data/v1_median_bm25/p200.txt");
+  [median1d,   mrr1d  ] = scan_median_and_mrr("data/v1_median_bm25/d1.txt");
+  [median10d,  mrr10d ] = scan_median_and_mrr("data/v1_median_bm25/d10.txt");
+  [median100d, mrr100d] = scan_median_and_mrr("data/v1_median_bm25/d100.txt");
+  [median200d, mrr200d] = scan_median_and_mrr("data/v1_median_bm25/d200.txt");
 
   mediansp = [median1p, median10p, median100p, median200p];
   mediansd = [median1d, median10d, median100d, median200d];

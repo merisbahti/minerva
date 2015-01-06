@@ -22,6 +22,7 @@ minerva-source/indexDir*
 minerva-source/output/*
 minerva-source/lib/*
 minerva-source/model/*
+minerva-source/.metadata/*
 
 # sbt specific
 .cache/

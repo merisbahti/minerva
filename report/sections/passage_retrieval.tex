@@ -34,7 +34,12 @@ which is defined as the scoring of the Vector Space Model (VSM) of a document d 
 Where $V(q) \cdot V(d)$ is the dot product of the weighted vectors, and $|V(q)|$ and $|V(d)|$ are their Euclidean norms. \cite{tfidfsimilarity}
 
 There is another similarity function, called BM25, that scores similarity as
-\[ score(q,d) = \sum_{i=1}^{|q|} idf(q_i) \cdot \frac{tf(q_i,d) \cdot (k_1 + 1)}{tf(q_1,d) + k_1 \cdot (1 - b + b \cdot \frac{|d|}{avgdl})} \]
+\[
+score(q,d) = \\
+\]
+\[
+\sum_{i=1}^{|q|} idf(q_i) \cdot \frac{tf(q_i,d) \cdot (k_1 + 1)}{tf(q_1,d) + k_1 \cdot (1 - b + b \cdot \frac{|d|}{avgdl})}
+\]
 where $f(q_i,d)$ is the frequency of the term $q_i$ in document $d$, 
 $|d|$ is the number of words in document $d$,
 $avgdl$ is the average number of words in each document,
